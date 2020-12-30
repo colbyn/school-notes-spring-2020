@@ -1,6 +1,3 @@
-# NOTE
-
-**This isn’t actually my school notes anymore, it’s just an example project.**
-
+# Colbyn's School Notes (Currently for the Spring 2020 Semester)
 
 
