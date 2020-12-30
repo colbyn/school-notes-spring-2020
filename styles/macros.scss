@@ -56,3 +56,16 @@
     border-bottom: none;
     text-align: center;
 }
+
+/* ========================================================================= */
+/* LATEX */
+/* ========================================================================= */
+
+[latex] {
+    font-family: 'Roboto Slab', monospace;
+    text-rendering: optimizeLegibility;
+}
+
+[latex='block'] {
+    font-size: 0.8em;
+}
