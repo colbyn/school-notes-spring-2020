@@ -3,7 +3,6 @@
 /* ========================================================================= */
 [macro='layout'] {
     display: grid;
-    width: auto;
     column-gap: 8px;
     row-gap: 8px;
 }
@@ -33,7 +32,7 @@
 /* NOTE */
 /* ========================================================================= */
 
-[macro='note'] {
+[macro='note'][boxed] {
     border-radius: 3px;
     border-color: #fff;
     box-shadow: 0 0 0px 1px #eeeeee;
