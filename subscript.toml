@@ -2,6 +2,5 @@
 root = "."
 pages = ["pages/**/*.html"]
 output_dir = "output"
-plugins = ["plugins/**/*.rhai"]
 
 

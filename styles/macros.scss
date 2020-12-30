@@ -28,3 +28,31 @@
 [macro='layout'] img {
     align-self: flex-start;
 }
+
+/* ========================================================================= */
+/* NOTE */
+/* ========================================================================= */
+
+[macro='note'] {
+    border-radius: 3px;
+    border-color: #fff;
+    box-shadow: 0 0 0px 1px #eeeeee;
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+}
+
+[macro='note'] [macro='note'] {
+    margin: 12px;
+}
+
+
+[macro='note'] > h1,
+[macro='note'] > h2,
+[macro='note'] > h3,
+[macro='note'] > h4,
+[macro='note'] > h5,
+[macro='note'] > h6 {
+    border-bottom: none;
+    text-align: center;
+}
