@@ -11,7 +11,7 @@ subscript compile \
 
 mv output-release docs
 
-# git add docs
-# git commit -m "update site"
-# git push
+git add docs
+git commit -m "update site"
+git push
 
