@@ -1,0 +1,1 @@
+All stock photos are from `Pexels.com`.

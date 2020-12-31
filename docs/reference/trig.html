@@ -1,0 +1,232 @@
+<html>
+  <head>
+    <title>Note
+    </title>
+    <link href="https://colbyn.github.io/school-notes-spring-2020/ss-data/7465957898607009145" rel="stylesheet" ss.link.processed></link>
+    <script>window.MathJax = {
+tex: {
+inlineMath: [['\\(', '\\)'], ['stem:[', ']'], ['`', '`']],
+macros: {
+'dx': "{\\, \\mathrm{d}x\\;}",
+'Integrate': ['{\\int_{#1}^{#2}\\, #3 \\dx}', 3],
+'IntegrateFor': ['{\\int_{#1}^{#2}\\, #3 {\\, \\mathrm{d}{#4}\\;}}', 4],
+'I': ['{\\Integrate{a}{b}{#1}}', 1],
+'angles': ['\\langle {#1},{#2} \\rangle', 2]
+},
+},
+svg: {
+fontCache: 'global',
+minScale: 0.2
+},
+processEscapes: true,
+};</script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" id="MathJax-script" type="text/javascript" async></script>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet"></link>
+    <meta name="viewport" content="width=device-width,initial-scale=1"></meta>
+    <meta charset="utf-8"></meta>
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <script src="https://www.desmos.com/api/v1.5/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com"></link>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"></link>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"></link>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"></link>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"></link>
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/joshuarudd/typeset.css/master/typeset.min.css"></link>
+    <style>* {
+box-sizing: border-box;
+}
+body {
+margin: 0;
+}
+    </style>
+  </head>
+  <body>
+    <header id="site-header">
+      <div page-nav>
+        <h1 toc-ignore id="6766082461996421290">Site Navigation
+        </h1>
+        <ul macro="page-nav">
+          <li>
+            <a href="/index.html">Homepage</a>
+          </li>
+          <li>
+            <a href="/reference.html">Reference</a>
+            <ul>
+              <li>
+                <a href="/reference/trig.html">Trigonometry</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div toc>
+        <h1 toc-ignore id="8048217207168378525">Table of Contents
+        </h1>
+        <ul macro="toc">
+          <li for="h1">
+            <a href="#13299914671132665291">Trigonometry</a>
+          </li>
+          <li for="h2">
+            <a href="#6001140156748452355">Trigonometric Identities and Equations</a>
+          </li>
+          <li for="h3">
+            <a href="#417466350605896182">Sum and Difference Identities</a>
+          </li>
+          <li for="h3">
+            <a href="#6426214839245301166">Cofunction Identities</a>
+          </li>
+          <li for="h3">
+            <a href="#3964748257554636156">Ratio Identities</a>
+          </li>
+          <li for="h3">
+            <a href="#17367024456932618597">Double-Angle Identities</a>
+          </li>
+          <li for="h3">
+            <a href="#8313496678382517556">Half-Angle Identities</a>
+          </li>
+          <li for="h3">
+            <a href="#8389730851384301021">Power-Reducing Identities</a>
+          </li>
+          <li for="h3">
+            <a href="#8824372876109677412">Product-to-Sum Identities</a>
+          </li>
+          <li for="h3">
+            <a href="#906024959179201698">Sum-to-Product-Identities</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <h1 id="13299914671132665291">Trigonometry
+      </h1>
+      <h2 id="6001140156748452355">Trigonometric Identities and Equations
+      </h2>
+      <div macro="layout" cols="2" columns="2">
+        <div macro="note" boxed>
+          <h3 id="417466350605896182">Sum and Difference Identities
+          </h3>
+          <div latex="block" macro="texblock">$$
+\begin{equation}
+\begin{split}
+\cos(\alpha - \beta) &= \cos(\alpha) \cdot \cos(\beta) + \sin(\alpha) \cdot \sin(\beta) \\
+\cos(\alpha + \beta) &= \cos(\alpha) \cdot \cos(\beta) - \sin(\alpha) \cdot \sin(\beta) \\
+&\\
+\sin(\alpha - \beta) &= \sin(\alpha) \cdot \cos(\beta) - \cos(\alpha) \cdot \sin(\beta) \\
+\sin(\alpha + \beta) &= \sin(\alpha) \cdot \cos(\beta) + \cos(\alpha) \cdot \sin(\beta) \\
+&\\
+\tan(\alpha + \beta) &= \frac{\tan(\alpha) + \tan(\beta)}{1 - \tan(\alpha) \cdot \tan(\beta)} \\
+\tan(\alpha - \beta) &= \frac{\tan(\alpha) - \tan(\beta)}{1 + \tan(\alpha) \cdot \tan(\beta)}
+\end{split}
+\end{equation}
+$$
+          </div>
+        </div>
+        <div macro="note" boxed>
+          <h3 id="6426214839245301166">Cofunction Identities
+          </h3>
+          <div columns="2" cols="2" macro="layout">
+            <span latex="inline" macro="tex">\(\sin(\theta) = \cos(\frac{1}{4}\tau - \theta)\)</span>
+            <span latex="inline" macro="tex">\(\cos(\theta) = \sin(\frac{1}{4}\tau - \theta)\)</span>
+            <span macro="tex" latex="inline">\(\tan(\theta) = \cot(\frac{1}{4}\tau - \theta)\)</span>
+            <span macro="tex" latex="inline">\(\cot(\theta) = \tan(\frac{1}{4}\tau - \theta)\)</span>
+            <span latex="inline" macro="tex">\(\csc(\theta) = \sec(\frac{1}{4}\tau - \theta)\)</span>
+            <span latex="inline" macro="tex">\(\sec(\theta) = \csc(\frac{1}{4}\tau - \theta)\)</span>
+          </div>
+        </div>
+        <div macro="note" boxed>
+          <h3 id="3964748257554636156">Ratio Identities
+          </h3>
+          <div macro="texblock" latex="block">$$
+\begin{equation}
+\begin{split}
+\tan(90^\circ - x) & = \frac{\sin(90^\circ - x)}{\cos(90^\circ - x)} = \frac{\cos(x)}{\sin(x)} = \cot(x) \\
+\\
+\cot(90^\circ - x) & = \frac{\cos(90^\circ - x)}{\sin(90^\circ - x)} = \frac{\sin(x)}{\cos(x)} = \tan(x) \\
+\end{split}
+\end{equation}
+$$
+          </div>
+        </div>
+        <div boxed macro="note">
+          <h3 id="17367024456932618597">Double-Angle Identities
+          </h3>
+          <div latex="block" macro="texblock">$$
+\begin{equation}
+\begin{split}
+\sin(2\alpha) &= 2\sin(\alpha)\cos(\alpha) \\
+\cos(2\alpha) &= \cos^2(\alpha) - \sin^2(\alpha) \\
+&= 1 - 2\sin^2(\alpha) \\
+&= 2\cos^2(\alpha) - 1 \\
+&\\
+\tan(2\alpha) &= \frac{2\tan(\alpha)}{1 - \tan^2(\alpha)}
+\end{split}
+\end{equation}
+$$
+          </div>
+        </div>
+        <div macro="note" boxed>
+          <h3 id="8313496678382517556">Half-Angle Identities
+          </h3>
+          <div latex="block" macro="texblock">$$
+\begin{equation}
+\begin{split}
+\sin \frac{\alpha}{2} &= \pm \sqrt{\frac{1 - \cos(\alpha)}{2}} \\
+\cos \frac{\alpha}{2} &= \pm \sqrt{\frac{1 + \cos(\alpha)}{2}} \\
+\tan \frac{\alpha}{2} &= \pm \sqrt{\frac{1 - \cos(\alpha)}{1 + \cos(\alpha)}} \\
+&= \frac{sin(\alpha)}{1 + \cos(\alpha)} \\
+&= \frac{1 - \cos(\alpha)}{sin(\alpha)}
+\end{split}
+\end{equation}
+$$
+          </div>
+        </div>
+        <div boxed macro="note">
+          <h3 id="8389730851384301021">Power-Reducing Identities
+          </h3>
+          <div macro="texblock" latex="block">$$
+\begin{equation}
+\begin{split}
+\sin^2(\alpha) &= \frac{1 - \cos(2\alpha)}{2} \\
+&\\
+\cos^2(\alpha) &= \frac{1 + \cos(2\alpha)}{2} \\
+&\\
+\tan^2(\alpha) &= \frac{1 - \cos(2\alpha)}{1 + \cos(2\alpha)}
+\end{split}
+\end{equation}
+$$
+          </div>
+        </div>
+        <div macro="note" boxed>
+          <h3 id="8824372876109677412">Product-to-Sum Identities
+          </h3>
+          <div latex="block" macro="texblock">$$
+\begin{equation}
+\begin{split}
+\sin(\alpha) \cdot \cos(\beta) &= \frac{1}{2} \Big[ \sin(\alpha + \beta) + \sin(\alpha - \beta) \Big] \\
+\cos(\alpha) \cdot \sin(\beta) &= \frac{1}{2} \Big[ \sin(\alpha + \beta) - \sin(\alpha - \beta) \Big] \\
+\cos(\alpha) \cdot \cos(\beta) &= \frac{1}{2} \Big[ \cos(\alpha + \beta) + \cos(\alpha - \beta) \Big] \\
+\sin(\alpha) \cdot \sin(\beta) &= \frac{1}{2} \Big[ \cos(\alpha - \beta) - \cos(\alpha + \beta) \Big]
+\end{split}
+\end{equation}
+$$
+          </div>
+        </div>
+        <div boxed macro="note">
+          <h3 id="906024959179201698">Sum-to-Product-Identities
+          </h3>
+          <div latex="block" macro="texblock">$$
+\begin{equation}
+\begin{split}
+\sin(x) + \sin(y) &= 2 \cdot \sin\left( \frac{x + y}{2} \right) \cdot \cos\left( \frac{x - y}{2} \right) \\
+\cos(x) + \cos(y) &= 2 \cdot \cos\left( \frac{x + y}{2} \right) \cdot \cos\left( \frac{x - y}{2} \right) \\
+\sin(x) - \sin(y) &= 2 \cdot \cos\left( \frac{x + y}{2} \right) \cdot \sin\left( \frac{x - y}{2} \right) \\
+\cos(x) - \cos(y) &= -2 \sin \cos\left( \frac{x + y}{2} \right) \cdot \sin\left( \frac{x - y}{2} \right)
+\end{split}
+\end{equation}
+$$
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

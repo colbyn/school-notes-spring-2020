@@ -32,6 +32,7 @@
 /* NOTE */
 /* ========================================================================= */
 
+
 [macro='note'][boxed] {
     border-radius: 3px;
     border-color: #fff;
@@ -39,6 +40,8 @@
     display: flex;
     flex-direction: column;
     align-items: normal;
+    grid-row-gap: 12px;
+    padding-bottom: 12px;
 }
 
 [macro='note'] [macro='note'] {
@@ -65,6 +68,19 @@
     text-rendering: optimizeLegibility;
 }
 
+[latex='inline'] {
+    max-width: fit-content;
+    text-align: center;
+    display: inline-flex;
+    justify-self: center;
+}
+
 [latex='block'] {
     font-size: 0.8em;
+    max-width: fit-content;
+    max-height: fit-content;
+    align-self: center;
+}
+[latex='block'] > mjx-container {
+    margin: 0 !important;
 }
