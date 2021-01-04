@@ -34,11 +34,11 @@
             "attributes": []
         },
         {
-            "name": "gallery",
+            "name": "layout",
             "description": "A gallery of items",
             "attributes": [
                 {
-                    "name": "columns",
+                    "name": "cols",
                     "values": [
                         {"name": "2"},
                         {"name": "3"},
