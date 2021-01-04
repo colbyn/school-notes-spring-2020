@@ -131,6 +131,7 @@ dl[center] {
   max-width: fit-content;
   max-height: fit-content;
   align-self: center;
+  justify-self: center;
 }
 
 [latex=block] > mjx-container {
