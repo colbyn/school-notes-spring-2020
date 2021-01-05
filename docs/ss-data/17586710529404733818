@@ -82,6 +82,16 @@ dl[center] {
 [macro=layout] img {
   align-self: flex-start;
 }
+
+[macro=layout][boxed] > [boxed-child] {
+  border-radius: 3px;
+  border-color: #fff;
+  box-shadow: 0 0 0px 1px #eeeeee;
+  display: grid;
+  align-items: center;
+  grid-row-gap: 12px;
+  padding: 8px;
+}
 /* ========================================================================= */
 /* NOTE */
 /* ========================================================================= */
@@ -109,6 +119,24 @@ dl[center] {
 [macro=note] > h6 {
   border-bottom: none;
   text-align: center;
+  color: #2f2f2f;
+}
+
+[macro=note]:not([boxed]) > h1,
+[macro=note]:not([boxed]) > h2,
+[macro=note]:not([boxed]) > h3,
+[macro=note]:not([boxed]) > h4,
+[macro=note]:not([boxed]) > h5,
+[macro=note]:not([boxed]) > h6 {
+  border: 1px solid #e2e2e2;
+  margin-bottom: 4px;
+  border-radius: 3px;
+}
+
+[macro=note] p {
+  text-align: justify;
+  margin: 0 12px;
+  font-weight: 300;
 }
 /* ========================================================================= */
 /* LATEX */
@@ -157,6 +185,19 @@ main > h1 {
   width: 100%;
   box-shadow: 0px 3px 4px 0px #17171740;
   border: none;
+}
+
+main > h1[root] {
+  background-color: #ffffff;
+  color: #212121;
+  font-size: 2.3em;
+  text-align: center;
+  border: 1px solid #828282;
+  border-right: none;
+  border-left: none;
+  box-shadow: 0 0 10px 0px #bdbdbd;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 h1, h2, h3, h4, h5, h6 {
