@@ -55,17 +55,13 @@
     padding-bottom: 12px;
 }
 
-[macro='note'] [macro='note'] {
-    margin: 12px;
-}
 
-
-[macro='note'] > h1,
-[macro='note'] > h2,
-[macro='note'] > h3,
-[macro='note'] > h4,
-[macro='note'] > h5,
-[macro='note'] > h6 {
+[macro='note'] > h1:first-child,
+[macro='note'] > h2:first-child,
+[macro='note'] > h3:first-child,
+[macro='note'] > h4:first-child,
+[macro='note'] > h5:first-child,
+[macro='note'] > h6:first-child {
     border-bottom: none;
     text-align: center;
     color: #2f2f2f;
@@ -83,9 +79,18 @@
 }
 
 [macro='note'] p {
+    font-weight: 300;
+}
+
+
+[macro='note'] p,
+[macro='note'] h2,
+[macro='note'] h3,
+[macro='note'] h4,
+[macro='note'] h5,
+[macro='note'] h6 {
     text-align: justify;
     margin: 0 12px;
-    font-weight: 300;
 }
 
 

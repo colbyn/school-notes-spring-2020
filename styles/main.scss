@@ -34,8 +34,23 @@ main > h1[root] {
     color: #586f6d;
 }
 
+
+main > h2,
+main > h3,
+main > h4,
+main > h5,
+main > h6 {
+    border: 1px solid #e2e2e2;
+    margin-bottom: 4px;
+    border-radius: 3px;
+    text-align: center;
+    color: #2f2f2f;
+    width: calc(100% - 24px);
+    margin-bottom: 0;
+}
+
 main > [macro='note'][boxed] {
-    width: 98%;
+    width: calc(100% - 24px);
     margin: 0 auto;
 }
 
