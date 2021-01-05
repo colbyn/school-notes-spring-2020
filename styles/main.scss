@@ -34,6 +34,11 @@ main > h1[root] {
     color: #586f6d;
 }
 
+main > [macro='note'][boxed] {
+    width: 98%;
+    margin: 0 auto;
+}
+
 // @media (min-width: 900px) {
 //     main > * {
 //         padding: 0 12px;
