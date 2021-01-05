@@ -1,0 +1,72 @@
+<h1>Miscellaneous</h1>
+<h2>Functional Utilities & Notation Conveniences</h2>
+<layout cols="2">
+    <note boxed>
+        <h3>Right to Left Evaluation</h3>
+        <equation>
+            f \triangleleft x &= f(x)
+        </equation>
+        <equation>
+            f \circ g \triangleleft x
+                    &= f(g(x)) \\
+                    &= f \triangleleft g \triangleleft x
+        </equation>
+    </note>
+    <note boxed>
+        <h3>Left to Right Evaluation</h3>
+        <equation>
+            x \triangleright f &= f(x)
+        </equation>
+    </note>
+    <note boxed>
+        <h3>Derivative Shorthand</h3>
+        <equation>
+            \delta f(x) &= \frac{\mathrm{d}}{\mathrm{d}x} f(x) = f^\prime(x)
+        </equation>
+        <p>For this notation, the derivative with respect to a given variable, is implicit.</p>
+    </note>
+</layout>
+
+<h1>Trigonometry</h1>
+<h2>Trigonometric Identities and Equations</h2>
+<layout cols="2">
+    <include src="./reference/trig/identities.html"></include>
+</layout>
+
+<h1>Calculus</h1>
+<note>
+    <h2>Derivative Tables</h2>
+    <layout cols="3" boxed>
+        <equation>
+            \delta\sin(x) &= \cos(x) \\
+            \delta\csc(x) &= -\cot(x) \cdot \csc(x)
+        </equation>
+        <equation>
+            \delta\cos(x) &= -\sin(x) \\
+            \delta\sec(x) &= \tan(x) \cdot \sec(x)
+        </equation>
+        <equation>
+            \delta\tan(x) &= \sec^2(x) \\
+            \delta\cot(x) &= -\csc^2(x)
+        </equation>
+    </layout>
+</note>
+<note>
+    <h2>Integration Tables</h2>
+    <layout cols="3" boxed>
+        <equation>
+            \int\sin(x)\;\mathrm{d}x &= -\cos x + C \\
+            \int\csc^2(x)\;\mathrm{d}x &= -\cot x + C \\
+            \int\csc(x)\cdot\cot(x)\;\mathrm{d}x &= -\csc x + C \\
+        </equation>
+        <equation>
+            \int\cos(x)\;\mathrm{d}x &= \sin x + C \\
+            \int\sec^2(x)\;\mathrm{d}x &= \tan x + C \\
+            \int\sec(x)\cdot\tan(x)\;\mathrm{d}x &= \sec x + C \\
+        </equation>
+        <equation>
+            \int\tan(x)\;\mathrm{d}x &= \ln| \sec x | + C \\
+        </equation>
+    </layout>
+</note>
+
