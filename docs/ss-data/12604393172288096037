@@ -202,6 +202,11 @@ main > h1[root] {
   color: #586f6d;
 }
 
+main > [macro=note][boxed] {
+  width: 98%;
+  margin: 0 auto;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Playfair Display", serif;
   border-bottom: 1px solid #d0d0d0;
