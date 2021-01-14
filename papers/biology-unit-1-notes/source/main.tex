@@ -2,19 +2,20 @@
 % METADATA
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass{article}
-\title{Math Homework}
+\title{Biology Unit-1 Note}
 \author{Colbyn Wadman}
 
 \usepackage{amsmath}
 \usepackage{amssymb}
-
 \usepackage{xurl}
 \usepackage{hyperref}
 \hypersetup{
     breaklinks=true,
     colorlinks=true,
 }
-
+\usepackage[margin=0.25in]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -22,7 +23,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 \maketitle
-
+\tableofcontents
  
 
 
@@ -30,86 +31,7 @@
 % BODY
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section*{Problem \# 10}
-
-\begin{equation}
-\begin{split}
-    \int\ln\sqrt{x} \;\mathrm{d}x
-\end{split}
-\end{equation}
-
-Let
-
-\begin{equation}
-\begin{split}
-    w &= \sqrt{x} \\
-    \mathrm{d}w &= \frac{1}{2\sqrt{x}} \;\mathrm{d}x \\
-    2\overbrace{\sqrt{x}}^{w} \;\mathrm{d}w &= \mathrm{d}x \\
-    2w \;\mathrm{d}w &= \mathrm{d}x \\
-\end{split}
-\end{equation}
-
-Therefore
-
-\begin{equation}
-\begin{split}
-    \int\ln\sqrt{x} \;\mathrm{d}x
-        &= \int\ln(w) \;\overbrace{\mathrm{d}x}^{2w \;\mathrm{d}w}
-         = \int\ln(w) 2w \;\mathrm{d}w \\
-        &= 2\int w \ln(w) \;\mathrm{d}w \\
-\end{split}
-\end{equation}
-
-\subsection*{Subproblem}
-
-Given
-
-\begin{equation}
-\begin{split}
-    \int w \ln(w) \;\mathrm{d}w &= \int u\,\mathrm{d}v = uv - \int v \mathrm{d}u \\
-\end{split}
-\end{equation}
-
-Let
-
-\begin{equation}
-    \begin{split}
-        u &= \ln w \\
-        \mathrm{d}u &= \frac{1}{w} \;\mathrm{d}w
-    \end{split}
-    \quad\leftrightarrow\quad
-    \begin{split}
-        v &= \frac{1}{2} w^2 \\
-        \mathrm{d}v &= w \;\mathrm{d}w
-    \end{split}
-\end{equation}
-
-Therefore
-
-\begin{equation}
-\begin{split}
-    \int w \ln(w) \;\mathrm{d}w
-        &= \left(\ln(w)\right)\left(\frac{1}{2}w^2\right) - \int\left(\frac{1}{2}w^2\right)\left(\frac{1}{w}\right)\;\mathrm{d}w \\
-        &= \frac{1}{2}w^2\ln(w) - \frac{1}{2}\int\frac{w^2}{w}\;\mathrm{d}w \\
-        &= \frac{1}{2}w^2\ln(w) - \frac{1}{2}\int w\;\mathrm{d}w \\
-        &= \frac{1}{2}w^2\ln(w) - \frac{1}{2}\left(\frac{w^2}{2}\right) + C \\
-        &= \overbrace{\frac{1}{2}w^2\ln(w) - \frac{1}{4}w^2 + C}^{w = \sqrt{x}} \\
-        &= \frac{1}{2}\sqrt{x}^2\ln(\sqrt{x}) - \frac{1}{4}\sqrt{x}^2 + C \\
-        &= \frac{1}{2}x\ln\sqrt{x} - \frac{1}{4}x + C \\
-\end{split}
-\end{equation}
-
-\subsection*{Putting It All Together}
-
-\begin{equation}
-\begin{split}
-    \int\ln\sqrt{x} \;\mathrm{d}x
-        &= 2\int w \ln(w) \;\mathrm{d}w \\
-        &= 2\left(\frac{1}{2}x\ln\sqrt{x} - \frac{1}{4}x\right) + C \\
-        &= x\ln\sqrt{x} - \frac{1}{2}x + C
-\end{split}
-\end{equation}
-
+\input{body.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % END
