@@ -19,6 +19,8 @@ table {
   border-collapse: collapse;
   border: none;
   align-self: center;
+  margin: 0 auto;
+  font-weight: 300;
 }
 
 th, td {
@@ -95,6 +97,12 @@ dl[center] {
 /* ========================================================================= */
 /* NOTE */
 /* ========================================================================= */
+
+[macro=note] {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 8px;
+}
 
 [macro=note][boxed] {
   border-radius: 3px;
