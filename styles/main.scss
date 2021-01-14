@@ -54,6 +54,15 @@ main > [macro='note'][boxed] {
     margin: 0 auto;
 }
 
+main > ol,
+main > ul,
+main > dl,
+main > p {
+    width: calc(100% - 84px);
+    margin: 0 auto;
+    padding-left: 0;
+}
+
 // @media (min-width: 900px) {
 //     main > * {
 //         padding: 0 12px;
