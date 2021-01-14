@@ -43,7 +43,11 @@
 /* NOTE */
 /* ========================================================================= */
 
-
+[macro='note'] {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 8px;
+}
 [macro='note'][boxed] {
     border-radius: 3px;
     border-color: #fff;
