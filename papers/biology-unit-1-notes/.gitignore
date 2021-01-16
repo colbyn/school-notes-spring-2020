@@ -1,8 +1,0 @@
-source/main.pdf
-*.aux
-*.fdb_latexmk
-*.fls
-*.log
-*.out
-*.toc
-*.synctex.gz
