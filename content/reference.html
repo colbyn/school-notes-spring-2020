@@ -107,18 +107,39 @@
     <h2>Integration Tables</h2>
     <layout cols="3" boxed>
         <equation>
-            \int\sin(x)\;\mathrm{d}x &= -\cos x + C \\
-            \int\csc^2(x)\;\mathrm{d}x &= -\cot x + C \\
-            \int\csc(x)\cdot\cot(x)\;\mathrm{d}x &= -\csc x + C \\
+            \int\sin(x)\;\mathrm{d}x &= -\cos x \\
+            \int\csc^2(x)\;\mathrm{d}x &= -\cot x \\
+            \int\csc(x)\cdot\cot(x)\;\mathrm{d}x &= -\csc x \\
+            \int\csc(x)\;\mathrm{d}x &= \ln\left|\csc x - \cot x\right| \\
+            \int\sinh(x)\;\mathrm{d}x &= \cosh(x) \\
         </equation>
         <equation>
-            \int\cos(x)\;\mathrm{d}x &= \sin x + C \\
-            \int\sec^2(x)\;\mathrm{d}x &= \tan x + C \\
-            \int\sec(x)\cdot\tan(x)\;\mathrm{d}x &= \sec x + C \\
+            \int\cos(x)\;\mathrm{d}x &= \sin x \\
+            \int\sec^2(x)\;\mathrm{d}x &= \tan x \\
+            \int\sec(x)\cdot\tan(x)\;\mathrm{d}x &= \sec x \\
+            \int\sec(x)\;\mathrm{d}x &= \ln\left|\sec x + \tan x\right| \\
+            \int\cosh(x)\;\mathrm{d}x &= \sinh(x) \\
         </equation>
         <equation>
-            \int\tan(x)\;\mathrm{d}x &= \ln| \sec x | + C \\
-            \int\cot(x)\;\mathrm{d}x &= \ln| \sin x | + C \\
+            \int\tan(x)\;\mathrm{d}x &= \ln| \sec x | \\
+            \int\cot(x)\;\mathrm{d}x &= \ln| \sin x | \\
+        </equation>
+    </layout>
+    <layout cols="3" boxed>
+        <equation>
+            \int b^x\;\mathrm{d}x &= \frac{b^x}{\ln(b)}
+        </equation>
+        <equation>
+            \int\frac{1}{x^2 + a^2}\;\mathrm{d}x &= \frac{1}{a}\tan^{-1}\left(\frac{x}{a}\right)
+        </equation>
+        <equation>
+            \int\frac{1}{x^2 - a^2}\;\mathrm{d}x &= \frac{1}{2a}\ln\left|\frac{x-a}{x+a}\right|
+        </equation>
+        <equation>
+            \int\frac{1}{\sqrt{a^2 - x^2}}\;\mathrm{d}x &= \sin^{-1}\left(\frac{x}{a}\right),\;a>0
+        </equation>
+        <equation>
+            \int\frac{1}{\sqrt{x^2 \pm a^2}}\;\mathrm{d}x &= \ln\left|x+\sqrt{x^2\pm a^2}\right|
         </equation>
     </layout>
 </note>
