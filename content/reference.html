@@ -244,6 +244,7 @@
             A = \int_{a}^{b} f(x) \;\mathrm{d}x &\approx S_n\;\text{where}\;
                     \left\{\begin{array}{ll}
                     \begin{split}
+                    n \;&\text{is even}\\
                     \Delta{x} &= \frac{b - a}{n}\\
                         x_i &= a + i\Delta{x}\\
                     \end{split}
@@ -263,17 +264,19 @@
                 \;\text{given}\;&
                 \left\{\begin{array}{ll}
                 \begin{split}
+                    n \;&\text{is even}\\
                     \Delta{x} &= \frac{b - a}{n}\\
                     x_i &= a + i\Delta{x}\\
                     \mathrm{start} &= f\left(a + 0\Delta{x}\right) = f(a)\\
                     \fourOrTwo &= \text{alternate between $4$ and $2$}\\
                     \mathrm{mid} &= \fourOrTwo f\left(x_i\right)\\
-                    \mathrm{end} &= \text{continue until $2f\left(x_n\right)$ (will always end in $2$)}\;
+                    \mathrm{end} &= \text{continue until $2f\left(x_n\right)$ (will always end in $2$)}\\
+                    \mathrm{repeat} &= \mathrm{mid}\;\cdots\;\mathrm{end}
                 \end{split}
                 \end{array}\right.\\
             }
             \newcommand{\core}{
-                \frac{\Delta{x}}{3}\left[\mathrm{start\;\cdot\;\mathrm{mid}\;\cdots\;\mathrm{end}}\right]
+                \frac{\Delta{x}}{3}\left[\mathrm{start\;\cdot\;\mathrm{repeat}}\right]
             }
             \begin{equation}
             \begin{split}
