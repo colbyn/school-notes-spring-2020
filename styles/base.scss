@@ -33,7 +33,6 @@ a {
 hr {
     border: none;
     border-bottom: 1px solid #d4d4d4;
-    max-width: 90%;
     margin: 0 auto;
     justify-self: center;
     align-self: center;
@@ -44,4 +43,9 @@ hr {
 
 dl[center] {
     margin: 0 auto !important;
+}
+
+img[center] {
+    align-self: center;
+    margin: 0 auto;
 }

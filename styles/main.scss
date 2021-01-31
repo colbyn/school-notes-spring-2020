@@ -1,16 +1,13 @@
 main {
     display: grid;
-    grid-row-gap: 12px;
+    grid-row-gap: 4px;
 }
 
 main > * {
     width: 100%;
     justify-self: center;
     padding: 0 12px;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 12px;
-    margin-right: 12px;
+    margin: 0;
 }
 
 main > h1 {

@@ -143,4 +143,144 @@
         </equation>
     </layout>
 </note>
-
+<note boxed>
+    <h2>Riemann Sums</h2>
+    <p center>Given</p>
+    <equation>
+        A &= \int_{a}^{b} f(x) = \lim_{n\to\infty}\sum_{i=1}^{n} \Delta{x} \cdot f(x) \;\text{where}\;
+            \left\{\begin{array}{ll}
+                \Delta{x} = \frac{b - a}{n}
+            \end{array}\right.
+    </equation>
+    <layout cols="2">
+        <note boxed>
+            <h3>Left Riemann Sum</h3>
+            <equation>
+                A &= \int_{a}^{b} f(x) \;\mathrm{d}x \approx L_n = \sum_{i = 0}^{n-1}\, \Delta{x}\cdot f\left(a + i\cdot\Delta{x}\right)
+            </equation>
+        </note>
+        <note boxed>
+            <h3>Right Riemann Sum</h3>
+            <equation>
+                A &= \int_{a}^{b} f(x) \;\mathrm{d}x \approx R_n = \sum_{i = 1}^{n}\, \Delta{x}\cdot f\left(a + i\cdot\Delta{x}\right)
+            </equation>
+        </note>
+    </layout>
+    <note boxed>
+        <h3>Midpoint Riemann Sum</h3>
+        <texblock>
+            \newcommand{\generalFormat}{
+                \sum_{\small{\cdots}}^{\small{\cdots}}\, \Delta{x}\cdot f\left(a + \text{“avg. of $x_i$ and $x_{i-1}$”} \cdot \Delta{x}\right)
+            }
+            \newcommand{\SigmaExampleOne}{
+                \sum_{i = 1}^{n}\, \Delta{x}\cdot f\left(a + \frac{x_{i - 1} + x_i}{2} \cdot \Delta{x}\right)
+            }
+            \newcommand{\SigmaExampleTwo}{
+                \sum_{i = 0}^{n-1}\, \Delta{x}\cdot f\left(a + \frac{x_{i + 1} + x_i}{2} \cdot \Delta{x}\right)
+            }
+            \begin{equation}
+            \begin{split}
+                A = \int_{a}^{b} f(x) \;\mathrm{d}x &\approx \generalFormat\\
+                    &\approx \SigmaExampleOne\\
+                    \text{or alternatively}&\\
+                    A &\approx \SigmaExampleTwo
+            \end{split}
+            \end{equation}
+        </texblock>
+        <hr/>
+        <p center>We can also do away with the index notation and simplify things.</p>
+        <texblock>
+            \newcommand{\SigmaExampleOne}{
+                \sum_{i = 1}^{n}\, \Delta{x}\cdot f\left(a + \frac{(i - 1) + i}{2} \cdot \Delta{x}\right) =
+                \sum_{i = 1}^{n}\, \Delta{x}\cdot f\left(a + \frac{2i - 1}{2} \cdot \Delta{x}\right)
+            }
+            \newcommand{\SigmaExampleTwo}{
+                \sum_{i = 0}^{n-1}\, \Delta{x}\cdot f\left(a + \frac{(i + 1) + i}{2} \cdot \Delta{x}\right) =
+                \sum_{i = 0}^{n-1}\, \Delta{x}\cdot f\left(a + \frac{2i + 1}{2} \cdot \Delta{x}\right)
+            }
+            \begin{equation}
+            \begin{split}
+                A = \int_{a}^{b} f(x) \;\mathrm{d}x
+                    &\approx \SigmaExampleOne\\
+                    &\approx \SigmaExampleTwo
+            \end{split}
+            \end{equation}
+        </texblock>
+    </note>
+    <note boxed>
+        <h3>Trapezoidal Riemann Sum</h3>
+        <texblock>
+            \newcommand{\leftSum}{
+                \sum_{i = 0}^{n-1}\, \Delta{x}\cdot f\left(a + i\cdot\Delta{x}\right)
+            }
+            \newcommand{\rightSum}{
+                \sum_{i = 1}^{n}\, \Delta{x}\cdot f\left(a + i\cdot\Delta{x}\right)
+            }
+            \newcommand{\leftSumNoDelta}{
+                \sum_{i = 0}^{n-1}\, f\left(a + i\cdot\Delta{x}\right)
+            }
+            \newcommand{\rightSumNoDelta}{
+                \sum_{i = 1}^{n}\, f\left(a + i\cdot\Delta{x}\right)
+            }
+            \begin{equation}
+            \begin{split}
+                A = \int_{a}^{b} f(x) \;\mathrm{d}x &\approx T_n\\
+                    &= \overbrace{\frac{1}{2}\left(L_n + R_n\right)}^{\text{i.e. avg. of two sums}}\\
+                    &= \frac{1}{2}\left(\leftSum + \rightSum\right)\\
+                    &= \frac{\Delta{x}}{2}\left(\leftSumNoDelta + \rightSumNoDelta\right)
+            \end{split}
+            \end{equation}
+        </texblock>
+        <hr/>
+        <note>
+            <p center>Note that the formula for a trapezoid is <tex>A = h\cdot\frac{a + b}{2}</tex>.</p>
+            <img width='200px' src="../static/trap-eg.png" center>
+            <p center>In this case, height corresponds to width of each interval.</p>
+        </note>
+    </note>
+    <note boxed>
+        <h3>Simpson's Rule</h3>
+        <equation>
+            A = \int_{a}^{b} f(x) \;\mathrm{d}x &\approx S_n\;\text{where}\;
+                    \left\{\begin{array}{ll}
+                    \begin{split}
+                    \Delta{x} &= \frac{b - a}{n}\\
+                        x_i &= a + i\Delta{x}\\
+                    \end{split}
+                    \end{array}\right.\\
+                &\approx \frac{\Delta{x}}{3}\left[f(x_0) + 4f(x_1) + 2f(x_2) + 4f(x_3) \cdots f(x_i) \cdots f(x_n)\right]\\
+        </equation>
+        <hr/>
+        <p center>Alternatively</p>
+        <texblock>
+            \newcommand{\fourOrTwoLiteral}{
+                {}^4{\mskip -5mu/\mskip -3mu}_2
+            }
+            \newcommand{\fourOrTwo}{
+                \fourOrTwoLiteral
+            }
+            \newcommand{\given}{
+                \;\text{given}\;&
+                \left\{\begin{array}{ll}
+                \begin{split}
+                    \Delta{x} &= \frac{b - a}{n}\\
+                    x_i &= a + i\Delta{x}\\
+                    \mathrm{start} &= f\left(a + 0\Delta{x}\right) = f(a)\\
+                    \fourOrTwo &= \text{alternate between $4$ and $2$}\\
+                    \mathrm{mid} &= \fourOrTwo f\left(x_i\right)\\
+                    \mathrm{end} &= \text{continue until $2f\left(x_n\right)$ (will always end in $2$)}\;
+                \end{split}
+                \end{array}\right.\\
+            }
+            \newcommand{\core}{
+                \frac{\Delta{x}}{3}\left[\mathrm{start\;\cdot\;\mathrm{mid}\;\cdots\;\mathrm{end}}\right]
+            }
+            \begin{equation}
+            \begin{split}
+                \given\\
+                A &= \int_{a}^{b} f(x) \;\mathrm{d}x \approx S_n = \core
+            \end{split}
+            \end{equation}
+        </texblock>
+    </note>
+</note>

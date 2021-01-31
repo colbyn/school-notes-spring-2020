@@ -3,8 +3,9 @@
 /* ========================================================================= */
 [macro='layout'] {
     display: grid;
-    column-gap: 8px;
-    row-gap: 8px;
+    column-gap: 4px;
+    row-gap: 4px;
+    margin-bottom: 1px;
 }
 [macro='layout'][columns='2'] {
     grid-template-columns: repeat(2, 1fr);
@@ -24,8 +25,12 @@
     }
 }
 
-[macro='layout'] img {
+[macro='layout'] > img {
     align-self: flex-start;
+}
+[macro='layout'] > img[center] {
+    align-self: center;
+    margin: 0 auto;
 }
 
 [macro='layout'][boxed] > [boxed-child] {
@@ -34,7 +39,7 @@
     box-shadow: 0 0 0px 1px #eeeeee;
     display: grid;
     align-items: center;
-    grid-row-gap: 12px;
+    grid-row-gap: 4px;
     padding: 8px;
 }
 
@@ -46,7 +51,9 @@
 [macro='note'] {
     display: grid;
     grid-template-columns: 1fr;
-    grid-row-gap: 8px;
+    grid-row-gap: 4px;
+    overflow: auto;
+    margin-bottom: 1px;
 }
 [macro='note'][boxed] {
     border-radius: 3px;
@@ -55,10 +62,9 @@
     display: flex;
     flex-direction: column;
     align-items: normal;
-    grid-row-gap: 12px;
-    padding-bottom: 12px;
+    grid-row-gap: 4px;
+    padding: 12px;
 }
-
 
 [macro='note'] > h1:first-child,
 [macro='note'] > h2:first-child,
@@ -82,22 +88,35 @@
     border-radius: 3px;
 }
 
-[macro='note'] p {
-    font-weight: 300;
-}
 
 
-[macro='note'] p,
 [macro='note'] h2,
 [macro='note'] h3,
 [macro='note'] h4,
 [macro='note'] h5,
 [macro='note'] h6 {
-    text-align: justify;
-    margin: 0 12px;
     margin: 0 auto;
-    margin-bottom: 6px;
 }
+
+[macro='note'] p {
+    font-weight: 300;
+    text-align: justify;
+    margin: 0;
+    padding: 0;
+    width: 90%;
+}
+
+[macro='note'] p[center] {
+    text-align: center;
+    margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+    [macro='note'] p {
+        width: 95%;
+    }
+}
+
 
 
 /* ========================================================================= */
@@ -118,10 +137,11 @@
 
 [latex='block'] {
     font-size: 0.8em;
-    max-width: fit-content;
+    max-width: 100%;
     max-height: fit-content;
     align-self: center;
     justify-self: center;
+    overflow: auto;
 }
 [latex='block'] > mjx-container {
     margin: 0 !important;
