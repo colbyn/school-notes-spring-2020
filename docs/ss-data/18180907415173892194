@@ -42,7 +42,6 @@ a {
 hr {
   border: none;
   border-bottom: 1px solid #d4d4d4;
-  max-width: 90%;
   margin: 0 auto;
   justify-self: center;
   align-self: center;
@@ -54,14 +53,20 @@ hr {
 dl[center] {
   margin: 0 auto !important;
 }
+
+img[center] {
+  align-self: center;
+  margin: 0 auto;
+}
 /* ========================================================================= */
 /* LAYOUT */
 /* ========================================================================= */
 
 [macro=layout] {
   display: grid;
-  column-gap: 8px;
-  row-gap: 8px;
+  column-gap: 4px;
+  row-gap: 4px;
+  margin-bottom: 1px;
 }
 
 [macro=layout][columns="2"] {
@@ -83,8 +88,13 @@ dl[center] {
   }
 }
 
-[macro=layout] img {
+[macro=layout] > img {
   align-self: flex-start;
+}
+
+[macro=layout] > img[center] {
+  align-self: center;
+  margin: 0 auto;
 }
 
 [macro=layout][boxed] > [boxed-child] {
@@ -93,7 +103,7 @@ dl[center] {
   box-shadow: 0 0 0px 1px #eeeeee;
   display: grid;
   align-items: center;
-  grid-row-gap: 12px;
+  grid-row-gap: 4px;
   padding: 8px;
 }
 /* ========================================================================= */
@@ -103,7 +113,9 @@ dl[center] {
 [macro=note] {
   display: grid;
   grid-template-columns: 1fr;
-  grid-row-gap: 8px;
+  grid-row-gap: 4px;
+  overflow: auto;
+  margin-bottom: 1px;
 }
 
 [macro=note][boxed] {
@@ -113,8 +125,8 @@ dl[center] {
   display: flex;
   flex-direction: column;
   align-items: normal;
-  grid-row-gap: 12px;
-  padding-bottom: 12px;
+  grid-row-gap: 4px;
+  padding: 12px;
 }
 
 [macro=note] > h1:first-child,
@@ -139,20 +151,30 @@ dl[center] {
   border-radius: 3px;
 }
 
-[macro=note] p {
-  font-weight: 300;
-}
-
-[macro=note] p,
 [macro=note] h2,
 [macro=note] h3,
 [macro=note] h4,
 [macro=note] h5,
 [macro=note] h6 {
-  text-align: justify;
-  margin: 0 12px;
   margin: 0 auto;
-  margin-bottom: 6px;
+}
+
+[macro=note] p {
+  font-weight: 300;
+  text-align: justify;
+  margin: 0;
+  padding: 0;
+  width: 90%;
+}
+
+[macro=note] p[center] {
+  text-align: center;
+  margin: 0 auto;
+}
+@media (max-width: 900px) {
+  [macro=note] p {
+    width: 95%;
+  }
 }
 /* ========================================================================= */
 /* LATEX */
@@ -172,10 +194,11 @@ dl[center] {
 
 [latex=block] {
   font-size: 0.8em;
-  max-width: fit-content;
+  max-width: 100%;
   max-height: fit-content;
   align-self: center;
   justify-self: center;
+  overflow: auto;
 }
 
 [latex=block] > mjx-container {
@@ -184,17 +207,14 @@ dl[center] {
 
 main {
   display: grid;
-  grid-row-gap: 12px;
+  grid-row-gap: 4px;
 }
 
 main > * {
   width: 100%;
   justify-self: center;
   padding: 0 12px;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 12px;
-  margin-right: 12px;
+  margin: 0;
 }
 
 main > h1 {
