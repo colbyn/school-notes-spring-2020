@@ -142,8 +142,9 @@
     max-height: fit-content;
     align-self: center;
     justify-self: center;
+    overflow: hidden;
     overflow-x: auto;
-    overflow-y: initial;
+    overflow-y: hidden;
 }
 [latex='block'] > mjx-container {
     margin: 0 !important;
