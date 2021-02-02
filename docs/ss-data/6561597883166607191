@@ -115,7 +115,7 @@ img[center] {
   grid-template-columns: 1fr;
   grid-row-gap: 4px;
   overflow-x: auto;
-  overflow-y: visible;
+  overflow-y: initial;
   margin-bottom: 1px;
 }
 
@@ -200,7 +200,7 @@ img[center] {
   align-self: center;
   justify-self: center;
   overflow-x: auto;
-  overflow-y: visible;
+  overflow-y: initial;
 }
 
 [latex=block] > mjx-container {
