@@ -53,7 +53,7 @@
     grid-template-columns: 1fr;
     grid-row-gap: 4px;
     overflow-x: auto;
-    overflow-y: visible;
+    overflow-y: initial;
     margin-bottom: 1px;
 }
 [macro='note'][boxed] {
@@ -143,7 +143,7 @@
     align-self: center;
     justify-self: center;
     overflow-x: auto;
-    overflow-y: visible;
+    overflow-y: initial;
 }
 [latex='block'] > mjx-container {
     margin: 0 !important;
