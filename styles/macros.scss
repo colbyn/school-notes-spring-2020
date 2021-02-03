@@ -49,22 +49,23 @@
 /* ========================================================================= */
 
 [macro='note'] {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-row-gap: 4px;
-    overflow-x: auto;
-    overflow-y: visible;
-    margin-bottom: 1px;
+    display: flex;
+    flex-direction: column;
 }
 [macro='note'][boxed] {
     border-radius: 3px;
     border-color: #fff;
     box-shadow: 0 0 0px 1px #eeeeee;
-    display: flex;
-    flex-direction: column;
-    align-items: normal;
-    grid-row-gap: 4px;
     padding: 12px;
+}
+[macro='note'][inline] {
+    border-radius: 3px;
+    border-color: #fff;
+    box-shadow: 0 0 0px 1px #eeeeee;
+    padding: 12px;
+    display: inline-block;
+    padding: 4px;
+    margin: 8px;
 }
 
 [macro='note'] > h1:first-child,
@@ -78,15 +79,25 @@
     color: #2f2f2f;
 }
 
-[macro='note']:not([boxed]) > h1,
-[macro='note']:not([boxed]) > h2,
-[macro='note']:not([boxed]) > h3,
-[macro='note']:not([boxed]) > h4,
-[macro='note']:not([boxed]) > h5,
-[macro='note']:not([boxed]) > h6 {
+[macro='note']:not([boxed]) > h1:first-child,
+[macro='note']:not([boxed]) > h2:first-child,
+[macro='note']:not([boxed]) > h3:first-child,
+[macro='note']:not([boxed]) > h4:first-child,
+[macro='note']:not([boxed]) > h5:first-child,
+[macro='note']:not([boxed]) > h6:first-child {
     border: 1px solid #e2e2e2;
     margin-bottom: 4px;
     border-radius: 3px;
+}
+
+[macro='note']:not([boxed]) > h1:not(:first-child),
+[macro='note']:not([boxed]) > h2:not(:first-child),
+[macro='note']:not([boxed]) > h3:not(:first-child),
+[macro='note']:not([boxed]) > h4:not(:first-child),
+[macro='note']:not([boxed]) > h5:not(:first-child),
+[macro='note']:not([boxed]) > h6:not(:first-child) {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 8px;
 }
 
 
@@ -102,20 +113,50 @@
 [macro='note'] p {
     font-weight: 300;
     text-align: justify;
-    margin: 0;
     padding: 0;
     width: 90%;
 }
 
 [macro='note'] p[center] {
     text-align: center;
-    margin: 0 auto;
 }
 
 @media (max-width: 900px) {
     [macro='note'] p {
         width: 95%;
     }
+}
+
+[macro='note'] > * {
+    margin-bottom: 4px;
+}
+
+[macro='note']:not([boxed]) > h1:not(:first-child) {
+    font-size: 1.6em;
+}
+[macro='note']:not([boxed]) > h2:not(:first-child) {
+    font-size: 1.4em;
+}
+[macro='note']:not([boxed]) > h3:not(:first-child) {
+    font-size: 1.2em;
+}
+[macro='note']:not([boxed]) > h4:not(:first-child) {
+    font-size: 1em;
+    color: #565656;
+    border-color: #e6e6e6;
+    padding-left: 6px;
+}
+[macro='note']:not([boxed]) > h5:not(:first-child) {
+    font-size: 0.8em;
+    color: #565656;
+    border-color: #e6e6e6;
+    padding-left: 8px;
+}
+[macro='note']:not([boxed]) > h6:not(:first-child) {
+    font-size: 0.7em;
+    color: #565656;
+    border-color: #e6e6e6;
+    padding-left: 10px;
 }
 
 
