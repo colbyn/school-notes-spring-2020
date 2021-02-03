@@ -1,0 +1,469 @@
+<html>
+  <head>
+    <title>Colbyn's Math Notes
+    </title>
+    <link rel="stylesheet" ss.link.processed href="https://colbyn.github.io/school-notes-spring-2020/ss-data/17021888969182416878"></link><script>
+window.MathJax = {
+    tex: {
+        inlineMath: [['\\(', '\\)'], ['stem:[', ']'], ['`', '`']],
+        macros: {
+            'dx': "{\\, \\mathrm{d}x\\;}",
+            'Integrate': ['{\\int_{#1}^{#2}\\, #3 \\dx}', 3],
+            'IntegrateFor': ['{\\int_{#1}^{#2}\\, #3 {\\, \\mathrm{d}{#4}\\;}}', 4],
+            'I': ['{\\Integrate{a}{b}{#1}}', 1],
+            'angles': ['\\langle {#1},{#2} \\rangle', 2]
+        },
+    },
+    svg: {
+        fontCache: 'global',
+        minScale: 0.2
+    },
+    processEscapes: true,
+};
+</script><script type="text/javascript" async id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"></link>
+    <meta name="viewport" content="width=device-width,initial-scale=1"></meta>
+    <meta charset="utf-8"></meta><script src="https://www.geogebra.org/apps/deployggb.js"></script><script src="https://www.desmos.com/api/v1.5/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com"></link>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"></link>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"></link>
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/joshuarudd/typeset.css/master/typeset.min.css"></link>
+    <style>
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        margin: 0;
+    }
+
+    </style>
+  </head>
+  <body>
+    <header id="site-header">
+      <div page-nav>
+        <h1 id="4989918169123059790" toc-ignore>Site Navigation
+        </h1>
+        <ul macro="page-nav">
+          <li><a href="https://colbyn.github.io/school-notes-spring-2020/index.html">Reference</a>
+            <ul>
+              <li><a href="https://colbyn.github.io/school-notes-spring-2020/reference/chemistry.html">Chemistry</a>
+              </li>
+            </ul>
+          </li>
+          <li><a>Class Notes</a>
+            <ul>
+              <li><a href="https://colbyn.github.io/school-notes-spring-2020/class/chem.html">Chemistry</a>
+              </li>
+              <li><a href="https://colbyn.github.io/school-notes-spring-2020/class/calc.html">Calculus</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div toc>
+        <h1 toc-ignore id="6674993164017854530">Table of Contents
+        </h1>
+        <ul macro="toc">
+          <li for="h1"><a href="#10287548765303690855">Chemical Formulas</a>
+          </li>
+          <li for="h2"><a href="#2075138428419572201">Molecular Formula</a>
+          </li>
+          <li for="h2"><a href="#8100699396071620196">Empirical Formula</a>
+          </li>
+          <li for="h2"><a href="#17266963087242744058">Structural formula</a>
+          </li>
+          <li for="h1"><a href="#2184407807575956833">Terminology</a>
+          </li>
+          <li for="h2"><a href="#13523701906847271757">Solutions</a>
+          </li>
+          <li for="h2"><a href="#18393424417932272783">Dilution of Solutions</a>
+          </li>
+          <li for="h3"><a href="#132533220259352830">Determining the Concentration of a Diluted Solution</a>
+          </li>
+          <li for="h3"><a href="#1848995768899583776">Volume of a Diluted Solution</a>
+          </li>
+          <li for="h3"><a href="#7344717669568483683">Volume of a Concentrated Solution Needed for Dilution</a>
+          </li>
+          <li for="h2"><a href="#16434312925349760826">Other Units for Solution Concentrations</a>
+          </li>
+          <li for="h3"><a href="#18405980943217766783">Mass Percentage</a>
+          </li>
+          <li for="h4"><a href="#16809834743438229599">Calculation of Percent by Mass</a>
+          </li>
+          <li for="h4"><a href="#2212132590201730589">Calculations using Mass Percentage</a>
+          </li>
+          <li for="h4"><a href="#16315625457703493519">Calculations using Volume Percentage</a>
+          </li>
+          <li for="h3"><a href="#14825646451542181525">Mass-Volume Percentage</a>
+          </li>
+          <li for="h3"><a href="#911807724239596702">Parts per Million and Parts per Billion</a>
+          </li>
+          <li for="h1"><a href="#3783951982553951743">Units & Values</a>
+          </li>
+          <li for="h2"><a href="#17580902930867363308">Atomic Mass Unit (amu) </a>
+          </li>
+          <li for="h2"><a href="#2364780475594429151">Fundamental Unit Of Charge (e)</a>
+          </li>
+          <li for="h2"><a href="#6050001666754675388">Formula Mass</a>
+          </li>
+          <li for="h2"><a href="#9533227117178188660">The Mole</a>
+          </li>
+          <li for="h2"><a href="#2278565988110985059">Molar Mass</a>
+          </li>
+          <li for="h3"><a href="#14358609979815438307">Notes</a>
+          </li>
+          <li for="h2"><a href="#13196421490891854360">Percent Composition</a>
+          </li>
+          <li for="h3"><a href="#4545738234534475139">Determining Empirical Formula from Percent Composition</a>
+          </li>
+          <li for="h3"><a href="#7497773986009987799">Derivation of Molecular Formulas</a>
+          </li>
+          <li for="h2"><a href="#15733627395484571018">Molarity (M)</a>
+          </li>
+          <li for="h3"><a href="#14254038109805220710">Determining the Volume of Solution Containing a Given Mass of Solute</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <h1 toc-ignore root id="53552654967894111">Colbyn's School Notes
+      </h1>
+      <div macro="note" boxed>
+        <h2 id="9230723620909407708" toc-ignore>Meta
+        </h2>
+        <ul>
+          <li><a href="https://colbyn.github.io/school-notes-spring-2020/">Online Release</a>
+          </li>
+          <li><a href="http://github.com/colbyn/school-notes-spring-2020">Source Code</a>
+          </li>
+        </ul>
+        <div macro="note">
+          <h3 toc-ignore id="13816586512125531032">Legacy Notes
+          </h3>
+          <ul>
+            <li><a href="https://colbyn.github.io/subscript/">Original Subscript Implementation (Last Iteration)</a>
+            </li>
+            <li><a href="https://colbyn.github.io/school-notes/">Original School Notes Implementation</a>
+            </li>
+            <li><a href="https://colbyn.github.io/colbyns-math-notes/">Original Math Notes Implementation</a>
+            </li>
+            <li><a href="https://colbyn.github.io/colbyns-calculus-notes/">Original Calculus Notes</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <h1 id="10287548765303690855">Chemical Formulas
+      </h1>      <div cols="3" columns="3" macro="layout">
+        <div macro="note">
+          <h2 id="2075138428419572201">Molecular Formula
+          </h2>
+          <ul>
+            <li>Shows actual number of atoms.
+            </li>
+            <li>Used for covalently bonded atoms.
+            </li>
+          </ul>
+        </div>
+        <div macro="note">
+          <h2 id="8100699396071620196">Empirical Formula
+          </h2>
+          <ul>
+            <li>simplest whole-integer ratio of atoms in a compound.
+            </li>
+            <li>Used for ionic compounds -crystals that can form thousands of bonds. Such as <span latex="inline" macro="tex">\(\mathrm{Na}_{1000}\mathrm{Cl}_{1000}\)</span>. The Empirical Formula simplified this into just <span macro="tex" latex="inline">\(\mathrm{Na}\mathrm{Cl}\)</span>.
+            </li>
+          </ul>
+        </div>
+        <div macro="note">
+          <h2 id="17266963087242744058">Structural formula
+          </h2>
+          <ul>
+            <li>Graphical diagrams.
+            </li>
+          </ul>
+        </div>
+      </div>      <h1 id="2184407807575956833">Terminology
+      </h1>      <div macro="layout" columns="2" cols="2">
+        <div macro="note">
+          <h2 id="13523701906847271757">Solutions
+          </h2>
+          <ul>
+            <li>Solutions have previously been defined as <u>homogeneous mixtures</u>.
+            </li>
+            <li>The relative amount of a given solution component is known as its <u>concentration</u>.
+            </li>
+            <li>The <b>solvent</b> is some <span macro="tex" latex="inline">\(C_x\)</span> that is <u>significantly greater</u> than all other <span latex="inline" macro="tex">\(C_{xs}\)</span> in the given solution.
+            </li>
+            <li>A <b>solute</b> is a component of a solution that is typically present at a <u>much lower concentration</u> than the solvent.
+                
+              <div inline macro="note">Solute concentrations are often described with qualitative terms such as <b>dilute</b> (of relatively low concentration) and <b>concentrated</b> (of relatively high concentration).
+              </div>
+            </li>
+            <li>This component is called the <b>solvent</b> and may be viewed as the <u>medium</u> in which the other components are <u>dispersed or dissolved</u>.
+            </li>
+            <li>A <b>solution</b> in which <u>water is the solvent</u> is called an <u><b>aqueous solution</b></u>.
+            </li>
+          </ul>
+        </div>
+        <div macro="note">
+          <h2 id="18393424417932272783">Dilution of Solutions
+          </h2>
+          <ul>
+            <li><b>Dilution</b> is the process whereby the concentration of a solution is lessened by the <u>addition of solvent</u>.
+            </li>
+            <li><b>Dilution</b> is also a common means of preparing solutions of a desired concentration.
+                
+              <div macro="note" inline>By adding solvent to a measured portion of a more concentrated stock solution, a solution of lesser concentration may be prepared.
+              </div>
+            </li>
+            <li>A simple mathematical relationship can be used to relate the volumes and concentrations of a solution before and after the dilution process.
+            </li>
+          </ul>
+          <p>According to the definition of molarity, the molar amount of solute in a solution (n) is equal to the product of the solution’s molarity (M) and its volume in liters (L):</p>
+          <div macro="equation" latex="block">$$\begin{equation}
+\begin{split}
+
+            n &= ML
+        
+\end{split}
+\end{equation}$$
+          </div>
+          <p>the dilution equation is often written in the more general form:</p>
+          <div macro="equation" latex="block">$$\begin{equation}
+\begin{split}
+
+            C_1 V_1 &= C_2 V_2
+        
+\end{split}
+\end{equation}$$
+          </div>
+          <p>where <span latex="inline" macro="tex">\(C\)</span> and <span macro="tex" latex="inline">\(V\)</span> are concentration and volume, respectively.</p>
+          <h3 id="132533220259352830">Determining the Concentration of a Diluted Solution
+          </h3>
+          <h3 id="1848995768899583776">Volume of a Diluted Solution
+          </h3>
+          <h3 id="7344717669568483683">Volume of a Concentrated Solution Needed for Dilution
+          </h3>
+        </div>
+        <div macro="note">
+          <h2 id="16434312925349760826">Other Units for Solution Concentrations
+          </h2>
+          <h3 id="18405980943217766783">Mass Percentage
+          </h3>
+          <h4 id="16809834743438229599">Calculation of Percent by Mass
+          </h4>
+          <h4 id="2212132590201730589">Calculations using Mass Percentage
+          </h4>
+          <h4 id="16315625457703493519">Calculations using Volume Percentage
+          </h4>
+          <h3 id="14825646451542181525">Mass-Volume Percentage
+          </h3>
+          <ul>
+            <li>A mass-volume percent is a ratio of a solute’s mass to the solution’s volume expressed as a percentage.
+            </li>
+          </ul>
+          <h3 id="911807724239596702">Parts per Million and Parts per Billion
+          </h3>
+          <ul>
+            <li>Very low solute concentrations are often expressed using appropriately small units such as <b>parts per million</b> (ppm) or <b>parts per billion</b> (ppb).
+            </li>
+            <li>The <b>ppm</b> and <b>ppb</b> units defined with respect to <u>numbers of atoms and molecules</u>.
+            </li>
+            <li>Both <b>ppm</b> and <b>ppb</b> are convenient units for reporting the concentrations of pollutants and other trace contaminants in water.
+            </li>
+          </ul>
+          <div latex="block" macro="equation">$$\begin{equation}
+\begin{split}
+
+            \mathrm{ppm} &\equiv \frac{\text{mass solute}}{\text{mass solution}} \times 10^6 ppm \\
+            \mathrm{ppb} &\equiv \frac{\text{mass solute}}{\text{mass solution}} \times 10^9 ppb \\
+        
+\end{split}
+\end{equation}$$
+          </div>
+        </div>
+      </div>      <h1 id="3783951982553951743">Units & Values
+      </h1>      <div columns="2" cols="2" macro="layout">
+        <div macro="note">
+          <h2 id="17580902930867363308">Atomic Mass Unit (amu) 
+          </h2>
+          <ul>
+            <li>Equivalent to Dalton (Da) and Unified Atomic Mass Unit (u).
+            </li>
+          </ul>
+          <div latex="block" macro="equation">$$\begin{equation}
+\begin{split}
+
+            1\;\mathrm{amu}
+                &= \frac{1}{12}\;\text{mass of carbon-12}\\
+                &\approx 1.6605 \times 10^{-24}\mathrm{g}
+        
+\end{split}
+\end{equation}$$
+          </div>
+        </div>
+        <div macro="note">
+          <h2 id="2364780475594429151">Fundamental Unit Of Charge (e)
+          </h2>
+        </div>
+        <div macro="note">
+          <h2 id="6050001666754675388">Formula Mass
+          </h2>
+          <div macro="equation" latex="block">$$\begin{equation}
+\begin{split}
+
+            \small{\text{Let}}\;\;&\\
+            A &= \text{“atoms in a given substance”}\\
+            A_{\mathrm{avg}} &= \text{“avg. mass of each atom in $A$”}\\
+            \small{\text{Therefore}}\;\;&\\
+            \text{“Formula Mass”} &= \text{“sum of all values in $A_{\mathrm{avg}}$”} = \text{“Molecular Mass”}
+        
+\end{split}
+\end{equation}$$
+          </div>
+        </div>
+        <div macro="note"></div>
+        <div macro="note">
+          <h2 id="9533227117178188660">The Mole
+          </h2>
+          <div latex="block" macro="equation">$$\begin{equation}
+\begin{split}
+
+            1\;\mathrm{mole} &\approx 6.022 \times 10^{23}\\
+                &\approx 6.02 \times 10^{23}\\
+                &\approx \small{\text{“Avogadro’s number”}}
+        
+\end{split}
+\end{equation}$$
+          </div>
+          <hr></hr>
+          <p center>Note that</p>
+          <div macro="equation" latex="block">$$\begin{equation}
+\begin{split}
+
+            1\;\mathrm{mole} & \implies \text{“amount” unit}\\
+        
+\end{split}
+\end{equation}$$
+          </div>
+          <p center>Therefore given any two elements <span macro="tex" latex="inline">\(E_1\)</span> and <span latex="inline" macro="tex">\(E_2\)</span></p>
+          <div latex="block" macro="equation">$$\begin{equation}
+\begin{split}
+
+            \text{$1$ mole of $E_1$} &= \text{$1$ mole of $E_2$}
+        
+\end{split}
+\end{equation}$$
+          </div>
+        </div>
+        <div macro="note">
+          <h2 id="2278565988110985059">Molar Mass
+          </h2>
+          <ul>
+            <li>The molar mass of an element (or compound) is the mass in grams of <span latex="inline" macro="tex">\(1\)</span> mole of that substance.
+            </li>
+            <li>This property is expressed in units of grams per mole, <span latex="inline" macro="tex">\(\frac{\mathrm{g}}{\mathrm{mol}}\)</span>
+            </li>
+          </ul>
+          <h3 id="14358609979815438307">Notes
+          </h3>
+          <div macro="equation" latex="block">$$\begin{equation}
+\begin{split}
+
+            \text{“molar mass of a compound $C_x$ in grams”} &= \text{“formula mass of $C_x$ in amu”}\\
+            \text{atomic mass} &= \text{molar mass}
+        
+\end{split}
+\end{equation}$$
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <td>Element
+                </td>
+                <td>Average Atomic Mass (amu)
+                </td>
+                <td>Molar Mass (g/mol)
+                </td>
+                <td>Atoms/Mole
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>C
+                </td>
+                <td>12.01
+                </td>
+                <td>12.01
+                </td>
+                <td><span latex="inline" macro="tex">\(6.022 \times 10^23\)</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div macro="note">
+          <h2 id="13196421490891854360">Percent Composition
+          </h2>
+          <ul>
+            <li>Works for <b>Molecular</b> and <b>Empirical Formulas</b>.
+            </li>
+            <li>Can be used for <u>determining an <b>Empirical Formula</b> from <b>Percent Composition</b></u>.
+            </li>
+          </ul>
+          <p center>Given some compound <span macro="tex" latex="inline">\(C_x\)</span></p>
+          <div macro="equation" latex="block">$$\begin{equation}
+\begin{split}
+
+            \text{“Percent Composition”} &\equiv \text{“percentage by mass of each element in $C_x$”}
+        
+\end{split}
+\end{equation}$$
+          </div>
+          <p center>Therefore given some <span latex="inline" macro="tex">\(E_x \in C_x\)</span></p>
+          <div latex="block" macro="equation">$$\begin{equation}
+\begin{split}
+
+            \% E_x &\equiv \frac{\text{mass of $E_x$}}{\text{total mass of $C_x$}} \times 100\%
+        
+\end{split}
+\end{equation}$$
+          </div>
+          <p>Note that <span macro="tex" latex="inline">\(E_x\)</span> may itself be a group of atoms in the case of Molecular and Empirical Formulas.</p>
+          <h3 id="4545738234534475139">Determining Empirical Formula from Percent Composition
+          </h3>
+          <h3 id="7497773986009987799">Derivation of Molecular Formulas
+          </h3>
+          <ul>
+            <li>Molecular formulas are derived by comparing the compound’s molecular or molar mass to its <u>empirical formula mass</u>.
+                
+              <div inline macro="note">As the name suggests, an empirical formula mass is the sum of the average atomic masses of all the atoms represented in an empirical formula.
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div macro="note">
+          <h2 id="15733627395484571018">Molarity (M)
+          </h2>
+          <ul>
+            <li>Molarity is defined as the <u>number of moles of solute</u> in exactly <u>1 liter of the solution</u>.
+            </li>
+          </ul>
+          <div latex="block" macro="equation">$$\begin{equation}
+\begin{split}
+
+            \mathrm{M} &\equiv \frac{\text{mol solute}}{1\; L\;\mathrm{solution}}
+        
+\end{split}
+\end{equation}$$
+          </div>
+          <h3 id="14254038109805220710">Determining the Volume of Solution Containing a Given Mass of Solute
+          </h3>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
