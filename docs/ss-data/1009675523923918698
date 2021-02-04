@@ -113,6 +113,7 @@ img[center] {
 [macro=note] {
   display: flex;
   flex-direction: column;
+  overflow: auto;
 }
 
 [macro=note][boxed] {
