@@ -51,6 +51,7 @@
 [macro='note'] {
     display: flex;
     flex-direction: column;
+    overflow: auto;
 }
 [macro='note'][boxed] {
     border-radius: 3px;
