@@ -179,10 +179,6 @@ img[center] {
   padding: 0;
   width: 90%;
 }
-
-[macro=note] p[center] {
-  text-align: center;
-}
 @media (max-width: 900px) {
   [macro=note] p {
     width: 95%;
@@ -506,4 +502,8 @@ dd:last-child {
 ul, ol, dl {
   padding-left: 38px;
   font-weight: 300;
+}
+
+p[center] {
+  text-align: center;
 }
