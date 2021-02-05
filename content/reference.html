@@ -499,6 +499,19 @@
             </ul>
         </note>
     </note>
+    <note boxed style="display: grid;">
+        <h3>P-Series -or- Harmonic Series</h3>
+        <equation>
+            &\text{Given}\\
+            &\;\;\;\;S_n=\sum_{n=1}^{\infty}\frac{1}{n^p}\\
+            &\text{Tests}\\
+            &\;\;\;\;\text{If $p>1$ then $S_n$ is $\mathbf{convergent}$}\\
+            &\;\;\;\;\text{If $0 < p \leq{1}$ then $S_n$ is $\mathbf{divergent}$}
+        </equation>
+        <note boxed style="align-self: flex-end;">
+            <p>Note: the <u>Harmonic series</u> is the special case where <tex>p=1</tex></p>
+        </note>
+    </note>
     <note boxed>
         <h3>Comparison Test</h3>
         <equation>
@@ -506,22 +519,49 @@
             &\;\;\;\;A_n = \sum_{n=1}^\infty\,a_n\\
             &\;\;\;\;B_n = \sum_{n=1}^\infty\,b_n\\
             &\text{Where}\\
-            &\;\;\;\;a_n \geq 0, b_n \neq 0\\
+            &\;\;\;\;a_n, b_n \geq 0\\
             &\;\;\;\;a_n \leq b_n\\
             &\text{Tests}\\
             &\;\;\;\;\text{If $B_n$ converges $\implies A_n$ converges}\\
-            &\;\;\;\;\text{If $A_n$ diverges $\implies B_n$ diverges}
+            &\;\;\;\;\text{If $A_n$ diverges $\implies B_n$ diverges}\\
         </equation>
-        <note inline>
-            <p>This should make sense; because if <tex>B_n</tex> converges, then so must <tex>A_n</tex>.</p>
-        </note>
     </note>
     <note boxed>
-        <h3>P-Series</h3>
+        <h3>Limit Comparison Test</h3>
         <equation>
-            \text{Given}&\;S_n=\sum_{n=1}^{\infty}\frac{1}{n^p}\\
-            &\text{If $p>1$ then $S_n$ is $\mathbf{convergent}$}\\
-            &\text{If $0 < p \leq{1}$ then $S_n$ is $\mathbf{divergent}$}
+            &\text{Given}\\
+            &\;\;\;\;A_n = \sum_{n=1}^\infty\,a_n\\
+            &\;\;\;\;B_n = \sum_{n=1}^\infty\,b_n\\
+            &\;\;\;\; L = \lim_{n\to\infty}\frac{a_n}{b_n}\\
+            &\text{Where}\\
+            &\;\;\;\;L > 0,\;L \neq \pm \infty\\
+            &\text{Therefore either both converge or diverge}\\
+            &\;\;\;\;\text{$A_n$ converges $\Longleftrightarrow B_n$ converges}\\
+            &\;\;\;\;\text{$A_n$ diverges $\Longleftrightarrow B_n$ diverges}
+        </equation>
+    </note>
+    <note boxed>
+        <h3>Estimating Infinite Series</h3>
+        <equation>
+            &\text{For some infinite sum “$S$”}\\
+            &\;\;\;\;S = \text{“infinite sum we will estimate”}\\
+            &\text{Given}\\
+            &\;\;\;\;S_k + \int_{k+1}^\infty f(x)\mathrm{d}x\leq\,S\leq\,S_k + \int_{k}^\infty f(x)\mathrm{d}x\\
+            &\text{Where}\\
+            &\;\;\;\;\text{$S$ is $\mathbf{\text{convergent}}$}\\
+            &\;\;\;\;\text{$\forall x$ in $f(x)$, f is $\mathbf{\text{continuous}}$}\\
+            &\;\;\;\;\text{$\forall x$ in $f(x)$, f is $\mathbf{\text{positive}}$}\\
+            &\;\;\;\;\text{$\forall x$ in $f(x)$, f is $\mathbf{\text{decreasing}}$}\\
+            &\;\;\;\;\text{$\forall x$ in $f(x)$, $\mathbf{x \geq k}$}\\
+            &\text{Or alternatively}\\
+            &\;\;\;\;\int_{k+1}^\infty f(x)\mathrm{d}x \leq S - S_k \leq\ \int_{k}^\infty f(x)\mathrm{d}x\\
+            &\text{Step #$1$}\\
+            &\;\;\;\;\text{set value for $k$}\\
+            &\text{Step #2, evaluate the following}\\
+            &\;\;\;\;\text{lower} = S_k + \int_{k+1}^\infty f(x)\mathrm{d}x\\
+            &\;\;\;\;\text{upper} = S_k + \int_{k}^\infty f(x)\mathrm{d}x\\
+            &\text{Therefore}\\
+            &\;\;\;\;\therefore\;\underbrace{\text{lower}\;\leq\,S\leq\;\text{upper}}_{\text{this is our estimate}}\\
         </equation>
     </note>
 </layout>
