@@ -107,7 +107,6 @@
         <p>In other words, if L’Hospital’s Rule applies to indeterminate forms.</p>
     </note>
 </layout>
-
 <h2>Limit Laws</h2>
 <layout cols="3">
     <equation>\lim_{x \to a} \Big[ f(x) + g(x) \Big] &= \lim_{x \to a} f(x) + \lim_{x \to a} g(x)</equation>
@@ -119,11 +118,15 @@
     <equation>\underbrace{\lim_{x \to a} \sqrt[n]{f(x)} = \sqrt[n]{\lim_{x \to a} f(x)}\;\text{if}\;n\in\mathbb{Z}^+}_{\text{if $n$ is even we assume $\lim_{x \to a} f(x) > 0$}}</equation>
     <equation>\lim_{x\to{c}}\, \left(f \circ g\right)(x) &= f\left(\lim_{x\to{c}}\, g(x)\right)</equation>
 </layout>
-
 <h2>Limit Formulas</h2>
 <layout cols="3">
-    <equation>\lim_{x\to\infty} \frac{1}{x^r} &= 0\;\text{if $r > 0$} </equation>
+    <equation>\lim_{x\to\infty} \frac{1}{x^r} &= 0\;\text{if $r > 0$}</equation>
 </layout>
+<h2>Growth Rates</h2>
+<ol>
+    <li><u>Factorial functions</u> grow faster than <u>exponential functions</u>.</li>
+    <li><u>Exponential functions</u> grow faster than <u>polynomials</u>.</li>
+</ol>
 
 <h1>Calculus</h1>
 <note>
@@ -445,10 +448,13 @@
             \text{Given}&\\
             &S_n = \sum_{n = 1}^{\infty}\,a_n\\
             \text{Tests}&\\
-            &\text{If}\;\lim_{n\to\infty}\,S_n = 0\;\text{then}\;\mathbf{\text{$S_n$ is convergent}}\\
+            &\text{If}\;\lim_{n\to\infty}\,S_n = 0\;\text{then}\;\text{$S_n$ may be $\mathbf{\text{convergent}}$}\\
             &\text{If}\;\lim_{n\to\infty}\,S_n \neq 0\;\text{then}\;\mathbf{\text{$S_n$ is divergent}}\\
             &\text{If}\;\lim_{n\to\infty}\,S_n \text{“does not exists”}\;\text{then}\;\mathbf{\text{$S_n$ is divergent}}\\
         </equation>
+        <p>Note that the limit of every <b>convergent</b> series is equal to zero. But the inverse isn't always true. If the limit is equal to zero, it <u>may not be convergent</u>.</p>
+        <p>For example, <tex>\sum_{n=1}^\infty \frac{1}{n}</tex> does diverge; <u>but it's limit is equal to zero</u>.</p>
+        <note inline><p>If the limit is equal to zero; the <u>test is <b>inconclusive</b></u>.</p></note>
     </note>
     <note boxed>
         <h3>Geometric Series</h3>
@@ -461,11 +467,61 @@
                     r &= \frac{S_2}{S_1}
                     \end{split}
                     \end{array}\right.\\
+            \text{Alternatively}&\\
+            &S_n = \sum_{n=0}^{\infty}\,a_n = \sum_{n=0}^{\infty}\,a\cdot r^{n}\\
             \text{Tests}&\\
             &\text{If}\;|r|\geq{1}\;\text{then}\;\mathbf{\text{$S_n$ is divergent}}\\
             &\text{If}\;|r|<1\;\text{then}\;\mathbf{\text{$S_n$ is convergent}}\\
             \text{Furthermore}&\\
             &\sum_{n = 1}^{\infty}\,a_n = \sum_{n = 1}^{\infty}\,a\cdot r^{n - 1} = \frac{a}{1 - r}\;\text{for all}\;|r|<1
+        </equation>
+    </note>
+    <note boxed>
+        <h3>The Integral Test</h3>
+        <equation>
+            &\text{Given}\\
+            &\;\;\;\;a_n = f(n)\;\text{$\forall$n on}\;[1,n)\\
+            &\;\;\;\;S_n = \sum_{n = 1}^{\infty}\,a_n\\
+            &\;\;\;\;F(x) = \int_{1}^{\infty}f(x)\;\mathrm{d}x\\
+            &\text{Where}\\
+            &\;\;\;\;f(x) > 0, \forall\,x\in\,[1, \infty)\\
+            &\;\;\;\;f^\prime(x) < 0, \forall\,x\in\,[1, \infty)\\
+            &\text{Tests}\\
+            &\;\;\;\;\text{If $S_n$ convergent; then $F(x)$ is $\mathbf{convergent}$}\\
+            &\;\;\;\;\text{If $S_n$ divergent; then $F(x)$ is $\mathbf{divergent}$}
+        </equation>
+        <note>
+            <h4>Constraints on <tex>[1,n)</tex></h4>
+            <ul>
+                <li>Continuous</li>
+                <li>Positive</li>
+                <li>Decreasing (i.e. use derivative test)</li>
+            </ul>
+        </note>
+    </note>
+    <note boxed>
+        <h3>Comparison Test</h3>
+        <equation>
+            &\text{Given}\\
+            &\;\;\;\;A_n = \sum_{n=1}^\infty\,a_n\\
+            &\;\;\;\;B_n = \sum_{n=1}^\infty\,b_n\\
+            &\text{Where}\\
+            &\;\;\;\;a_n \geq 0, b_n \neq 0\\
+            &\;\;\;\;a_n \leq b_n\\
+            &\text{Tests}\\
+            &\;\;\;\;\text{If $B_n$ converges $\implies A_n$ converges}\\
+            &\;\;\;\;\text{If $A_n$ diverges $\implies B_n$ diverges}
+        </equation>
+        <note inline>
+            <p>This should make sense; because if <tex>B_n</tex> converges, then so must <tex>A_n</tex>.</p>
+        </note>
+    </note>
+    <note boxed>
+        <h3>P-Series</h3>
+        <equation>
+            \text{Given}&\;S_n=\sum_{n=1}^{\infty}\frac{1}{n^p}\\
+            &\text{If $p>1$ then $S_n$ is $\mathbf{convergent}$}\\
+            &\text{If $0 < p \leq{1}$ then $S_n$ is $\mathbf{divergent}$}
         </equation>
     </note>
 </layout>

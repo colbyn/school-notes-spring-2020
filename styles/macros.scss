@@ -69,6 +69,11 @@
     margin: 8px;
 }
 
+[macro='note'][inline] > ul {
+    padding-left: 24px;
+    padding-right: 8px;
+}
+
 [macro='note'] > h1:first-child,
 [macro='note'] > h2:first-child,
 [macro='note'] > h3:first-child,
@@ -78,6 +83,7 @@
     border-bottom: none;
     text-align: center;
     color: #2f2f2f;
+    padding: 4px;
 }
 
 [macro='note']:not([boxed]) > h1:first-child,
