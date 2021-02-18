@@ -76,7 +76,8 @@
         \left(a^m\right)^n &= a^{m\cdot\,n} = \left(a^n\right)^m\\
         \left(a\cdot\,b\right)^n &= a^n \cdot b^n\\
         \left(\frac{a}{b}\right)^{-n} &= \left(\frac{b}{a}\right)^n\\
-        \frac{x^n}{y^n} &= \left(\frac{x}{y}\right)^n
+        \frac{x^n}{y^n} &= \left(\frac{x}{y}\right)^n\\
+        x^{y^z} &= x^{\left(y ^ z\right)} \neq \left(x^y\right)^z
     </equation>
     <equation>
         |x| &= \sqrt{x^2} \neq x
@@ -153,7 +154,7 @@
             \delta\cos^{-1}(x) &= -\frac{1}{\sqrt{1 - x^2}}
         </equation>
         <equation>
-            \delta\tan^{-1}(x) &= \frac{1}{\sqrt{1 + x^2}}
+            \delta\tan^{-1}(x) &= \frac{1}{1 + x^2}
         </equation>
     </layout>
 </note>
@@ -448,9 +449,9 @@
             \text{Given}&\\
             &S_n = \sum_{n = 1}^{\infty}\,a_n\\
             \text{Tests}&\\
-            &\text{If}\;\lim_{n\to\infty}\,S_n = 0\;\text{then}\;\text{$S_n$ may be $\mathbf{\text{convergent}}$}\\
-            &\text{If}\;\lim_{n\to\infty}\,S_n \neq 0\;\text{then}\;\mathbf{\text{$S_n$ is divergent}}\\
-            &\text{If}\;\lim_{n\to\infty}\,S_n \text{“does not exists”}\;\text{then}\;\mathbf{\text{$S_n$ is divergent}}\\
+            &\text{If}\;\lim_{n\to\infty}\,a_n = 0\;\text{then}\;\text{$S_n$ may be $\mathbf{\text{convergent}}$}\\
+            &\text{If}\;\lim_{n\to\infty}\,a_n \neq 0\;\text{then}\;\mathbf{\text{$S_n$ is divergent}}\\
+            &\text{If}\;\lim_{n\to\infty}\,a_n \text{“does not exists”}\;\text{then}\;\mathbf{\text{$S_n$ is divergent}}\\
         </equation>
         <p>Note that the limit of every <b>convergent</b> series is equal to zero. But the inverse isn't always true. If the limit is equal to zero, it <u>may not be convergent</u>.</p>
         <p>For example, <tex>\sum_{n=1}^\infty \frac{1}{n}</tex> does diverge; <u>but it's limit is equal to zero</u>.</p>
@@ -539,6 +540,19 @@
             &\;\;\;\;\text{$A_n$ converges $\Longleftrightarrow B_n$ converges}\\
             &\;\;\;\;\text{$A_n$ diverges $\Longleftrightarrow B_n$ diverges}
         </equation>
+        <note>
+            <h4>Warning</h4>
+            <ul>
+                <li>If <tex>L > 0</tex>, this only means that the limit comparison test <u>can be used</u>. You <u>still need to determine if either</u> <tex>A_n</tex> or <tex>B_b</tex> converges or diverges.</li>
+                <li>Therefore, this does not apply to any arbitrary rational function.</li>
+            </ul>
+        </note>
+        <note>
+            <h4>Notes</h4>
+            <ul>
+                <li>For many series, we find a suitable comparison, <tex>B_n</tex>, by keeping only the <u>highest powers in the numerator and denominator</u> of <tex>A_n</tex>.</li>
+            </ul>
+        </note>
     </note>
     <note boxed>
         <h3>Estimating Infinite Series</h3>
