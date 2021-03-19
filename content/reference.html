@@ -121,7 +121,8 @@
 </layout>
 <h2>Limit Formulas</h2>
 <layout cols="3">
-    <equation>\lim_{x\to\infty} \frac{1}{x^r} &= 0\;\text{if $r > 0$}</equation>
+    <equation>\lim_{x\to\infty} \frac{1}{x^r} &= 0\;,\;\forall r > 0</equation>
+    <equation>\lim_{x\to\infty} \frac{x^n}{!n} &= 0\;,\;\forall n \in \mathbb{R}</equation>
 </layout>
 <h2>Growth Rates</h2>
 <ol>
@@ -264,82 +265,17 @@
     </note>
     <note boxed>
         <h3>Trapezoidal Riemann Sum</h3>
+        <!-- TODO: REWRITE IN TEMRS OF a_{i,n} where a = {1 if i == 1 or i == n, 2 if ...} -->
         <texblock>
-            \newcommand{\leftSum}{
-                \sum_{i = 0}^{n-1}\, \Delta{x}\cdot f\left(a + i\cdot\Delta{x}\right)
-            }
-            \newcommand{\rightSum}{
-                \sum_{i = 1}^{n}\, \Delta{x}\cdot f\left(a + i\cdot\Delta{x}\right)
-            }
-            \newcommand{\leftSumNoDelta}{
-                \sum_{i = 0}^{n-1}\, f\left(a + i\cdot\Delta{x}\right)
-            }
-            \newcommand{\rightSumNoDelta}{
-                \sum_{i = 1}^{n}\, f\left(a + i\cdot\Delta{x}\right)
-            }
-            \begin{equation}
-            \begin{split}
-                A = \int_{a}^{b} f(x) \;\mathrm{d}x &\approx T_n\\
-                    &= \overbrace{\frac{1}{2}\left(L_n + R_n\right)}^{\text{i.e. avg. of two sums}}\\
-                    &= \frac{1}{2}\left(\leftSum + \rightSum\right)\\
-                    &= \frac{\Delta{x}}{2}\left(\leftSumNoDelta + \rightSumNoDelta\right)
-            \end{split}
-            \end{equation}
+            \dots
         </texblock>
-        <hr/>
-        <note>
-            <p center>Note that the formula for a trapezoid is <tex>A = h\cdot\frac{a + b}{2}</tex>.</p>
-            <img width='200px' src="../static/trap-eg.png" center>
-            <p center>In this case, height corresponds to width of each interval.</p>
-        </note>
     </note>
     <note boxed>
         <h3>Simpson's Rule</h3>
+        <!-- TODO: REWRITE IN TEMRS OF a_{i,n} where a = {1 if i == 1 or i == n, 2 if ...} -->
         <equation>
-            A = \int_{a}^{b} f(x) \;\mathrm{d}x &\approx S_n\;\text{where}\;
-                    \left\{\begin{array}{ll}
-                    \begin{split}
-                    n \;&\text{is even}\\
-                    \Delta{x} &= \frac{b - a}{n}\\
-                        x_i &= a + i\Delta{x}\\
-                    \end{split}
-                    \end{array}\right.\\
-                &\approx \frac{\Delta{x}}{3}\left[f(x_0) + 4f(x_1) + 2f(x_2) + 4f(x_3) \cdots f(x_i) \cdots f(x_n)\right]\\
+            \dots
         </equation>
-        <hr/>
-        <p center>Alternatively</p>
-        <texblock>
-            \newcommand{\fourOrTwoLiteral}{
-                {}^4{\mskip -5mu/\mskip -3mu}_2
-            }
-            \newcommand{\fourOrTwo}{
-                \fourOrTwoLiteral
-            }
-            \newcommand{\given}{
-                \;\text{given}\;&
-                \left\{\begin{array}{ll}
-                \begin{split}
-                    n \;&\text{is even}\\
-                    \Delta{x} &= \frac{b - a}{n}\\
-                    x_i &= a + i\Delta{x}\\
-                    \mathrm{start} &= f\left(a + 0\Delta{x}\right) = f(a)\\
-                    \fourOrTwo &= \text{alternate between $4$ and $2$}\\
-                    \mathrm{mid} &= \fourOrTwo f\left(x_i\right)\\
-                    \mathrm{end} &= \text{continue until $2f\left(x_n\right)$ (will always end in $2$)}\\
-                    \mathrm{repeat} &= \mathrm{mid}\;\cdots\;\mathrm{end}
-                \end{split}
-                \end{array}\right.\\
-            }
-            \newcommand{\core}{
-                \frac{\Delta{x}}{3}\left[\mathrm{start\;\cdot\;\mathrm{repeat}}\right]
-            }
-            \begin{equation}
-            \begin{split}
-                \given\\
-                A &= \int_{a}^{b} f(x) \;\mathrm{d}x \approx S_n = \core
-            \end{split}
-            \end{equation}
-        </texblock>
     </note>
 </note>
 <layout cols="2">
@@ -354,44 +290,6 @@
 </layout>
 
 <h1>Infinite Sequences and Series</h1>
-
-<h2>Terminology</h2>
-<dl>
-    <dt>Sequence</dt>
-    <dd>A sequence can be thought of as a list of elements with a particular order.</dd>
-    <dt>Monotonically Increasing</dt>
-    <dd>A sequence is said to be monotonically increasing if each term is greater than or equal to the one before it.</dd>
-    <dt>Monotonically Decreasing</dt>
-    <dd>A sequence is monotonically decreasing, if each consecutive term is less than or equal to the previous one.</dd>
-    <dt>Convergence</dt>
-    <dd><p>An important property of a sequence is <b>convergence</b>. If a sequence converges, it <u>converges to a particular value known as the limit</u>. If a sequence converges to some limit, then it is convergent.</p><p>A sequence that does not converge is <b>divergent</b>.</p>
-    <layout cols="3">
-    <equation>\underbrace{\lim_{x\to s} f(x) = N\;\;\text{where $N$ is some number}}_{\text{convergent}}</equation>
-    <equation>\underbrace{\lim_{x\to s} f(x) = \pm\,\infty}_{\text{divergent}}</equation>
-    <equation>\underbrace{\lim_{x\to s} f(x)\;\text{does not exist}}_{\text{divergent}}</equation>
-    </layout></dd>
-    <dd>Convergence sequences are <b>bounded</b>.</dd>
-    <dt>Series</dt>
-    <dd>
-    <layout cols=2>
-        <note>
-            <p>A series is, informally speaking, the <u>sum of the terms of a sequence</u>. A series is an expression of the form:</p>
-            <equation>S = \sum_{i=1}^{\infty}\,i &= 1 + 2 + 3 \cdots \infty</equation>
-        </note>
-    </layout>
-    </dd>
-    <dd>Order matters! Unlike addition.</dd>
-    <dt>Partial Sums</dt>
-    <dd>
-        <dl>
-            <dt>For example, given</dt>
-            <dd><equation>S_n = \sum{i = 1}^{\infty}\,n_i</equation></dd>
-            <dt>Therefore</dt>
-            <dd><p><tex>S_6</tex> is the partial sum of the first <tex>6</tex> elements.</p></dd>
-        </dl>
-    </dd>
-</dl>
-
 <h2>Sequence</h2>
 <layout cols="2">
     <note boxed>
@@ -576,6 +474,89 @@
             &\;\;\;\;\text{upper} = S_k + \int_{k}^\infty f(x)\mathrm{d}x\\
             &\text{Therefore}\\
             &\;\;\;\;\therefore\;\underbrace{\text{lower}\;\leq\,S\leq\;\text{upper}}_{\text{this is our estimate}}\\
+        </equation>
+    </note>
+</layout>
+
+
+
+<h2>Sequence</h2>
+<layout cols="2">
+    <note boxed>
+        <h3>Infinite Sequence</h3>
+        <equation>
+            \text{Given}&\\
+            &S_n = \{a_n\}_{n=1}^{\infty}\\
+            \text{Tests}&\\
+            &\text{If}\;\lim_{n\to\infty}\,S_n \text{“exists”}\;\text{then}\;\mathbf{\text{$S_n$ is convergent}}\\
+            &\text{If}\;\lim_{n\to\infty}\,S_n \text{“does not exists”}\;\text{then}\;\mathbf{\text{$S_n$ is Divergent}}\\
+        </equation>
+    </note>
+    <note boxed>
+        <h3>Helpful Theorem</h3>
+        <equation>
+            \text{If}&\\
+            \lim_{x\to\infty}\,|a_n| &= 0\\
+            \text{Then}&\\
+            \lim_{x\to\infty}\,a_n &= 0\\
+        </equation>
+    </note>
+    <note boxed>
+        <h3>Example</h3>
+        <equation>
+        \text{Given}\\
+            S_n &= \{\cos\left(\frac{n\pi}{2}\right)\}\\
+            L &=\lim_{n\to\infty}\,\cos\left(\frac{n\pi}{2}\right)\\
+            &= \cos\left(\lim_{n\to\infty}\,\frac{n\pi}{2}\right) \\
+            &= \cos\left(\infty\right) \\
+            &= \text{undefined} \\
+        \text{Therefore}\\
+        \therefore\;&\text{$S_n$ is Divergent}&
+        </equation>
+    </note>
+    <note boxed>
+        <h3>Example</h3>
+        <equation>
+        \text{Given}\\
+            S_n &= \{\sin\left(\frac{\pi}{n}\right)\}\\
+            L &= \lim_{n\to\infty}\,\sin\left(\frac{\pi}{n}\right)\\
+                &= \sin\left(\lim_{n\to\infty}\,\frac{\pi}{n}\right) \\
+                &= \sin\left(0\right) \\
+                &= 0\\
+        \text{Therefore}\\
+        \therefore\;&\text{$S_n$ is Convergent}
+        </equation>
+    </note>
+</layout>
+
+<h2>Differential Equations</h2>
+<layout cols="2">
+    <note boxed>
+        <h3>Separable Differential Equations</h3>
+        <equation>
+            \text{Given}\\
+            \frac{\mathrm{d}y}{\mathrm{d}x}
+                &= g(x) \cdot f(y)\\
+                &= \frac{g(x)}{\frac{1}{f(y)}}\\
+                &= \frac{g(x)}{h(y)}\;\text{where}\;h(x) = \frac{1}{f(y)}\\
+            \\\text{Therefore (restated)}\\
+            \frac{\mathrm{d}y}{\mathrm{d}x} &= \frac{g(x)}{h(y)}\\
+            \\\text{Multiply reciprocals}\\
+            h(y)\;\mathrm{d}y &= g(x)\;\mathrm{d}x\\
+            \\\text{Integrate}\\
+            \int h(y)\;\mathrm{d}y &= \int g(x)\;\mathrm{d}x\\
+            \\\text{Differentiate}\\
+            \frac{d}{dx} \left(\int h(y)\;\mathrm{d}y\right) &= \frac{d}{dx} \left(\int g(x)\;\mathrm{d}x\right)\\
+            \\\text{Given}\\
+            \frac{\mathrm{d}}{dx}
+                &= \frac{\mathrm{d}}{dx} \cdot \frac{\mathrm{d}y}{\mathrm{d}y}
+                = \textcolor{blue}{\frac{\mathrm{d}}{dy}} \cdot \textcolor{JungleGreen}{\frac{\mathrm{d}y}{dx}}\\
+            \\\text{Therefore the LHS is equal to}\\
+            \frac{\mathrm{d}}{dx} \left(\int h(y) \mathrm{d}y\right)
+                &= \textcolor{blue}{\frac{\mathrm{d}}{dy}} \left(\int h(y) \mathrm{d}y\right) \textcolor{JungleGreen}{\frac{\mathrm{d}y}{dx}}\\
+                &= h(y) \textcolor{JungleGreen}{\frac{\mathrm{d}y}{dx}}
+            \\\text{Therefore (in conclusion)}\\
+            \therefore \; h(y)\;\frac{\mathrm{d}y}{dx} &= g(x)
         </equation>
     </note>
 </layout>
