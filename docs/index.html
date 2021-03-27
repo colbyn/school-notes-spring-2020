@@ -2,33 +2,15 @@
   <head>
     <title>Colbyn's Math Notes
     </title>
-    <link href="https://colbyn.github.io/school-notes-spring-2020/ss-data/4228447982281247232" rel="stylesheet" ss.link.processed></link><script>
-window.MathJax = {
-    tex: {
-        inlineMath: [['\\(', '\\)'], ['stem:[', ']'], ['`', '`']],
-        macros: {
-            'dx': "{\\, \\mathrm{d}x\\;}",
-            'Integrate': ['{\\int_{#1}^{#2}\\, #3 \\dx}', 3],
-            'IntegrateFor': ['{\\int_{#1}^{#2}\\, #3 {\\, \\mathrm{d}{#4}\\;}}', 4],
-            'I': ['{\\Integrate{a}{b}{#1}}', 1],
-            'angles': ['\\langle {#1},{#2} \\rangle', 2]
-        },
-    },
-    svg: {
-        fontCache: 'global',
-        minScale: 0.2
-    },
-    processEscapes: true,
-};
-</script><script async type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" id="MathJax-script"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet"></link>
+    <link href="https://colbyn.github.io/school-notes-spring-2020/ss-data/4228447982281247232" ss.link.processed rel="stylesheet"></link>
     <meta name="viewport" content="width=device-width,initial-scale=1"></meta>
-    <meta charset="utf-8"></meta><script src="https://www.geogebra.org/apps/deployggb.js"></script><script src="https://www.desmos.com/api/v1.5/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+    <meta charset="utf-8"></meta>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet"></link>
     <link rel="preconnect" href="https://fonts.gstatic.com"></link>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"></link>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"></link>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"></link>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"></link>
     <link rel="stylesheet" href="https://raw.githubusercontent.com/joshuarudd/typeset.css/master/typeset.min.css"></link>
     <style>
     * {
@@ -38,12 +20,40 @@ window.MathJax = {
         margin: 0;
     }
 
-    </style>
+    </style><script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['\\(', '\\)'], ['stem:[', ']'], ['`', '`']],
+            macros: {
+                'dx': "{\\, \\mathrm{d}x\\;}",
+                'Integrate': ['{\\int_{#1}^{#2}\\, #3 \\dx}', 3],
+                'IntegrateFor': ['{\\int_{#1}^{#2}\\, #3 {\\, \\mathrm{d}{#4}\\;}}', 4],
+                'I': ['{\\Integrate{a}{b}{#1}}', 1],
+                'angles': ['\\langle {#1},{#2} \\rangle', 2]
+            },
+        },
+        processEscapes: true,
+        options: {enableMenu: false},
+        chtml: {
+            scale: 1,                      // global scaling factor for all expressions
+            minScale: 0.5,                  // smallest scaling factor to use
+            matchFontHeight: true,         // true to match ex-height of surrounding font
+            mtextInheritFont: true,       // true to make mtext elements use surrounding font
+            merrorInheritFont: true,       // true to make merror text use surrounding font
+            mathmlSpacing: true,          // true for MathML spacing rules, false for TeX rules
+            skipAttributes: {},            // RFDa and other attributes NOT to copy to the output
+            exFactor: .5,                  // default size of ex in em units
+            displayAlign: 'center',        // default for indentalign when set to 'auto'
+            displayIndent: '0',            // default for indentshift when set to 'auto'
+            adaptiveCSS: true              // true means only produce CSS that is used in the processed equations
+        }
+    };
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" id="MathJax-script" type="text/javascript" async></script>
   </head>
   <body>
     <header id="site-header">
       <div page-nav>
-        <h1 id="15928291384061935819" toc-ignore>Site Navigation
+        <h1 id="1761205424481053678" toc-ignore>Site Navigation
         </h1>
         <ul macro="page-nav">
           <li><a href="https://colbyn.github.io/school-notes-spring-2020/index.html">Reference (Math)</a>
@@ -63,151 +73,151 @@ window.MathJax = {
         </ul>
       </div>
       <div toc>
-        <h1 id="6863867100440231829" toc-ignore>Table of Contents
+        <h1 toc-ignore id="13027994864767525373">Table of Contents
         </h1>
         <ul macro="toc">
-          <li for="h1"><a href="#11771439280903657129">Miscellaneous</a>
+          <li for="h1"><a href="#11116013326482035419">Miscellaneous</a>
           </li>
-          <li for="h2"><a href="#14907171881358354198">Functional Utilities & Notation Conveniences</a>
+          <li for="h2"><a href="#13666467967251544967">Functional Utilities & Notation Conveniences</a>
           </li>
-          <li for="h3"><a href="#3954547750133937148">Right to Left Evaluation</a>
+          <li for="h3"><a href="#7778407107566985565">Right to Left Evaluation</a>
           </li>
-          <li for="h3"><a href="#18333142251706956961">Left to Right Evaluation</a>
+          <li for="h3"><a href="#1964020355288796818">Left to Right Evaluation</a>
           </li>
-          <li for="h3"><a href="#15709460785792854836">Derivative Shorthand</a>
+          <li for="h3"><a href="#12273125304521339960">Derivative Shorthand</a>
           </li>
-          <li for="h2"><a href="#2567580904469204276">Radians & Radian Conversion</a>
+          <li for="h2"><a href="#4330614317510455459">Radians & Radian Conversion</a>
           </li>
-          <li for="h3"><a href="#15913957767493222100">Constants</a>
+          <li for="h3"><a href="#8955030520704325619">Constants</a>
           </li>
-          <li for="h3"><a href="#7031674009224323935">Conversion</a>
+          <li for="h3"><a href="#16921828761063672188">Conversion</a>
           </li>
-          <li for="h1"><a href="#18220495860171989692">Algebra</a>
+          <li for="h1"><a href="#16974346889171762589">Algebra</a>
           </li>
-          <li for="h2"><a href="#15602019347038358507">Properties</a>
+          <li for="h2"><a href="#2192385938618677535">Properties</a>
           </li>
-          <li for="h1"><a href="#8306848109553373979">Trigonometry</a>
+          <li for="h1"><a href="#6474581948711709256">Trigonometry</a>
           </li>
-          <li for="h2"><a href="#1150635367612330343">Trigonometric Identities and Equations</a>
+          <li for="h2"><a href="#3160035587622675910">Trigonometric Identities and Equations</a>
           </li>
-          <li for="h3"><a href="#12020100421822795052">Pythagorean Identities</a>
+          <li for="h3"><a href="#13604805287813099345">Pythagorean Identities</a>
           </li>
-          <li for="h3"><a href="#10763700042647081978">Sum and Difference Identities</a>
+          <li for="h3"><a href="#11189743197617247164">Sum and Difference Identities</a>
           </li>
-          <li for="h3"><a href="#8246605742564740916">Cofunction Identities</a>
+          <li for="h3"><a href="#18358454646492647868">Cofunction Identities</a>
           </li>
-          <li for="h3"><a href="#4714766647351433520">Ratio Identities</a>
+          <li for="h3"><a href="#3231747190541918311">Ratio Identities</a>
           </li>
-          <li for="h3"><a href="#9574069964860421590">Double-Angle Identities</a>
+          <li for="h3"><a href="#3832547449222755021">Double-Angle Identities</a>
           </li>
-          <li for="h3"><a href="#1022995796276808912">Half-Angle Identities</a>
+          <li for="h3"><a href="#5010184027744141106">Half-Angle Identities</a>
           </li>
-          <li for="h3"><a href="#1995069007211374849">Power-Reducing Identities</a>
+          <li for="h3"><a href="#8660104088860503872">Power-Reducing Identities</a>
           </li>
-          <li for="h3"><a href="#12240314563605639437">Product-to-Sum Identities</a>
+          <li for="h3"><a href="#17275630078885359902">Product-to-Sum Identities</a>
           </li>
-          <li for="h3"><a href="#3407460226591424872">Sum-to-Product-Identities</a>
+          <li for="h3"><a href="#17147270045402049561">Sum-to-Product-Identities</a>
           </li>
-          <li for="h1"><a href="#1601065659772009964">Limits</a>
+          <li for="h1"><a href="#7443775667979208505">Limits</a>
           </li>
-          <li for="h2"><a href="#10122871847971669777">L’Hospital’s Rule</a>
+          <li for="h2"><a href="#13810164189180080180">L’Hospital’s Rule</a>
           </li>
-          <li for="h2"><a href="#1559302616108345933">Limit Laws</a>
+          <li for="h2"><a href="#4230663039126295584">Limit Laws</a>
           </li>
-          <li for="h2"><a href="#2637108005614084283">Limit Formulas</a>
+          <li for="h2"><a href="#15197550569435802099">Limit Formulas</a>
           </li>
-          <li for="h2"><a href="#13380892928983736310">Growth Rates</a>
+          <li for="h2"><a href="#13317759258093480156">Growth Rates</a>
           </li>
-          <li for="h1"><a href="#4149604913152959023">Calculus</a>
+          <li for="h1"><a href="#14788657835352461433">Calculus</a>
           </li>
-          <li for="h2"><a href="#1903905777401757752">Derivative Tables</a>
+          <li for="h2"><a href="#2799917814107659763">Derivative Tables</a>
           </li>
-          <li for="h2"><a href="#12247645984006036680">Integration Tables</a>
+          <li for="h2"><a href="#4421934364885890705">Integration Tables</a>
           </li>
-          <li for="h2"><a href="#6516886555590622645">Riemann Sums</a>
+          <li for="h2"><a href="#15444981658339018528">Riemann Sums</a>
           </li>
-          <li for="h3"><a href="#13064478134420733499">Left Riemann Sum</a>
+          <li for="h3"><a href="#7889278357006478190">Left Riemann Sum</a>
           </li>
-          <li for="h3"><a href="#13709259654612285096">Right Riemann Sum</a>
+          <li for="h3"><a href="#6485843047364528661">Right Riemann Sum</a>
           </li>
-          <li for="h3"><a href="#523452734374938997">Midpoint Riemann Sum</a>
+          <li for="h3"><a href="#11913850114631249706">Midpoint Riemann Sum</a>
           </li>
-          <li for="h3"><a href="#4156602342369527224">Trapezoidal Riemann Sum</a>
+          <li for="h3"><a href="#18197509888470614739">Trapezoidal Riemann Sum</a>
           </li>
-          <li for="h3"><a href="#3773074421338411844">Simpson's Rule</a>
+          <li for="h3"><a href="#15850922170982189082">Simpson's Rule</a>
           </li>
-          <li for="h2"><a href="#4778329724929829982">Improper Integrals</a>
+          <li for="h2"><a href="#6104755296350419402">Improper Integrals</a>
           </li>
-          <li for="h1"><a href="#9997582284539004118">Infinite Sequences and Series</a>
+          <li for="h1"><a href="#2909953064924322019">Infinite Sequences and Series</a>
           </li>
-          <li for="h2"><a href="#4152876007789844182">Sequence</a>
+          <li for="h2"><a href="#2442834394891273850">Sequence</a>
           </li>
-          <li for="h3"><a href="#5158120706954772560">Infinite Sequence</a>
+          <li for="h3"><a href="#5161756110822019672">Infinite Sequence</a>
           </li>
-          <li for="h3"><a href="#12318358463568601582">Helpful Theorem</a>
+          <li for="h3"><a href="#16353236852663505480">Helpful Theorem</a>
           </li>
-          <li for="h3"><a href="#15055527297168846694">Example</a>
+          <li for="h3"><a href="#17174829760903510475">Example</a>
           </li>
-          <li for="h3"><a href="#4740006848629359380">Example</a>
+          <li for="h3"><a href="#12664005285948278369">Example</a>
           </li>
-          <li for="h2"><a href="#3138608049002523842">Series</a>
+          <li for="h2"><a href="#4039849812974774374">Series</a>
           </li>
-          <li for="h3"><a href="#7732037875415709364">Infinite Series</a>
+          <li for="h3"><a href="#1783246559061260629">Infinite Series</a>
           </li>
-          <li for="h3"><a href="#3133855087523808270">Geometric Series</a>
+          <li for="h3"><a href="#16342236816327364563">Geometric Series</a>
           </li>
-          <li for="h3"><a href="#10941403362855279360">The Integral Test</a>
+          <li for="h3"><a href="#1094384703724759020">The Integral Test</a>
           </li>
-          <li for="h4"><a href="#9262952594202299795">Constraints on  \([1,n)\)</a>
+          <li for="h4"><a href="#15985961550400203688">Constraints on  \([1,n)\)</a>
           </li>
-          <li for="h3"><a href="#1558507593393351155">P-Series -or- Harmonic Series</a>
+          <li for="h3"><a href="#8347924634588937025">P-Series -or- Harmonic Series</a>
           </li>
-          <li for="h3"><a href="#16726304449077107440">Comparison Test</a>
+          <li for="h3"><a href="#12723110104780179947">Comparison Test</a>
           </li>
-          <li for="h3"><a href="#10073976755125265447">Limit Comparison Test</a>
+          <li for="h3"><a href="#12515007207880130730">Limit Comparison Test</a>
           </li>
-          <li for="h4"><a href="#9426319926524904760">Warning</a>
+          <li for="h4"><a href="#8115088294845376399">Warning</a>
           </li>
-          <li for="h4"><a href="#14129538780081573867">Notes</a>
+          <li for="h4"><a href="#12506385385944326541">Notes</a>
           </li>
-          <li for="h3"><a href="#6482232195425023141">Estimating Infinite Series</a>
+          <li for="h3"><a href="#12112563374177142597">Estimating Infinite Series</a>
           </li>
-          <li for="h2"><a href="#8641898577043753827">Sequence</a>
+          <li for="h2"><a href="#16444108417089502218">Sequence</a>
           </li>
-          <li for="h3"><a href="#15440965363243250749">Infinite Sequence</a>
+          <li for="h3"><a href="#14182468505816858608">Infinite Sequence</a>
           </li>
-          <li for="h3"><a href="#8027902407638945924">Helpful Theorem</a>
+          <li for="h3"><a href="#12258456036559465885">Helpful Theorem</a>
           </li>
-          <li for="h3"><a href="#2066398927268305814">Example</a>
+          <li for="h3"><a href="#6991374278889143296">Example</a>
           </li>
-          <li for="h3"><a href="#12886166973152984573">Example</a>
+          <li for="h3"><a href="#5289151188250018300">Example</a>
           </li>
-          <li for="h2"><a href="#4238873018100566224">Differential Equations</a>
+          <li for="h2"><a href="#18088992861855306342">Differential Equations</a>
           </li>
-          <li for="h3"><a href="#12303004300432067227">First Order Differential Equations</a>
+          <li for="h3"><a href="#624845563685289635">First Order Differential Equations</a>
           </li>
-          <li for="h4"><a href="#3369340153941147304">Separable Differential Equations</a>
+          <li for="h4"><a href="#5979561704442355957">Separable Differential Equations</a>
           </li>
-          <li for="h3"><a href="#10164571140935905949">Second-Order Differential Equations</a>
+          <li for="h3"><a href="#2785733445637753795">Second-Order Differential Equations</a>
           </li>
-          <li for="h4"><a href="#4559498620676681389">Second order homogeneous linear differential equations with constant coefficients</a>
+          <li for="h4"><a href="#4731251578513206747">Second order homogeneous linear differential equations with constant coefficients</a>
           </li>
-          <li for="h2"><a href="#12886910818871287970">Parametric Equations</a>
+          <li for="h2"><a href="#11384835483427695019">Parametric Equations</a>
           </li>
-          <li for="h3"><a href="#6720420607573749240">First Derivative Formula</a>
+          <li for="h3"><a href="#3567795819370498690">First Derivative Formula</a>
           </li>
-          <li for="h3"><a href="#16983160605609572955">Second Derivative Formula</a>
+          <li for="h3"><a href="#17043069009955420306">Second Derivative Formula</a>
           </li>
-          <li for="h3"><a href="#3202369168001196096">Arc Length</a>
+          <li for="h3"><a href="#13698059807179591373">Arc Length</a>
           </li>
         </ul>
       </div>
     </header>
     <main>
-      <h1 root id="11734048048562247442" toc-ignore>Colbyn's School Notes
+      <h1 toc-ignore root id="8278306665254790794">Colbyn's School Notes
       </h1>
       <div boxed macro="note">
-        <h2 id="2951642446524129270" toc-ignore>Meta
+        <h2 id="4416326094326875201" toc-ignore>Meta
         </h2>
         <ul>
           <li><a href="https://colbyn.github.io/school-notes-spring-2020/">Online Release</a>
@@ -216,7 +226,7 @@ window.MathJax = {
           </li>
         </ul>
         <div macro="note">
-          <h3 id="12172466304259072573" toc-ignore>Legacy Notes
+          <h3 id="6380700332020826325" toc-ignore>Legacy Notes
           </h3>
           <ul>
             <li><a href="https://colbyn.github.io/subscript/">Original Subscript Implementation (Last Iteration)</a>
@@ -230,11 +240,11 @@ window.MathJax = {
           </ul>
         </div>
       </div>
-      <h1 id="11771439280903657129">Miscellaneous
-      </h1>      <h2 id="14907171881358354198">Functional Utilities & Notation Conveniences
+      <h1 id="11116013326482035419">Miscellaneous
+      </h1>      <h2 id="13666467967251544967">Functional Utilities & Notation Conveniences
       </h2>      <div columns="2" macro="layout" cols="2">
-        <div macro="note" boxed>
-          <h3 id="3954547750133937148">Right to Left Evaluation
+        <div boxed macro="note">
+          <h3 id="7778407107566985565">Right to Left Evaluation
           </h3>
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -255,8 +265,8 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-        <div macro="note" boxed>
-          <h3 id="18333142251706956961">Left to Right Evaluation
+        <div boxed macro="note">
+          <h3 id="1964020355288796818">Left to Right Evaluation
           </h3>
           <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
@@ -267,8 +277,8 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-        <div macro="note" boxed>
-          <h3 id="15709460785792854836">Derivative Shorthand
+        <div boxed macro="note">
+          <h3 id="12273125304521339960">Derivative Shorthand
           </h3>
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -280,12 +290,12 @@ window.MathJax = {
           </div>
           <p>For this notation, the derivative with respect to a given variable, is implicit.</p>
         </div>
-      </div>      <h2 id="2567580904469204276">Radians & Radian Conversion
-      </h2>      <div cols="2" macro="layout" columns="2">
-        <div boxed macro="note">
-          <h3 id="15913957767493222100">Constants
+      </div>      <h2 id="4330614317510455459">Radians & Radian Conversion
+      </h2>      <div columns="2" macro="layout" cols="2">
+        <div macro="note" boxed>
+          <h3 id="8955030520704325619">Constants
           </h3>
-          <div latex="block" macro="equation">$$\begin{equation}
+          <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
             \tau &= 2\pi = 360^{\circ} \\
@@ -295,8 +305,8 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-        <div macro="note" boxed>
-          <h3 id="7031674009224323935">Conversion
+        <div boxed macro="note">
+          <h3 id="16921828761063672188">Conversion
           </h3>
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -316,9 +326,9 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-      </div>      <h1 id="18220495860171989692">Algebra
-      </h1>      <h2 id="15602019347038358507">Properties
-      </h2>      <div macro="layout" columns="3" cols="3">
+      </div>      <h1 id="16974346889171762589">Algebra
+      </h1>      <h2 id="2192385938618677535">Properties
+      </h2>      <div columns="3" cols="3" macro="layout">
         <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
@@ -332,7 +342,7 @@ window.MathJax = {
 \end{split}
 \end{equation}$$
         </div>
-        <div latex="block" macro="equation">$$\begin{equation}
+        <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
         |x| &= \sqrt{x^2} \neq x
@@ -340,7 +350,7 @@ window.MathJax = {
 \end{split}
 \end{equation}$$
         </div>
-        <div latex="block" macro="equation">$$\begin{equation}
+        <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
         \log_{\beta}(\alpha) &= \gamma\\
@@ -351,20 +361,20 @@ window.MathJax = {
 \end{split}
 \end{equation}$$
         </div>
-      </div>      <h1 id="8306848109553373979">Trigonometry
-      </h1>      <h2 id="1150635367612330343">Trigonometric Identities and Equations
-      </h2>      <div columns="2" cols="2" macro="layout">
-        <div macro="note" boxed>
-          <h3 id="12020100421822795052">Pythagorean Identities
+      </div>      <h1 id="6474581948711709256">Trigonometry
+      </h1>      <h2 id="3160035587622675910">Trigonometric Identities and Equations
+      </h2>      <div macro="layout" cols="2" columns="2">
+        <div boxed macro="note">
+          <h3 id="13604805287813099345">Pythagorean Identities
           </h3>
-          <div macro="equation" latex="block">$$\begin{equation}
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 \cos^2(\theta) + \sin^2(\theta) = 1
 \end{split}
 \end{equation}$$
           </div>
-          <div macro="layout" cols="2" columns="2">
-            <div latex="block" macro="equation">$$\begin{equation}
+          <div macro="layout" columns="2" cols="2">
+            <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
             \sec^2(\theta) - \tan^2(\theta) &= 1 \\
@@ -384,9 +394,9 @@ window.MathJax = {
             </div>
           </div>
         </div>        <div boxed macro="note">
-          <h3 id="10763700042647081978">Sum and Difference Identities
+          <h3 id="11189743197617247164">Sum and Difference Identities
           </h3>
-          <div macro="texblock" latex="block">$$
+          <div latex="block" macro="texblock">$$
          \begin{equation}
         \begin{split}
             \cos(\alpha - \beta) &= \cos(\alpha) \cdot \cos(\beta) + \sin(\alpha) \cdot \sin(\beta) \\
@@ -401,11 +411,11 @@ window.MathJax = {
         \end{equation} 
     $$
           </div>
-        </div>        <div boxed macro="note">
-          <h3 id="8246605742564740916">Cofunction Identities
+        </div>        <div macro="note" boxed>
+          <h3 id="18358454646492647868">Cofunction Identities
           </h3>
-          <div macro="layout" columns="2" cols="2">
-            <div macro="equation" latex="block">$$\begin{equation}
+          <div macro="layout" cols="2" columns="2">
+            <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 \sin(\theta) = \cos(\frac{1}{4}\tau - \theta)
 \end{split}
@@ -417,13 +427,13 @@ window.MathJax = {
 \end{split}
 \end{equation}$$
             </div>
-            <div macro="equation" latex="block">$$\begin{equation}
+            <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 \tan(\theta) = \cot(\frac{1}{4}\tau - \theta)
 \end{split}
 \end{equation}$$
             </div>
-            <div macro="equation" latex="block">$$\begin{equation}
+            <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 \cot(\theta) = \tan(\frac{1}{4}\tau - \theta)
 \end{split}
@@ -435,7 +445,7 @@ window.MathJax = {
 \end{split}
 \end{equation}$$
             </div>
-            <div latex="block" macro="equation">$$\begin{equation}
+            <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 \sec(\theta) = \csc(\frac{1}{4}\tau - \theta)
 \end{split}
@@ -443,9 +453,9 @@ window.MathJax = {
             </div>
           </div>
         </div>        <div macro="note" boxed>
-          <h3 id="4714766647351433520">Ratio Identities
+          <h3 id="3231747190541918311">Ratio Identities
           </h3>
-          <div latex="block" macro="texblock">$$
+          <div macro="texblock" latex="block">$$
         \begin{equation}
         \begin{split}
             \tan(90^\circ - x) & = \frac{\sin(90^\circ - x)}{\cos(90^\circ - x)} = \frac{\cos(x)}{\sin(x)} = \cot(x) \\
@@ -456,7 +466,7 @@ window.MathJax = {
     $$
           </div>
         </div>        <div boxed macro="note">
-          <h3 id="9574069964860421590">Double-Angle Identities
+          <h3 id="3832547449222755021">Double-Angle Identities
           </h3>
           <div latex="block" macro="texblock">$$
          \begin{equation}
@@ -471,10 +481,10 @@ window.MathJax = {
         \end{equation}
     $$
           </div>
-        </div>        <div boxed macro="note">
-          <h3 id="1022995796276808912">Half-Angle Identities
+        </div>        <div macro="note" boxed>
+          <h3 id="5010184027744141106">Half-Angle Identities
           </h3>
-          <div latex="block" macro="texblock">$$
+          <div macro="texblock" latex="block">$$
          \begin{equation}
         \begin{split}
             \sin \frac{\alpha}{2} &= \pm \sqrt{\frac{1 - \cos(\alpha)}{2}} \\
@@ -486,8 +496,8 @@ window.MathJax = {
         \end{equation} 
     $$
           </div>
-        </div>        <div macro="note" boxed>
-          <h3 id="1995069007211374849">Power-Reducing Identities
+        </div>        <div boxed macro="note">
+          <h3 id="8660104088860503872">Power-Reducing Identities
           </h3>
           <div latex="block" macro="texblock">$$
          \begin{equation}
@@ -510,10 +520,10 @@ window.MathJax = {
 \end{split}
 \end{equation}$$
           </div>
-        </div>        <div boxed macro="note">
-          <h3 id="12240314563605639437">Product-to-Sum Identities
+        </div>        <div macro="note" boxed>
+          <h3 id="17275630078885359902">Product-to-Sum Identities
           </h3>
-          <div macro="texblock" latex="block">$$
+          <div latex="block" macro="texblock">$$
         \begin{equation}
         \begin{split}
             \sin(\alpha) \cdot \cos(\beta) &= \frac{1}{2} \Big[ \sin(\alpha + \beta) + \sin(\alpha - \beta) \Big] \\
@@ -524,10 +534,10 @@ window.MathJax = {
         \end{equation}
     $$
           </div>
-        </div>        <div boxed macro="note">
-          <h3 id="3407460226591424872">Sum-to-Product-Identities
+        </div>        <div macro="note" boxed>
+          <h3 id="17147270045402049561">Sum-to-Product-Identities
           </h3>
-          <div latex="block" macro="texblock">$$
+          <div macro="texblock" latex="block">$$
          \begin{equation}
         \begin{split}
             \sin(x) + \sin(y) &= 2 \cdot \sin\left( \frac{x + y}{2} \right) \cdot \cos\left( \frac{x - y}{2} \right) \\
@@ -539,10 +549,10 @@ window.MathJax = {
     $$
           </div>
         </div>
-      </div>      <h1 id="1601065659772009964">Limits
-      </h1>      <div cols="2" columns="2" macro="layout">
+      </div>      <h1 id="7443775667979208505">Limits
+      </h1>      <div columns="2" cols="2" macro="layout">
         <div boxed macro="note">
-          <h2 id="10122871847971669777">L’Hospital’s Rule
+          <h2 id="13810164189180080180">L’Hospital’s Rule
           </h2>
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -556,15 +566,15 @@ window.MathJax = {
           </div>
           <p>In other words, if L’Hospital’s Rule applies to indeterminate forms.</p>
         </div>
-      </div>      <h2 id="1559302616108345933">Limit Laws
-      </h2>      <div macro="layout" columns="3" cols="3">
-        <div latex="block" macro="equation">$$\begin{equation}
+      </div>      <h2 id="4230663039126295584">Limit Laws
+      </h2>      <div cols="3" macro="layout" columns="3">
+        <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 \lim_{x \to a} \Big[ f(x) + g(x) \Big] &= \lim_{x \to a} f(x) + \lim_{x \to a} g(x)
 \end{split}
 \end{equation}$$
         </div>
-        <div latex="block" macro="equation">$$\begin{equation}
+        <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 \lim_{x \to a} \Big[ f(x) - g(x) \Big] &= \lim_{x \to a} f(x) - \lim_{x \to a} g(x)
 \end{split}
@@ -606,29 +616,29 @@ window.MathJax = {
 \end{split}
 \end{equation}$$
         </div>
-      </div>      <h2 id="2637108005614084283">Limit Formulas
+      </div>      <h2 id="15197550569435802099">Limit Formulas
       </h2>      <div macro="layout" columns="3" cols="3">
-        <div macro="equation" latex="block">$$\begin{equation}
+        <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 \lim_{x\to\infty} \frac{1}{x^r} &= 0\;,\;\forall r > 0
 \end{split}
 \end{equation}$$
         </div>
-        <div latex="block" macro="equation">$$\begin{equation}
+        <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 \lim_{x\to\infty} \frac{x^n}{!n} &= 0\;,\;\forall n \in \mathbb{R}
 \end{split}
 \end{equation}$$
         </div>
-      </div>      <h2 id="13380892928983736310">Growth Rates
+      </div>      <h2 id="13317759258093480156">Growth Rates
       </h2>      <ol>
         <li><u>Factorial functions</u> grow faster than <u>exponential functions</u>.
         </li>
         <li><u>Exponential functions</u> grow faster than <u>polynomials</u>.
         </li>
-      </ol>      <h1 id="4149604913152959023">Calculus
+      </ol>      <h1 id="14788657835352461433">Calculus
       </h1>      <div macro="note">
-        <h2 id="1903905777401757752">Derivative Tables
+        <h2 id="2799917814107659763">Derivative Tables
         </h2>
         <div cols="3" boxed macro="layout" columns="3">
           <div boxed-child>
@@ -643,7 +653,7 @@ window.MathJax = {
             </div>
           </div>
           <div boxed-child>
-            <div latex="block" macro="equation">$$\begin{equation}
+            <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
             \delta\cos(x) &= -\sin(x) \\
@@ -665,9 +675,9 @@ window.MathJax = {
             </div>
           </div>
         </div>
-        <div macro="layout" cols="3" boxed columns="3">
+        <div macro="layout" boxed cols="3" columns="3">
           <div boxed-child>
-            <div latex="block" macro="equation">$$\begin{equation}
+            <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
             \delta\sin^{-1}(x) &= \frac{1}{\sqrt{1 - x^2}}
@@ -687,7 +697,7 @@ window.MathJax = {
             </div>
           </div>
           <div boxed-child>
-            <div latex="block" macro="equation">$$\begin{equation}
+            <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
             \delta\tan^{-1}(x) &= \frac{1}{1 + x^2}
@@ -698,11 +708,11 @@ window.MathJax = {
           </div>
         </div>
       </div>      <div macro="note">
-        <h2 id="12247645984006036680">Integration Tables
+        <h2 id="4421934364885890705">Integration Tables
         </h2>
-        <div macro="layout" boxed columns="3" cols="3">
+        <div boxed macro="layout" cols="3" columns="3">
           <div boxed-child>
-            <div latex="block" macro="equation">$$\begin{equation}
+            <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
             \int\sin(x)\;\mathrm{d}x &= -\cos x \\
@@ -753,7 +763,7 @@ window.MathJax = {
             </div>
           </div>
           <div boxed-child>
-            <div latex="block" macro="equation">$$\begin{equation}
+            <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
             \int\frac{1}{x^2 + a^2}\;\mathrm{d}x &= \frac{1}{a}\tan^{-1}\left(\frac{x}{a}\right)
@@ -763,7 +773,7 @@ window.MathJax = {
             </div>
           </div>
           <div boxed-child>
-            <div latex="block" macro="equation">$$\begin{equation}
+            <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
             \int\frac{1}{x^2 - a^2}\;\mathrm{d}x &= \frac{1}{2a}\ln\left|\frac{x-a}{x+a}\right|
@@ -773,7 +783,7 @@ window.MathJax = {
             </div>
           </div>
           <div boxed-child>
-            <div macro="equation" latex="block">$$\begin{equation}
+            <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             \int\frac{1}{\sqrt{a^2 - x^2}}\;\mathrm{d}x &= \sin^{-1}\left(\frac{x}{a}\right),\;a>0
@@ -794,7 +804,7 @@ window.MathJax = {
           </div>
         </div>
       </div>      <div boxed macro="note">
-        <h2 id="6516886555590622645">Riemann Sums
+        <h2 id="15444981658339018528">Riemann Sums
         </h2>
         <p center>Given</p>
         <div macro="equation" latex="block">$$\begin{equation}
@@ -810,9 +820,9 @@ window.MathJax = {
         </div>
         <div macro="layout" columns="2" cols="2">
           <div macro="note" boxed>
-            <h3 id="13064478134420733499">Left Riemann Sum
+            <h3 id="7889278357006478190">Left Riemann Sum
             </h3>
-            <div latex="block" macro="equation">$$\begin{equation}
+            <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
                 A &= \int_{a}^{b} f(x) \;\mathrm{d}x \approx L_n = \sum_{i = 0}^{n-1}\, \Delta{x}\cdot f\left(a + i\cdot\Delta{x}\right)
@@ -821,10 +831,10 @@ window.MathJax = {
 \end{equation}$$
             </div>
           </div>
-          <div macro="note" boxed>
-            <h3 id="13709259654612285096">Right Riemann Sum
+          <div boxed macro="note">
+            <h3 id="6485843047364528661">Right Riemann Sum
             </h3>
-            <div latex="block" macro="equation">$$\begin{equation}
+            <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
                 A &= \int_{a}^{b} f(x) \;\mathrm{d}x \approx R_n = \sum_{i = 1}^{n}\, \Delta{x}\cdot f\left(a + i\cdot\Delta{x}\right)
@@ -835,9 +845,9 @@ window.MathJax = {
           </div>
         </div>
         <div macro="note" boxed>
-          <h3 id="523452734374938997">Midpoint Riemann Sum
+          <h3 id="11913850114631249706">Midpoint Riemann Sum
           </h3>
-          <div macro="texblock" latex="block">$$
+          <div latex="block" macro="texblock">$$
             \newcommand{\generalFormat}{
                 \sum_{\small{\cdots}}^{\small{\cdots}}\, \Delta{x}\cdot f\left(a + \text{“avg. of $x_i$ and $x_{i-1}$”} \cdot \Delta{x}\right)
             }
@@ -859,7 +869,7 @@ window.MathJax = {
           </div>
           <hr></hr>
           <p center>We can also do away with the index notation and simplify things.</p>
-          <div macro="texblock" latex="block">$$
+          <div latex="block" macro="texblock">$$
             \newcommand{\SigmaExampleOne}{
                 \sum_{i = 1}^{n}\, \Delta{x}\cdot f\left(a + \frac{(i - 1) + i}{2} \cdot \Delta{x}\right) =
                 \sum_{i = 1}^{n}\, \Delta{x}\cdot f\left(a + \frac{2i - 1}{2} \cdot \Delta{x}\right)
@@ -878,16 +888,16 @@ window.MathJax = {
         $$
           </div>
         </div>
-        <div macro="note" boxed>
-          <h3 id="4156602342369527224">Trapezoidal Riemann Sum
+        <div boxed macro="note">
+          <h3 id="18197509888470614739">Trapezoidal Riemann Sum
           </h3>
-          <div latex="block" macro="texblock">$$
+          <div macro="texblock" latex="block">$$
             \dots
         $$
           </div>
         </div>
-        <div boxed macro="note">
-          <h3 id="3773074421338411844">Simpson's Rule
+        <div macro="note" boxed>
+          <h3 id="15850922170982189082">Simpson's Rule
           </h3>
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -898,9 +908,9 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-      </div>      <div macro="layout" cols="2" columns="2">
+      </div>      <div macro="layout" columns="2" cols="2">
         <div macro="note">
-          <h2 id="4778329724929829982">Improper Integrals
+          <h2 id="6104755296350419402">Improper Integrals
           </h2>
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -913,13 +923,13 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-      </div>      <h1 id="9997582284539004118">Infinite Sequences and Series
-      </h1>      <h2 id="4152876007789844182">Sequence
-      </h2>      <div columns="2" macro="layout" cols="2">
-        <div boxed macro="note">
-          <h3 id="5158120706954772560">Infinite Sequence
+      </div>      <h1 id="2909953064924322019">Infinite Sequences and Series
+      </h1>      <h2 id="2442834394891273850">Sequence
+      </h2>      <div cols="2" columns="2" macro="layout">
+        <div macro="note" boxed>
+          <h3 id="5161756110822019672">Infinite Sequence
           </h3>
-          <div macro="equation" latex="block">$$\begin{equation}
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             \text{Given}&\\
@@ -933,9 +943,9 @@ window.MathJax = {
           </div>
         </div>
         <div boxed macro="note">
-          <h3 id="12318358463568601582">Helpful Theorem
+          <h3 id="16353236852663505480">Helpful Theorem
           </h3>
-          <div macro="equation" latex="block">$$\begin{equation}
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             \text{If}&\\
@@ -948,7 +958,7 @@ window.MathJax = {
           </div>
         </div>
         <div boxed macro="note">
-          <h3 id="15055527297168846694">Example
+          <h3 id="17174829760903510475">Example
           </h3>
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -967,7 +977,7 @@ window.MathJax = {
           </div>
         </div>
         <div macro="note" boxed>
-          <h3 id="4740006848629359380">Example
+          <h3 id="12664005285948278369">Example
           </h3>
           <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
@@ -985,10 +995,10 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-      </div>      <h2 id="3138608049002523842">Series
+      </div>      <h2 id="4039849812974774374">Series
       </h2>      <div cols="2" macro="layout" columns="2">
         <div boxed macro="note">
-          <h3 id="7732037875415709364">Infinite Series
+          <h3 id="1783246559061260629">Infinite Series
           </h3>
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -1004,15 +1014,15 @@ window.MathJax = {
 \end{equation}$$
           </div>
           <p>Note that the limit of every <b>convergent</b> series is equal to zero. But the inverse isn't always true. If the limit is equal to zero, it <u>may not be convergent</u>.</p>
-          <p>For example, <span macro="tex" latex="inline">\(\sum_{n=1}^\infty \frac{1}{n}\)</span> does diverge; <u>but it's limit is equal to zero</u>.</p>
-          <div macro="note" inline>
+          <p>For example, <span latex="inline" macro="tex">\(\sum_{n=1}^\infty \frac{1}{n}\)</span> does diverge; <u>but it's limit is equal to zero</u>.</p>
+          <div inline macro="note">
             <p>If the limit is equal to zero; the <u>test is <b>inconclusive</b></u>.</p>
           </div>
         </div>
-        <div boxed macro="note">
-          <h3 id="3133855087523808270">Geometric Series
+        <div macro="note" boxed>
+          <h3 id="16342236816327364563">Geometric Series
           </h3>
-          <div macro="equation" latex="block">$$\begin{equation}
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             \text{Given}&\\
@@ -1036,9 +1046,9 @@ window.MathJax = {
           </div>
         </div>
         <div boxed macro="note">
-          <h3 id="10941403362855279360">The Integral Test
+          <h3 id="1094384703724759020">The Integral Test
           </h3>
-          <div macro="equation" latex="block">$$\begin{equation}
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             &\text{Given}\\
@@ -1056,7 +1066,7 @@ window.MathJax = {
 \end{equation}$$
           </div>
           <div macro="note">
-            <h4 id="9262952594202299795">Constraints on <span macro="tex" latex="inline">\([1,n)\)</span>
+            <h4 id="15985961550400203688">Constraints on <span macro="tex" latex="inline">\([1,n)\)</span>
             </h4>
             <ul>
               <li>Continuous
@@ -1069,7 +1079,7 @@ window.MathJax = {
           </div>
         </div>
         <div style="display: grid;" macro="note" boxed>
-          <h3 id="1558507593393351155">P-Series -or- Harmonic Series
+          <h3 id="8347924634588937025">P-Series -or- Harmonic Series
           </h3>
           <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
@@ -1083,14 +1093,14 @@ window.MathJax = {
 \end{split}
 \end{equation}$$
           </div>
-          <div style="align-self: flex-end;" macro="note" boxed>
+          <div style="align-self: flex-end;" boxed macro="note">
             <p>Note: the <u>Harmonic series</u> is the special case where <span macro="tex" latex="inline">\(p=1\)</span></p>
           </div>
         </div>
         <div boxed macro="note">
-          <h3 id="16726304449077107440">Comparison Test
+          <h3 id="12723110104780179947">Comparison Test
           </h3>
-          <div macro="equation" latex="block">$$\begin{equation}
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             &\text{Given}\\
@@ -1107,8 +1117,8 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-        <div boxed macro="note">
-          <h3 id="10073976755125265447">Limit Comparison Test
+        <div macro="note" boxed>
+          <h3 id="12515007207880130730">Limit Comparison Test
           </h3>
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -1127,17 +1137,17 @@ window.MathJax = {
 \end{equation}$$
           </div>
           <div macro="note">
-            <h4 id="9426319926524904760">Warning
+            <h4 id="8115088294845376399">Warning
             </h4>
             <ul>
-              <li>If <span macro="tex" latex="inline">\(L > 0\)</span>, this only means that the limit comparison test <u>can be used</u>. You <u>still need to determine if either</u><span latex="inline" macro="tex">\(A_n\)</span> or <span macro="tex" latex="inline">\(B_b\)</span> converges or diverges.
+              <li>If <span macro="tex" latex="inline">\(L > 0\)</span>, this only means that the limit comparison test <u>can be used</u>. You <u>still need to determine if either</u><span latex="inline" macro="tex">\(A_n\)</span> or <span latex="inline" macro="tex">\(B_b\)</span> converges or diverges.
               </li>
               <li>Therefore, this does not apply to any arbitrary rational function.
               </li>
             </ul>
           </div>
           <div macro="note">
-            <h4 id="14129538780081573867">Notes
+            <h4 id="12506385385944326541">Notes
             </h4>
             <ul>
               <li>For many series, we find a suitable comparison, <span latex="inline" macro="tex">\(B_n\)</span>, by keeping only the <u>highest powers in the numerator and denominator</u> of <span latex="inline" macro="tex">\(A_n\)</span>.
@@ -1145,8 +1155,8 @@ window.MathJax = {
             </ul>
           </div>
         </div>
-        <div macro="note" boxed>
-          <h3 id="6482232195425023141">Estimating Infinite Series
+        <div boxed macro="note">
+          <h3 id="12112563374177142597">Estimating Infinite Series
           </h3>
           <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
@@ -1155,12 +1165,12 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-      </div>      <h2 id="8641898577043753827">Sequence
-      </h2>      <div macro="layout" cols="2" columns="2">
+      </div>      <h2 id="16444108417089502218">Sequence
+      </h2>      <div columns="2" cols="2" macro="layout">
         <div boxed macro="note">
-          <h3 id="15440965363243250749">Infinite Sequence
+          <h3 id="14182468505816858608">Infinite Sequence
           </h3>
-          <div macro="equation" latex="block">$$\begin{equation}
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             \text{Given}&\\
@@ -1174,9 +1184,9 @@ window.MathJax = {
           </div>
         </div>
         <div boxed macro="note">
-          <h3 id="8027902407638945924">Helpful Theorem
+          <h3 id="12258456036559465885">Helpful Theorem
           </h3>
-          <div latex="block" macro="equation">$$\begin{equation}
+          <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
             \text{If}&\\
@@ -1189,7 +1199,7 @@ window.MathJax = {
           </div>
         </div>
         <div boxed macro="note">
-          <h3 id="2066398927268305814">Example
+          <h3 id="6991374278889143296">Example
           </h3>
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -1207,10 +1217,10 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-        <div macro="note" boxed>
-          <h3 id="12886166973152984573">Example
+        <div boxed macro="note">
+          <h3 id="5289151188250018300">Example
           </h3>
-          <div macro="equation" latex="block">$$\begin{equation}
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
         \text{Given}\\
@@ -1226,13 +1236,13 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-      </div>      <h2 id="4238873018100566224">Differential Equations
-      </h2>      <h3 id="12303004300432067227">First Order Differential Equations
-      </h3>      <div columns="2" macro="layout" cols="2">
+      </div>      <h2 id="18088992861855306342">Differential Equations
+      </h2>      <h3 id="624845563685289635">First Order Differential Equations
+      </h3>      <div cols="2" macro="layout" columns="2">
         <div boxed macro="note">
-          <h4 id="3369340153941147304">Separable Differential Equations
+          <h4 id="5979561704442355957">Separable Differential Equations
           </h4>
-          <div latex="block" macro="equation">$$\begin{equation}
+          <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
             \text{Given}\\
@@ -1263,8 +1273,8 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-      </div>      <h3 id="10164571140935905949">Second-Order Differential Equations
-      </h3>      <div cols="2" macro="layout" columns="2">
+      </div>      <h3 id="2785733445637753795">Second-Order Differential Equations
+      </h3>      <div columns="2" cols="2" macro="layout">
         <div macro="note">
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -1298,10 +1308,10 @@ window.MathJax = {
           </ul>
         </div>
         <div macro="note">
-          <h4 id="4559498620676681389">Second order homogeneous linear differential equations with constant coefficients
+          <h4 id="4731251578513206747">Second order homogeneous linear differential equations with constant coefficients
           </h4>
           <p>Given some:</p>
-          <div latex="block" macro="equation">$$\begin{equation}
+          <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
             a y^{\prime\prime} + b y^\prime + c y = 0\;\text{where $a \neq 0$}\\
@@ -1309,8 +1319,8 @@ window.MathJax = {
 \end{split}
 \end{equation}$$
           </div>
-          <p>We can presume that <span latex="inline" macro="tex">\(y\)</span> is of the form <span latex="inline" macro="tex">\(e^{r t}\)</span>, and therefore:</p>
-          <div macro="equation" latex="block">$$\begin{equation}
+          <p>We can presume that <span macro="tex" latex="inline">\(y\)</span> is of the form <span latex="inline" macro="tex">\(e^{r t}\)</span>, and therefore:</p>
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             \text{if}\\
@@ -1333,7 +1343,7 @@ window.MathJax = {
 \end{equation}$$
           </div>
           <p>Where:</p>
-          <div macro="equation" latex="block">$$\begin{equation}
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             &= \underbrace{e^{r t}}_\text{never $0$}
@@ -1343,7 +1353,7 @@ window.MathJax = {
 \end{equation}$$
           </div>
           <p>So therefore:</p>
-          <div macro="equation" latex="block">$$\begin{equation}
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             &\underbrace{a r^2 + b r + c = 0}
@@ -1357,7 +1367,7 @@ window.MathJax = {
 \end{equation}$$
           </div>
           <p>Where the general solution is of the form:</p>
-          <div latex="block" macro="equation">$$\begin{equation}
+          <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
             y &=\; &C_1\; e^{r_1 t} &+ C_2\; e^{r_2 t}\\
@@ -1368,13 +1378,13 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-      </div>      <h2 id="12886910818871287970">Parametric Equations
+      </div>      <h2 id="11384835483427695019">Parametric Equations
       </h2>      <div cols="2" macro="layout" columns="2">
         <div macro="note">
-          <h3 id="6720420607573749240">First Derivative Formula
+          <h3 id="3567795819370498690">First Derivative Formula
           </h3>
           <p>To find the derivative of a given function defined parametrically by the equations <span latex="inline" macro="tex">\(x = u(t)\)</span> and <span latex="inline" macro="tex">\(y = v(t)\)</span>.</p>
-          <div latex="block" macro="equation">$$\begin{equation}
+          <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
             \text{Given}\\
@@ -1392,10 +1402,10 @@ window.MathJax = {
           </div>
         </div>
         <div macro="note">
-          <h3 id="16983160605609572955">Second Derivative Formula
+          <h3 id="17043069009955420306">Second Derivative Formula
           </h3>
-          <p>To find the second derivative of a given function defined parametrically by the equations <span macro="tex" latex="inline">\(x = u(t)\)</span> and <span macro="tex" latex="inline">\(y = v(t)\)</span>.</p>
-          <div macro="equation" latex="block">$$\begin{equation}
+          <p>To find the second derivative of a given function defined parametrically by the equations <span latex="inline" macro="tex">\(x = u(t)\)</span> and <span macro="tex" latex="inline">\(y = v(t)\)</span>.</p>
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             \text{Given}\\
@@ -1446,12 +1456,12 @@ window.MathJax = {
 \end{split}
 \end{equation}$$
           </div>
-          <div inline macro="note">
-            <p>The above shows different ways of representing <span latex="inline" macro="tex">\(\frac{\mathrm{d}^{2}y}{\mathrm{d}x^2}\)</span>. (I.e. it doesn't correspond to some final solution.)</p>
+          <div macro="note" inline>
+            <p>The above shows different ways of representing <span macro="tex" latex="inline">\(\frac{\mathrm{d}^{2}y}{\mathrm{d}x^2}\)</span>. (I.e. it doesn't correspond to some final solution.)</p>
           </div>
         </div>
         <div macro="note">
-          <h3 id="3202369168001196096">Arc Length
+          <h3 id="13698059807179591373">Arc Length
           </h3>
           <p>Formula for the arc length of a parametric curve over the interval <span latex="inline" macro="tex">\([a, b]\)</span>.</p>
           <div latex="block" macro="equation">$$\begin{equation}
