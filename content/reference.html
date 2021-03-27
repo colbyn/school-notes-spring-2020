@@ -438,7 +438,8 @@
     </note>
     <note boxed>
         <h3>Estimating Infinite Series</h3>
-        <equation>
+        <equation>\cdots</equation>
+        <!-- <equation>
             &\text{For some infinite sum “$S$”}\\
             &\;\;\;\;S = \text{“infinite sum we will estimate”}\\
             &\text{Given}\\
@@ -458,7 +459,7 @@
             &\;\;\;\;\text{upper} = S_k + \int_{k}^\infty f(x)\mathrm{d}x\\
             &\text{Therefore}\\
             &\;\;\;\;\therefore\;\underbrace{\text{lower}\;\leq\,S\leq\;\text{upper}}_{\text{this is our estimate}}\\
-        </equation>
+        </equation> -->
     </note>
 </layout>
 
@@ -514,9 +515,10 @@
 </layout>
 
 <h2>Differential Equations</h2>
+<h3>First Order Differential Equations</h3>
 <layout cols="2">
     <note boxed>
-        <h3>Separable Differential Equations</h3>
+        <h4>Separable Differential Equations</h4>
         <equation>
             \text{Given}\\
             \frac{\mathrm{d}y}{\mathrm{d}x}
@@ -541,6 +543,70 @@
                 &= h(y) \textcolor{JungleGreen}{\frac{\mathrm{d}y}{dx}}
             \\\text{Therefore (in conclusion)}\\
             \therefore \; h(y)\;\frac{\mathrm{d}y}{dx} &= g(x)
+        </equation>
+    </note>
+</layout>
+<h3>Second-Order Differential Equations</h3>
+<layout cols="2">
+    <note>
+        <equation>
+            \underbrace
+                {A(x) y^{\prime\prime} + B(x) y^\prime + C(x) y = D(x)}
+                _{\text{Non-homogeneous}}\\
+            \underbrace
+                {A(x) y^{\prime\prime} + B(x) y^\prime + C(x) y = 0}
+                _{\text{Homogeneous}}\\
+        </equation>
+        <equation>
+            \underbrace{
+                a y^{\prime\prime} + b y^\prime + c y = g(t)
+                \;\;\text{-or-}\;\;
+                a y^{\prime\prime} + b y^\prime + c y = 0
+            }
+                _{\text{Constant coefficients}}\\
+        </equation>
+        <ul>
+            <li>“Homogeneous” means that the term in the equation that does not depend on y or its derivatives is 0.</li>
+        </ul>
+    </note>
+    <note>
+        <h4>Second order homogeneous linear differential equations with constant coefficients</h4>
+        <p>Given some:</p>
+        <equation>
+            a y^{\prime\prime} + b y^\prime + c y = 0\;\text{where $a \neq 0$}\\
+        </equation>
+        <p>We can presume that <tex>y</tex> is of the form <tex>e^{r t}</tex>, and therefore:</p>
+        <equation>
+            \text{if}\\
+            y &= e^{r t}\\
+            \text{then}\\
+            y^{\prime} &= r e^{r t}\\
+            y^{\prime\prime} &= r^2 e^{r t}
+        </equation>
+        <p>Substituting this back into the original equation, we have:</p>
+        <equation>
+            0 &= a r^2 e^{r t} + b r e^{r t} + c e^{r t}\\
+              &= e^{r t} \left(a r^2 + b r + c\right)
+        </equation>
+        <p>Where:</p>
+        <equation>
+            &= \underbrace{e^{r t}}_\text{never $0$}
+               \underbrace{\left(a r^2 + b r + c\right)}_\text{?}
+        </equation>
+        <p>So therefore:</p>
+        <equation>
+            &\underbrace{a r^2 + b r + c = 0}
+            _\text{characteristic equation}\\
+            &r = \frac
+                {-b \pm \sqrt{b^2 - 4ac}}
+                {2a}
+              \implies r_1, r_2
+        </equation>
+        <p>Where the general solution is of the form:</p>
+        <equation>
+            y &=\; &C_1\; e^{r_1 t} &+ C_2\; e^{r_2 t}\\
+            y^\prime &=\; &C_1\; r_1\; e^{r_1 t} &+ C_2\; r_2\; e^{r_2 t}\\
+            y^{\prime\prime} &=\; &C_1\; \left(r_1\right)^2\; e^{r_1 t} &+ C_2\; \left(r_2\right)^2\; e^{r_2 t}\\
         </equation>
     </note>
 </layout>
@@ -615,4 +681,16 @@
             <p>The above shows different ways of representing <tex>\frac{\mathrm{d}^{2}y}{\mathrm{d}x^2}</tex>. (I.e. it doesn't correspond to some final solution.)</p>
         </note>
     </note>
+    <note>
+        <h3>Arc Length</h3>
+        <p>Formula for the arc length of a parametric curve over the interval <tex>[a, b]</tex>.</p>
+        <equation>
+            \int_a^b \sqrt{
+                \left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)^2 +
+                \left(\frac{\mathrm{d}y}{\mathrm{d}t}\right)^2
+            }
+            \mathrm{d}t
+        </equation>
+    </note>
 </layout>
+

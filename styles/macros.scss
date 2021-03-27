@@ -178,10 +178,11 @@
     text-align: center;
     display: inline-flex;
     justify-self: center;
+    box-sizing: content-box;
 }
 
 [latex='block'] {
-    font-size: 0.8em;
+    // font-size: unset !important;
     max-width: 100%;
     max-height: fit-content;
     align-self: center;
@@ -189,7 +190,14 @@
     overflow: hidden;
     overflow-x: auto;
     overflow-y: hidden;
+    box-sizing: unset;
+    overflow: auto;
 }
 [latex='block'] > mjx-container {
     margin: 0 !important;
+    // overflow: auto;
 }
+
+// mjx-container[jax='CHTML'][display='true'] {
+//     display: inline !important;
+// }
