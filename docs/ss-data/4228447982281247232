@@ -231,31 +231,13 @@ img[center] {
 /* LATEX */
 /* ========================================================================= */
 
-[latex] {
-  font-family: "Roboto Slab", monospace;
-  text-rendering: optimizeLegibility;
-}
-
 [latex=inline] {
-  max-width: fit-content;
-  text-align: center;
-  display: inline-flex;
-  justify-self: center;
+  box-sizing: unset;
 }
 
 [latex=block] {
-  font-size: 0.8em;
-  max-width: 100%;
-  max-height: fit-content;
-  align-self: center;
-  justify-self: center;
-  overflow: hidden;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-
-[latex=block] > mjx-container {
-  margin: 0 !important;
+  font-size: unset !important;
+  box-sizing: unset;
 }
 
 main {
