@@ -2,49 +2,62 @@
   <head>
     <title>Colbyn's Math Notes
     </title>
-    <link ss.link.processed rel="stylesheet" href="https://colbyn.github.io/school-notes-spring-2020/ss-data/4228447982281247232"></link>
-    <meta content="width=device-width,initial-scale=1" name="viewport"></meta>
-    <meta charset="utf-8"></meta>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet"></link>
-    <link href="https://fonts.gstatic.com" rel="preconnect"></link>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"></link>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"></link>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"></link>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"></link>
-    <link rel="stylesheet" href="https://raw.githubusercontent.com/joshuarudd/typeset.css/master/typeset.min.css"></link><script>
-    window.MathJax = {
-        tex: {
-            inlineMath: [['\\(', '\\)'], ['stem:[', ']'], ['`', '`']],
-            macros: {
-                'dx': "{\\, \\mathrm{d}x\\;}",
-                'Integrate': ['{\\int_{#1}^{#2}\\, #3 \\dx}', 3],
-                'IntegrateFor': ['{\\int_{#1}^{#2}\\, #3 {\\, \\mathrm{d}{#4}\\;}}', 4],
-                'I': ['{\\Integrate{a}{b}{#1}}', 1],
-                'angles': ['\\langle {#1},{#2} \\rangle', 2]
-            },
+    <link href="https://colbyn.github.io/school-notes-spring-2020/ss-data/11013937192394877511" rel="stylesheet" ss.link.processed></link><script>
+window.MathJax = {
+    tex: {
+        inlineMath: [['\\(', '\\)'], ['stem:[', ']'], ['`', '`']],
+        macros: {
+            'dx': "{\\, \\mathrm{d}x\\;}",
+            'Integrate': ['{\\int_{#1}^{#2}\\, #3 \\dx}', 3],
+            'IntegrateFor': ['{\\int_{#1}^{#2}\\, #3 {\\, \\mathrm{d}{#4}\\;}}', 4],
+            'I': ['{\\Integrate{a}{b}{#1}}', 1],
+            'angles': ['\\langle {#1},{#2} \\rangle', 2]
         },
-        processEscapes: true,
-        options: {enableMenu: false},
-        chtml: {
-            scale: 1,                      // global scaling factor for all expressions
-            minScale: 0.5,                  // smallest scaling factor to use
-            matchFontHeight: true,         // true to match ex-height of surrounding font
-            mtextInheritFont: true,       // true to make mtext elements use surrounding font
-            merrorInheritFont: true,       // true to make merror text use surrounding font
-            mathmlSpacing: true,          // true for MathML spacing rules, false for TeX rules
-            skipAttributes: {},            // RFDa and other attributes NOT to copy to the output
-            exFactor: .5,                  // default size of ex in em units
-            displayAlign: 'center',        // default for indentalign when set to 'auto'
-            displayIndent: '0',            // default for indentshift when set to 'auto'
-            adaptiveCSS: true              // true means only produce CSS that is used in the processed equations
-        }
-    };
-</script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" id="MathJax-script" async></script>
+    },
+    // svg: {
+    //     fontCache: 'global',
+    //     minScale: 0.2
+    // },
+    svg: {
+        scale: 0.9,                      // global scaling factor for all expressions
+        minScale: 0.2,                  // smallest scaling factor to use
+        mtextInheritFont: false,       // true to make mtext elements use surrounding font
+        merrorInheritFont: true,       // true to make merror text use surrounding font
+        mathmlSpacing: false,          // true for MathML spacing rules, false for TeX rules
+        skipAttributes: {},            // RFDa and other attributes NOT to copy to the output
+        exFactor: 0.5,                  // default size of ex in em units
+        displayAlign: 'center',        // default for indentalign when set to 'auto'
+        displayIndent: '0',            // default for indentshift when set to 'auto'
+        fontCache: 'global',            // or 'global' or 'none'
+        titleID: 0                     // initial id number to use for aria-labeledby titles
+    },
+    processEscapes: true,
+    options: {enableMenu: false},
+};
+</script><script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" id="MathJax-script"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet"></link>
+    <meta content="width=device-width,initial-scale=1" name="viewport"></meta>
+    <meta charset="utf-8"></meta><script src="https://www.geogebra.org/apps/deployggb.js"></script><script src="https://www.desmos.com/api/v1.5/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com"></link>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"></link>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"></link>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"></link>
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/joshuarudd/typeset.css/master/typeset.min.css"></link>
+    <style>
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        margin: 0;
+    }
+
+    </style>
   </head>
   <body>
     <header id="site-header">
       <div page-nav>
-        <h1 id="15694755762374474212" toc-ignore>Site Navigation
+        <h1 toc-ignore id="11247403596781277819">Site Navigation
         </h1>
         <ul macro="page-nav">
           <li><a href="https://colbyn.github.io/school-notes-spring-2020/index.html">Reference (Math)</a>
@@ -64,151 +77,151 @@
         </ul>
       </div>
       <div toc>
-        <h1 id="16151502391661389505" toc-ignore>Table of Contents
+        <h1 toc-ignore id="3040846149766848300">Table of Contents
         </h1>
         <ul macro="toc">
-          <li for="h1"><a href="#6369443736214526393">Miscellaneous</a>
+          <li for="h1"><a href="#12933277979226249001">Miscellaneous</a>
           </li>
-          <li for="h2"><a href="#6720235364620684023">Functional Utilities & Notation Conveniences</a>
+          <li for="h2"><a href="#7389085591937700613">Functional Utilities & Notation Conveniences</a>
           </li>
-          <li for="h3"><a href="#14155665574392651755">Right to Left Evaluation</a>
+          <li for="h3"><a href="#12364260902408276267">Right to Left Evaluation</a>
           </li>
-          <li for="h3"><a href="#14261792939274827195">Left to Right Evaluation</a>
+          <li for="h3"><a href="#10720700408189142905">Left to Right Evaluation</a>
           </li>
-          <li for="h3"><a href="#5903250207875478637">Derivative Shorthand</a>
+          <li for="h3"><a href="#11564302101130541933">Derivative Shorthand</a>
           </li>
-          <li for="h2"><a href="#3573985360489684126">Radians & Radian Conversion</a>
+          <li for="h2"><a href="#8540620932181588700">Radians & Radian Conversion</a>
           </li>
-          <li for="h3"><a href="#14835711490992212987">Constants</a>
+          <li for="h3"><a href="#3925445226403454683">Constants</a>
           </li>
-          <li for="h3"><a href="#3857894668454431447">Conversion</a>
+          <li for="h3"><a href="#5013436887810146851">Conversion</a>
           </li>
-          <li for="h1"><a href="#11228876988019543709">Algebra</a>
+          <li for="h1"><a href="#14359663670454431574">Algebra</a>
           </li>
-          <li for="h2"><a href="#10354550653698493008">Properties</a>
+          <li for="h2"><a href="#1669916788656307796">Properties</a>
           </li>
-          <li for="h1"><a href="#1866569955371971491">Trigonometry</a>
+          <li for="h1"><a href="#437699651531424563">Trigonometry</a>
           </li>
-          <li for="h2"><a href="#6151698414311319207">Trigonometric Identities and Equations</a>
+          <li for="h2"><a href="#8727128385612043839">Trigonometric Identities and Equations</a>
           </li>
-          <li for="h3"><a href="#9357019076140977835">Pythagorean Identities</a>
+          <li for="h3"><a href="#15875469804420651133">Pythagorean Identities</a>
           </li>
-          <li for="h3"><a href="#7293049532660909992">Sum and Difference Identities</a>
+          <li for="h3"><a href="#1870436609683161518">Sum and Difference Identities</a>
           </li>
-          <li for="h3"><a href="#14060605873097563175">Cofunction Identities</a>
+          <li for="h3"><a href="#11410957026227474514">Cofunction Identities</a>
           </li>
-          <li for="h3"><a href="#4779040517241447962">Ratio Identities</a>
+          <li for="h3"><a href="#10442509826939068481">Ratio Identities</a>
           </li>
-          <li for="h3"><a href="#540676857530956513">Double-Angle Identities</a>
+          <li for="h3"><a href="#6299294172046463883">Double-Angle Identities</a>
           </li>
-          <li for="h3"><a href="#1011690862868934972">Half-Angle Identities</a>
+          <li for="h3"><a href="#4911220760190280511">Half-Angle Identities</a>
           </li>
-          <li for="h3"><a href="#5476383484454670485">Power-Reducing Identities</a>
+          <li for="h3"><a href="#8492545774274042517">Power-Reducing Identities</a>
           </li>
-          <li for="h3"><a href="#279230354675202017">Product-to-Sum Identities</a>
+          <li for="h3"><a href="#13274879956198161799">Product-to-Sum Identities</a>
           </li>
-          <li for="h3"><a href="#7381421732831921867">Sum-to-Product-Identities</a>
+          <li for="h3"><a href="#4346143357462073056">Sum-to-Product-Identities</a>
           </li>
-          <li for="h1"><a href="#14263503073303631489">Limits</a>
+          <li for="h1"><a href="#14860288297592905532">Limits</a>
           </li>
-          <li for="h2"><a href="#5189511805185271565">L’Hospital’s Rule</a>
+          <li for="h2"><a href="#7380505617081537301">L’Hospital’s Rule</a>
           </li>
-          <li for="h2"><a href="#13587304792190463138">Limit Laws</a>
+          <li for="h2"><a href="#8174352871781322158">Limit Laws</a>
           </li>
-          <li for="h2"><a href="#15739182132247420461">Limit Formulas</a>
+          <li for="h2"><a href="#15550643622117912214">Limit Formulas</a>
           </li>
-          <li for="h2"><a href="#7868150443206244887">Growth Rates</a>
+          <li for="h2"><a href="#6333330839128000717">Growth Rates</a>
           </li>
-          <li for="h1"><a href="#17102563254006741267">Calculus</a>
+          <li for="h1"><a href="#14780136653328290348">Calculus</a>
           </li>
-          <li for="h2"><a href="#327543684309046637">Derivative Tables</a>
+          <li for="h2"><a href="#15197788181773047063">Derivative Tables</a>
           </li>
-          <li for="h2"><a href="#17581162001182550022">Integration Tables</a>
+          <li for="h2"><a href="#12166568486987090688">Integration Tables</a>
           </li>
-          <li for="h2"><a href="#8497992677650646931">Riemann Sums</a>
+          <li for="h2"><a href="#3042223790119828964">Riemann Sums</a>
           </li>
-          <li for="h3"><a href="#9434020052150533774">Left Riemann Sum</a>
+          <li for="h3"><a href="#14151227297264172944">Left Riemann Sum</a>
           </li>
-          <li for="h3"><a href="#11782863105052702590">Right Riemann Sum</a>
+          <li for="h3"><a href="#11479379255455254730">Right Riemann Sum</a>
           </li>
-          <li for="h3"><a href="#2825110918373860370">Midpoint Riemann Sum</a>
+          <li for="h3"><a href="#14970270269790815114">Midpoint Riemann Sum</a>
           </li>
-          <li for="h3"><a href="#6142401936085033708">Trapezoidal Riemann Sum</a>
+          <li for="h3"><a href="#14019154724298785439">Trapezoidal Riemann Sum</a>
           </li>
-          <li for="h3"><a href="#14558338916332546184">Simpson's Rule</a>
+          <li for="h3"><a href="#1370757587721545334">Simpson's Rule</a>
           </li>
-          <li for="h2"><a href="#16633482774407705007">Improper Integrals</a>
+          <li for="h2"><a href="#9391227868584759796">Improper Integrals</a>
           </li>
-          <li for="h1"><a href="#2196756449772776462">Infinite Sequences and Series</a>
+          <li for="h1"><a href="#16670029421663308138">Infinite Sequences and Series</a>
           </li>
-          <li for="h2"><a href="#13655616018394794397">Sequence</a>
+          <li for="h2"><a href="#7707651123312210893">Sequence</a>
           </li>
-          <li for="h3"><a href="#14283772912240528566">Infinite Sequence</a>
+          <li for="h3"><a href="#12358732133478112444">Infinite Sequence</a>
           </li>
-          <li for="h3"><a href="#8847742890268208519">Helpful Theorem</a>
+          <li for="h3"><a href="#18295286770765816072">Helpful Theorem</a>
           </li>
-          <li for="h3"><a href="#17226236829339448743">Example</a>
+          <li for="h3"><a href="#8297796314896783878">Example</a>
           </li>
-          <li for="h3"><a href="#7322290467197919437">Example</a>
+          <li for="h3"><a href="#5272722204108191237">Example</a>
           </li>
-          <li for="h2"><a href="#13691727615487300594">Series</a>
+          <li for="h2"><a href="#10166422600480279236">Series</a>
           </li>
-          <li for="h3"><a href="#12229920545804714559">Infinite Series</a>
+          <li for="h3"><a href="#14039274229057040190">Infinite Series</a>
           </li>
-          <li for="h3"><a href="#46191070358382706">Geometric Series</a>
+          <li for="h3"><a href="#6593216840834555739">Geometric Series</a>
           </li>
-          <li for="h3"><a href="#4654336096550967892">The Integral Test</a>
+          <li for="h3"><a href="#7035062554400378505">The Integral Test</a>
           </li>
-          <li for="h4"><a href="#15253571903626587385">Constraints on  \([1,n)\)</a>
+          <li for="h4"><a href="#15843647570870106717">Constraints on  \([1,n)\)</a>
           </li>
-          <li for="h3"><a href="#1400896119295411916">P-Series -or- Harmonic Series</a>
+          <li for="h3"><a href="#5811452291927300167">P-Series -or- Harmonic Series</a>
           </li>
-          <li for="h3"><a href="#16362844734268268826">Comparison Test</a>
+          <li for="h3"><a href="#7491634106221450197">Comparison Test</a>
           </li>
-          <li for="h3"><a href="#15100879437755636468">Limit Comparison Test</a>
+          <li for="h3"><a href="#6329802983431089704">Limit Comparison Test</a>
           </li>
-          <li for="h4"><a href="#13141152298097975172">Warning</a>
+          <li for="h4"><a href="#9199618755860291340">Warning</a>
           </li>
-          <li for="h4"><a href="#17149266611115423015">Notes</a>
+          <li for="h4"><a href="#14536337290410885209">Notes</a>
           </li>
-          <li for="h3"><a href="#10767498917928177875">Estimating Infinite Series</a>
+          <li for="h3"><a href="#2075541590478596261">Estimating Infinite Series</a>
           </li>
-          <li for="h2"><a href="#881680394267442611">Sequence</a>
+          <li for="h2"><a href="#4448688842601588233">Sequence</a>
           </li>
-          <li for="h3"><a href="#790250834196302851">Infinite Sequence</a>
+          <li for="h3"><a href="#670128415680960995">Infinite Sequence</a>
           </li>
-          <li for="h3"><a href="#13502309307026903866">Helpful Theorem</a>
+          <li for="h3"><a href="#2675895999002517467">Helpful Theorem</a>
           </li>
-          <li for="h3"><a href="#17832685922896643670">Example</a>
+          <li for="h3"><a href="#18020491899403341016">Example</a>
           </li>
-          <li for="h3"><a href="#10587259839653622460">Example</a>
+          <li for="h3"><a href="#16174212574404462658">Example</a>
           </li>
-          <li for="h2"><a href="#15396231017633530905">Differential Equations</a>
+          <li for="h2"><a href="#7179490357021345510">Differential Equations</a>
           </li>
-          <li for="h3"><a href="#12110887059269236044">First Order Differential Equations</a>
+          <li for="h3"><a href="#4154433004546923334">First Order Differential Equations</a>
           </li>
-          <li for="h4"><a href="#7100947172103219689">Separable Differential Equations</a>
+          <li for="h4"><a href="#12104580142615332861">Separable Differential Equations</a>
           </li>
-          <li for="h3"><a href="#10982825154256884375">Second-Order Differential Equations</a>
+          <li for="h3"><a href="#14546617342107208615">Second-Order Differential Equations</a>
           </li>
-          <li for="h4"><a href="#6635415548244613203">Second order homogeneous linear differential equations with constant coefficients</a>
+          <li for="h4"><a href="#4758083394963635847">Second order homogeneous linear differential equations with constant coefficients</a>
           </li>
-          <li for="h2"><a href="#12545529127873088139">Parametric Equations</a>
+          <li for="h2"><a href="#475794808892584890">Parametric Equations</a>
           </li>
-          <li for="h3"><a href="#11042958993775001420">First Derivative Formula</a>
+          <li for="h3"><a href="#8653359628054834612">First Derivative Formula</a>
           </li>
-          <li for="h3"><a href="#5506932567595133185">Second Derivative Formula</a>
+          <li for="h3"><a href="#11835581073442647964">Second Derivative Formula</a>
           </li>
-          <li for="h3"><a href="#4908340257443318933">Arc Length</a>
+          <li for="h3"><a href="#13950116236114735517">Arc Length</a>
           </li>
         </ul>
       </div>
     </header>
     <main>
-      <h1 id="5402603148508934991" root toc-ignore>Colbyn's School Notes
+      <h1 toc-ignore id="2184596056298678346" root>Colbyn's School Notes
       </h1>
-      <div macro="note" boxed>
-        <h2 id="13222569194489352510" toc-ignore>Meta
+      <div boxed macro="note">
+        <h2 toc-ignore id="2577980948934292923">Meta
         </h2>
         <ul>
           <li><a href="https://colbyn.github.io/school-notes-spring-2020/">Online Release</a>
@@ -217,7 +230,7 @@
           </li>
         </ul>
         <div macro="note">
-          <h3 id="16400987780358629257" toc-ignore>Legacy Notes
+          <h3 toc-ignore id="17362222015287821567">Legacy Notes
           </h3>
           <ul>
             <li><a href="https://colbyn.github.io/subscript/">Original Subscript Implementation (Last Iteration)</a>
@@ -231,13 +244,13 @@
           </ul>
         </div>
       </div>
-      <h1 id="6369443736214526393">Miscellaneous
-      </h1>      <h2 id="6720235364620684023">Functional Utilities & Notation Conveniences
+      <h1 id="12933277979226249001">Miscellaneous
+      </h1>      <h2 id="7389085591937700613">Functional Utilities & Notation Conveniences
       </h2>      <div columns="2" cols="2" macro="layout">
-        <div boxed macro="note">
-          <h3 id="14155665574392651755">Right to Left Evaluation
+        <div macro="note" boxed>
+          <h3 id="12364260902408276267">Right to Left Evaluation
           </h3>
-          <div latex="block" macro="equation">$$\begin{equation}
+          <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
             f \triangleleft x &= f(x)
@@ -257,7 +270,7 @@
           </div>
         </div>
         <div boxed macro="note">
-          <h3 id="14261792939274827195">Left to Right Evaluation
+          <h3 id="10720700408189142905">Left to Right Evaluation
           </h3>
           <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
@@ -268,8 +281,8 @@
 \end{equation}$$
           </div>
         </div>
-        <div boxed macro="note">
-          <h3 id="5903250207875478637">Derivative Shorthand
+        <div macro="note" boxed>
+          <h3 id="11564302101130541933">Derivative Shorthand
           </h3>
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -281,12 +294,12 @@
           </div>
           <p>For this notation, the derivative with respect to a given variable, is implicit.</p>
         </div>
-      </div>      <h2 id="3573985360489684126">Radians & Radian Conversion
-      </h2>      <div cols="2" macro="layout" columns="2">
-        <div boxed macro="note">
-          <h3 id="14835711490992212987">Constants
+      </div>      <h2 id="8540620932181588700">Radians & Radian Conversion
+      </h2>      <div macro="layout" columns="2" cols="2">
+        <div macro="note" boxed>
+          <h3 id="3925445226403454683">Constants
           </h3>
-          <div macro="equation" latex="block">$$\begin{equation}
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             \tau &= 2\pi = 360^{\circ} \\
@@ -296,10 +309,10 @@
 \end{equation}$$
           </div>
         </div>
-        <div boxed macro="note">
-          <h3 id="3857894668454431447">Conversion
+        <div macro="note" boxed>
+          <h3 id="5013436887810146851">Conversion
           </h3>
-          <div latex="block" macro="equation">$$\begin{equation}
+          <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
             \text{Given}\\
@@ -317,10 +330,10 @@
 \end{equation}$$
           </div>
         </div>
-      </div>      <h1 id="11228876988019543709">Algebra
-      </h1>      <h2 id="10354550653698493008">Properties
-      </h2>      <div columns="3" cols="3" macro="layout">
-        <div macro="equation" latex="block">$$\begin{equation}
+      </div>      <h1 id="14359663670454431574">Algebra
+      </h1>      <h2 id="1669916788656307796">Properties
+      </h2>      <div cols="3" columns="3" macro="layout">
+        <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
         a^m \cdot b^n &= a^{m+n}\\
@@ -352,19 +365,19 @@
 \end{split}
 \end{equation}$$
         </div>
-      </div>      <h1 id="1866569955371971491">Trigonometry
-      </h1>      <h2 id="6151698414311319207">Trigonometric Identities and Equations
+      </div>      <h1 id="437699651531424563">Trigonometry
+      </h1>      <h2 id="8727128385612043839">Trigonometric Identities and Equations
       </h2>      <div macro="layout" cols="2" columns="2">
         <div macro="note" boxed>
-          <h3 id="9357019076140977835">Pythagorean Identities
+          <h3 id="15875469804420651133">Pythagorean Identities
           </h3>
-          <div macro="equation" latex="block">$$\begin{equation}
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 \cos^2(\theta) + \sin^2(\theta) = 1
 \end{split}
 \end{equation}$$
           </div>
-          <div macro="layout" cols="2" columns="2">
+          <div cols="2" columns="2" macro="layout">
             <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
@@ -374,7 +387,7 @@
 \end{split}
 \end{equation}$$
             </div>
-            <div macro="equation" latex="block">$$\begin{equation}
+            <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             \csc^2(\theta) - \cot^2(\theta) &= 1 \\
@@ -384,10 +397,10 @@
 \end{equation}$$
             </div>
           </div>
-        </div>        <div boxed macro="note">
-          <h3 id="7293049532660909992">Sum and Difference Identities
+        </div>        <div macro="note" boxed>
+          <h3 id="1870436609683161518">Sum and Difference Identities
           </h3>
-          <div macro="texblock" latex="block">$$
+          <div latex="block" macro="texblock">$$
          \begin{equation}
         \begin{split}
             \cos(\alpha - \beta) &= \cos(\alpha) \cdot \cos(\beta) + \sin(\alpha) \cdot \sin(\beta) \\
@@ -403,9 +416,9 @@
     $$
           </div>
         </div>        <div boxed macro="note">
-          <h3 id="14060605873097563175">Cofunction Identities
+          <h3 id="11410957026227474514">Cofunction Identities
           </h3>
-          <div columns="2" cols="2" macro="layout">
+          <div cols="2" macro="layout" columns="2">
             <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 \sin(\theta) = \cos(\frac{1}{4}\tau - \theta)
@@ -430,7 +443,7 @@
 \end{split}
 \end{equation}$$
             </div>
-            <div macro="equation" latex="block">$$\begin{equation}
+            <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 \csc(\theta) = \sec(\frac{1}{4}\tau - \theta)
 \end{split}
@@ -443,8 +456,8 @@
 \end{equation}$$
             </div>
           </div>
-        </div>        <div boxed macro="note">
-          <h3 id="4779040517241447962">Ratio Identities
+        </div>        <div macro="note" boxed>
+          <h3 id="10442509826939068481">Ratio Identities
           </h3>
           <div macro="texblock" latex="block">$$
         \begin{equation}
@@ -456,10 +469,10 @@
         \end{equation}
     $$
           </div>
-        </div>        <div boxed macro="note">
-          <h3 id="540676857530956513">Double-Angle Identities
+        </div>        <div macro="note" boxed>
+          <h3 id="6299294172046463883">Double-Angle Identities
           </h3>
-          <div latex="block" macro="texblock">$$
+          <div macro="texblock" latex="block">$$
          \begin{equation}
         \begin{split}
             \sin(2\alpha) &= 2\sin(\alpha)\cos(\alpha) \\
@@ -472,10 +485,10 @@
         \end{equation}
     $$
           </div>
-        </div>        <div boxed macro="note">
-          <h3 id="1011690862868934972">Half-Angle Identities
+        </div>        <div macro="note" boxed>
+          <h3 id="4911220760190280511">Half-Angle Identities
           </h3>
-          <div latex="block" macro="texblock">$$
+          <div macro="texblock" latex="block">$$
          \begin{equation}
         \begin{split}
             \sin \frac{\alpha}{2} &= \pm \sqrt{\frac{1 - \cos(\alpha)}{2}} \\
@@ -488,7 +501,7 @@
     $$
           </div>
         </div>        <div boxed macro="note">
-          <h3 id="5476383484454670485">Power-Reducing Identities
+          <h3 id="8492545774274042517">Power-Reducing Identities
           </h3>
           <div macro="texblock" latex="block">$$
          \begin{equation}
@@ -512,7 +525,7 @@
 \end{equation}$$
           </div>
         </div>        <div boxed macro="note">
-          <h3 id="279230354675202017">Product-to-Sum Identities
+          <h3 id="13274879956198161799">Product-to-Sum Identities
           </h3>
           <div latex="block" macro="texblock">$$
         \begin{equation}
@@ -526,7 +539,7 @@
     $$
           </div>
         </div>        <div boxed macro="note">
-          <h3 id="7381421732831921867">Sum-to-Product-Identities
+          <h3 id="4346143357462073056">Sum-to-Product-Identities
           </h3>
           <div macro="texblock" latex="block">$$
          \begin{equation}
@@ -540,10 +553,10 @@
     $$
           </div>
         </div>
-      </div>      <h1 id="14263503073303631489">Limits
-      </h1>      <div cols="2" columns="2" macro="layout">
+      </div>      <h1 id="14860288297592905532">Limits
+      </h1>      <div cols="2" macro="layout" columns="2">
         <div macro="note" boxed>
-          <h2 id="5189511805185271565">L’Hospital’s Rule
+          <h2 id="7380505617081537301">L’Hospital’s Rule
           </h2>
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -557,8 +570,8 @@
           </div>
           <p>In other words, if L’Hospital’s Rule applies to indeterminate forms.</p>
         </div>
-      </div>      <h2 id="13587304792190463138">Limit Laws
-      </h2>      <div columns="3" cols="3" macro="layout">
+      </div>      <h2 id="8174352871781322158">Limit Laws
+      </h2>      <div macro="layout" cols="3" columns="3">
         <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 \lim_{x \to a} \Big[ f(x) + g(x) \Big] &= \lim_{x \to a} f(x) + \lim_{x \to a} g(x)
@@ -583,7 +596,7 @@
 \end{split}
 \end{equation}$$
         </div>
-        <div macro="equation" latex="block">$$\begin{equation}
+        <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 \lim_{x \to a} \frac{f(x)}{g(x)} &= \frac{\lim_{x \to a} f(x)}{\lim_{x \to a}g(x)} \; \text{if} \lim_{x \to a}g(x) \neq 0
 \end{split}
@@ -595,7 +608,7 @@
 \end{split}
 \end{equation}$$
         </div>
-        <div latex="block" macro="equation">$$\begin{equation}
+        <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 \underbrace{\lim_{x \to a} \sqrt[n]{f(x)} = \sqrt[n]{\lim_{x \to a} f(x)}\;\text{if}\;n\in\mathbb{Z}^+}_{\text{if $n$ is even we assume $\lim_{x \to a} f(x) > 0$}}
 \end{split}
@@ -607,31 +620,31 @@
 \end{split}
 \end{equation}$$
         </div>
-      </div>      <h2 id="15739182132247420461">Limit Formulas
-      </h2>      <div columns="3" macro="layout" cols="3">
-        <div latex="block" macro="equation">$$\begin{equation}
+      </div>      <h2 id="15550643622117912214">Limit Formulas
+      </h2>      <div macro="layout" cols="3" columns="3">
+        <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 \lim_{x\to\infty} \frac{1}{x^r} &= 0\;,\;\forall r > 0
 \end{split}
 \end{equation}$$
         </div>
-        <div latex="block" macro="equation">$$\begin{equation}
+        <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 \lim_{x\to\infty} \frac{x^n}{!n} &= 0\;,\;\forall n \in \mathbb{R}
 \end{split}
 \end{equation}$$
         </div>
-      </div>      <h2 id="7868150443206244887">Growth Rates
+      </div>      <h2 id="6333330839128000717">Growth Rates
       </h2>      <ol>
         <li><u>Factorial functions</u> grow faster than <u>exponential functions</u>.
         </li>
         <li><u>Exponential functions</u> grow faster than <u>polynomials</u>.
         </li>
-      </ol>      <h1 id="17102563254006741267">Calculus
+      </ol>      <h1 id="14780136653328290348">Calculus
       </h1>      <div macro="note">
-        <h2 id="327543684309046637">Derivative Tables
+        <h2 id="15197788181773047063">Derivative Tables
         </h2>
-        <div macro="layout" cols="3" boxed columns="3">
+        <div cols="3" macro="layout" boxed columns="3">
           <div boxed-child>
             <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -655,7 +668,7 @@
             </div>
           </div>
           <div boxed-child>
-            <div macro="equation" latex="block">$$\begin{equation}
+            <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             \delta\tan(x) &= \sec^2(x) \\
@@ -666,7 +679,7 @@
             </div>
           </div>
         </div>
-        <div boxed cols="3" macro="layout" columns="3">
+        <div cols="3" columns="3" macro="layout" boxed>
           <div boxed-child>
             <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -678,7 +691,7 @@
             </div>
           </div>
           <div boxed-child>
-            <div macro="equation" latex="block">$$\begin{equation}
+            <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             \delta\cos^{-1}(x) &= -\frac{1}{\sqrt{1 - x^2}}
@@ -699,11 +712,11 @@
           </div>
         </div>
       </div>      <div macro="note">
-        <h2 id="17581162001182550022">Integration Tables
+        <h2 id="12166568486987090688">Integration Tables
         </h2>
-        <div cols="3" boxed columns="3" macro="layout">
+        <div boxed columns="3" macro="layout" cols="3">
           <div boxed-child>
-            <div macro="equation" latex="block">$$\begin{equation}
+            <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             \int\sin(x)\;\mathrm{d}x &= -\cos x \\
@@ -717,7 +730,7 @@
             </div>
           </div>
           <div boxed-child>
-            <div macro="equation" latex="block">$$\begin{equation}
+            <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             \int\cos(x)\;\mathrm{d}x &= \sin x \\
@@ -742,7 +755,7 @@
             </div>
           </div>
         </div>
-        <div macro="layout" cols="3" columns="3" boxed>
+        <div cols="3" columns="3" boxed macro="layout">
           <div boxed-child>
             <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
@@ -754,7 +767,7 @@
             </div>
           </div>
           <div boxed-child>
-            <div macro="equation" latex="block">$$\begin{equation}
+            <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             \int\frac{1}{x^2 + a^2}\;\mathrm{d}x &= \frac{1}{a}\tan^{-1}\left(\frac{x}{a}\right)
@@ -774,7 +787,7 @@
             </div>
           </div>
           <div boxed-child>
-            <div latex="block" macro="equation">$$\begin{equation}
+            <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
             \int\frac{1}{\sqrt{a^2 - x^2}}\;\mathrm{d}x &= \sin^{-1}\left(\frac{x}{a}\right),\;a>0
@@ -794,11 +807,11 @@
             </div>
           </div>
         </div>
-      </div>      <div boxed macro="note">
-        <h2 id="8497992677650646931">Riemann Sums
+      </div>      <div macro="note" boxed>
+        <h2 id="3042223790119828964">Riemann Sums
         </h2>
         <p center>Given</p>
-        <div latex="block" macro="equation">$$\begin{equation}
+        <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
         A &= \int_{a}^{b} f(x) = \lim_{n\to\infty}\sum_{i=1}^{n} \Delta{x} \cdot f(x) \;\text{where}\;
@@ -809,11 +822,11 @@
 \end{split}
 \end{equation}$$
         </div>
-        <div cols="2" macro="layout" columns="2">
-          <div macro="note" boxed>
-            <h3 id="9434020052150533774">Left Riemann Sum
+        <div cols="2" columns="2" macro="layout">
+          <div boxed macro="note">
+            <h3 id="14151227297264172944">Left Riemann Sum
             </h3>
-            <div latex="block" macro="equation">$$\begin{equation}
+            <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
                 A &= \int_{a}^{b} f(x) \;\mathrm{d}x \approx L_n = \sum_{i = 0}^{n-1}\, \Delta{x}\cdot f\left(a + i\cdot\Delta{x}\right)
@@ -822,8 +835,8 @@
 \end{equation}$$
             </div>
           </div>
-          <div boxed macro="note">
-            <h3 id="11782863105052702590">Right Riemann Sum
+          <div macro="note" boxed>
+            <h3 id="11479379255455254730">Right Riemann Sum
             </h3>
             <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -836,9 +849,9 @@
           </div>
         </div>
         <div boxed macro="note">
-          <h3 id="2825110918373860370">Midpoint Riemann Sum
+          <h3 id="14970270269790815114">Midpoint Riemann Sum
           </h3>
-          <div latex="block" macro="texblock">$$
+          <div macro="texblock" latex="block">$$
             \newcommand{\generalFormat}{
                 \sum_{\small{\cdots}}^{\small{\cdots}}\, \Delta{x}\cdot f\left(a + \text{“avg. of $x_i$ and $x_{i-1}$”} \cdot \Delta{x}\right)
             }
@@ -860,7 +873,7 @@
           </div>
           <hr></hr>
           <p center>We can also do away with the index notation and simplify things.</p>
-          <div macro="texblock" latex="block">$$
+          <div latex="block" macro="texblock">$$
             \newcommand{\SigmaExampleOne}{
                 \sum_{i = 1}^{n}\, \Delta{x}\cdot f\left(a + \frac{(i - 1) + i}{2} \cdot \Delta{x}\right) =
                 \sum_{i = 1}^{n}\, \Delta{x}\cdot f\left(a + \frac{2i - 1}{2} \cdot \Delta{x}\right)
@@ -880,7 +893,7 @@
           </div>
         </div>
         <div macro="note" boxed>
-          <h3 id="6142401936085033708">Trapezoidal Riemann Sum
+          <h3 id="14019154724298785439">Trapezoidal Riemann Sum
           </h3>
           <div macro="texblock" latex="block">$$
             \dots
@@ -888,9 +901,9 @@
           </div>
         </div>
         <div macro="note" boxed>
-          <h3 id="14558338916332546184">Simpson's Rule
+          <h3 id="1370757587721545334">Simpson's Rule
           </h3>
-          <div latex="block" macro="equation">$$\begin{equation}
+          <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
             \dots
@@ -899,11 +912,11 @@
 \end{equation}$$
           </div>
         </div>
-      </div>      <div macro="layout" cols="2" columns="2">
+      </div>      <div cols="2" columns="2" macro="layout">
         <div macro="note">
-          <h2 id="16633482774407705007">Improper Integrals
+          <h2 id="9391227868584759796">Improper Integrals
           </h2>
-          <div macro="equation" latex="block">$$\begin{equation}
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             \text{Given}&\;L = \int_{a}^{\infty} f(x) \;\mathrm{d}x = \lim_{t\to\infty} \int_{a}^{\infty} f(x) \;\mathrm{d}x = \lim_{t\to\infty} F(x)\\
@@ -914,11 +927,11 @@
 \end{equation}$$
           </div>
         </div>
-      </div>      <h1 id="2196756449772776462">Infinite Sequences and Series
-      </h1>      <h2 id="13655616018394794397">Sequence
-      </h2>      <div macro="layout" cols="2" columns="2">
-        <div boxed macro="note">
-          <h3 id="14283772912240528566">Infinite Sequence
+      </div>      <h1 id="16670029421663308138">Infinite Sequences and Series
+      </h1>      <h2 id="7707651123312210893">Sequence
+      </h2>      <div columns="2" cols="2" macro="layout">
+        <div macro="note" boxed>
+          <h3 id="12358732133478112444">Infinite Sequence
           </h3>
           <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
@@ -934,7 +947,7 @@
           </div>
         </div>
         <div boxed macro="note">
-          <h3 id="8847742890268208519">Helpful Theorem
+          <h3 id="18295286770765816072">Helpful Theorem
           </h3>
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -948,8 +961,8 @@
 \end{equation}$$
           </div>
         </div>
-        <div boxed macro="note">
-          <h3 id="17226236829339448743">Example
+        <div macro="note" boxed>
+          <h3 id="8297796314896783878">Example
           </h3>
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -968,9 +981,9 @@
           </div>
         </div>
         <div boxed macro="note">
-          <h3 id="7322290467197919437">Example
+          <h3 id="5272722204108191237">Example
           </h3>
-          <div macro="equation" latex="block">$$\begin{equation}
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
         \text{Given}\\
@@ -986,10 +999,10 @@
 \end{equation}$$
           </div>
         </div>
-      </div>      <h2 id="13691727615487300594">Series
-      </h2>      <div macro="layout" cols="2" columns="2">
-        <div boxed macro="note">
-          <h3 id="12229920545804714559">Infinite Series
+      </div>      <h2 id="10166422600480279236">Series
+      </h2>      <div cols="2" macro="layout" columns="2">
+        <div macro="note" boxed>
+          <h3 id="14039274229057040190">Infinite Series
           </h3>
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -1005,13 +1018,13 @@
 \end{equation}$$
           </div>
           <p>Note that the limit of every <b>convergent</b> series is equal to zero. But the inverse isn't always true. If the limit is equal to zero, it <u>may not be convergent</u>.</p>
-          <p>For example, <span latex="inline" macro="tex">\(\sum_{n=1}^\infty \frac{1}{n}\)</span> does diverge; <u>but it's limit is equal to zero</u>.</p>
-          <div macro="note" inline>
+          <p>For example, <span macro="tex" latex="inline">\(\sum_{n=1}^\infty \frac{1}{n}\)</span> does diverge; <u>but it's limit is equal to zero</u>.</p>
+          <div inline macro="note">
             <p>If the limit is equal to zero; the <u>test is <b>inconclusive</b></u>.</p>
           </div>
         </div>
         <div boxed macro="note">
-          <h3 id="46191070358382706">Geometric Series
+          <h3 id="6593216840834555739">Geometric Series
           </h3>
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -1036,8 +1049,8 @@
 \end{equation}$$
           </div>
         </div>
-        <div macro="note" boxed>
-          <h3 id="4654336096550967892">The Integral Test
+        <div boxed macro="note">
+          <h3 id="7035062554400378505">The Integral Test
           </h3>
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -1057,7 +1070,7 @@
 \end{equation}$$
           </div>
           <div macro="note">
-            <h4 id="15253571903626587385">Constraints on <span latex="inline" macro="tex">\([1,n)\)</span>
+            <h4 id="15843647570870106717">Constraints on <span latex="inline" macro="tex">\([1,n)\)</span>
             </h4>
             <ul>
               <li>Continuous
@@ -1069,8 +1082,8 @@
             </ul>
           </div>
         </div>
-        <div style="display: grid;" boxed macro="note">
-          <h3 id="1400896119295411916">P-Series -or- Harmonic Series
+        <div style="display: grid;" macro="note" boxed>
+          <h3 id="5811452291927300167">P-Series -or- Harmonic Series
           </h3>
           <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
@@ -1084,12 +1097,12 @@
 \end{split}
 \end{equation}$$
           </div>
-          <div boxed macro="note" style="align-self: flex-end;">
+          <div macro="note" boxed style="align-self: flex-end;">
             <p>Note: the <u>Harmonic series</u> is the special case where <span latex="inline" macro="tex">\(p=1\)</span></p>
           </div>
         </div>
         <div macro="note" boxed>
-          <h3 id="16362844734268268826">Comparison Test
+          <h3 id="7491634106221450197">Comparison Test
           </h3>
           <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
@@ -1108,8 +1121,8 @@
 \end{equation}$$
           </div>
         </div>
-        <div macro="note" boxed>
-          <h3 id="15100879437755636468">Limit Comparison Test
+        <div boxed macro="note">
+          <h3 id="6329802983431089704">Limit Comparison Test
           </h3>
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -1128,26 +1141,26 @@
 \end{equation}$$
           </div>
           <div macro="note">
-            <h4 id="13141152298097975172">Warning
+            <h4 id="9199618755860291340">Warning
             </h4>
             <ul>
-              <li>If <span macro="tex" latex="inline">\(L > 0\)</span>, this only means that the limit comparison test <u>can be used</u>. You <u>still need to determine if either</u><span macro="tex" latex="inline">\(A_n\)</span> or <span latex="inline" macro="tex">\(B_b\)</span> converges or diverges.
+              <li>If <span latex="inline" macro="tex">\(L > 0\)</span>, this only means that the limit comparison test <u>can be used</u>. You <u>still need to determine if either</u><span macro="tex" latex="inline">\(A_n\)</span> or <span latex="inline" macro="tex">\(B_b\)</span> converges or diverges.
               </li>
               <li>Therefore, this does not apply to any arbitrary rational function.
               </li>
             </ul>
           </div>
           <div macro="note">
-            <h4 id="17149266611115423015">Notes
+            <h4 id="14536337290410885209">Notes
             </h4>
             <ul>
-              <li>For many series, we find a suitable comparison, <span macro="tex" latex="inline">\(B_n\)</span>, by keeping only the <u>highest powers in the numerator and denominator</u> of <span macro="tex" latex="inline">\(A_n\)</span>.
+              <li>For many series, we find a suitable comparison, <span latex="inline" macro="tex">\(B_n\)</span>, by keeping only the <u>highest powers in the numerator and denominator</u> of <span latex="inline" macro="tex">\(A_n\)</span>.
               </li>
             </ul>
           </div>
         </div>
         <div boxed macro="note">
-          <h3 id="10767498917928177875">Estimating Infinite Series
+          <h3 id="2075541590478596261">Estimating Infinite Series
           </h3>
           <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
@@ -1156,12 +1169,12 @@
 \end{equation}$$
           </div>
         </div>
-      </div>      <h2 id="881680394267442611">Sequence
-      </h2>      <div cols="2" columns="2" macro="layout">
+      </div>      <h2 id="4448688842601588233">Sequence
+      </h2>      <div columns="2" cols="2" macro="layout">
         <div macro="note" boxed>
-          <h3 id="790250834196302851">Infinite Sequence
+          <h3 id="670128415680960995">Infinite Sequence
           </h3>
-          <div latex="block" macro="equation">$$\begin{equation}
+          <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
             \text{Given}&\\
@@ -1175,9 +1188,9 @@
           </div>
         </div>
         <div macro="note" boxed>
-          <h3 id="13502309307026903866">Helpful Theorem
+          <h3 id="2675895999002517467">Helpful Theorem
           </h3>
-          <div macro="equation" latex="block">$$\begin{equation}
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             \text{If}&\\
@@ -1190,7 +1203,7 @@
           </div>
         </div>
         <div boxed macro="note">
-          <h3 id="17832685922896643670">Example
+          <h3 id="18020491899403341016">Example
           </h3>
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -1208,10 +1221,10 @@
 \end{equation}$$
           </div>
         </div>
-        <div macro="note" boxed>
-          <h3 id="10587259839653622460">Example
+        <div boxed macro="note">
+          <h3 id="16174212574404462658">Example
           </h3>
-          <div macro="equation" latex="block">$$\begin{equation}
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
         \text{Given}\\
@@ -1227,11 +1240,11 @@
 \end{equation}$$
           </div>
         </div>
-      </div>      <h2 id="15396231017633530905">Differential Equations
-      </h2>      <h3 id="12110887059269236044">First Order Differential Equations
-      </h3>      <div columns="2" cols="2" macro="layout">
-        <div macro="note" boxed>
-          <h4 id="7100947172103219689">Separable Differential Equations
+      </div>      <h2 id="7179490357021345510">Differential Equations
+      </h2>      <h3 id="4154433004546923334">First Order Differential Equations
+      </h3>      <div columns="2" macro="layout" cols="2">
+        <div boxed macro="note">
+          <h4 id="12104580142615332861">Separable Differential Equations
           </h4>
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -1264,10 +1277,10 @@
 \end{equation}$$
           </div>
         </div>
-      </div>      <h3 id="10982825154256884375">Second-Order Differential Equations
-      </h3>      <div cols="2" macro="layout" columns="2">
+      </div>      <h3 id="14546617342107208615">Second-Order Differential Equations
+      </h3>      <div cols="2" columns="2" macro="layout">
         <div macro="note">
-          <div macro="equation" latex="block">$$\begin{equation}
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             \underbrace
@@ -1280,7 +1293,7 @@
 \end{split}
 \end{equation}$$
           </div>
-          <div latex="block" macro="equation">$$\begin{equation}
+          <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
             \underbrace{
@@ -1299,7 +1312,7 @@
           </ul>
         </div>
         <div macro="note">
-          <h4 id="6635415548244613203">Second order homogeneous linear differential equations with constant coefficients
+          <h4 id="4758083394963635847">Second order homogeneous linear differential equations with constant coefficients
           </h4>
           <p>Given some:</p>
           <div latex="block" macro="equation">$$\begin{equation}
@@ -1310,8 +1323,8 @@
 \end{split}
 \end{equation}$$
           </div>
-          <p>We can presume that <span latex="inline" macro="tex">\(y\)</span> is of the form <span macro="tex" latex="inline">\(e^{r t}\)</span>, and therefore:</p>
-          <div macro="equation" latex="block">$$\begin{equation}
+          <p>We can presume that <span macro="tex" latex="inline">\(y\)</span> is of the form <span latex="inline" macro="tex">\(e^{r t}\)</span>, and therefore:</p>
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             \text{if}\\
@@ -1324,7 +1337,7 @@
 \end{equation}$$
           </div>
           <p>Substituting this back into the original equation, we have:</p>
-          <div macro="equation" latex="block">$$\begin{equation}
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             0 &= a r^2 e^{r t} + b r e^{r t} + c e^{r t}\\
@@ -1334,7 +1347,7 @@
 \end{equation}$$
           </div>
           <p>Where:</p>
-          <div latex="block" macro="equation">$$\begin{equation}
+          <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
             &= \underbrace{e^{r t}}_\text{never $0$}
@@ -1358,7 +1371,7 @@
 \end{equation}$$
           </div>
           <p>Where the general solution is of the form:</p>
-          <div macro="equation" latex="block">$$\begin{equation}
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             y &=\; &C_1\; e^{r_1 t} &+ C_2\; e^{r_2 t}\\
@@ -1369,12 +1382,12 @@
 \end{equation}$$
           </div>
         </div>
-      </div>      <h2 id="12545529127873088139">Parametric Equations
+      </div>      <h2 id="475794808892584890">Parametric Equations
       </h2>      <div cols="2" macro="layout" columns="2">
         <div macro="note">
-          <h3 id="11042958993775001420">First Derivative Formula
+          <h3 id="8653359628054834612">First Derivative Formula
           </h3>
-          <p>To find the derivative of a given function defined parametrically by the equations <span latex="inline" macro="tex">\(x = u(t)\)</span> and <span macro="tex" latex="inline">\(y = v(t)\)</span>.</p>
+          <p>To find the derivative of a given function defined parametrically by the equations <span latex="inline" macro="tex">\(x = u(t)\)</span> and <span latex="inline" macro="tex">\(y = v(t)\)</span>.</p>
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
@@ -1393,9 +1406,9 @@
           </div>
         </div>
         <div macro="note">
-          <h3 id="5506932567595133185">Second Derivative Formula
+          <h3 id="11835581073442647964">Second Derivative Formula
           </h3>
-          <p>To find the second derivative of a given function defined parametrically by the equations <span macro="tex" latex="inline">\(x = u(t)\)</span> and <span latex="inline" macro="tex">\(y = v(t)\)</span>.</p>
+          <p>To find the second derivative of a given function defined parametrically by the equations <span latex="inline" macro="tex">\(x = u(t)\)</span> and <span macro="tex" latex="inline">\(y = v(t)\)</span>.</p>
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
@@ -1452,7 +1465,7 @@
           </div>
         </div>
         <div macro="note">
-          <h3 id="4908340257443318933">Arc Length
+          <h3 id="13950116236114735517">Arc Length
           </h3>
           <p>Formula for the arc length of a parametric curve over the interval <span latex="inline" macro="tex">\([a, b]\)</span>.</p>
           <div macro="equation" latex="block">$$\begin{equation}
