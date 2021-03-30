@@ -52,6 +52,26 @@
     </note>
 </layout>
 
+<h1>Constants</h1>
+<layout cols="2">
+    <note boxed>
+        <h2>ℯ (Euler's number)</h2>
+        <equation>
+            \mathrm{e}
+                &= \sum_{n = 0}^\infty \frac{1}{n!} \\
+                &= \lim_{n\to\infty} \left(1 + \frac{1}{n}\right)^n \\
+                &= \lim_{t \to 0} \left(1 + t\right)^{\frac{1}{t}}
+        </equation>
+        <hr>
+        <equation>
+            \mathrm{e}^x
+                &= 1 + \frac{x}{1!} + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots \\
+                &= \sum_{n = 0}^\infty \frac{x^n}{n!} \\
+                &= \lim_{n\to\infty} \left(1 + \frac{x}{n}\right)^n
+        </equation>
+    </note>
+</layout>
+
 <h1>Algebra</h1>
 <h2>Properties</h2>
 <layout cols="3">
@@ -75,10 +95,239 @@
 </layout>
 
 <h1>Trigonometry</h1>
-<h2>Trigonometric Identities and Equations</h2>
+<h2>Trigonometric Identities</h2>
 <layout cols="2">
-    <include src="./reference/trig/identities.html"></include>
+<note boxed>
+    <h3>Pythagorean Identities</h3>
+    <equation>\cos^2(\theta) + \sin^2(\theta) = 1</equation>
+    <layout cols="2">
+        <equation>
+            \sec^2(\theta) - \tan^2(\theta) &= 1 \\
+            \sec^2(\theta) &= 1 + \tan^2(\theta)
+        </equation>
+        <equation>
+            \csc^2(\theta) - \cot^2(\theta) &= 1 \\
+            \csc^2(\theta) &= 1 + \cot^2(\theta)
+        </equation>
+    </layout>
+</note>
+<note boxed>
+    <h3>Sum and Difference Identities</h3>
+    <texblock>
+         \begin{equation}
+        \begin{split}
+            \cos(\alpha - \beta) &= \cos(\alpha) \cdot \cos(\beta) + \sin(\alpha) \cdot \sin(\beta) \\
+            \cos(\alpha + \beta) &= \cos(\alpha) \cdot \cos(\beta) - \sin(\alpha) \cdot \sin(\beta) \\
+            &\\
+            \sin(\alpha - \beta) &= \sin(\alpha) \cdot \cos(\beta) - \cos(\alpha) \cdot \sin(\beta) \\
+            \sin(\alpha + \beta) &= \sin(\alpha) \cdot \cos(\beta) + \cos(\alpha) \cdot \sin(\beta) \\
+            &\\
+            \tan(\alpha + \beta) &= \frac{\tan(\alpha) + \tan(\beta)}{1 - \tan(\alpha) \cdot \tan(\beta)} \\
+            \tan(\alpha - \beta) &= \frac{\tan(\alpha) - \tan(\beta)}{1 + \tan(\alpha) \cdot \tan(\beta)}
+        \end{split}
+        \end{equation} 
+    </texblock>
+</note>
+<note boxed>
+    <h3>Cofunction Identities</h3>
+    <layout cols="2">
+        <equation>\sin(\theta) = \cos(\frac{1}{4}\tau - \theta)</equation>
+        <equation>\cos(\theta) = \sin(\frac{1}{4}\tau - \theta)</equation>
+        <equation>\tan(\theta) = \cot(\frac{1}{4}\tau - \theta)</equation>
+        <equation>\cot(\theta) = \tan(\frac{1}{4}\tau - \theta)</equation>
+        <equation>\csc(\theta) = \sec(\frac{1}{4}\tau - \theta)</equation>
+        <equation>\sec(\theta) = \csc(\frac{1}{4}\tau - \theta)</equation>
+    </layout>
+</note>
+<note boxed>
+    <h3>Ratio Identities</h3>
+    <texblock>
+        \begin{equation}
+        \begin{split}
+            \tan(90^\circ - x) & = \frac{\sin(90^\circ - x)}{\cos(90^\circ - x)} = \frac{\cos(x)}{\sin(x)} = \cot(x) \\
+            \\
+            \cot(90^\circ - x) & = \frac{\cos(90^\circ - x)}{\sin(90^\circ - x)} = \frac{\sin(x)}{\cos(x)} = \tan(x) \\
+        \end{split}
+        \end{equation}
+    </texblock>
+</note>
+<note boxed>
+    <h3>Double-Angle Identities</h3>
+    <texblock>
+         \begin{equation}
+        \begin{split}
+            \sin(2\alpha) &= 2\sin(\alpha)\cos(\alpha) \\
+            \cos(2\alpha) &= \cos^2(\alpha) - \sin^2(\alpha) \\
+                        &= 1 - 2\sin^2(\alpha) \\
+                        &= 2\cos^2(\alpha) - 1 \\
+            &\\
+            \tan(2\alpha) &= \frac{2\tan(\alpha)}{1 - \tan^2(\alpha)}
+        \end{split}
+        \end{equation}
+    </texblock>
+</note>
+<note boxed>
+    <h3>Half-Angle Identities</h3>
+    <texblock>
+         \begin{equation}
+        \begin{split}
+            \sin \frac{\alpha}{2} &= \pm \sqrt{\frac{1 - \cos(\alpha)}{2}} \\
+            \cos \frac{\alpha}{2} &= \pm \sqrt{\frac{1 + \cos(\alpha)}{2}} \\
+            \tan \frac{\alpha}{2} &= \pm \sqrt{\frac{1 - \cos(\alpha)}{1 + \cos(\alpha)}} \\
+                &= \frac{sin(\alpha)}{1 + \cos(\alpha)} \\
+                &= \frac{1 - \cos(\alpha)}{sin(\alpha)}
+        \end{split}
+        \end{equation} 
+    </texblock>
+</note>
+<note boxed>
+    <h3>Power-Reducing Identities</h3>
+    <texblock>
+         \begin{equation}
+        \begin{split}
+            \sin^2(\alpha) &= \frac{1 - \cos(2\alpha)}{2} \\
+            &\\
+            \cos^2(\alpha) &= \frac{1 + \cos(2\alpha)}{2} \\
+            &\\
+            \tan^2(\alpha) &= \frac{1 - \cos(2\alpha)}{1 + \cos(2\alpha)}
+        \end{split}
+        \end{equation} 
+    </texblock>
+    <hr/>
+    <equation>
+        \sin\alpha\cdot\cos\alpha &= \frac{1}{2}\sin(2\alpha)
+    </equation>
+</note>
+<note boxed>
+    <h3>Product-to-Sum Identities</h3>
+    <texblock>
+        \begin{equation}
+        \begin{split}
+            \sin(\alpha) \cdot \cos(\beta) &= \frac{1}{2} \Big[ \sin(\alpha + \beta) + \sin(\alpha - \beta) \Big] \\
+            \cos(\alpha) \cdot \sin(\beta) &= \frac{1}{2} \Big[ \sin(\alpha + \beta) - \sin(\alpha - \beta) \Big] \\
+            \cos(\alpha) \cdot \cos(\beta) &= \frac{1}{2} \Big[ \cos(\alpha + \beta) + \cos(\alpha - \beta) \Big] \\
+            \sin(\alpha) \cdot \sin(\beta) &= \frac{1}{2} \Big[ \cos(\alpha - \beta) - \cos(\alpha + \beta) \Big]
+        \end{split}
+        \end{equation}
+    </texblock>
+</note>
+<note boxed>
+    <h3>Sum-to-Product-Identities</h3>
+    <texblock>
+         \begin{equation}
+        \begin{split}
+            \sin(x) + \sin(y) &= 2 \cdot \sin\left( \frac{x + y}{2} \right) \cdot \cos\left( \frac{x - y}{2} \right) \\
+            \cos(x) + \cos(y) &= 2 \cdot \cos\left( \frac{x + y}{2} \right) \cdot \cos\left( \frac{x - y}{2} \right) \\
+            \sin(x) - \sin(y) &= 2 \cdot \cos\left( \frac{x + y}{2} \right) \cdot \sin\left( \frac{x - y}{2} \right) \\
+            \cos(x) - \cos(y) &= -2 \sin \cos\left( \frac{x + y}{2} \right) \cdot \sin\left( \frac{x - y}{2} \right)
+        \end{split}
+        \end{equation} 
+    </texblock>
+</note>
 </layout>
+<h2>Trigonometric Equations</h2>
+<layout cols="2">
+<note boxed>
+    <h3>Euler's Formula</h3>
+    <equation>
+        e^{i x} &= \cos(x) + \mathrm{i}\sin(x)
+    </equation>
+    <hr>
+    <equation>
+        \mathrm{e}
+            &= \sum_{n = 0}^\infty \frac{1}{n!} \\
+            &= \lim_{n\to\infty} \left(1 + \frac{1}{n}\right)^n \\
+            &= \lim_{t \to 0} \left(1 + t\right)^{\frac{1}{t}}
+    </equation>
+    <hr>
+    <equation>
+        \mathrm{e}^x
+            &= 1 + \frac{x}{1!} + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots \\
+            &= \sum_{n = 0}^\infty \frac{x^n}{n!} \\
+            &= \lim_{n\to\infty} \left(1 + \frac{x}{n}\right)^n
+    </equation>
+</note>
+</layout>
+
+<h1>Coordinate & Number Systems</h1>
+<layout cols="3">
+    <note boxed>
+        <equation>
+            x &= r \cdot \cos\,\theta \\
+            y &= r \cdot \sin\,\theta \\
+        </equation>
+        <hr>
+        <equation>
+            z &= x + \mathrm{i}y \\
+              &= r \left(\cos\, \theta + \mathrm{i}\sin\, \theta\right)\\
+              & = r\;\mathrm{cis}\; \theta \\
+        </equation>
+    </note>
+    <note boxed>
+        <equation>
+            e^{i x} &= \cos\, x + \mathrm{i}\sin\, x \\
+            e ^{i x} &= r \left(\cos\, \theta + \mathrm{i}\sin\, \theta\right) \\
+            \left(\cos\, x + \mathrm{i}\sin\, x\right)^n &= \cos(n x) + \mathrm{i}\sin(n x) \\
+        </equation>
+    </note>
+    <note boxed>
+        <equation>
+            r &= |z| = |x + \mathrm{i}y| = \sqrt{x^2 + y^2} \\
+            r^2 &= x^2 + y^2 \\
+            \tan \theta &= \frac{y}{x} \\
+            \theta &= \arctan\left(\frac{y}{x}\right)
+        </equation>
+    </note>
+</layout>
+<layout cols="2">
+    <note boxed>
+        <h2>Polar Coordinate System</h2>
+        <p>Given</p>
+        <equation>
+            \tan \theta &= \frac{y}{x} \\
+            r^2 &= x^2 + y^2 \\
+        </equation>
+        <p>Then</p>
+        <equation>
+            x &= r \cdot \cos\,\theta \\
+            y &= r \cdot \sin\,\theta \\
+        </equation>
+    </note>
+    <note boxed>
+        <h2>Properties</h2>
+        <p>Given</p>
+        <equation>
+            z_1 &= r_1\;\mathrm{cis}\;\theta_1 \\
+            z_2 &= r_1\;\mathrm{cis}\;\theta_1
+        </equation>
+        <p>Then</p>
+        <equation>
+            z_1 \cdot z_2 &= r_1 \cdot r_2 \;\mathrm{cis}\;\left(\theta_1 + \theta_2\right) \\
+            \frac{z_1}{z_2} &= \frac{r_1}{r_2} \;\mathrm{cis}\;\left(\theta_1 - \theta_2\right) \\
+        </equation>
+        <hr>
+        <p>De Moivre’s Theorem</p>
+        <equation>
+            z^n &= r^n \;\mathrm{cis}\;\;n\theta
+        </equation>
+        <p>De Moivre’s Theorem For Finding Roots</p>
+        <equation>
+            \underbrace{w_k = r^{\frac{1}{n}}\;\mathrm{cis}\;\frac{\theta + \tau\cdot{k}}{n}}
+            _{\begin{split}\forall\; k &= 0,1,2\cdots,n-1\\ n &\geq 1\end{split}}
+        </equation>
+    </note>
+    <note boxed>
+        <h2><small>Trigonometric form of a complex number</small></h2>
+        <equation>
+            z &= x + \mathrm{i}y \\
+              &= r \left(\cos\, \theta + \mathrm{i}\sin\, \theta\right)\\
+              & = r\;\mathrm{cis}\;\theta \\
+        </equation>
+    </note>
+</layout>
+
+
+
 
 <h1>Limits</h1>
 <layout cols="2">
@@ -273,8 +522,7 @@
     </note>
 </layout>
 
-<h1>Infinite Sequences and Series</h1>
-<h2>Sequence</h2>
+<h2>Infinite Sequences</h2>
 <layout cols="2">
     <note boxed>
         <h3>Infinite Sequence</h3>
@@ -323,7 +571,7 @@
     </note>
 </layout>
 
-<h2>Series</h2>
+<h2>Infinite Series</h2>
 <layout cols="2">
     <note boxed>
         <h3>Infinite Series</h3>
@@ -463,57 +711,6 @@
     </note>
 </layout>
 
-
-
-<h2>Sequence</h2>
-<layout cols="2">
-    <note boxed>
-        <h3>Infinite Sequence</h3>
-        <equation>
-            \text{Given}&\\
-            &S_n = \{a_n\}_{n=1}^{\infty}\\
-            \text{Tests}&\\
-            &\text{If}\;\lim_{n\to\infty}\,S_n \text{“exists”}\;\text{then}\;\mathbf{\text{$S_n$ is convergent}}\\
-            &\text{If}\;\lim_{n\to\infty}\,S_n \text{“does not exists”}\;\text{then}\;\mathbf{\text{$S_n$ is Divergent}}\\
-        </equation>
-    </note>
-    <note boxed>
-        <h3>Helpful Theorem</h3>
-        <equation>
-            \text{If}&\\
-            \lim_{x\to\infty}\,|a_n| &= 0\\
-            \text{Then}&\\
-            \lim_{x\to\infty}\,a_n &= 0\\
-        </equation>
-    </note>
-    <note boxed>
-        <h3>Example</h3>
-        <equation>
-        \text{Given}\\
-            S_n &= \{\cos\left(\frac{n\pi}{2}\right)\}\\
-            L &=\lim_{n\to\infty}\,\cos\left(\frac{n\pi}{2}\right)\\
-            &= \cos\left(\lim_{n\to\infty}\,\frac{n\pi}{2}\right) \\
-            &= \cos\left(\infty\right) \\
-            &= \text{undefined} \\
-        \text{Therefore}\\
-        \therefore\;&\text{$S_n$ is Divergent}&
-        </equation>
-    </note>
-    <note boxed>
-        <h3>Example</h3>
-        <equation>
-        \text{Given}\\
-            S_n &= \{\sin\left(\frac{\pi}{n}\right)\}\\
-            L &= \lim_{n\to\infty}\,\sin\left(\frac{\pi}{n}\right)\\
-                &= \sin\left(\lim_{n\to\infty}\,\frac{\pi}{n}\right) \\
-                &= \sin\left(0\right) \\
-                &= 0\\
-        \text{Therefore}\\
-        \therefore\;&\text{$S_n$ is Convergent}
-        </equation>
-    </note>
-</layout>
-
 <h2>Differential Equations</h2>
 <h3>First Order Differential Equations</h3>
 <layout cols="2">
@@ -546,31 +743,16 @@
         </equation>
     </note>
 </layout>
-<h3>Second-Order Differential Equations</h3>
+<h3>Second Order Homogeneous Linear Differential Equations with Constant Coefficients</h3>
 <layout cols="2">
     <note>
-        <equation>
-            \underbrace
-                {A(x) y^{\prime\prime} + B(x) y^\prime + C(x) y = D(x)}
-                _{\text{Non-homogeneous}}\\
-            \underbrace
-                {A(x) y^{\prime\prime} + B(x) y^\prime + C(x) y = 0}
-                _{\text{Homogeneous}}\\
-        </equation>
-        <equation>
-            \underbrace{
-                a y^{\prime\prime} + b y^\prime + c y = g(t)
-                \;\;\text{-or-}\;\;
-                a y^{\prime\prime} + b y^\prime + c y = 0
-            }
-                _{\text{Constant coefficients}}\\
-        </equation>
+        <h4>Properties</h4>
         <ul>
-            <li>“Homogeneous” means that the term in the equation that does not depend on y or its derivatives is 0.</li>
+            <li><p>If <tex>f(x)</tex> and <tex>g(x)</tex> are solutions; then <tex>f + g</tex> is also a solution. Therefore, the most general solution to some second order homogeneous linear differential equations with constant coefficients would be <tex>y = C_1 f(x) + C_2 g(x)</tex>.</p> <p>This is why, when you find two solutions to the characteristic equation <tex>r_1</tex> and <tex>r_2</tex> respectively, we write it like so.</p></li>
         </ul>
     </note>
     <note>
-        <h4>Second order homogeneous linear differential equations with constant coefficients</h4>
+        <h4><tex>r_1 = r_2</tex></h4>
         <p>Given some:</p>
         <equation>
             a y^{\prime\prime} + b y^\prime + c y = 0\;\text{where $a \neq 0$}\\
@@ -604,13 +786,16 @@
         </equation>
         <p>Where the general solution is of the form:</p>
         <equation>
-            y &=\; &C_1\; e^{r_1 t} &+ C_2\; e^{r_2 t}\\
-            y^\prime &=\; &C_1\; r_1\; e^{r_1 t} &+ C_2\; r_2\; e^{r_2 t}\\
-            y^{\prime\prime} &=\; &C_1\; \left(r_1\right)^2\; e^{r_1 t} &+ C_2\; \left(r_2\right)^2\; e^{r_2 t}\\
+\left.
+\begin{array}{ll}
+    y &=\; &C_1\; e^{r_1 t} &+\; C_2\; e^{r_2 t}\\
+    y^\prime &=\; &C_1\; r_1\; e^{r_1 t} &+\; C_2\; r_2\; e^{r_2 t}\\
+    y^{\prime\prime} &=\; &C_1\; \left(r_1\right)^2\; e^{r_1 t} &+\; C_2\; \left(r_2\right)^2\; e^{r_2 t}
+\end{array}
+\right\}\text{$\forall r_1 \; r_2$ where $r_1 \neq r_2$}
         </equation>
     </note>
 </layout>
-
 <h2>Parametric Equations</h2>
 <layout cols="2">
     <note>
