@@ -221,7 +221,7 @@
             \sin(x) - \sin(y) &= 2 \cdot \cos\left( \frac{x + y}{2} \right) \cdot \sin\left( \frac{x - y}{2} \right) \\
             \cos(x) - \cos(y) &= -2 \sin \cos\left( \frac{x + y}{2} \right) \cdot \sin\left( \frac{x - y}{2} \right)
         \end{split}
-        \end{equation} 
+        \end{equation}
     </texblock>
 </note>
 </layout>
@@ -326,33 +326,225 @@
     </note>
 </layout>
 
-<h1>Abstract Algebra</h1>
-<h2>Groups</h2>
-
-<h1>Matrices</h1>
+<h1>Vectors</h1>
+<h2>Reference</h2>
 <layout cols="2">
     <note boxed>
-        <h2>Definitions</h2>
+        <h3>Dot Product</h3>
+        <equation>
+            \vec{a}\cdot\vec{b}
+            &=  \begin{bmatrix} a_1 \\ a_2 \\ a_3 \end{bmatrix}
+                \cdot
+                \begin{bmatrix} b_1 \\ b_2 \\ b_3 \end{bmatrix}
+            =  a_1b_1 + a_2b_2 + a_3b_3\\\\
+            \vec{a}\cdot\vec{b}
+            &=  \begin{bmatrix} a_1 \\ a_2 \end{bmatrix}
+                \cdot
+                \begin{bmatrix} b_1 \\ b_2 \end{bmatrix}
+            =  a_1b_1 + a_2b_2
+        </equation>
     </note>
     <note boxed>
-        <h2>Matrix Algebra</h2>
+        <h3>Cross Product</h3>
+        <equation>
+            \vec{a}\times\vec{b}
+            &=
+            \begin{bmatrix} a_1 & a_2 & a_3 \end{bmatrix}\times\begin{bmatrix} b_1 & b_2 & b_3 \end{bmatrix}\\
+            &=
+            \mathrm{det}
+            \begin{pmatrix}
+            \mathrm{\hat{i}} & \mathrm{\hat{j}} & \mathrm{\hat{k}}\\
+            a_1 & a_2 & a_3\\
+            b_1 & b_2 & b_3
+            \end{pmatrix}\\
+            &=
+            \mathrm{\hat{i}}
+            \begin{vmatrix}
+            e & f\\
+            h & i
+            \end{vmatrix}
+            -
+            \mathrm{\hat{j}}
+            \begin{vmatrix}
+            d & f\\
+            g & i
+            \end{vmatrix}
+            +
+            \mathrm{\hat{k}}
+            \begin{vmatrix}
+            d & e\\
+            g & h
+            \end{vmatrix}\\
+            &= \mathrm{\hat{i}}\left(e i - f h\right)
+             - \mathrm{\hat{j}}\left(d i - f g\right)
+             + \mathrm{\hat{k}}\left(d h - e g\right)\\
+            &=
+            \begin{bmatrix}
+                e i - f h &
+                d i - f g &
+                d h - e g
+            \end{bmatrix}\\
+            &= \vec{c}
+        </equation>
     </note>
     <note boxed>
-        <h2>Direct products</h2>
+        <h3>Length of a Vector</h3>
+        <equation>
+            |a| &= \sqrt{(a_1)^2 + (a_2)^2} \\
+            |a| &= \sqrt{(a_1)^2 + (a_2)^2 + (a_3)^2}
+        </equation>
+    </note>
+</layout>
+<layout cols="3">
+    <note boxed>
+        <h3>Standard Basis Vectors</h3>
+        <equation>
+            \mathrm{i} &= \begin{bmatrix} 1 & 0 & 0 \end{bmatrix}\\
+            \mathrm{j} &= \begin{bmatrix} 0 & 1 & 0 \end{bmatrix}\\
+            \mathrm{k} &= \begin{bmatrix} 0 & 0 & 1 \end{bmatrix}
+        </equation>
     </note>
     <note boxed>
-        <h2>Inverse matrices and determinants</h2>
+        <h3>Orthogonal</h3>
+        <p>Two vectors are orthogonal if and only if</p>
+        <equation>
+            \vec{a}\cdot\vec{b} = 0
+        </equation>
     </note>
     <note boxed>
-        <h2>Inverse matrices and determinants</h2>
+        <h3>The Unit Vector</h3>
+        <equation>
+            \hat{u} &= \frac{\vec{a}}{|\vec{a}|} 
+        </equation>
     </note>
     <note boxed>
-        <h2>Transformation matrices</h2>
-        <p>Matrices can be used to map one set of coordinates or functions onto another set.</p>
+        <h3><small>If <tex>\theta</tex> is the angle between the vectors <tex>\vec{a}</tex> and <tex>\vec{b}</tex>, then</small></h3>
+        <equation>
+            \vec{a} \cdot \vec{a} = |\vec{a}| \cdot |\vec{a}| \cos\theta
+        </equation>
     </note>
     <note boxed>
-        <h2>Matrix representations of groups</h2>
-        <p>The symmetry operations in a group may be represented by a set of transformation matrices <tex>\Gamma (g)</tex>, one for each symmetry element g. Each individual matrix is called a representative of the corresponding symmetry operation, and the complete set of matrices is called a matrix representation of the group. The matrix representatives act on some chosen basis set of functions, and the actual matrices making up a given representation will depend on the basis that has been chosen. The representation is then said to span the chosen basis. </p>
+        <h3><small>If <tex>\theta</tex> is the angle between the nonzero vectors <tex>\vec{a}</tex> and <tex>\vec{b}</tex>, then</small></h3>
+        <equation>
+            \cos\theta = \frac
+                {\vec{a}\cdot\vec{b}}
+                {|\vec{a}| |\vec{b}|}
+        </equation>
+    </note>
+    <note boxed>
+        <h3><small>Two nonzero vectors <tex>\vec{a}</tex> and <tex>\vec{b}</tex> are parallel if and only if</small></h3>
+        <equation>
+            \vec{a}\times\vec{b} = 0
+        </equation>
+    </note>
+</layout>
+<h3>Properties of the Dot Product</h3>
+<layout cols="3">
+    <note boxed>
+        <equation>
+            \vec{a} \cdot \vec{a} = |\vec{a}|^2
+        </equation>
+    </note>
+    <note boxed>
+        <equation>
+            \vec{a} \cdot \left(\vec{b} + \vec{c}\right) = \vec{a}\vec{b} + \vec{a}\vec{c}
+        </equation>
+    </note>
+    <note boxed>
+        <equation>
+            \vec{a} \cdot \vec{b} = \vec{b} \cdot \vec{a}
+        </equation>
+    </note>
+    <note boxed>
+        <equation>
+            \left(c \cdot \vec{a}\right) \cdot \vec{b} = c\left(\vec{a} \cdot \vec{b}\right)
+        </equation>
+    </note>
+</layout>
+
+<h1>Matrices</h1>
+<h2>Reference</h2>
+<layout cols="2">
+    <note boxed>
+        <h3>The Determinant of A Matrix</h3>
+        <equation>
+            |A| &=
+            \begin{vmatrix}
+            a & b\\
+            c & d
+            \end{vmatrix} =
+            ad - bc\\\\
+            |A| &=
+            \begin{vmatrix}
+            a & b & c\\
+            d & e & f\\
+            g & h & i
+            \end{vmatrix}\\ &=
+            a 
+            \begin{vmatrix}
+            e & f\\
+            h & i
+            \end{vmatrix}
+            -
+            b
+            \begin{vmatrix}
+            d & f\\
+            g & i
+            \end{vmatrix}
+            +
+            c
+            \begin{vmatrix}
+            d & e\\
+            g & h
+            \end{vmatrix}
+        </equation>
+        <img center width='400px' src="../static/drawings/matrix/3x3-determinant.png">
+        <note boxed>
+            <p>Only works for square matrices.</p>
+        </note>
+    </note>
+    <note boxed>
+        <h3>The Cross Product</h3>
+        <equation>
+            \vec{a}\times\vec{b}
+            &=
+            \begin{bmatrix} a_1 & a_2 & a_3 \end{bmatrix}\times\begin{bmatrix} b_1 & b_2 & b_3 \end{bmatrix}\\
+            &=
+            \mathrm{det}
+            \begin{pmatrix}
+            \mathrm{\hat{i}} & \mathrm{\hat{j}} & \mathrm{\hat{k}}\\
+            a_1 & a_2 & a_3\\
+            b_1 & b_2 & b_3
+            \end{pmatrix}\\
+            &=
+            \mathrm{\hat{i}}
+            \begin{vmatrix}
+            e & f\\
+            h & i
+            \end{vmatrix}
+            -
+            \mathrm{\hat{j}}
+            \begin{vmatrix}
+            d & f\\
+            g & i
+            \end{vmatrix}
+            +
+            \mathrm{\hat{k}}
+            \begin{vmatrix}
+            d & e\\
+            g & h
+            \end{vmatrix}\\
+            &= \mathrm{\hat{i}}\left(e i - f h\right)
+             - \mathrm{\hat{j}}\left(d i - f g\right)
+             + \mathrm{\hat{k}}\left(d h - e g\right)\\
+            &=
+            \begin{bmatrix}
+                e i - f h &
+                d i - f g &
+                d h - e g
+            \end{bmatrix}\\
+            &= \vec{c}
+        </equation>
     </note>
 </layout>
 
@@ -740,10 +932,9 @@
 </layout>
 
 <h2>Differential Equations</h2>
-<h3>First Order Differential Equations</h3>
 <layout cols="2">
     <note boxed>
-        <h4>Separable Differential Equations</h4>
+        <h3>Separable Differential Equations</h3>
         <equation>
             \text{Given}\\
             \frac{\mathrm{d}y}{\mathrm{d}x}
@@ -770,17 +961,98 @@
             \therefore \; h(y)\;\frac{\mathrm{d}y}{dx} &= g(x)
         </equation>
     </note>
+    <note boxed>
+        <h3>Growth and Decay Models</h3>
+        <equation>
+            \text{Given}\\
+            \frac{\mathrm{d}y}{\mathrm{d}t} &= \textcolor{Periwinkle}{k} y\\
+            \text{Proof}\\
+            \frac{1}{y}\;\mathrm{d}y &= \textcolor{Periwinkle}{k}\;\mathrm{d}t \\
+            \int \frac{1}{y}\;\mathrm{d}y &= \int \textcolor{Periwinkle}{k}\;\mathrm{d}t \\
+            \ln(y) &=  \textcolor{Periwinkle}{k} t + \textcolor{SeaGreen}{C} \\
+            e^{\ln(y)} &= e^ {\textcolor{Periwinkle}{k} t + \textcolor{SeaGreen}{C}} \\
+            y &= e^{\textcolor{Periwinkle}{k} t} \cdot e^{\textcolor{SeaGreen}{C}} \\
+            y &= e^{\textcolor{Periwinkle}{k} t} \cdot \textcolor{SeaGreen}{C} \\
+            \text{Therefore}\\
+            y &= \textcolor{SeaGreen}{C} e^{\textcolor{Periwinkle}{k} t}
+        </equation>
+        <p>The above states that all solutions for <tex>y^\prime = k y</tex> are of the form <tex>y = C e^{k t}</tex>.</p>
+        <p>Where</p>
+        <equation>
+            \textcolor{SeaGreen}{C} &= \textcolor{SeaGreen}{\text{Initial value of $y$}}\\
+            \textcolor{Periwinkle}{k} &= \textcolor{Periwinkle}{\text{Proportionality constant}}\\
+        </equation>
+        <p>Exponential growth occurs when <tex>\textcolor{Periwinkle}{k > 0}</tex>, and exponential decay occurs when <tex>\textcolor{Periwinkle}{k < 0}</tex>.</p>
+        <hr>
+        <p>The Law of Natural Growth:</p>
+        <equation>
+            \frac{\mathrm{d}\textcolor{DarkOrchid}{P}}{\mathrm{d}t}
+                = \textcolor{Periwinkle}{k} \textcolor{DarkOrchid}P
+        </equation>
+        <p>The Logistic Model of Population Growth:</p>
+        <equation>
+            \frac{\mathrm{d}\textcolor{DarkOrchid}P}{\mathrm{d}t}
+                = \textcolor{Periwinkle}{k} \textcolor{DarkOrchid}P
+                    \left(1 - \frac{\textcolor{DarkOrchid}{P}}{\textcolor{Aquamarine}{L}}\right)
+        </equation>
+        <p>Where</p>
+        <equation>
+            \textcolor{Periwinkle}{k} &= \textcolor{Periwinkle}{\text{Constant of proportionality}}\\
+            \textcolor{DarkOrchid}{P} &= \textcolor{DarkOrchid}{\text{Population at time $t$}}\\
+            \textcolor{Aquamarine}{L} &= \textcolor{Aquamarine}{\text{Max size of population}}\\
+        </equation>
+    </note>
+    <note boxed>
+        <h3>Solving the Logistic Equation</h3>
+        <equation>
+            \D{P}{t} &= kP \parens{1 - \frac{P}{L}} \\
+            \s{d}P &= kP \parens{1 - \frac{P}{L}} \s{d}t \\
+            \reciprocal{P \parens{1 - \frac{P}{L}}} \s{d}P &= k \s{d}t
+        </equation>
+        <p>Via partial fraction decomposition</p>
+        <equation>
+            \reciprocal{P \parens{1 - \frac{P}{L}}} &= \frac{A}{P} + \frac{B}{\parens{1 - \frac{P}{L}}}\\
+            0P + 1 &= A\parens{1 - \frac{P}{L}} + BP\\
+            0P + 1 &= A - \frac{P A}{L} + BP\\
+            0P + 1 &= P\parens{B - \frac{A}{L}} + A \\
+            \text{Where}\\
+            \left.\begin{array}{ll}
+                B - \frac{A}{L} &= 0\\
+                A &= 1
+            \end{array}\right\}
+            \;\begin{array}{ll}
+            A &= 1\\
+            B &= \reciprocal{L}
+            \end{array}\\
+            \text{Therefore}\\
+            \reciprocal{P \parens{1 - \frac{P}{L}}} &= \frac{1}{P} + \frac{\reciprocal{L}}{\parens{1 - \frac{P}{L}}}
+        </equation>
+        <p>Rewriting the differential equation</p>
+        <equation>
+            \reciprocal{P \parens{1 - \frac{P}{L}}} \s{d}P
+                &= \frac{1}{P} + \frac{\reciprocal{L}}{\parens{1 - \frac{P}{L}}} \s{d}P\\
+                &= k \s{d}t \\
+            \int \frac{1}{P} + \frac{\reciprocal{L}}{\parens{1 - \frac{P}{L}}}
+                &= \int k \s{d}t \\
+            \ln\; P - \reciprocal{L} \ln\parens{1 - \frac{P}{L}} &= k t + C\\
+            \ln\parens{\frac
+                {P}
+                {L \cdot \parens{1 - \frac{P}{L}}}
+            }
+        </equation>
+    </note>
 </layout>
-<h3>Second Order Homogeneous Linear Differential Equations with Constant Coefficients</h3>
+
+<h2>Second Order Homogeneous Linear Differential Equations with Constant Coefficients</h2>
 <layout cols="2">
     <note>
-        <h4>Properties</h4>
+        <h3>Properties</h3>
         <ul>
             <li><p>If <tex>f(x)</tex> and <tex>g(x)</tex> are solutions; then <tex>f + g</tex> is also a solution. Therefore, the most general solution to some second order homogeneous linear differential equations with constant coefficients would be <tex>y = C_1 f(x) + C_2 g(x)</tex>.</p> <p>This is why, when you find two solutions to the characteristic equation <tex>r_1</tex> and <tex>r_2</tex> respectively, we write it like so.</p></li>
         </ul>
     </note>
     <note>
-        <h4><tex>r_1 = r_2</tex></h4>
+        <h3><tex>r_1 = r_2</tex></h3>
         <p>Given some:</p>
         <equation>
             a y^{\prime\prime} + b y^\prime + c y = 0\;\text{where $a \neq 0$}\\
