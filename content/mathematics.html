@@ -327,7 +327,22 @@
 </layout>
 
 <h1>Vectors</h1>
-<h2>Reference</h2>
+<note>
+<h2>Quick Facts</h2>
+<ul>
+    <li><p>Two vectors are equal if they share the same magnitude and direction. <note inline>Initial points don't matter.</note></p></li>
+    <li>
+        <note>
+            <p>You can define a vector with two points.</p>
+            <img width="300px" center src="../static/drawings/matrix/trinagle-def-of-a-vector.png">
+        </note>
+    </li>
+    <li><p><b>Do not divide vectors!</b></p></li>
+    <li><tex>\vec{v} \cdot \vec{v} = ||\vec{v}||^2 \implies \text{constant}</tex></li>
+    <li><tex>\vec{v} \cdot \left(\vec{v}\right)^\prime = 0</tex></li>
+</ul>
+</note>
+<h2>Vector Operations</h2>
 <layout cols="2">
     <note boxed>
         <h3>Dot Product</h3>
@@ -394,15 +409,26 @@
             |a| &= \sqrt{(a_1)^2 + (a_2)^2 + (a_3)^2}
         </equation>
     </note>
+    <note boxed>
+        <h3>Definition of Vector Addition</h3>
+        <p>If <tex>\vec{u}</tex> and <tex>\vec{v}</tex> are positioned so the initial point of <tex>\vec{v}</tex> is at the terminal point of <tex>\vec{u}</tex>, then the sum <tex>\vec{u} + \vec{v}</tex> is the vector from the initial point of <tex>\vec{u}</tex> to the terminal point of <tex>\vec{v}</tex>.</p>
+        <img width="300px" center src="../static/drawings/matrix/Definition-of-Vector-Addition.png">
+        <hr>
+        <p>Given some vectors <tex>\vec{u}</tex> and <tex>\vec{v}</tex>, the vector <tex>\vec{u} - \vec{v}</tex> is the vector that points from the head of <tex>\vec{v}</tex> to the head of <tex>\vec{u}</tex></p>
+        <img width="200px" center src="../static/drawings/matrix/vector-u-v.png">
+        
+    </note>
 </layout>
 <layout cols="3">
     <note boxed>
         <h3>Standard Basis Vectors</h3>
         <equation>
-            \mathrm{i} &= \begin{bmatrix} 1 & 0 & 0 \end{bmatrix}\\
-            \mathrm{j} &= \begin{bmatrix} 0 & 1 & 0 \end{bmatrix}\\
-            \mathrm{k} &= \begin{bmatrix} 0 & 0 & 1 \end{bmatrix}
+            \mathrm{\hat{i}} &= \begin{bmatrix} 1 & 0 & 0 \end{bmatrix}\\
+            \mathrm{\hat{j}} &= \begin{bmatrix} 0 & 1 & 0 \end{bmatrix}\\
+            \mathrm{\hat{k}} &= \begin{bmatrix} 0 & 0 & 1 \end{bmatrix}
         </equation>
+        <hr>
+        <img width="200px" center src="../static/drawings/matrix/unit-vectors.png">
     </note>
     <note boxed>
         <h3>Orthogonal</h3>
@@ -461,6 +487,222 @@
         </equation>
     </note>
 </layout>
+<h2>Direction Cosines & Direction Angles of a Vector</h2>
+<note>
+    <img width="300px" center src="../static/drawings/matrix/Direction-Cosines-Direction-Angles-of-a-Vector.png">
+    <p center>Where</p>
+    <equation>
+        \vec{v} &= \begin{bmatrix} v_x & v_y & v_z \end{bmatrix}
+        \;\;\;\;
+        ||\vec{v}|| &= \sqrt{(v_x)^2 + (v_y)^2 + (v_z)^2}
+    </equation>
+</note>
+<layout cols="3">
+    <note boxed>
+        <h3>Direction Cosines</h3>
+        <equation>
+            \cos\alpha &= \frac{v_x}{||\vec{v}||}\\
+            \cos\beta &= \frac{v_y}{||\vec{v}||}\\
+            \cos\gamma &= \frac{v_z}{||\vec{v}||}
+        </equation>
+    </note>
+    <note boxed>
+        <h3>Direction Angles</h3>
+        <equation>
+            \alpha &= \arccos \left(\frac{v_x}{||\vec{v}||}\right)\\
+            \beta &= \arccos \left(\frac{v_y}{||\vec{v}||}\right)\\
+            \gamma &= \arccos \left(\frac{v_z}{||\vec{v}||}\right)
+        </equation>
+    </note>
+    <note boxed>
+        <h3>Theorem</h3>
+        <equation>
+            \cos^2\alpha + \cos^2\beta + \cos^2\gamma = 1
+        </equation>
+        <hr>
+        <h5>Proof</h5>
+        <equation>
+            \vec{v} &= \hat{i}\cos\alpha + \hat{k}\cos\beta + \hat{k}\cos\gamma\\
+            ||\vec{v}|| &= || \hat{i}\cos\alpha + \hat{k}\cos\beta + \hat{k}\cos\gamma|| = 1
+        </equation>
+        <p>Given</p>
+        <equation>
+            \sqrt{\cos^2\alpha + \cos^2\beta + \cos^2\gamma} &= 1\\
+            \sqrt{\cos^2\alpha + \cos^2\beta + \cos^2\gamma}^2 &= 1^2\\
+            \cos^2\alpha + \cos^2\beta + \cos^2\gamma &= 1
+        </equation>
+        <p>Therefore</p>
+        <equation>
+            \cos^2\alpha + \cos^2\beta + \cos^2\gamma = 1\\
+        </equation>
+    </note>
+</layout>
+<h2>Vector Relations</h2>
+<layout cols="2">
+    <note boxed>
+        <h3>Parallel Vectors</h3>
+        <ul>
+            <li>When two vectors are parallel; they never intersect (duh).</li>
+        </ul>
+        <p>Given some vectors</p>
+        <equation>
+            \vec{a} &= \begin{bmatrix} a_x & a_y & a_z \end{bmatrix}\\
+            \vec{b} &= \begin{bmatrix} b_x & b_y & b_z \end{bmatrix}
+        </equation>
+        <p>The vectors <tex>\vec{a}</tex> and <tex>\vec{b}</tex> are parallel if and only if they are scalar multiples of one another.</p>
+        <equation>
+            \vec{a} &= k\;\vec{b} \;\;\;\;\forall k \neq 0
+        </equation>
+        <h4>Alternatively</h4>
+        <equation>
+            \frac{a_x}{b_x} = \frac{a_y}{b_y} = \frac{a_z}{b_z}
+        </equation>
+    </note>
+    <note boxed>
+        <h3>Orthogonal Vectors</h3>
+        <ul>
+            <li>When two vectors are orthogonal; they meet at right angles.</li>
+        </ul>
+        <p>Given some vectors</p>
+        <equation>
+            \vec{a} &= \begin{bmatrix} a_x & a_y & a_z \end{bmatrix}\\
+            \vec{b} &= \begin{bmatrix} b_x & b_y & b_z \end{bmatrix}
+        </equation>
+        <p>Two vectors are orthogonal if and only if</p>
+        <equation>
+            \vec{a}\times\vec{b} = 0
+        </equation>
+    </note>
+</layout>
+
+<h2>Vectors Derived From Some Curve Defined by <tex>\vec{v}</tex></h2>
+<layout cols="2">
+    <layout>
+        <note boxed>
+            <img width="300px" center src="../static/drawings/matrix/curvature.png">
+        </note>
+        <note boxed>
+            <h3>The Unit Vector</h3>
+            <equation>
+                \hat{U} \equiv \frac{\vec{v}}{||\vec{v}||}
+            </equation>
+        </note>
+    </layout>
+    <note boxed>
+        <h3>The Arc Length Function</h3>
+        <p>Given</p>
+        <equation>
+            \vec{v}
+                &= \begin{bmatrix} x & y & z \end{bmatrix}
+                = \begin{bmatrix} f(t) & g(t) & h(t) \end{bmatrix}
+        </equation>
+        <p>We can redefine <tex>\vec{v}</tex> in terms of arc length between two endpoints</p>
+        <texblock>
+            \newcommand{\Long}{
+                \int_a^t \sqrt{
+                    \left(f^\prime(u)\right)^2
+                    \left(g^\prime(u)\right)^2
+                    \left(h^\prime(u)\right)^2
+                }
+            }
+            \newcommand{\AltLong}{
+                \int_a^t \sqrt{
+                    \left(\frac{\mathrm{d}x}{\mathrm{d}u}\right)^2
+                    \left(\frac{\mathrm{d}y}{\mathrm{d}u}\right)^2
+                    \left(\frac{\mathrm{d}z}{\mathrm{d}u}\right)^2
+                }
+            }
+            \newcommand{\short}{
+                \int_a^t ||\left(v^\prime(u)\right)||
+            }
+            \begin{equation}
+            \begin{split}
+                S(t)
+                    &= \Long\\
+                    &= \AltLong\\
+                    &= \short
+            \end{split}
+            \end{equation}
+        </texblock>
+        <p>That is, <tex>S(t)</tex> is the length of the curve (<tex>C</tex>) between <tex>r(a)</tex> and <tex>r(b)</tex>.</p>
+        <hr>
+        <p>We can parametrize a curve <b>with respect to arc length</b>; because arc length arises naturally from the shape of the curve and <b>does not depend on any coordinate system</b>.</p>
+        <equation>
+            \frac{\mathrm{d}S}{\mathrm{d}t} \equiv || v^\prime(t) ||
+        </equation>
+        <p>That is</p>
+        <texblock>
+            \newcommand{\Long}{
+                \sqrt{
+                    \left(f^\prime(u)\right)^2
+                    \left(g^\prime(u)\right)^2
+                    \left(h^\prime(u)\right)^2
+                }
+            }
+            \newcommand{\AltLong}{
+                \sqrt{
+                    \left(\frac{\mathrm{d}x}{\mathrm{d}u}\right)^2
+                    \left(\frac{\mathrm{d}y}{\mathrm{d}u}\right)^2
+                    \left(\frac{\mathrm{d}z}{\mathrm{d}u}\right)^2
+                }
+            }
+            \newcommand{\short}{
+                ||\left(v^\prime(u)\right)||
+            }
+            \begin{equation}
+            \begin{split}
+                \frac{\mathrm{d}S}{\mathrm{d}t}
+                    &= \Long\\
+                    &= \AltLong\\
+                    &= \short
+            \end{split}
+            \end{equation}
+        </texblock>
+    </note>
+</layout>
+<layout cols="2">
+    <note boxed>
+        <h3>The Unit <b>Tangent</b> Vector</h3>
+        <equation>
+            \vec{T}
+                &\equiv \frac
+                    {v^\prime(t)}
+                    {||v^\prime(t)||}
+                &\equiv \frac
+                    {\mathrm{d}v}
+                    {\mathrm{d}S}
+        </equation>
+    </note>
+    <note boxed>
+        <h3>The Unit <b>Normal</b> Vector</h3>
+        <equation>
+            \vec{N} \equiv \frac
+                {T^\prime}
+                {||T^\prime||}
+        </equation>
+    </note>
+    <note boxed>
+        <h3>The Binormal Vector</h3>
+        <equation>
+            \vec{B} \equiv \vec{T}\times\vec{N}
+        </equation>
+        <p>Therefore, the binormal vector is orthogonal to both the tangent vector and the normal vector.</p>
+    </note>
+    <note boxed>
+        <h3>Kappa - Curvature of a Vector</h3>
+        <equation>
+            \kappa
+                &\equiv \left|\frac{\mathrm{d}T}{\mathrm{d}S}\right|
+                &\equiv \frac
+                    {\left| T^\prime \right|}
+                    {\left| r^\prime \right|}
+                &\equiv \frac
+                    {\left| r^\prime \times v^{\prime\prime} \right|}
+                    {\left| r^\prime \right|^3}
+        </equation>
+    </note>
+</layout>
+
 
 <h1>Matrices</h1>
 <h2>Reference</h2>
@@ -545,6 +787,184 @@
             \end{bmatrix}\\
             &= \vec{c}
         </equation>
+    </note>
+</layout>
+
+<h1>Geometry</h1>
+<h2>Definition of a Line</h2>
+<img width="500px" center src="../static/drawings/matrix/vector-equation-of-a-line.png">
+<layout cols="3">
+    <note boxed>
+        <h3>Vector Equation of a Line</h3>
+        <p>Given</p>
+        <equation>
+            P_1 &= \begin{bmatrix} x_1 & y_1 & z_1 \end{bmatrix}\\
+            P_2 &= \begin{bmatrix} x_2 & y_2 & z_2 \end{bmatrix}\\
+        </equation>
+        <p>We can define a vector between <tex>P_1</tex> and <tex>P_2</tex></p>
+        <equation>
+            \vec{v} &= 
+            \begin{bmatrix} x_2 \\ y_2 \\ z_2 \end{bmatrix} -
+            \begin{bmatrix} x_1 \\ y_1 \\ z_1 \end{bmatrix} =
+            \begin{bmatrix} x_2-x_1 \\ y_2-y_1 \\ z_2-z_1 \end{bmatrix} =
+            \begin{bmatrix} v_x \\ v_y \\ v_z \end{bmatrix}
+        </equation>
+        <h4>Therefore</h4>
+        <p>The equation of a line in 3D space or <tex>\mathbb{R}^3</tex> can be defined VIA the following options</p>
+        <equation>
+            L &= P_1 + t\cdot\vec{v} \\
+            \begin{bmatrix} x \\ y \\ z \end{bmatrix} &= 
+            \begin{bmatrix} x_1 \\ y_1 \\ z_1 \end{bmatrix} +
+            t\begin{bmatrix} v_x \\ v_y \\ v_z \end{bmatrix} =
+            \begin{bmatrix} x_1 \\ y_1 \\ z_1 \end{bmatrix} +
+            \begin{bmatrix} t\;v_x \\ t\;v_y \\ t\;v_z \end{bmatrix} \\
+            &= 
+            \begin{bmatrix} x_1 + t\;v_x \\ y_1 + t\;v_y \\ z_1 + t\;v_z \end{bmatrix}\\
+            &= 
+            \begin{bmatrix} x_1 + t(x_2-x_1) \\ x_2 + t(x_2-x_1) \\ x_3 + t(x_2-x_1) \end{bmatrix}
+        </equation>
+        <p>That is</p>
+        <equation>
+            L &= P_1 + t\cdot\vec{v}\\
+            \begin{bmatrix} x \\ y \\ z \end{bmatrix} &=
+            \begin{bmatrix} x_1 + t\;v_x \\ y_1 + t\;v_y \\ z_1 + t\;v_z \end{bmatrix}
+                = \begin{bmatrix} x_1 + t(x_2-x_1) \\ y_1 + t(y_2-y_1) \\ z_1 + t(z_2-z_1) \end{bmatrix}
+        </equation>
+    </note>
+    <layout>
+        <note boxed>
+            <h3>Parametric Equation of a Line</h3>
+            <equation>
+                \underbrace{\begin{split}
+                    x &= x_1 + t(x_2-x_1) = x_1 + t\;v_x\\
+                    y &= x_1 + t(y_2-y_1) = y_1 + t\;v_y\\
+                    z &= x_1 + t(z_2-z_1) = z_1 + t\;v_z
+                \end{split}}_{
+                    r \;=\; r_0 \;+\; a \;=\; r_0 \;+\; t\,v
+                }
+            </equation>
+        </note>
+        <note boxed>
+            <h3>Essentially</h3>
+            <equation>
+                L &= P_1 + t\cdot\vec{v}\;\;\forall t\in\mathbb{R}
+            </equation>
+            <p>That is, <tex>t</tex> is the scaling factor. In a way, it's like it's a function of <tex>t</tex>, but also similar to the slope (<tex>m</tex>) in <tex>y = mx + b</tex>, except <tex>m</tex> (i.e. <tex>t</tex>) is parameterized.</p>
+            <hr>
+            <p>Sometimes this will be (confusingly) denoted as</p>
+            <equation>
+                \vec{r} &= \vec{r_0} + \vec{a} = \vec{r_0} + t\vec{v}\\
+            </equation>
+        </note>
+    </layout>
+    <note boxed>
+        <h3>Symmetric Equation of a Line</h3>
+        <equation>
+            t &= \frac{x - x_1}{x_2-x_1} = \frac{x - x_1}{v_x}\\
+            t &= \frac{y - y_1}{y_2-y_1} = \frac{y - y_1}{v_y}\\
+            t &= \frac{z - z_1}{z_2-z_1} = \frac{z - z_1}{v_z}
+        </equation>
+        <p>Therefore</p>
+        <equation>
+                  \frac{x - x_1}{v_x}
+               &= \frac{y - y_1}{v_y}
+                = \frac{z - z_1}{v_z}
+            \\\\
+                  \frac{x - x_1}{x_2-x_1}
+               &= \frac{y - y_1}{y_2-y_1}
+               =  \frac{z - z_1}{z_2-z_1}
+        </equation>
+        <hr>
+        <h4>Rationale</h4>
+        <p>We rewrite <tex>r = r_0 + a = r_0 + t v</tex> in terms of <tex>t</tex>.</p>
+        <p>That is</p>
+        <equation>
+            x &= x_1 + t(x_2-x_1) = x_1 + t v_x\\
+            t v_x  &= x - x_1 = t(x_2-x_1)\\
+            t &= \frac{x - x_1}{x_2-x_1} = \frac{x - x_1}{v_x} \\\\
+            y &= y_1 + t(y_2-y_1) = y_1 + t v_y\\
+            t v_y  &= y - y_1 = t(y_2-y_1)\\
+            t &= \frac{y - y_1}{y_2-y_1} = \frac{y - y_1}{v_y} \\\\
+            z &= z_1 + t(z_2-z_1) = z_1 + t v_z\\
+            t v_z &= z - z_1 = t(z_2-z_1) \\
+            t &= \frac{z - z_1}{z_2-z_1} = \frac{z - z_1}{v_z}
+        </equation>
+    </note>
+</layout>
+<h2>Parameterizations of a curve</h2>
+<dl>
+    <dt>Parametrized curve</dt>
+    <dd>A curve in the plane is said to be parameterized if the set of coordinates on the curve, (x,y), are represented as functions of a variable t.</dd>
+    <dd>A parametrized Curve is a path in the xy-plane traced out by the point <tex>\left(x(t), y(t)\right)</tex> as the parameter <tex>t</tex> ranges over an interval <tex>I</tex>.</dd>
+    <dd>A parametrized Curve is a path in the xyz-plane traced out by the point <tex>\left(x(t), y(t), z(t)\right)</tex> as the parameter <tex>t</tex> ranges over an interval <tex>I</tex>.</dd>
+</dl>
+<h2>Curvature Properties</h2>
+<layout cols="3">
+    <note boxed>
+        <h3>Length of a Curve</h3>
+        <texblock>
+            \newcommand{\Long}{
+                \int_a^b \sqrt{
+                    \left(f^\prime(t)\right)^2
+                    \left(g^\prime(t)\right)^2
+                    \left(h^\prime(t)\right)^2
+                }
+            }
+            \newcommand{\AltLong}{
+                \int_a^b \sqrt{
+                    \left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)^2
+                    \left(\frac{\mathrm{d}y}{\mathrm{d}t}\right)^2
+                    \left(\frac{\mathrm{d}z}{\mathrm{d}t}\right)^2
+                }
+            }
+            \newcommand{\short}{
+                \int_a^b ||\left(r^\prime(t)\right)||
+            }
+            \begin{equation}
+            \begin{split}
+                L &= \Long\\
+                  &= \AltLong\\
+                  &= \short\\
+                  &\implies \text{some constant}
+            \end{split}
+            \end{equation}
+        </texblock>
+    </note>
+    <note boxed>
+        <h3>The Arc Length Function</h3>
+        <p>Suppose</p>
+        <ul>
+            <li><p>Given some curve <tex>C</tex> defined by some vector <tex>\vec{r}</tex> in <tex>\mathbb{R}^3</tex></p></li>
+            <li><p>where <tex>r^\prime</tex> is continuous and <tex>C</tex> is traversed exactly once as <tex>t</tex> increases from <tex>a</tex> to <tex>b</tex></p></li>
+        </ul>
+        <p>We can define it's arc length function VIA</p>
+        <texblock>
+            \newcommand{\Long}{
+                \int_a^t \sqrt{
+                    \left(f^\prime(u)\right)^2
+                    \left(g^\prime(u)\right)^2
+                    \left(h^\prime(u)\right)^2
+                }
+            }
+            \newcommand{\AltLong}{
+                \int_a^t \sqrt{
+                    \left(\frac{\mathrm{d}x}{\mathrm{d}u}\right)^2
+                    \left(\frac{\mathrm{d}y}{\mathrm{d}u}\right)^2
+                    \left(\frac{\mathrm{d}z}{\mathrm{d}u}\right)^2
+                }
+            }
+            \newcommand{\short}{
+                \int_a^t ||\left(r^\prime(u)\right)||
+            }
+            \begin{equation}
+            \begin{split}
+                S(t)
+                    &= \Long\\
+                    &= \AltLong\\
+                    &= \short
+            \end{split}
+            \end{equation}
+        </texblock>
     </note>
 </layout>
 

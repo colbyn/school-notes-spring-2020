@@ -51,7 +51,7 @@
 [macro='note'] {
     display: flex;
     flex-direction: column;
-    overflow: auto;
+    // overflow: auto;
 }
 [macro='note'][boxed] {
     border-radius: 3px;
@@ -122,6 +122,16 @@
     text-align: justify;
     padding: 0;
     width: 90%;
+}
+
+[macro=note] li {
+    text-align: left;
+    width: 100%;
+}
+
+[macro=note] li > p {
+    text-align: left;
+    width: 100%;
 }
 
 @media (max-width: 900px) {
