@@ -575,19 +575,11 @@
     </note>
 </layout>
 
-<h2>Vectors Derived From Some Curve Defined by <tex>\vec{v}</tex></h2>
+<h2>Reparameterization of the position vector <tex>\vec{v}(t)</tex> in terms of length <tex>S(t)</tex></h2>
+<ul>
+    <li><p>We can parametrize a curve <b>with respect to arc length</b>; because arc length arises naturally from the shape of the curve and <b>does not depend on any coordinate system</b>.</p></li>
+</ul>
 <layout cols="2">
-    <layout>
-        <note boxed>
-            <img width="300px" center src="../static/drawings/matrix/curvature.png">
-        </note>
-        <note boxed>
-            <h3>The Unit Vector</h3>
-            <equation>
-                \hat{U} \equiv \frac{\vec{v}}{||\vec{v}||}
-            </equation>
-        </note>
-    </layout>
     <note boxed>
         <h3>The Arc Length Function</h3>
         <p>Given</p>
@@ -626,7 +618,13 @@
         </texblock>
         <p>That is, <tex>S(t)</tex> is the length of the curve (<tex>C</tex>) between <tex>r(a)</tex> and <tex>r(b)</tex>.</p>
         <hr>
-        <p>We can parametrize a curve <b>with respect to arc length</b>; because arc length arises naturally from the shape of the curve and <b>does not depend on any coordinate system</b>.</p>
+        <p>Furthermore from the adjacent definition; we can simply the above to</p>
+        <equation>
+            S(t) = \int_a^t \frac{\mathrm{d}S}{\mathrm{d}t}
+        </equation>
+    </note>
+    <note boxed>
+        <h3>The Arc Length Function</h3>
         <equation>
             \frac{\mathrm{d}S}{\mathrm{d}t} \equiv || v^\prime(t) ||
         </equation>
@@ -660,6 +658,18 @@
         </texblock>
     </note>
 </layout>
+<h2>Vectors Derived From Some Curve Defined by <tex>\vec{v}</tex></h2>
+<layout cols="2">
+    <note boxed>
+        <img width="300px" center src="../static/drawings/matrix/curvature.png">
+    </note>
+    <note boxed>
+        <h3>The Unit Vector</h3>
+        <equation>
+            \hat{U} \equiv \frac{\vec{v}}{||\vec{v}||}
+        </equation>
+    </note>
+</layout>
 <layout cols="2">
     <note boxed>
         <h3>The Unit <b>Tangent</b> Vector</h3>
@@ -686,7 +696,11 @@
         <equation>
             \vec{B} \equiv \vec{T}\times\vec{N}
         </equation>
-        <p>Therefore, the binormal vector is orthogonal to both the tangent vector and the normal vector.</p>
+        <ul>
+            <li><p>Therefore, the binormal vector is orthogonal to both the tangent vector and the normal vector.</p></li>
+            <li><p>The plane determined by the normal and binormal vectors N and B at a point P on a curve C is called the normal plane of C at P.</p></li>
+            <li><p>The plane determined by the vectors T and N is called the osculating plane of C at P. The name comes from the Latin osculum, meaning “kiss.” It is the plane that comes closest to containing the part of the curve near P. (For a plane curve, the osculating plane is simply the plane that contains the curve.)</p></li>
+        </ul>
     </note>
     <note boxed>
         <h3>Kappa - Curvature of a Vector</h3>
@@ -697,9 +711,54 @@
                     {\left| T^\prime \right|}
                     {\left| r^\prime \right|}
                 &\equiv \frac
-                    {\left| r^\prime \times v^{\prime\prime} \right|}
+                    {\left| r^\prime \times r^{\prime\prime} \right|}
                     {\left| r^\prime \right|^3}
         </equation>
+    </note>
+    <note boxed>
+        <h3>Tangential & Normal Components of the Acceleration Vector of the Curve</h3>
+        <p>When we study the motion of a particle, it is often useful to resolve the acceleration into two components, one in the direction of the tangent and the other in the direction of the normal.</p>
+        <equation>
+            a_{\vec{T}}
+                &= \frac{\mathrm{d}}{\mathrm{d}t} \left|\vec{v}\right|
+                = \frac{r^\prime \cdot r^{\prime\prime}}{|r^\prime|}\\
+            a_{\vec{N}}
+                &= \kappa \left|\vec{v}\right|^2
+                = \frac{\left|r^\prime \times r^{\prime\prime}\right|}{|r^\prime|}\\
+
+            \vec{a} &= a_{\vec{T}} \vec{T} + a_{\vec{N}} \vec{N}
+        </equation>
+        <p>Specifically</p>
+        <equation>
+            \left.\begin{aligned}
+            a_{\vec{T}}\\
+            a_{\vec{N}}
+            \end{aligned}\right\} \text{Tangential & Normal Components of $\vec{a}$}
+        </equation>
+    </note>
+</layout>
+<h2>Vector Calculus</h2>
+<layout cols="3">
+    <note boxed>
+        <h3><small>The Position Vector <tex>\vec{r}(t)</tex></small></h3>
+        <p center><small>(Original Function)</small></p>
+    </note>
+    <note boxed>
+        <h3><small>The Velocity Vector <tex>\vec{v}(t)</tex></small></h3>
+        <p center><small>(First Derivative)</small></p>
+        <ul>
+            <li>The velocity vector is also the tangent vector and points in the direction of the tangent line.</li>
+            <li>The <b>speed</b> of the particle <u>at time t</u> is the <b>magnitude</b> of the velocity vector, that is,
+                <equation>
+                    \underbrace{|\vec{v}(t)| = |(\vec{r})^\prime(t)| = \frac{\mathrm{d}s}{\mathrm{d}t}}
+                    _{\text{rate of change of distance with respect to time}}
+                </equation>
+            </li>
+        </ul>
+    </note>
+    <note boxed>
+        <h3><small>The Acceleration Vector <tex>\vec{a}(t)</tex></small></h3>
+        <p center><small>(Second Derivative)</small></p>
     </note>
 </layout>
 
@@ -798,37 +857,41 @@
         <h3>Vector Equation of a Line</h3>
         <p>Given</p>
         <equation>
-            P_1 &= \begin{bmatrix} x_1 & y_1 & z_1 \end{bmatrix}\\
-            P_2 &= \begin{bmatrix} x_2 & y_2 & z_2 \end{bmatrix}\\
+            \colorB{P_1} &= \begin{bmatrix} \colorB{x_1} & \colorB{y_1} & \colorB{z_1} \end{bmatrix}\\
+            \colorC{P_2} &= \begin{bmatrix} \colorC{x_2} & \colorC{y_2} & \colorC{z_2} \end{bmatrix}\\
         </equation>
-        <p>We can define a vector between <tex>P_1</tex> and <tex>P_2</tex></p>
         <equation>
-            \vec{v} &= 
-            \begin{bmatrix} x_2 \\ y_2 \\ z_2 \end{bmatrix} -
-            \begin{bmatrix} x_1 \\ y_1 \\ z_1 \end{bmatrix} =
-            \begin{bmatrix} x_2-x_1 \\ y_2-y_1 \\ z_2-z_1 \end{bmatrix} =
-            \begin{bmatrix} v_x \\ v_y \\ v_z \end{bmatrix}
+            \colorB{P_1} &= \begin{bmatrix} \colorB{x_1} & \colorB{y_1} & \colorB{z_1} \end{bmatrix}\\
+            \colorC{P_2} &= \begin{bmatrix} \colorC{x_2} & \colorC{y_2} & \colorC{z_2} \end{bmatrix}\\
+        </equation>
+        <p>We can define a vector between <tex>\colorB{P_1}</tex> and <tex>\colorC{P_2}</tex></p>
+        <equation>
+            \colorA{\overrightarrow{\Delta\mathsf{v}}} &= 
+            \begin{bmatrix} \colorC{x_2} \\ \colorC{y_2} \\ \colorC{z_2} \end{bmatrix} -
+            \begin{bmatrix} \colorB{x_1} \\ \colorB{y_1} \\ \colorB{z_1} \end{bmatrix} =
+            \begin{bmatrix} \colorC{x_2}-\colorB{x_1} \\ \colorC{y_2}-\colorB{y_1} \\ \colorC{z_2}-\colorB{z_1} \end{bmatrix} =
+            \begin{bmatrix} \colorA{\Delta_x} \\ \colorA{\Delta_y} \\ \colorA{\Delta_z} \end{bmatrix}
         </equation>
         <h4>Therefore</h4>
         <p>The equation of a line in 3D space or <tex>\mathbb{R}^3</tex> can be defined VIA the following options</p>
         <equation>
-            L &= P_1 + t\cdot\vec{v} \\
+            L &= \colorB{P_1} + t\cdot\colorA{\overrightarrow{\Delta\mathsf{v}}} \\
             \begin{bmatrix} x \\ y \\ z \end{bmatrix} &= 
-            \begin{bmatrix} x_1 \\ y_1 \\ z_1 \end{bmatrix} +
-            t\begin{bmatrix} v_x \\ v_y \\ v_z \end{bmatrix} =
-            \begin{bmatrix} x_1 \\ y_1 \\ z_1 \end{bmatrix} +
-            \begin{bmatrix} t\;v_x \\ t\;v_y \\ t\;v_z \end{bmatrix} \\
+            \begin{bmatrix} \colorB{x_1} \\ \colorB{y_1} \\ \colorB{z_1} \end{bmatrix} +
+            t\begin{bmatrix} \colorA{\Delta_x} \\ \colorA{\Delta_y} \\ \colorA{\Delta_z} \end{bmatrix} =
+            \begin{bmatrix} \colorB{x_1} \\ \colorB{y_1} \\ \colorB{z_1} \end{bmatrix} +
+            \begin{bmatrix} t\;\colorA{\Delta_x} \\ t\;\colorA{\Delta_y} \\ t\;\colorA{\Delta_z} \end{bmatrix} \\
             &= 
-            \begin{bmatrix} x_1 + t\;v_x \\ y_1 + t\;v_y \\ z_1 + t\;v_z \end{bmatrix}\\
+            \begin{bmatrix} \colorB{x_1} + t\;\colorA{\Delta_x} \\ \colorB{y_1} + t\;\colorA{\Delta_y} \\ \colorB{z_1} + t\;\colorA{\Delta_z} \end{bmatrix}\\
             &= 
-            \begin{bmatrix} x_1 + t(x_2-x_1) \\ x_2 + t(x_2-x_1) \\ x_3 + t(x_2-x_1) \end{bmatrix}
+            \begin{bmatrix} \colorB{x_1} + t(\colorC{x_2}-\colorB{x_1}) \\ \colorC{x_2} + t(\colorC{x_2}-\colorB{x_1}) \\ x_3 + t(\colorC{x_2}-\colorB{x_1}) \end{bmatrix}
         </equation>
         <p>That is</p>
         <equation>
-            L &= P_1 + t\cdot\vec{v}\\
+            L &= \colorB{P_1} + t\cdot\colorA{\overrightarrow{\Delta\mathsf{v}}}\\
             \begin{bmatrix} x \\ y \\ z \end{bmatrix} &=
-            \begin{bmatrix} x_1 + t\;v_x \\ y_1 + t\;v_y \\ z_1 + t\;v_z \end{bmatrix}
-                = \begin{bmatrix} x_1 + t(x_2-x_1) \\ y_1 + t(y_2-y_1) \\ z_1 + t(z_2-z_1) \end{bmatrix}
+            \begin{bmatrix} \colorB{x_1} + t\;\colorA{\Delta_x} \\ \colorB{y_1} + t\;\colorA{\Delta_y} \\ \colorB{z_1} + t\;\colorA{\Delta_z} \end{bmatrix}
+                = \begin{bmatrix} \colorB{x_1} + t(\colorC{x_2}-\colorB{x_1}) \\ \colorB{y_1} + t(\colorC{y_2}-\colorB{y_1}) \\ \colorB{z_1} + t(\colorC{z_2}-\colorB{z_1}) \end{bmatrix}
         </equation>
     </note>
     <layout>
@@ -836,9 +899,9 @@
             <h3>Parametric Equation of a Line</h3>
             <equation>
                 \underbrace{\begin{split}
-                    x &= x_1 + t(x_2-x_1) = x_1 + t\;v_x\\
-                    y &= x_1 + t(y_2-y_1) = y_1 + t\;v_y\\
-                    z &= x_1 + t(z_2-z_1) = z_1 + t\;v_z
+                    x &= \colorB{x_1} + t(\colorC{x_2}-\colorB{x_1}) = \colorB{x_1} + t\;\colorA{\Delta_x}\\
+                    y &= \colorB{x_1} + t(\colorC{y_2}-\colorB{y_1}) = \colorB{y_1} + t\;\colorA{\Delta_y}\\
+                    z &= \colorB{x_1} + t(\colorC{z_2}-\colorB{z_1}) = \colorB{z_1} + t\;\colorA{\Delta_z}
                 \end{split}}_{
                     r \;=\; r_0 \;+\; a \;=\; r_0 \;+\; t\,v
                 }
@@ -847,7 +910,7 @@
         <note boxed>
             <h3>Essentially</h3>
             <equation>
-                L &= P_1 + t\cdot\vec{v}\;\;\forall t\in\mathbb{R}
+                L &= \colorB{P_1} + t\cdot\colorA{\overrightarrow{\Delta\mathsf{v}}}\;\;\forall t\in\mathbb{R}
             </equation>
             <p>That is, <tex>t</tex> is the scaling factor. In a way, it's like it's a function of <tex>t</tex>, but also similar to the slope (<tex>m</tex>) in <tex>y = mx + b</tex>, except <tex>m</tex> (i.e. <tex>t</tex>) is parameterized.</p>
             <hr>
@@ -860,34 +923,34 @@
     <note boxed>
         <h3>Symmetric Equation of a Line</h3>
         <equation>
-            t &= \frac{x - x_1}{x_2-x_1} = \frac{x - x_1}{v_x}\\
-            t &= \frac{y - y_1}{y_2-y_1} = \frac{y - y_1}{v_y}\\
-            t &= \frac{z - z_1}{z_2-z_1} = \frac{z - z_1}{v_z}
+            t &= \frac{x - \colorB{x_1}}{\colorC{x_2}-\colorB{x_1}} = \frac{x - \colorB{x_1}}{\colorA{\Delta_x}}\\
+            t &= \frac{y - \colorB{y_1}}{\colorC{y_2}-\colorB{y_1}} = \frac{y - \colorB{y_1}}{\colorA{\Delta_y}}\\
+            t &= \frac{z - \colorB{z_1}}{\colorC{z_2}-\colorB{z_1}} = \frac{z - \colorB{z_1}}{\colorA{\Delta_z}}
         </equation>
         <p>Therefore</p>
         <equation>
-                  \frac{x - x_1}{v_x}
-               &= \frac{y - y_1}{v_y}
-                = \frac{z - z_1}{v_z}
+                  \frac{x - \colorB{x_1}}{\colorA{\Delta_x}}
+               &= \frac{y - \colorB{y_1}}{\colorA{\Delta_y}}
+                = \frac{z - \colorB{z_1}}{\colorA{\Delta_z}}
             \\\\
-                  \frac{x - x_1}{x_2-x_1}
-               &= \frac{y - y_1}{y_2-y_1}
-               =  \frac{z - z_1}{z_2-z_1}
+                  \frac{x - \colorB{x_1}}{\colorC{x_2}-\colorB{x_1}}
+               &= \frac{y - \colorB{y_1}}{\colorC{y_2}-\colorB{y_1}}
+               =  \frac{z - \colorB{z_1}}{\colorC{z_2}-\colorB{z_1}}
         </equation>
         <hr>
         <h4>Rationale</h4>
         <p>We rewrite <tex>r = r_0 + a = r_0 + t v</tex> in terms of <tex>t</tex>.</p>
         <p>That is</p>
         <equation>
-            x &= x_1 + t(x_2-x_1) = x_1 + t v_x\\
-            t v_x  &= x - x_1 = t(x_2-x_1)\\
-            t &= \frac{x - x_1}{x_2-x_1} = \frac{x - x_1}{v_x} \\\\
-            y &= y_1 + t(y_2-y_1) = y_1 + t v_y\\
-            t v_y  &= y - y_1 = t(y_2-y_1)\\
-            t &= \frac{y - y_1}{y_2-y_1} = \frac{y - y_1}{v_y} \\\\
-            z &= z_1 + t(z_2-z_1) = z_1 + t v_z\\
-            t v_z &= z - z_1 = t(z_2-z_1) \\
-            t &= \frac{z - z_1}{z_2-z_1} = \frac{z - z_1}{v_z}
+            x &= \colorB{x_1} + t(\colorC{x_2}-\colorB{x_1}) = \colorB{x_1} + t\;\colorA{\Delta_x}\\
+            t\;\colorA{\Delta_x}  &= x - \colorB{x_1} = t(\colorC{x_2}-\colorB{x_1})\\
+            t &= \frac{x - \colorB{x_1}}{\colorC{x_2}-\colorB{x_1}} = \frac{x - \colorB{x_1}}{\colorA{\Delta_x}} \\\\
+            y &= \colorB{y_1} + t(\colorC{y_2}-\colorB{y_1}) = \colorB{y_1} + t\;\colorA{\Delta_y}\\
+            t\;\colorA{\Delta_y}  &= y - \colorB{y_1} = t(\colorC{y_2}-\colorB{y_1})\\
+            t &= \frac{y - \colorB{y_1}}{\colorC{y_2}-\colorB{y_1}} = \frac{y - \colorB{y_1}}{\colorA{\Delta_y}} \\\\
+            z &= \colorB{z_1} + t(\colorC{z_2}-\colorB{z_1}) = \colorB{z_1} + t\;\colorA{\Delta_z}\\
+            t\;\colorA{\Delta_z} &= z - \colorB{z_1} = t(\colorC{z_2}-\colorB{z_1}) \\
+            t &= \frac{z - \colorB{z_1}}{\colorC{z_2}-\colorB{z_1}} = \frac{z - \colorB{z_1}}{\colorA{\Delta_z}}
         </equation>
     </note>
 </layout>
