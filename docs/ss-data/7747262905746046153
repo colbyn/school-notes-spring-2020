@@ -113,7 +113,6 @@ img[center] {
 [macro=note] {
   display: flex;
   flex-direction: column;
-  overflow: auto;
 }
 
 [macro=note][boxed] {
@@ -184,6 +183,16 @@ img[center] {
   text-align: justify;
   padding: 0;
   width: 90%;
+}
+
+[macro=note] li {
+  text-align: left;
+  width: 100%;
+}
+
+[macro=note] li > p {
+  text-align: left;
+  width: 100%;
 }
 @media (max-width: 900px) {
   [macro=note] p {

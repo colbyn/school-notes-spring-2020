@@ -2,7 +2,7 @@
   <head>
     <title>Colbyn's Math Notes
     </title>
-    <link href="https://colbyn.github.io/school-notes-spring-2020/ss-data/11013937192394877511" rel="stylesheet" ss.link.processed></link><script>
+    <link rel="stylesheet" ss.link.processed href="https://colbyn.github.io/school-notes-spring-2020/ss-data/7747262905746046153"></link><script>
 window.MathJax = {
     tex: {
         inlineMath: [['\\(', '\\)'], ['stem:[', ']'], ['`', '`']],
@@ -11,7 +11,16 @@ window.MathJax = {
             'Integrate': ['{\\int_{#1}^{#2}\\, #3 \\dx}', 3],
             'IntegrateFor': ['{\\int_{#1}^{#2}\\, #3 {\\, \\mathrm{d}{#4}\\;}}', 4],
             'I': ['{\\Integrate{a}{b}{#1}}', 1],
-            'angles': ['\\langle {#1},{#2} \\rangle', 2]
+            'angles': ['\\langle {#1},{#2} \\rangle', 2],
+            's': ['\\;\\mathrm{{#1}}', 1], // symbol
+            'D': ['{\\frac{\\mathrm{d}{#1}}{\\mathrm{d}{#2}}}', 2],
+            'colorA': ['\\textcolor{Periwinkle}{#1}', 1],
+            'colorB': ['\\textcolor{DarkOrchid}{#1}', 1],
+            'colorC': ['\\textcolor{Aquamarine}{#1}', 1],
+            'colorD': ['\\textcolor{SeaGreen}{#1}', 1],
+            'dPrime': '{\\prime\\prime}',
+            'reciprocal': ['\\frac{1}{#1}', 1],
+            'parens': ['\\left({#1}\\right)', 1],
         },
     },
     // svg: {
@@ -34,13 +43,13 @@ window.MathJax = {
     processEscapes: true,
     options: {enableMenu: false},
 };
-</script><script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" id="MathJax-script"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"></link>
+</script><script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet"></link>
     <meta name="viewport" content="width=device-width,initial-scale=1"></meta>
     <meta charset="utf-8"></meta><script src="https://www.geogebra.org/apps/deployggb.js"></script><script src="https://www.desmos.com/api/v1.5/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com"></link>
+    <link href="https://fonts.gstatic.com" rel="preconnect"></link>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"></link>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"></link>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"></link>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"></link>
     <link href="https://raw.githubusercontent.com/joshuarudd/typeset.css/master/typeset.min.css" rel="stylesheet"></link>
@@ -57,7 +66,7 @@ window.MathJax = {
   <body>
     <header id="site-header">
       <div page-nav>
-        <h1 id="4966621614580263441" toc-ignore>Site Navigation
+        <h1 toc-ignore id="--Site%5FNavigation">Site Navigation
         </h1>
         <ul macro="page-nav">
           <li><a href="https://colbyn.github.io/school-notes-spring-2020/index.html">Reference (Math)</a>
@@ -71,61 +80,61 @@ window.MathJax = {
         </ul>
       </div>
       <div toc>
-        <h1 id="1869794979793395901" toc-ignore>Table of Contents
+        <h1 toc-ignore id="--Table%5Fof%5FContents">Table of Contents
         </h1>
         <ul macro="toc">
-          <li for="h1"><a href="#10408239755215579030">Basic Electrical Quantities</a>
+          <li for="h1"><a href="#--Basic%5FElectrical%5FQuantities">Basic Electrical Quantities</a>
           </li>
-          <li for="h2"><a href="#11788963289675480947">Charge</a>
+          <li for="h2"><a href="#--Basic%255FElectrical%255FQuantities--Charge">Charge</a>
           </li>
-          <li for="h2"><a href="#14408747284475332103">Conductors and insulators</a>
+          <li for="h2"><a href="#--Basic%255FElectrical%255FQuantities--Conductors%5Fand%5Finsulators">Conductors and insulators</a>
           </li>
-          <li for="h2"><a href="#3105695230896531129">Current</a>
+          <li for="h2"><a href="#--Basic%255FElectrical%255FQuantities--Current">Current</a>
           </li>
-          <li for="h2"><a href="#15680833861298601949">Voltage</a>
+          <li for="h2"><a href="#--Basic%255FElectrical%255FQuantities--Voltage">Voltage</a>
           </li>
-          <li for="h2"><a href="#5820677996546091207">Power</a>
+          <li for="h2"><a href="#--Basic%255FElectrical%255FQuantities--Power">Power</a>
           </li>
-          <li for="h1"><a href="#15370355312913814619">Standard Electrical Units</a>
+          <li for="h1"><a href="#--Standard%5FElectrical%5FUnits">Standard Electrical Units</a>
           </li>
-          <li for="h2"><a href="#15461711911393704458">SI base units</a>
+          <li for="h2"><a href="#--Standard%255FElectrical%255FUnits--SI%5Fbase%5Funits">SI base units</a>
           </li>
-          <li for="h2"><a href="#3003434041515589255">SI derived units used in electricity</a>
+          <li for="h2"><a href="#--Standard%255FElectrical%255FUnits--SI%5Fderived%5Funits%5Fused%5Fin%5Felectricity">SI derived units used in electricity</a>
           </li>
-          <li for="h3"><a href="#12385927638866312441">Ampere</a>
+          <li for="h3"><a href="#--Standard%255FElectrical%255FUnits---Standard%25255FElectrical%25255FUnits--SI%255Fderived%255Funits%255Fused%255Fin%255Felectricity--Ampere">Ampere</a>
           </li>
-          <li for="h3"><a href="#274639865039354196">Coulomb</a>
+          <li for="h3"><a href="#--Standard%255FElectrical%255FUnits---Standard%25255FElectrical%25255FUnits--SI%255Fderived%255Funits%255Fused%255Fin%255Felectricity--Coulomb">Coulomb</a>
           </li>
-          <li for="h3"><a href="#6887537216793041061">Electron charge</a>
+          <li for="h3"><a href="#--Standard%255FElectrical%255FUnits---Standard%25255FElectrical%25255FUnits--SI%255Fderived%255Funits%255Fused%255Fin%255Felectricity--Electron%5Fcharge">Electron charge</a>
           </li>
-          <li for="h3"><a href="#13933735271039594695">Watt</a>
+          <li for="h3"><a href="#--Standard%255FElectrical%255FUnits---Standard%25255FElectrical%25255FUnits--SI%255Fderived%255Funits%255Fused%255Fin%255Felectricity--Watt">Watt</a>
           </li>
-          <li for="h3"><a href="#12196605435851837192">Volt</a>
+          <li for="h3"><a href="#--Standard%255FElectrical%255FUnits---Standard%25255FElectrical%25255FUnits--SI%255Fderived%255Funits%255Fused%255Fin%255Felectricity--Volt">Volt</a>
           </li>
-          <li for="h3"><a href="#12655589402800957535">Ohm</a>
+          <li for="h3"><a href="#--Standard%255FElectrical%255FUnits---Standard%25255FElectrical%25255FUnits--SI%255Fderived%255Funits%255Fused%255Fin%255Felectricity--Ohm">Ohm</a>
           </li>
-          <li for="h1"><a href="#18240849237751255642">Ideal Circuit Elements</a>
+          <li for="h1"><a href="#--Ideal%5FCircuit%5FElements">Ideal Circuit Elements</a>
           </li>
-          <li for="h2"><a href="#12219425834620306142">Resistor ( R )</a>
+          <li for="h2"><a href="#--Ideal%255FCircuit%255FElements--Resistor%5F%28-R-%29">Resistor ( R )</a>
           </li>
-          <li for="h2"><a href="#10308856237715244534">Capacitor ( C )</a>
+          <li for="h2"><a href="#--Ideal%255FCircuit%255FElements--Capacitor%5F%28-C-%29">Capacitor ( C )</a>
           </li>
-          <li for="h2"><a href="#3116681455895525560">Inductor ( L )</a>
+          <li for="h2"><a href="#--Ideal%255FCircuit%255FElements--Inductor%5F%28-L-%29">Inductor ( L )</a>
           </li>
-          <li for="h1"><a href="#6821640623037137741">Ideal Sources</a>
+          <li for="h1"><a href="#--Ideal%5FSources">Ideal Sources</a>
           </li>
-          <li for="h2"><a href="#13958280111483899034">Ideal Voltage Source</a>
+          <li for="h2"><a href="#--Ideal%255FSources--Ideal%5FVoltage%5FSource">Ideal Voltage Source</a>
           </li>
-          <li for="h2"><a href="#11649327911608649080">Ideal Current Source</a>
+          <li for="h2"><a href="#--Ideal%255FSources--Ideal%5FCurrent%5FSource">Ideal Current Source</a>
           </li>
         </ul>
       </div>
     </header>
     <main>
-      <h1 id="8373823283852390356" root toc-ignore>Colbyn's School Notes
+      <h1 toc-ignore id="--Colbyn%27s%5FSchool%5FNotes" root>Colbyn's School Notes
       </h1>
-      <div boxed macro="note">
-        <h2 toc-ignore id="6233974224280525499">Meta
+      <div macro="note" boxed>
+        <h2 toc-ignore id="--Meta">Meta
         </h2>
         <ul>
           <li><a href="https://colbyn.github.io/school-notes-spring-2020/">Online Release</a>
@@ -134,7 +143,7 @@ window.MathJax = {
           </li>
         </ul>
         <div macro="note">
-          <h3 id="1654949216283922482" toc-ignore>Legacy Notes
+          <h3 toc-ignore id="--Legacy%5FNotes">Legacy Notes
           </h3>
           <ul>
             <li><a href="https://colbyn.github.io/subscript/">Original Subscript Implementation (Last Iteration)</a>
@@ -148,18 +157,18 @@ window.MathJax = {
           </ul>
         </div>
       </div>
-      <h1 id="10408239755215579030">Basic Electrical Quantities
-      </h1>      <div cols="3" columns="3" macro="layout">
-        <div boxed macro="note">
-          <h2 id="11788963289675480947">Charge
+      <h1 id="--Basic%5FElectrical%5FQuantities">Basic Electrical Quantities
+      </h1>      <div macro="layout" cols="3" columns="3">
+        <div macro="note" boxed>
+          <h2 id="--Basic%255FElectrical%255FQuantities--Charge">Charge
           </h2>
         </div>
         <div macro="note" boxed>
-          <h2 id="14408747284475332103">Conductors and insulators
+          <h2 id="--Basic%255FElectrical%255FQuantities--Conductors%5Fand%5Finsulators">Conductors and insulators
           </h2>
         </div>
         <div macro="note" boxed>
-          <h2 id="3105695230896531129">Current
+          <h2 id="--Basic%255FElectrical%255FQuantities--Current">Current
           </h2>
           <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
@@ -170,12 +179,12 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-        <div boxed macro="note">
-          <h2 id="15680833861298601949">Voltage
+        <div macro="note" boxed>
+          <h2 id="--Basic%255FElectrical%255FQuantities--Voltage">Voltage
           </h2>
         </div>
-        <div boxed macro="note">
-          <h2 id="5820677996546091207">Power
+        <div macro="note" boxed>
+          <h2 id="--Basic%255FElectrical%255FQuantities--Power">Power
           </h2>
           <p>Power is defined as the rate energy (<b>U</b>) is transformed or transferred over time. We measure power in units of joules/second, also known as watts.</p>
           <div macro="equation" latex="block">$$\begin{equation}
@@ -194,7 +203,7 @@ window.MathJax = {
             </li>
           </ul>
           <p>We can insert these definitions into the equation for power:</p>
-          <div macro="equation" latex="block">$$\begin{equation}
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             \text{power}
@@ -207,10 +216,10 @@ window.MathJax = {
           </div>
           <p>Electrical power is the product of voltage times current. in units of watts.</p>
         </div>
-      </div>      <h1 id="15370355312913814619">Standard Electrical Units
-      </h1>      <div columns="2" macro="layout" cols="2">
+      </div>      <h1 id="--Standard%5FElectrical%5FUnits">Standard Electrical Units
+      </h1>      <div columns="2" cols="2" macro="layout">
         <div macro="note">
-          <h2 id="15461711911393704458">SI base units
+          <h2 id="--Standard%255FElectrical%255FUnits--SI%5Fbase%5Funits">SI base units
           </h2>
           <table>
             <tbody>
@@ -225,7 +234,7 @@ window.MathJax = {
               <tr>
                 <td>meter
                 </td>
-                <td><span latex="inline" macro="tex">\(\mathrm{m}\)</span>
+                <td><span macro="tex" latex="inline">\(\mathrm{m}\)</span>
                 </td>
                 <td>length
                 </td>
@@ -233,7 +242,7 @@ window.MathJax = {
               <tr>
                 <td>kilogram
                 </td>
-                <td><span macro="tex" latex="inline">\(\mathrm{kg}\)</span>
+                <td><span latex="inline" macro="tex">\(\mathrm{kg}\)</span>
                 </td>
                 <td>mass
                 </td>
@@ -249,7 +258,7 @@ window.MathJax = {
               <tr>
                 <td>ampere
                 </td>
-                <td><span latex="inline" macro="tex">\(\mathrm{A}\)</span>
+                <td><span macro="tex" latex="inline">\(\mathrm{A}\)</span>
                 </td>
                 <td>electric current
                 </td>
@@ -282,7 +291,7 @@ window.MathJax = {
           </table>
         </div>
         <div macro="note">
-          <h2 id="3003434041515589255">SI derived units used in electricity
+          <h2 id="--Standard%255FElectrical%255FUnits--SI%5Fderived%5Funits%5Fused%5Fin%5Felectricity">SI derived units used in electricity
           </h2>
           <table>
             <tbody>
@@ -313,7 +322,7 @@ window.MathJax = {
                 </td>
                 <td>power
                 </td>
-                <td><span macro="tex" latex="inline">\(\frac{\mathrm{J}}{\mathrm{s}}\)</span>
+                <td><span latex="inline" macro="tex">\(\frac{\mathrm{J}}{\mathrm{s}}\)</span>
                 </td>
               </tr>
               <tr>
@@ -323,7 +332,7 @@ window.MathJax = {
                 </td>
                 <td>voltage (electric potential difference)
                 </td>
-                <td><span macro="tex" latex="inline">\(\frac{\mathrm{W}}{\mathrm{A}}\)</span>
+                <td><span latex="inline" macro="tex">\(\frac{\mathrm{W}}{\mathrm{A}}\)</span>
                 </td>
               </tr>
               <tr>
@@ -343,7 +352,7 @@ window.MathJax = {
                 </td>
                 <td>capacitance
                 </td>
-                <td><span macro="tex" latex="inline">\(\frac{\mathrm{C}}{\mathrm{V}}\)</span>
+                <td><span latex="inline" macro="tex">\(\frac{\mathrm{C}}{\mathrm{V}}\)</span>
                 </td>
               </tr>
               <tr>
@@ -373,7 +382,7 @@ window.MathJax = {
                 </td>
                 <td>conductance
                 </td>
-                <td><span latex="inline" macro="tex">\(\frac{\mathrm{A}}{\mathrm{V}}\)</span> or <span macro="tex" latex="inline">\(\frac{\mathrm{1}}{\mathrm{Ω}}\)</span>
+                <td><span latex="inline" macro="tex">\(\frac{\mathrm{A}}{\mathrm{V}}\)</span> or <span latex="inline" macro="tex">\(\frac{\mathrm{1}}{\mathrm{Ω}}\)</span>
                 </td>
               </tr>
               <tr>
@@ -383,7 +392,7 @@ window.MathJax = {
                 </td>
                 <td>magnetic flux
                 </td>
-                <td><span latex="inline" macro="tex">\(\mathrm{V}\cdot\mathrm{s}\)</span>
+                <td><span macro="tex" latex="inline">\(\mathrm{V}\cdot\mathrm{s}\)</span>
                 </td>
               </tr>
               <tr>
@@ -399,37 +408,37 @@ window.MathJax = {
             </tbody>
           </table>
         </div>
-      </div>      <div cols="2" macro="layout" columns="2">
+      </div>      <div macro="layout" columns="2" cols="2">
         <div boxed macro="note">
-          <h3 id="12385927638866312441">Ampere
-          </h3>
-        </div>
-        <div boxed macro="note">
-          <h3 id="274639865039354196">Coulomb
+          <h3 id="--Standard%255FElectrical%255FUnits---Standard%25255FElectrical%25255FUnits--SI%255Fderived%255Funits%255Fused%255Fin%255Felectricity--Ampere">Ampere
           </h3>
         </div>
         <div boxed macro="note">
-          <h3 id="6887537216793041061">Electron charge
-          </h3>
-        </div>
-        <div macro="note" boxed>
-          <h3 id="13933735271039594695">Watt
+          <h3 id="--Standard%255FElectrical%255FUnits---Standard%25255FElectrical%25255FUnits--SI%255Fderived%255Funits%255Fused%255Fin%255Felectricity--Coulomb">Coulomb
           </h3>
         </div>
         <div boxed macro="note">
-          <h3 id="12196605435851837192">Volt
+          <h3 id="--Standard%255FElectrical%255FUnits---Standard%25255FElectrical%25255FUnits--SI%255Fderived%255Funits%255Fused%255Fin%255Felectricity--Electron%5Fcharge">Electron charge
           </h3>
         </div>
         <div boxed macro="note">
-          <h3 id="12655589402800957535">Ohm
+          <h3 id="--Standard%255FElectrical%255FUnits---Standard%25255FElectrical%25255FUnits--SI%255Fderived%255Funits%255Fused%255Fin%255Felectricity--Watt">Watt
           </h3>
         </div>
-      </div>      <h1 id="18240849237751255642">Ideal Circuit Elements
-      </h1>      <div columns="3" cols="3" macro="layout">
-        <div macro="note" boxed>
-          <h2 id="12219425834620306142">Resistor (<b>R</b>)
+        <div boxed macro="note">
+          <h3 id="--Standard%255FElectrical%255FUnits---Standard%25255FElectrical%25255FUnits--SI%255Fderived%255Funits%255Fused%255Fin%255Felectricity--Volt">Volt
+          </h3>
+        </div>
+        <div boxed macro="note">
+          <h3 id="--Standard%255FElectrical%255FUnits---Standard%25255FElectrical%25255FUnits--SI%255Fderived%255Funits%255Fused%255Fin%255Felectricity--Ohm">Ohm
+          </h3>
+        </div>
+      </div>      <h1 id="--Ideal%5FCircuit%5FElements">Ideal Circuit Elements
+      </h1>      <div cols="3" macro="layout" columns="3">
+        <div boxed macro="note">
+          <h2 id="--Ideal%255FCircuit%255FElements--Resistor%5F%28-R-%29">Resistor (<b>R</b>)
           </h2>
-          <div macro="equation" latex="block">$$\begin{equation}
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             v  = i \cdot R
@@ -438,8 +447,8 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-        <div boxed macro="note">
-          <h2 id="10308856237715244534">Capacitor (<b>C</b>)
+        <div macro="note" boxed>
+          <h2 id="--Ideal%255FCircuit%255FElements--Capacitor%5F%28-C-%29">Capacitor (<b>C</b>)
           </h2>
           <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
@@ -451,7 +460,7 @@ window.MathJax = {
           </div>
         </div>
         <div boxed macro="note">
-          <h2 id="3116681455895525560">Inductor (<b>L</b>)
+          <h2 id="--Ideal%255FCircuit%255FElements--Inductor%5F%28-L-%29">Inductor (<b>L</b>)
           </h2>
           <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
@@ -462,10 +471,10 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-      </div>      <h1 id="6821640623037137741">Ideal Sources
-      </h1>      <div macro="layout" columns="2" cols="2">
+      </div>      <h1 id="--Ideal%5FSources">Ideal Sources
+      </h1>      <div cols="2" macro="layout" columns="2">
         <div macro="note" boxed>
-          <h2 id="13958280111483899034">Ideal Voltage Source
+          <h2 id="--Ideal%255FSources--Ideal%5FVoltage%5FSource">Ideal Voltage Source
           </h2>
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -477,7 +486,7 @@ window.MathJax = {
           </div>
         </div>
         <div boxed macro="note">
-          <h2 id="11649327911608649080">Ideal Current Source
+          <h2 id="--Ideal%255FSources--Ideal%5FCurrent%5FSource">Ideal Current Source
           </h2>
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}

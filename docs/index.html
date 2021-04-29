@@ -2,7 +2,7 @@
   <head>
     <title>Colbyn's Math Notes
     </title>
-    <link rel="stylesheet" href="https://colbyn.github.io/school-notes-spring-2020/ss-data/11013937192394877511" ss.link.processed></link><script>
+    <link ss.link.processed href="https://colbyn.github.io/school-notes-spring-2020/ss-data/7747262905746046153" rel="stylesheet"></link><script>
 window.MathJax = {
     tex: {
         inlineMath: [['\\(', '\\)'], ['stem:[', ']'], ['`', '`']],
@@ -11,7 +11,16 @@ window.MathJax = {
             'Integrate': ['{\\int_{#1}^{#2}\\, #3 \\dx}', 3],
             'IntegrateFor': ['{\\int_{#1}^{#2}\\, #3 {\\, \\mathrm{d}{#4}\\;}}', 4],
             'I': ['{\\Integrate{a}{b}{#1}}', 1],
-            'angles': ['\\langle {#1},{#2} \\rangle', 2]
+            'angles': ['\\langle {#1},{#2} \\rangle', 2],
+            's': ['\\;\\mathrm{{#1}}', 1], // symbol
+            'D': ['{\\frac{\\mathrm{d}{#1}}{\\mathrm{d}{#2}}}', 2],
+            'colorA': ['\\textcolor{Periwinkle}{#1}', 1],
+            'colorB': ['\\textcolor{DarkOrchid}{#1}', 1],
+            'colorC': ['\\textcolor{Aquamarine}{#1}', 1],
+            'colorD': ['\\textcolor{SeaGreen}{#1}', 1],
+            'dPrime': '{\\prime\\prime}',
+            'reciprocal': ['\\frac{1}{#1}', 1],
+            'parens': ['\\left({#1}\\right)', 1],
         },
     },
     // svg: {
@@ -34,15 +43,15 @@ window.MathJax = {
     processEscapes: true,
     options: {enableMenu: false},
 };
-</script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async id="MathJax-script"></script>
+</script><script id="MathJax-script" async type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"></link>
-    <meta content="width=device-width,initial-scale=1" name="viewport"></meta>
+    <meta name="viewport" content="width=device-width,initial-scale=1"></meta>
     <meta charset="utf-8"></meta><script src="https://www.geogebra.org/apps/deployggb.js"></script><script src="https://www.desmos.com/api/v1.5/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
-    <link href="https://fonts.gstatic.com" rel="preconnect"></link>
+    <link rel="preconnect" href="https://fonts.gstatic.com"></link>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"></link>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"></link>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"></link>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"></link>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"></link>
     <link href="https://raw.githubusercontent.com/joshuarudd/typeset.css/master/typeset.min.css" rel="stylesheet"></link>
     <style>
     * {
@@ -57,7 +66,7 @@ window.MathJax = {
   <body>
     <header id="site-header">
       <div page-nav>
-        <h1 id="8932457637791824098" toc-ignore>Site Navigation
+        <h1 toc-ignore id="--Site%5FNavigation">Site Navigation
         </h1>
         <ul macro="page-nav">
           <li><a href="https://colbyn.github.io/school-notes-spring-2020/index.html">Reference (Math)</a>
@@ -71,191 +80,265 @@ window.MathJax = {
         </ul>
       </div>
       <div toc>
-        <h1 toc-ignore id="1263503322003235279">Table of Contents
+        <h1 toc-ignore id="--Table%5Fof%5FContents">Table of Contents
         </h1>
         <ul macro="toc">
-          <li for="h1"><a href="#10845437582830074833">Miscellaneous</a>
+          <li for="h1"><a href="#--Miscellaneous">Miscellaneous</a>
           </li>
-          <li for="h2"><a href="#7509973234967416411">Functional Utilities & Notation Conveniences</a>
+          <li for="h2"><a href="#--Miscellaneous--Functional%5FUtilities%5F%26%5FNotation%5FConveniences">Functional Utilities & Notation Conveniences</a>
           </li>
-          <li for="h3"><a href="#16296426078759440407">Right to Left Evaluation</a>
+          <li for="h3"><a href="#--Miscellaneous---Miscellaneous--Functional%255FUtilities%255F%2526%255FNotation%255FConveniences--Right%5Fto%5FLeft%5FEvaluation">Right to Left Evaluation</a>
           </li>
-          <li for="h3"><a href="#14967589003189791102">Left to Right Evaluation</a>
+          <li for="h3"><a href="#--Miscellaneous---Miscellaneous--Functional%255FUtilities%255F%2526%255FNotation%255FConveniences--Left%5Fto%5FRight%5FEvaluation">Left to Right Evaluation</a>
           </li>
-          <li for="h3"><a href="#2399125742179579422">Derivative Shorthand</a>
+          <li for="h3"><a href="#--Miscellaneous---Miscellaneous--Functional%255FUtilities%255F%2526%255FNotation%255FConveniences--Derivative%5FShorthand">Derivative Shorthand</a>
           </li>
-          <li for="h2"><a href="#13877883699741570297">Radians & Radian Conversion</a>
+          <li for="h2"><a href="#--Miscellaneous--Radians%5F%26%5FRadian%5FConversion">Radians & Radian Conversion</a>
           </li>
-          <li for="h3"><a href="#16391320818453970554">Constants</a>
+          <li for="h3"><a href="#--Miscellaneous---Miscellaneous--Radians%255F%2526%255FRadian%255FConversion--Constants">Constants</a>
           </li>
-          <li for="h3"><a href="#7986769296690047794">Conversion</a>
+          <li for="h3"><a href="#--Miscellaneous---Miscellaneous--Radians%255F%2526%255FRadian%255FConversion--Conversion">Conversion</a>
           </li>
-          <li for="h1"><a href="#5746282551642775461">Constants</a>
+          <li for="h1"><a href="#--Constants">Constants</a>
           </li>
-          <li for="h2"><a href="#8700273150437404726">ℯ (Euler's number)</a>
+          <li for="h2"><a href="#--Constants--%E2%84%AF%5F%28Euler%27s%5Fnumber%29">ℯ (Euler's number)</a>
           </li>
-          <li for="h1"><a href="#2905265640916021422">Algebra</a>
+          <li for="h1"><a href="#--Algebra">Algebra</a>
           </li>
-          <li for="h2"><a href="#11116668752102433028">Properties</a>
+          <li for="h2"><a href="#--Algebra--Properties">Properties</a>
           </li>
-          <li for="h1"><a href="#4432563339777083548">Trigonometry</a>
+          <li for="h1"><a href="#--Trigonometry">Trigonometry</a>
           </li>
-          <li for="h2"><a href="#5372542382717843600">Trigonometric Identities</a>
+          <li for="h2"><a href="#--Trigonometry--Trigonometric%5FIdentities">Trigonometric Identities</a>
           </li>
-          <li for="h3"><a href="#12106048614795586939">Pythagorean Identities</a>
+          <li for="h3"><a href="#--Trigonometry---Trigonometry--Trigonometric%255FIdentities--Pythagorean%5FIdentities">Pythagorean Identities</a>
           </li>
-          <li for="h3"><a href="#6018787822124866568">Sum and Difference Identities</a>
+          <li for="h3"><a href="#--Trigonometry---Trigonometry--Trigonometric%255FIdentities--Sum%5Fand%5FDifference%5FIdentities">Sum and Difference Identities</a>
           </li>
-          <li for="h3"><a href="#12703705570178836292">Cofunction Identities</a>
+          <li for="h3"><a href="#--Trigonometry---Trigonometry--Trigonometric%255FIdentities--Cofunction%5FIdentities">Cofunction Identities</a>
           </li>
-          <li for="h3"><a href="#7598623267722356661">Ratio Identities</a>
+          <li for="h3"><a href="#--Trigonometry---Trigonometry--Trigonometric%255FIdentities--Ratio%5FIdentities">Ratio Identities</a>
           </li>
-          <li for="h3"><a href="#2525660013394514612">Double-Angle Identities</a>
+          <li for="h3"><a href="#--Trigonometry---Trigonometry--Trigonometric%255FIdentities--Double-Angle%5FIdentities">Double-Angle Identities</a>
           </li>
-          <li for="h3"><a href="#16550184276188704897">Half-Angle Identities</a>
+          <li for="h3"><a href="#--Trigonometry---Trigonometry--Trigonometric%255FIdentities--Half-Angle%5FIdentities">Half-Angle Identities</a>
           </li>
-          <li for="h3"><a href="#9155854727702594002">Power-Reducing Identities</a>
+          <li for="h3"><a href="#--Trigonometry---Trigonometry--Trigonometric%255FIdentities--Power-Reducing%5FIdentities">Power-Reducing Identities</a>
           </li>
-          <li for="h3"><a href="#2936711985913115583">Product-to-Sum Identities</a>
+          <li for="h3"><a href="#--Trigonometry---Trigonometry--Trigonometric%255FIdentities--Product-to-Sum%5FIdentities">Product-to-Sum Identities</a>
           </li>
-          <li for="h3"><a href="#5304787579223709692">Sum-to-Product-Identities</a>
+          <li for="h3"><a href="#--Trigonometry---Trigonometry--Trigonometric%255FIdentities--Sum-to-Product-Identities">Sum-to-Product-Identities</a>
           </li>
-          <li for="h2"><a href="#12351105942348486843">Trigonometric Equations</a>
+          <li for="h2"><a href="#--Trigonometry--Trigonometric%5FEquations">Trigonometric Equations</a>
           </li>
-          <li for="h3"><a href="#16160356673042880145">Euler's Formula</a>
+          <li for="h3"><a href="#--Trigonometry---Trigonometry--Trigonometric%255FEquations--Euler%27s%5FFormula">Euler's Formula</a>
           </li>
-          <li for="h1"><a href="#13251241107214795322">Coordinate & Number Systems</a>
+          <li for="h1"><a href="#--Coordinate%5F%26%5FNumber%5FSystems">Coordinate & Number Systems</a>
           </li>
-          <li for="h2"><a href="#13419282251872638191">Polar Coordinate System</a>
+          <li for="h2"><a href="#--Coordinate%255F%2526%255FNumber%255FSystems--Polar%5FCoordinate%5FSystem">Polar Coordinate System</a>
           </li>
-          <li for="h2"><a href="#16579643121913823421">Properties</a>
+          <li for="h2"><a href="#--Coordinate%255F%2526%255FNumber%255FSystems--Properties">Properties</a>
           </li>
-          <li for="h2"><a href="#8445463543137976012">Trigonometric form of a complex number</a>
+          <li for="h2"><a href="#--Coordinate%255F%2526%255FNumber%255FSystems--Trigonometric%5Fform%5Fof%5Fa%5Fcomplex%5Fnumber">Trigonometric form of a complex number</a>
           </li>
-          <li for="h1"><a href="#1021914873248373535">Vectors</a>
+          <li for="h1"><a href="#--Vectors">Vectors</a>
           </li>
-          <li for="h2"><a href="#15620096324072985220">Reference</a>
+          <li for="h2"><a href="#--Vectors--Quick%5FFacts">Quick Facts</a>
           </li>
-          <li for="h3"><a href="#8332191364841078797">Dot Product</a>
+          <li for="h2"><a href="#--Vectors--Vector%5FOperations">Vector Operations</a>
           </li>
-          <li for="h3"><a href="#624513512853184051">Cross Product</a>
+          <li for="h3"><a href="#--Vectors---Vectors--Vector%255FOperations--Dot%5FProduct">Dot Product</a>
           </li>
-          <li for="h3"><a href="#1596018462911982510">Length of a Vector</a>
+          <li for="h3"><a href="#--Vectors---Vectors--Vector%255FOperations--Cross%5FProduct">Cross Product</a>
           </li>
-          <li for="h3"><a href="#2725154560466501192">Standard Basis Vectors</a>
+          <li for="h3"><a href="#--Vectors---Vectors--Vector%255FOperations--Length%5Fof%5Fa%5FVector">Length of a Vector</a>
           </li>
-          <li for="h3"><a href="#7529155402461462496">Orthogonal</a>
+          <li for="h3"><a href="#--Vectors---Vectors--Vector%255FOperations--Definition%5Fof%5FVector%5FAddition">Definition of Vector Addition</a>
           </li>
-          <li for="h3"><a href="#13504306802453167629">The Unit Vector</a>
+          <li for="h3"><a href="#--Vectors---Vectors--Vector%255FOperations--Standard%5FBasis%5FVectors">Standard Basis Vectors</a>
           </li>
-          <li for="h3"><a href="#292706962695191518">If  \(\theta\)  is the angle between the vectors  \(\vec{a}\)  and  \(\vec{b}\) , then</a>
+          <li for="h3"><a href="#--Vectors---Vectors--Vector%255FOperations--Orthogonal">Orthogonal</a>
           </li>
-          <li for="h3"><a href="#1327674355028352407">If  \(\theta\)  is the angle between the nonzero vectors  \(\vec{a}\)  and  \(\vec{b}\) , then</a>
+          <li for="h3"><a href="#--Vectors---Vectors--Vector%255FOperations--The%5FUnit%5FVector">The Unit Vector</a>
           </li>
-          <li for="h3"><a href="#9430822908443876188">Two nonzero vectors  \(\vec{a}\)  and  \(\vec{b}\)  are parallel if and only if</a>
+          <li for="h3"><a href="#--Vectors---Vectors--Vector%255FOperations--If%5F-%5C%28%5Ctheta%5C%29-%5Fis%5Fthe%5Fangle%5Fbetween%5Fthe%5Fvectors%5F-%5C%28%5Cvec%7Ba%7D%5C%29-%5Fand%5F-%5C%28%5Cvec%7Bb%7D%5C%29-%2C%5Fthen">If  \(\theta\)  is the angle between the vectors  \(\vec{a}\)  and  \(\vec{b}\) , then</a>
           </li>
-          <li for="h3"><a href="#4316942666569772178">Properties of the Dot Product</a>
+          <li for="h3"><a href="#--Vectors---Vectors--Vector%255FOperations--If%5F-%5C%28%5Ctheta%5C%29-%5Fis%5Fthe%5Fangle%5Fbetween%5Fthe%5Fnonzero%5Fvectors%5F-%5C%28%5Cvec%7Ba%7D%5C%29-%5Fand%5F-%5C%28%5Cvec%7Bb%7D%5C%29-%2C%5Fthen">If  \(\theta\)  is the angle between the nonzero vectors  \(\vec{a}\)  and  \(\vec{b}\) , then</a>
           </li>
-          <li for="h1"><a href="#1839120467456439826">Matrices</a>
+          <li for="h3"><a href="#--Vectors---Vectors--Vector%255FOperations--Two%5Fnonzero%5Fvectors%5F-%5C%28%5Cvec%7Ba%7D%5C%29-%5Fand%5F-%5C%28%5Cvec%7Bb%7D%5C%29-%5Fare%5Fparallel%5Fif%5Fand%5Fonly%5Fif">Two nonzero vectors  \(\vec{a}\)  and  \(\vec{b}\)  are parallel if and only if</a>
           </li>
-          <li for="h2"><a href="#8314117654259225584">Reference</a>
+          <li for="h3"><a href="#--Vectors---Vectors--Vector%255FOperations--Properties%5Fof%5Fthe%5FDot%5FProduct">Properties of the Dot Product</a>
           </li>
-          <li for="h3"><a href="#12954746078723829334">The Determinant of A Matrix</a>
+          <li for="h2"><a href="#--Vectors--Direction%5FCosines%5F%26%5FDirection%5FAngles%5Fof%5Fa%5FVector">Direction Cosines & Direction Angles of a Vector</a>
           </li>
-          <li for="h3"><a href="#3863653940101464830">The Cross Product</a>
+          <li for="h3"><a href="#--Vectors---Vectors--Direction%255FCosines%255F%2526%255FDirection%255FAngles%255Fof%255Fa%255FVector--Direction%5FCosines">Direction Cosines</a>
           </li>
-          <li for="h1"><a href="#9476182299198553002">Limits</a>
+          <li for="h3"><a href="#--Vectors---Vectors--Direction%255FCosines%255F%2526%255FDirection%255FAngles%255Fof%255Fa%255FVector--Direction%5FAngles">Direction Angles</a>
           </li>
-          <li for="h2"><a href="#14892183798542452014">L’Hospital’s Rule</a>
+          <li for="h3"><a href="#--Vectors---Vectors--Direction%255FCosines%255F%2526%255FDirection%255FAngles%255Fof%255Fa%255FVector--Theorem">Theorem</a>
           </li>
-          <li for="h2"><a href="#5791620504577634231">Limit Laws</a>
+          <li for="h5"><a href="#--Vectors---Vectors--Direction%255FCosines%255F%2526%255FDirection%255FAngles%255Fof%255Fa%255FVector---Vectors---Vectors--Direction%25255FCosines%25255F%252526%25255FDirection%25255FAngles%25255Fof%25255Fa%25255FVector--Theorem--Proof">Proof</a>
           </li>
-          <li for="h2"><a href="#1752513741556030968">Limit Formulas</a>
+          <li for="h2"><a href="#--Vectors--Vector%5FRelations">Vector Relations</a>
           </li>
-          <li for="h2"><a href="#9809195265654545402">Growth Rates</a>
+          <li for="h3"><a href="#--Vectors---Vectors--Vector%255FRelations--Parallel%5FVectors">Parallel Vectors</a>
           </li>
-          <li for="h1"><a href="#12808442855556465821">Calculus</a>
+          <li for="h4"><a href="#--Vectors---Vectors--Vector%255FRelations---Vectors---Vectors--Vector%25255FRelations--Parallel%255FVectors--Alternatively">Alternatively</a>
           </li>
-          <li for="h2"><a href="#13041984319253941958">Derivative Tables</a>
+          <li for="h3"><a href="#--Vectors---Vectors--Vector%255FRelations--Orthogonal%5FVectors">Orthogonal Vectors</a>
           </li>
-          <li for="h2"><a href="#5983618283210520911">Integration Tables</a>
+          <li for="h2"><a href="#--Vectors--Reparameterization%5Fof%5Fthe%5Fposition%5Fvector%5F-%5C%28%5Cvec%7Bv%7D%28t%29%5C%29-%5Fin%5Fterms%5Fof%5Flength%5F-%5C%28S%28t%29%5C%29">Reparameterization of the position vector  \(\vec{v}(t)\)  in terms of length  \(S(t)\)</a>
           </li>
-          <li for="h2"><a href="#7917141332963055104">Riemann Sums</a>
+          <li for="h3"><a href="#--Vectors---Vectors--Reparameterization%255Fof%255Fthe%255Fposition%255Fvector%255F-%255C%2528%255Cvec%257Bv%257D%2528t%2529%255C%2529-%255Fin%255Fterms%255Fof%255Flength%255F-%255C%2528S%2528t%2529%255C%2529--The%5FArc%5FLength%5FFunction">The Arc Length Function</a>
           </li>
-          <li for="h3"><a href="#2066410476111681413">Left Riemann Sum</a>
+          <li for="h3"><a href="#--Vectors---Vectors--Reparameterization%255Fof%255Fthe%255Fposition%255Fvector%255F-%255C%2528%255Cvec%257Bv%257D%2528t%2529%255C%2529-%255Fin%255Fterms%255Fof%255Flength%255F-%255C%2528S%2528t%2529%255C%2529--The%5FArc%5FLength%5FFunction">The Arc Length Function</a>
           </li>
-          <li for="h3"><a href="#6581055467208646242">Right Riemann Sum</a>
+          <li for="h2"><a href="#--Vectors--Vectors%5FDerived%5FFrom%5FSome%5FCurve%5FDefined%5Fby%5F-%5C%28%5Cvec%7Bv%7D%5C%29">Vectors Derived From Some Curve Defined by  \(\vec{v}\)</a>
           </li>
-          <li for="h3"><a href="#9901584179951656103">Midpoint Riemann Sum</a>
+          <li for="h3"><a href="#--Vectors---Vectors--Vectors%255FDerived%255FFrom%255FSome%255FCurve%255FDefined%255Fby%255F-%255C%2528%255Cvec%257Bv%257D%255C%2529--The%5FUnit%5FVector">The Unit Vector</a>
           </li>
-          <li for="h3"><a href="#18233368383485577838">Trapezoidal Riemann Sum</a>
+          <li for="h3"><a href="#--Vectors---Vectors--Vectors%255FDerived%255FFrom%255FSome%255FCurve%255FDefined%255Fby%255F-%255C%2528%255Cvec%257Bv%257D%255C%2529--The%5FUnit%5F-Tangent-%5FVector">The Unit  Tangent  Vector</a>
           </li>
-          <li for="h3"><a href="#5480783690523816758">Simpson's Rule</a>
+          <li for="h3"><a href="#--Vectors---Vectors--Vectors%255FDerived%255FFrom%255FSome%255FCurve%255FDefined%255Fby%255F-%255C%2528%255Cvec%257Bv%257D%255C%2529--The%5FUnit%5F-Normal-%5FVector">The Unit  Normal  Vector</a>
           </li>
-          <li for="h2"><a href="#6011480643990090271">Improper Integrals</a>
+          <li for="h3"><a href="#--Vectors---Vectors--Vectors%255FDerived%255FFrom%255FSome%255FCurve%255FDefined%255Fby%255F-%255C%2528%255Cvec%257Bv%257D%255C%2529--The%5FBinormal%5FVector">The Binormal Vector</a>
           </li>
-          <li for="h2"><a href="#16183304260771647229">Infinite Sequences</a>
+          <li for="h3"><a href="#--Vectors---Vectors--Vectors%255FDerived%255FFrom%255FSome%255FCurve%255FDefined%255Fby%255F-%255C%2528%255Cvec%257Bv%257D%255C%2529--Kappa%5F-%5FCurvature%5Fof%5Fa%5FVector">Kappa - Curvature of a Vector</a>
           </li>
-          <li for="h3"><a href="#4517372019503599331">Infinite Sequence</a>
+          <li for="h3"><a href="#--Vectors---Vectors--Vectors%255FDerived%255FFrom%255FSome%255FCurve%255FDefined%255Fby%255F-%255C%2528%255Cvec%257Bv%257D%255C%2529--Tangential%5F%26%5FNormal%5FComponents%5Fof%5Fthe%5FAcceleration%5FVector%5Fof%5Fthe%5FCurve">Tangential & Normal Components of the Acceleration Vector of the Curve</a>
           </li>
-          <li for="h3"><a href="#14518621063304104086">Helpful Theorem</a>
+          <li for="h2"><a href="#--Vectors--Vector%5FCalculus">Vector Calculus</a>
           </li>
-          <li for="h3"><a href="#1076956825058869293">Example</a>
+          <li for="h3"><a href="#--Vectors---Vectors--Vector%255FCalculus--The%5FPosition%5FVector%5F-%5C%28%5Cvec%7Br%7D%28t%29%5C%29">The Position Vector  \(\vec{r}(t)\)</a>
           </li>
-          <li for="h3"><a href="#2761553380442747645">Example</a>
+          <li for="h3"><a href="#--Vectors---Vectors--Vector%255FCalculus--The%5FVelocity%5FVector%5F-%5C%28%5Cvec%7Bv%7D%28t%29%5C%29">The Velocity Vector  \(\vec{v}(t)\)</a>
           </li>
-          <li for="h2"><a href="#14379108937820668209">Infinite Series</a>
+          <li for="h3"><a href="#--Vectors---Vectors--Vector%255FCalculus--The%5FAcceleration%5FVector%5F-%5C%28%5Cvec%7Ba%7D%28t%29%5C%29">The Acceleration Vector  \(\vec{a}(t)\)</a>
           </li>
-          <li for="h3"><a href="#10237089603165525135">Infinite Series</a>
+          <li for="h1"><a href="#--Matrices">Matrices</a>
           </li>
-          <li for="h3"><a href="#5987098542738069234">Geometric Series</a>
+          <li for="h2"><a href="#--Matrices--Reference">Reference</a>
           </li>
-          <li for="h3"><a href="#12764328316927690872">The Integral Test</a>
+          <li for="h3"><a href="#--Matrices---Matrices--Reference--The%5FDeterminant%5Fof%5FA%5FMatrix">The Determinant of A Matrix</a>
           </li>
-          <li for="h4"><a href="#1504207077675013566">Constraints on  \([1,n)\)</a>
+          <li for="h3"><a href="#--Matrices---Matrices--Reference--The%5FCross%5FProduct">The Cross Product</a>
           </li>
-          <li for="h3"><a href="#14196651697575719226">P-Series -or- Harmonic Series</a>
+          <li for="h1"><a href="#--Geometry">Geometry</a>
           </li>
-          <li for="h3"><a href="#9054154038780863271">Comparison Test</a>
+          <li for="h2"><a href="#--Geometry--Definition%5Fof%5Fa%5FLine">Definition of a Line</a>
           </li>
-          <li for="h3"><a href="#9836350147783819554">Limit Comparison Test</a>
+          <li for="h3"><a href="#--Geometry---Geometry--Definition%255Fof%255Fa%255FLine--Vector%5FEquation%5Fof%5Fa%5FLine">Vector Equation of a Line</a>
           </li>
-          <li for="h4"><a href="#9534717585745295127">Warning</a>
+          <li for="h4"><a href="#--Geometry---Geometry--Definition%255Fof%255Fa%255FLine---Geometry---Geometry--Definition%25255Fof%25255Fa%25255FLine--Vector%255FEquation%255Fof%255Fa%255FLine--Therefore">Therefore</a>
           </li>
-          <li for="h4"><a href="#369590182669923540">Notes</a>
+          <li for="h3"><a href="#--Geometry---Geometry--Definition%255Fof%255Fa%255FLine--Parametric%5FEquation%5Fof%5Fa%5FLine">Parametric Equation of a Line</a>
           </li>
-          <li for="h3"><a href="#13612692549525215624">Estimating Infinite Series</a>
+          <li for="h3"><a href="#--Geometry---Geometry--Definition%255Fof%255Fa%255FLine--Essentially">Essentially</a>
           </li>
-          <li for="h2"><a href="#4282307792095540789">Differential Equations</a>
+          <li for="h3"><a href="#--Geometry---Geometry--Definition%255Fof%255Fa%255FLine--Symmetric%5FEquation%5Fof%5Fa%5FLine">Symmetric Equation of a Line</a>
           </li>
-          <li for="h3"><a href="#1674119506562619045">Separable Differential Equations</a>
+          <li for="h4"><a href="#--Geometry---Geometry--Definition%255Fof%255Fa%255FLine---Geometry---Geometry--Definition%25255Fof%25255Fa%25255FLine--Symmetric%255FEquation%255Fof%255Fa%255FLine--Rationale">Rationale</a>
           </li>
-          <li for="h3"><a href="#9931950878556336810">Growth and Decay Models</a>
+          <li for="h2"><a href="#--Geometry--Parameterizations%5Fof%5Fa%5Fcurve">Parameterizations of a curve</a>
           </li>
-          <li for="h3"><a href="#6430313704290086256">Solving the Logistic Equation</a>
+          <li for="h2"><a href="#--Geometry--Curvature%5FProperties">Curvature Properties</a>
           </li>
-          <li for="h2"><a href="#3477258549380472457">Second Order Homogeneous Linear Differential Equations with Constant Coefficients</a>
+          <li for="h3"><a href="#--Geometry---Geometry--Curvature%255FProperties--Length%5Fof%5Fa%5FCurve">Length of a Curve</a>
           </li>
-          <li for="h3"><a href="#14500282964375132167">Properties</a>
+          <li for="h3"><a href="#--Geometry---Geometry--Curvature%255FProperties--The%5FArc%5FLength%5FFunction">The Arc Length Function</a>
           </li>
-          <li for="h3"><a href="#18237100422879046548">\(r_1 = r_2\)</a>
+          <li for="h1"><a href="#--Limits">Limits</a>
           </li>
-          <li for="h2"><a href="#11747712099557378599">Parametric Equations</a>
+          <li for="h2"><a href="#--Limits--L%E2%80%99Hospital%E2%80%99s%5FRule">L’Hospital’s Rule</a>
           </li>
-          <li for="h3"><a href="#10232297552074792574">First Derivative Formula</a>
+          <li for="h2"><a href="#--Limits--Limit%5FLaws">Limit Laws</a>
           </li>
-          <li for="h3"><a href="#7206746481008878178">Second Derivative Formula</a>
+          <li for="h2"><a href="#--Limits--Limit%5FFormulas">Limit Formulas</a>
           </li>
-          <li for="h3"><a href="#11960894347663202276">Arc Length</a>
+          <li for="h2"><a href="#--Limits--Growth%5FRates">Growth Rates</a>
+          </li>
+          <li for="h1"><a href="#--Calculus">Calculus</a>
+          </li>
+          <li for="h2"><a href="#--Calculus--Derivative%5FTables">Derivative Tables</a>
+          </li>
+          <li for="h2"><a href="#--Calculus--Integration%5FTables">Integration Tables</a>
+          </li>
+          <li for="h2"><a href="#--Calculus--Riemann%5FSums">Riemann Sums</a>
+          </li>
+          <li for="h3"><a href="#--Calculus---Calculus--Riemann%255FSums--Left%5FRiemann%5FSum">Left Riemann Sum</a>
+          </li>
+          <li for="h3"><a href="#--Calculus---Calculus--Riemann%255FSums--Right%5FRiemann%5FSum">Right Riemann Sum</a>
+          </li>
+          <li for="h3"><a href="#--Calculus---Calculus--Riemann%255FSums--Midpoint%5FRiemann%5FSum">Midpoint Riemann Sum</a>
+          </li>
+          <li for="h3"><a href="#--Calculus---Calculus--Riemann%255FSums--Trapezoidal%5FRiemann%5FSum">Trapezoidal Riemann Sum</a>
+          </li>
+          <li for="h3"><a href="#--Calculus---Calculus--Riemann%255FSums--Simpson%27s%5FRule">Simpson's Rule</a>
+          </li>
+          <li for="h2"><a href="#--Calculus--Improper%5FIntegrals">Improper Integrals</a>
+          </li>
+          <li for="h2"><a href="#--Calculus--Infinite%5FSequences">Infinite Sequences</a>
+          </li>
+          <li for="h3"><a href="#--Calculus---Calculus--Infinite%255FSequences--Infinite%5FSequence">Infinite Sequence</a>
+          </li>
+          <li for="h3"><a href="#--Calculus---Calculus--Infinite%255FSequences--Helpful%5FTheorem">Helpful Theorem</a>
+          </li>
+          <li for="h3"><a href="#--Calculus---Calculus--Infinite%255FSequences--Example">Example</a>
+          </li>
+          <li for="h3"><a href="#--Calculus---Calculus--Infinite%255FSequences--Example">Example</a>
+          </li>
+          <li for="h2"><a href="#--Calculus--Infinite%5FSeries">Infinite Series</a>
+          </li>
+          <li for="h3"><a href="#--Calculus---Calculus--Infinite%255FSeries--Infinite%5FSeries">Infinite Series</a>
+          </li>
+          <li for="h3"><a href="#--Calculus---Calculus--Infinite%255FSeries--Geometric%5FSeries">Geometric Series</a>
+          </li>
+          <li for="h3"><a href="#--Calculus---Calculus--Infinite%255FSeries--The%5FIntegral%5FTest">The Integral Test</a>
+          </li>
+          <li for="h4"><a href="#--Calculus---Calculus--Infinite%255FSeries---Calculus---Calculus--Infinite%25255FSeries--The%255FIntegral%255FTest--Constraints%5Fon%5F-%5C%28%5B1%2Cn%29%5C%29">Constraints on  \([1,n)\)</a>
+          </li>
+          <li for="h3"><a href="#--Calculus---Calculus--Infinite%255FSeries--P-Series%5F-or-%5FHarmonic%5FSeries">P-Series -or- Harmonic Series</a>
+          </li>
+          <li for="h3"><a href="#--Calculus---Calculus--Infinite%255FSeries--Comparison%5FTest">Comparison Test</a>
+          </li>
+          <li for="h3"><a href="#--Calculus---Calculus--Infinite%255FSeries--Limit%5FComparison%5FTest">Limit Comparison Test</a>
+          </li>
+          <li for="h4"><a href="#--Calculus---Calculus--Infinite%255FSeries---Calculus---Calculus--Infinite%25255FSeries--Limit%255FComparison%255FTest--Warning">Warning</a>
+          </li>
+          <li for="h4"><a href="#--Calculus---Calculus--Infinite%255FSeries---Calculus---Calculus--Infinite%25255FSeries--Limit%255FComparison%255FTest--Notes">Notes</a>
+          </li>
+          <li for="h3"><a href="#--Calculus---Calculus--Infinite%255FSeries--Estimating%5FInfinite%5FSeries">Estimating Infinite Series</a>
+          </li>
+          <li for="h2"><a href="#--Calculus--Differential%5FEquations">Differential Equations</a>
+          </li>
+          <li for="h3"><a href="#--Calculus---Calculus--Differential%255FEquations--Separable%5FDifferential%5FEquations">Separable Differential Equations</a>
+          </li>
+          <li for="h3"><a href="#--Calculus---Calculus--Differential%255FEquations--Growth%5Fand%5FDecay%5FModels">Growth and Decay Models</a>
+          </li>
+          <li for="h3"><a href="#--Calculus---Calculus--Differential%255FEquations--Solving%5Fthe%5FLogistic%5FEquation">Solving the Logistic Equation</a>
+          </li>
+          <li for="h2"><a href="#--Calculus--Second%5FOrder%5FHomogeneous%5FLinear%5FDifferential%5FEquations%5Fwith%5FConstant%5FCoefficients">Second Order Homogeneous Linear Differential Equations with Constant Coefficients</a>
+          </li>
+          <li for="h3"><a href="#--Calculus---Calculus--Second%255FOrder%255FHomogeneous%255FLinear%255FDifferential%255FEquations%255Fwith%255FConstant%255FCoefficients--Properties">Properties</a>
+          </li>
+          <li for="h3"><a href="#--Calculus---Calculus--Second%255FOrder%255FHomogeneous%255FLinear%255FDifferential%255FEquations%255Fwith%255FConstant%255FCoefficients--%5C%28r%5F1%5F%3D%5Fr%5F2%5C%29">\(r_1 = r_2\)</a>
+          </li>
+          <li for="h2"><a href="#--Calculus--Parametric%5FEquations">Parametric Equations</a>
+          </li>
+          <li for="h3"><a href="#--Calculus---Calculus--Parametric%255FEquations--First%5FDerivative%5FFormula">First Derivative Formula</a>
+          </li>
+          <li for="h3"><a href="#--Calculus---Calculus--Parametric%255FEquations--Second%5FDerivative%5FFormula">Second Derivative Formula</a>
+          </li>
+          <li for="h3"><a href="#--Calculus---Calculus--Parametric%255FEquations--Arc%5FLength">Arc Length</a>
           </li>
         </ul>
       </div>
     </header>
     <main>
-      <h1 id="6797560705489221068" toc-ignore root>Colbyn's School Notes
+      <h1 root toc-ignore id="--Colbyn%27s%5FSchool%5FNotes">Colbyn's School Notes
       </h1>
       <div boxed macro="note">
-        <h2 toc-ignore id="12061724665420891160">Meta
+        <h2 id="--Meta" toc-ignore>Meta
         </h2>
         <ul>
           <li><a href="https://colbyn.github.io/school-notes-spring-2020/">Online Release</a>
@@ -264,7 +347,7 @@ window.MathJax = {
           </li>
         </ul>
         <div macro="note">
-          <h3 toc-ignore id="9459421529158975603">Legacy Notes
+          <h3 id="--Legacy%5FNotes" toc-ignore>Legacy Notes
           </h3>
           <ul>
             <li><a href="https://colbyn.github.io/subscript/">Original Subscript Implementation (Last Iteration)</a>
@@ -278,13 +361,13 @@ window.MathJax = {
           </ul>
         </div>
       </div>
-      <h1 id="10845437582830074833">Miscellaneous
-      </h1>      <h2 id="7509973234967416411">Functional Utilities & Notation Conveniences
+      <h1 id="--Miscellaneous">Miscellaneous
+      </h1>      <h2 id="--Miscellaneous--Functional%5FUtilities%5F%26%5FNotation%5FConveniences">Functional Utilities & Notation Conveniences
       </h2>      <div cols="2" columns="2" macro="layout">
-        <div macro="note" boxed>
-          <h3 id="16296426078759440407">Right to Left Evaluation
+        <div boxed macro="note">
+          <h3 id="--Miscellaneous---Miscellaneous--Functional%255FUtilities%255F%2526%255FNotation%255FConveniences--Right%5Fto%5FLeft%5FEvaluation">Right to Left Evaluation
           </h3>
-          <div macro="equation" latex="block">$$\begin{equation}
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             f \triangleleft x &= f(x)
@@ -303,8 +386,8 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-        <div macro="note" boxed>
-          <h3 id="14967589003189791102">Left to Right Evaluation
+        <div boxed macro="note">
+          <h3 id="--Miscellaneous---Miscellaneous--Functional%255FUtilities%255F%2526%255FNotation%255FConveniences--Left%5Fto%5FRight%5FEvaluation">Left to Right Evaluation
           </h3>
           <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
@@ -316,9 +399,9 @@ window.MathJax = {
           </div>
         </div>
         <div boxed macro="note">
-          <h3 id="2399125742179579422">Derivative Shorthand
+          <h3 id="--Miscellaneous---Miscellaneous--Functional%255FUtilities%255F%2526%255FNotation%255FConveniences--Derivative%5FShorthand">Derivative Shorthand
           </h3>
-          <div macro="equation" latex="block">$$\begin{equation}
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             \delta f(x) &= \frac{\mathrm{d}}{\mathrm{d}x} f(x) = f^\prime(x)
@@ -328,12 +411,12 @@ window.MathJax = {
           </div>
           <p>For this notation, the derivative with respect to a given variable, is implicit.</p>
         </div>
-      </div>      <h2 id="13877883699741570297">Radians & Radian Conversion
-      </h2>      <div macro="layout" cols="2" columns="2">
+      </div>      <h2 id="--Miscellaneous--Radians%5F%26%5FRadian%5FConversion">Radians & Radian Conversion
+      </h2>      <div cols="2" macro="layout" columns="2">
         <div macro="note" boxed>
-          <h3 id="16391320818453970554">Constants
+          <h3 id="--Miscellaneous---Miscellaneous--Radians%255F%2526%255FRadian%255FConversion--Constants">Constants
           </h3>
-          <div latex="block" macro="equation">$$\begin{equation}
+          <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
             \tau &= 2\pi = 360^{\circ} \\
@@ -344,7 +427,7 @@ window.MathJax = {
           </div>
         </div>
         <div boxed macro="note">
-          <h3 id="7986769296690047794">Conversion
+          <h3 id="--Miscellaneous---Miscellaneous--Radians%255F%2526%255FRadian%255FConversion--Conversion">Conversion
           </h3>
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -364,10 +447,10 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-      </div>      <h1 id="5746282551642775461">Constants
-      </h1>      <div macro="layout" columns="2" cols="2">
-        <div macro="note" boxed>
-          <h2 id="8700273150437404726">ℯ (Euler's number)
+      </div>      <h1 id="--Constants">Constants
+      </h1>      <div macro="layout" cols="2" columns="2">
+        <div boxed macro="note">
+          <h2 id="--Constants--%E2%84%AF%5F%28Euler%27s%5Fnumber%29">ℯ (Euler's number)
           </h2>
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -381,7 +464,7 @@ window.MathJax = {
 \end{equation}$$
           </div>
           <hr></hr>
-          <div latex="block" macro="equation">$$\begin{equation}
+          <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
             \mathrm{e}^x
@@ -393,10 +476,10 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-      </div>      <h1 id="2905265640916021422">Algebra
-      </h1>      <h2 id="11116668752102433028">Properties
-      </h2>      <div cols="3" columns="3" macro="layout">
-        <div latex="block" macro="equation">$$\begin{equation}
+      </div>      <h1 id="--Algebra">Algebra
+      </h1>      <h2 id="--Algebra--Properties">Properties
+      </h2>      <div cols="3" macro="layout" columns="3">
+        <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
         a^m \cdot b^n &= a^{m+n}\\
@@ -409,7 +492,7 @@ window.MathJax = {
 \end{split}
 \end{equation}$$
         </div>
-        <div latex="block" macro="equation">$$\begin{equation}
+        <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
         |x| &= \sqrt{x^2} \neq x
@@ -417,7 +500,7 @@ window.MathJax = {
 \end{split}
 \end{equation}$$
         </div>
-        <div latex="block" macro="equation">$$\begin{equation}
+        <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
         \log_{\beta}(\alpha) &= \gamma\\
@@ -428,11 +511,11 @@ window.MathJax = {
 \end{split}
 \end{equation}$$
         </div>
-      </div>      <h1 id="4432563339777083548">Trigonometry
-      </h1>      <h2 id="5372542382717843600">Trigonometric Identities
-      </h2>      <div cols="2" columns="2" macro="layout">
-        <div macro="note" boxed>
-          <h3 id="12106048614795586939">Pythagorean Identities
+      </div>      <h1 id="--Trigonometry">Trigonometry
+      </h1>      <h2 id="--Trigonometry--Trigonometric%5FIdentities">Trigonometric Identities
+      </h2>      <div macro="layout" columns="2" cols="2">
+        <div boxed macro="note">
+          <h3 id="--Trigonometry---Trigonometry--Trigonometric%255FIdentities--Pythagorean%5FIdentities">Pythagorean Identities
           </h3>
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -450,7 +533,7 @@ window.MathJax = {
 \end{split}
 \end{equation}$$
             </div>
-            <div latex="block" macro="equation">$$\begin{equation}
+            <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
             \csc^2(\theta) - \cot^2(\theta) &= 1 \\
@@ -462,9 +545,9 @@ window.MathJax = {
           </div>
         </div>
         <div macro="note" boxed>
-          <h3 id="6018787822124866568">Sum and Difference Identities
+          <h3 id="--Trigonometry---Trigonometry--Trigonometric%255FIdentities--Sum%5Fand%5FDifference%5FIdentities">Sum and Difference Identities
           </h3>
-          <div macro="texblock" latex="block">$$
+          <div latex="block" macro="texblock">$$
          \begin{equation}
         \begin{split}
             \cos(\alpha - \beta) &= \cos(\alpha) \cdot \cos(\beta) + \sin(\alpha) \cdot \sin(\beta) \\
@@ -481,28 +564,28 @@ window.MathJax = {
           </div>
         </div>
         <div boxed macro="note">
-          <h3 id="12703705570178836292">Cofunction Identities
+          <h3 id="--Trigonometry---Trigonometry--Trigonometric%255FIdentities--Cofunction%5FIdentities">Cofunction Identities
           </h3>
-          <div macro="layout" cols="2" columns="2">
+          <div cols="2" macro="layout" columns="2">
             <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 \sin(\theta) = \cos(\frac{1}{4}\tau - \theta)
 \end{split}
 \end{equation}$$
             </div>
-            <div latex="block" macro="equation">$$\begin{equation}
+            <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 \cos(\theta) = \sin(\frac{1}{4}\tau - \theta)
 \end{split}
 \end{equation}$$
             </div>
-            <div latex="block" macro="equation">$$\begin{equation}
+            <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 \tan(\theta) = \cot(\frac{1}{4}\tau - \theta)
 \end{split}
 \end{equation}$$
             </div>
-            <div latex="block" macro="equation">$$\begin{equation}
+            <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 \cot(\theta) = \tan(\frac{1}{4}\tau - \theta)
 \end{split}
@@ -522,8 +605,8 @@ window.MathJax = {
             </div>
           </div>
         </div>
-        <div macro="note" boxed>
-          <h3 id="7598623267722356661">Ratio Identities
+        <div boxed macro="note">
+          <h3 id="--Trigonometry---Trigonometry--Trigonometric%255FIdentities--Ratio%5FIdentities">Ratio Identities
           </h3>
           <div latex="block" macro="texblock">$$
         \begin{equation}
@@ -536,8 +619,8 @@ window.MathJax = {
     $$
           </div>
         </div>
-        <div boxed macro="note">
-          <h3 id="2525660013394514612">Double-Angle Identities
+        <div macro="note" boxed>
+          <h3 id="--Trigonometry---Trigonometry--Trigonometric%255FIdentities--Double-Angle%5FIdentities">Double-Angle Identities
           </h3>
           <div macro="texblock" latex="block">$$
          \begin{equation}
@@ -553,10 +636,10 @@ window.MathJax = {
     $$
           </div>
         </div>
-        <div macro="note" boxed>
-          <h3 id="16550184276188704897">Half-Angle Identities
+        <div boxed macro="note">
+          <h3 id="--Trigonometry---Trigonometry--Trigonometric%255FIdentities--Half-Angle%5FIdentities">Half-Angle Identities
           </h3>
-          <div latex="block" macro="texblock">$$
+          <div macro="texblock" latex="block">$$
          \begin{equation}
         \begin{split}
             \sin \frac{\alpha}{2} &= \pm \sqrt{\frac{1 - \cos(\alpha)}{2}} \\
@@ -569,8 +652,8 @@ window.MathJax = {
     $$
           </div>
         </div>
-        <div macro="note" boxed>
-          <h3 id="9155854727702594002">Power-Reducing Identities
+        <div boxed macro="note">
+          <h3 id="--Trigonometry---Trigonometry--Trigonometric%255FIdentities--Power-Reducing%5FIdentities">Power-Reducing Identities
           </h3>
           <div macro="texblock" latex="block">$$
          \begin{equation}
@@ -595,7 +678,7 @@ window.MathJax = {
           </div>
         </div>
         <div boxed macro="note">
-          <h3 id="2936711985913115583">Product-to-Sum Identities
+          <h3 id="--Trigonometry---Trigonometry--Trigonometric%255FIdentities--Product-to-Sum%5FIdentities">Product-to-Sum Identities
           </h3>
           <div macro="texblock" latex="block">$$
         \begin{equation}
@@ -610,7 +693,7 @@ window.MathJax = {
           </div>
         </div>
         <div macro="note" boxed>
-          <h3 id="5304787579223709692">Sum-to-Product-Identities
+          <h3 id="--Trigonometry---Trigonometry--Trigonometric%255FIdentities--Sum-to-Product-Identities">Sum-to-Product-Identities
           </h3>
           <div macro="texblock" latex="block">$$
          \begin{equation}
@@ -624,10 +707,10 @@ window.MathJax = {
     $$
           </div>
         </div>
-      </div>      <h2 id="12351105942348486843">Trigonometric Equations
-      </h2>      <div macro="layout" cols="2" columns="2">
+      </div>      <h2 id="--Trigonometry--Trigonometric%5FEquations">Trigonometric Equations
+      </h2>      <div cols="2" macro="layout" columns="2">
         <div boxed macro="note">
-          <h3 id="16160356673042880145">Euler's Formula
+          <h3 id="--Trigonometry---Trigonometry--Trigonometric%255FEquations--Euler%27s%5FFormula">Euler's Formula
           </h3>
           <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
@@ -638,7 +721,7 @@ window.MathJax = {
 \end{equation}$$
           </div>
           <hr></hr>
-          <div latex="block" macro="equation">$$\begin{equation}
+          <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
         \mathrm{e}
@@ -650,7 +733,7 @@ window.MathJax = {
 \end{equation}$$
           </div>
           <hr></hr>
-          <div latex="block" macro="equation">$$\begin{equation}
+          <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
         \mathrm{e}^x
@@ -662,7 +745,7 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-      </div>      <h1 id="13251241107214795322">Coordinate & Number Systems
+      </div>      <h1 id="--Coordinate%5F%26%5FNumber%5FSystems">Coordinate & Number Systems
       </h1>      <div cols="3" macro="layout" columns="3">
         <div macro="note" boxed>
           <div latex="block" macro="equation">$$\begin{equation}
@@ -686,8 +769,8 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-        <div boxed macro="note">
-          <div latex="block" macro="equation">$$\begin{equation}
+        <div macro="note" boxed>
+          <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
             e^{i x} &= \cos\, x + \mathrm{i}\sin\, x \\
@@ -711,12 +794,12 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-      </div>      <div cols="2" macro="layout" columns="2">
-        <div boxed macro="note">
-          <h2 id="13419282251872638191">Polar Coordinate System
+      </div>      <div columns="2" cols="2" macro="layout">
+        <div macro="note" boxed>
+          <h2 id="--Coordinate%255F%2526%255FNumber%255FSystems--Polar%5FCoordinate%5FSystem">Polar Coordinate System
           </h2>
           <p>Given</p>
-          <div latex="block" macro="equation">$$\begin{equation}
+          <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
             \tan \theta &= \frac{y}{x} \\
@@ -726,7 +809,7 @@ window.MathJax = {
 \end{equation}$$
           </div>
           <p>Then</p>
-          <div macro="equation" latex="block">$$\begin{equation}
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             x &= r \cdot \cos\,\theta \\
@@ -736,8 +819,8 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-        <div boxed macro="note">
-          <h2 id="16579643121913823421">Properties
+        <div macro="note" boxed>
+          <h2 id="--Coordinate%255F%2526%255FNumber%255FSystems--Properties">Properties
           </h2>
           <p>Given</p>
           <div latex="block" macro="equation">$$\begin{equation}
@@ -781,9 +864,9 @@ window.MathJax = {
           </div>
         </div>
         <div boxed macro="note">
-          <h2 id="8445463543137976012"><small>Trigonometric form of a complex number</small>
+          <h2 id="--Coordinate%255F%2526%255FNumber%255FSystems--Trigonometric%5Fform%5Fof%5Fa%5Fcomplex%5Fnumber"><small>Trigonometric form of a complex number</small>
           </h2>
-          <div latex="block" macro="equation">$$\begin{equation}
+          <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
             z &= x + \mathrm{i}y \\
@@ -794,11 +877,33 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-      </div>      <h1 id="1021914873248373535">Vectors
-      </h1>      <h2 id="15620096324072985220">Reference
-      </h2>      <div macro="layout" columns="2" cols="2">
+      </div>      <h1 id="--Vectors">Vectors
+      </h1>      <div macro="note">
+        <h2 id="--Vectors--Quick%5FFacts">Quick Facts
+        </h2>
+        <ul>
+          <li>
+            <p>Two vectors are equal if they share the same magnitude and direction. 
+              <div inline macro="note">Initial points don't matter.
+              </div></p>
+          </li>
+          <li>
+            <div macro="note">
+              <p>You can define a vector with two points.</p><img center src="https://colbyn.github.io/school-notes-spring-2020/ss-data/709194206636039211.png" style=";min-width: 0; max-width: 300px; width: 100%;" ss.proc.width width="300px" ss.img.processed></img>
+            </div>
+          </li>
+          <li>
+            <p><b>Do not divide vectors!</b></p>
+          </li>
+          <li><span latex="inline" macro="tex">\(\vec{v} \cdot \vec{v} = ||\vec{v}||^2 \implies \text{constant}\)</span>
+          </li>
+          <li><span latex="inline" macro="tex">\(\vec{v} \cdot \left(\vec{v}\right)^\prime = 0\)</span>
+          </li>
+        </ul>
+      </div>      <h2 id="--Vectors--Vector%5FOperations">Vector Operations
+      </h2>      <div columns="2" cols="2" macro="layout">
         <div boxed macro="note">
-          <h3 id="8332191364841078797">Dot Product
+          <h3 id="--Vectors---Vectors--Vector%255FOperations--Dot%5FProduct">Dot Product
           </h3>
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -818,10 +923,10 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-        <div boxed macro="note">
-          <h3 id="624513512853184051">Cross Product
+        <div macro="note" boxed>
+          <h3 id="--Vectors---Vectors--Vector%255FOperations--Cross%5FProduct">Cross Product
           </h3>
-          <div macro="equation" latex="block">$$\begin{equation}
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             \vec{a}\times\vec{b}
@@ -868,7 +973,7 @@ window.MathJax = {
           </div>
         </div>
         <div macro="note" boxed>
-          <h3 id="1596018462911982510">Length of a Vector
+          <h3 id="--Vectors---Vectors--Vector%255FOperations--Length%5Fof%5Fa%5FVector">Length of a Vector
           </h3>
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -880,26 +985,34 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-      </div>      <div macro="layout" columns="3" cols="3">
         <div boxed macro="note">
-          <h3 id="2725154560466501192">Standard Basis Vectors
+          <h3 id="--Vectors---Vectors--Vector%255FOperations--Definition%5Fof%5FVector%5FAddition">Definition of Vector Addition
           </h3>
-          <div latex="block" macro="equation">$$\begin{equation}
+          <p>If <span latex="inline" macro="tex">\(\vec{u}\)</span> and <span macro="tex" latex="inline">\(\vec{v}\)</span> are positioned so the initial point of <span latex="inline" macro="tex">\(\vec{v}\)</span> is at the terminal point of <span latex="inline" macro="tex">\(\vec{u}\)</span>, then the sum <span macro="tex" latex="inline">\(\vec{u} + \vec{v}\)</span> is the vector from the initial point of <span macro="tex" latex="inline">\(\vec{u}\)</span> to the terminal point of <span latex="inline" macro="tex">\(\vec{v}\)</span>.</p><img ss.img.processed style=";min-width: 0; max-width: 300px; width: 100%;" src="https://colbyn.github.io/school-notes-spring-2020/ss-data/17928435521911125705.png" ss.proc.width width="300px" center></img>
+          <hr></hr>
+          <p>Given some vectors <span latex="inline" macro="tex">\(\vec{u}\)</span> and <span macro="tex" latex="inline">\(\vec{v}\)</span>, the vector <span macro="tex" latex="inline">\(\vec{u} - \vec{v}\)</span> is the vector that points from the head of <span macro="tex" latex="inline">\(\vec{v}\)</span> to the head of <span latex="inline" macro="tex">\(\vec{u}\)</span></p><img ss.proc.width width="200px" ss.img.processed center style=";min-width: 0; max-width: 200px; width: 100%;" src="https://colbyn.github.io/school-notes-spring-2020/ss-data/1434203018934833313.png"></img>
+        </div>
+      </div>      <div cols="3" macro="layout" columns="3">
+        <div boxed macro="note">
+          <h3 id="--Vectors---Vectors--Vector%255FOperations--Standard%5FBasis%5FVectors">Standard Basis Vectors
+          </h3>
+          <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
-            \mathrm{i} &= \begin{bmatrix} 1 & 0 & 0 \end{bmatrix}\\
-            \mathrm{j} &= \begin{bmatrix} 0 & 1 & 0 \end{bmatrix}\\
-            \mathrm{k} &= \begin{bmatrix} 0 & 0 & 1 \end{bmatrix}
+            \mathrm{\hat{i}} &= \begin{bmatrix} 1 & 0 & 0 \end{bmatrix}\\
+            \mathrm{\hat{j}} &= \begin{bmatrix} 0 & 1 & 0 \end{bmatrix}\\
+            \mathrm{\hat{k}} &= \begin{bmatrix} 0 & 0 & 1 \end{bmatrix}
         
 \end{split}
 \end{equation}$$
           </div>
+          <hr></hr><img width="200px" center src="https://colbyn.github.io/school-notes-spring-2020/ss-data/11927511794626683445.png" ss.proc.width ss.img.processed style=";min-width: 0; max-width: 200px; width: 100%;"></img>
         </div>
-        <div boxed macro="note">
-          <h3 id="7529155402461462496">Orthogonal
+        <div macro="note" boxed>
+          <h3 id="--Vectors---Vectors--Vector%255FOperations--Orthogonal">Orthogonal
           </h3>
           <p>Two vectors are orthogonal if and only if</p>
-          <div latex="block" macro="equation">$$\begin{equation}
+          <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
             \vec{a}\cdot\vec{b} = 0
@@ -908,8 +1021,8 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-        <div boxed macro="note">
-          <h3 id="13504306802453167629">The Unit Vector
+        <div macro="note" boxed>
+          <h3 id="--Vectors---Vectors--Vector%255FOperations--The%5FUnit%5FVector">The Unit Vector
           </h3>
           <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
@@ -921,9 +1034,9 @@ window.MathJax = {
           </div>
         </div>
         <div boxed macro="note">
-          <h3 id="292706962695191518"><small>If <span latex="inline" macro="tex">\(\theta\)</span> is the angle between the vectors <span latex="inline" macro="tex">\(\vec{a}\)</span> and <span latex="inline" macro="tex">\(\vec{b}\)</span>, then</small>
+          <h3 id="--Vectors---Vectors--Vector%255FOperations--If%5F-%5C%28%5Ctheta%5C%29-%5Fis%5Fthe%5Fangle%5Fbetween%5Fthe%5Fvectors%5F-%5C%28%5Cvec%7Ba%7D%5C%29-%5Fand%5F-%5C%28%5Cvec%7Bb%7D%5C%29-%2C%5Fthen"><small>If <span latex="inline" macro="tex">\(\theta\)</span> is the angle between the vectors <span macro="tex" latex="inline">\(\vec{a}\)</span> and <span latex="inline" macro="tex">\(\vec{b}\)</span>, then</small>
           </h3>
-          <div macro="equation" latex="block">$$\begin{equation}
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             \vec{a} \cdot \vec{a} = |\vec{a}| \cdot |\vec{a}| \cos\theta
@@ -933,7 +1046,7 @@ window.MathJax = {
           </div>
         </div>
         <div macro="note" boxed>
-          <h3 id="1327674355028352407"><small>If <span latex="inline" macro="tex">\(\theta\)</span> is the angle between the nonzero vectors <span latex="inline" macro="tex">\(\vec{a}\)</span> and <span macro="tex" latex="inline">\(\vec{b}\)</span>, then</small>
+          <h3 id="--Vectors---Vectors--Vector%255FOperations--If%5F-%5C%28%5Ctheta%5C%29-%5Fis%5Fthe%5Fangle%5Fbetween%5Fthe%5Fnonzero%5Fvectors%5F-%5C%28%5Cvec%7Ba%7D%5C%29-%5Fand%5F-%5C%28%5Cvec%7Bb%7D%5C%29-%2C%5Fthen"><small>If <span latex="inline" macro="tex">\(\theta\)</span> is the angle between the nonzero vectors <span macro="tex" latex="inline">\(\vec{a}\)</span> and <span macro="tex" latex="inline">\(\vec{b}\)</span>, then</small>
           </h3>
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -947,9 +1060,9 @@ window.MathJax = {
           </div>
         </div>
         <div macro="note" boxed>
-          <h3 id="9430822908443876188"><small>Two nonzero vectors <span latex="inline" macro="tex">\(\vec{a}\)</span> and <span latex="inline" macro="tex">\(\vec{b}\)</span> are parallel if and only if</small>
+          <h3 id="--Vectors---Vectors--Vector%255FOperations--Two%5Fnonzero%5Fvectors%5F-%5C%28%5Cvec%7Ba%7D%5C%29-%5Fand%5F-%5C%28%5Cvec%7Bb%7D%5C%29-%5Fare%5Fparallel%5Fif%5Fand%5Fonly%5Fif"><small>Two nonzero vectors <span macro="tex" latex="inline">\(\vec{a}\)</span> and <span latex="inline" macro="tex">\(\vec{b}\)</span> are parallel if and only if</small>
           </h3>
-          <div macro="equation" latex="block">$$\begin{equation}
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             \vec{a}\times\vec{b} = 0
@@ -958,9 +1071,9 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-      </div>      <h3 id="4316942666569772178">Properties of the Dot Product
+      </div>      <h3 id="--Vectors---Vectors--Vector%255FOperations--Properties%5Fof%5Fthe%5FDot%5FProduct">Properties of the Dot Product
       </h3>      <div columns="3" cols="3" macro="layout">
-        <div boxed macro="note">
+        <div macro="note" boxed>
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
@@ -980,8 +1093,8 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-        <div boxed macro="note">
-          <div macro="equation" latex="block">$$\begin{equation}
+        <div macro="note" boxed>
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             \vec{a} \cdot \vec{b} = \vec{b} \cdot \vec{a}
@@ -991,7 +1104,7 @@ window.MathJax = {
           </div>
         </div>
         <div macro="note" boxed>
-          <div macro="equation" latex="block">$$\begin{equation}
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             \left(c \cdot \vec{a}\right) \cdot \vec{b} = c\left(\vec{a} \cdot \vec{b}\right)
@@ -1000,13 +1113,423 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-      </div>      <h1 id="1839120467456439826">Matrices
-      </h1>      <h2 id="8314117654259225584">Reference
-      </h2>      <div columns="2" cols="2" macro="layout">
-        <div macro="note" boxed>
-          <h3 id="12954746078723829334">The Determinant of A Matrix
+      </div>      <h2 id="--Vectors--Direction%5FCosines%5F%26%5FDirection%5FAngles%5Fof%5Fa%5FVector">Direction Cosines & Direction Angles of a Vector
+      </h2>      <div macro="note"><img width="300px" style=";min-width: 0; max-width: 300px; width: 100%;" ss.img.processed ss.proc.width src="https://colbyn.github.io/school-notes-spring-2020/ss-data/5574779330978927133.png" center></img>
+        <p center>Where</p>
+        <div latex="block" macro="equation">$$\begin{equation}
+\begin{split}
+
+        \vec{v} &= \begin{bmatrix} v_x & v_y & v_z \end{bmatrix}
+        \;\;\;\;
+        ||\vec{v}|| &= \sqrt{(v_x)^2 + (v_y)^2 + (v_z)^2}
+    
+\end{split}
+\end{equation}$$
+        </div>
+      </div>      <div columns="3" cols="3" macro="layout">
+        <div boxed macro="note">
+          <h3 id="--Vectors---Vectors--Direction%255FCosines%255F%2526%255FDirection%255FAngles%255Fof%255Fa%255FVector--Direction%5FCosines">Direction Cosines
           </h3>
           <div latex="block" macro="equation">$$\begin{equation}
+\begin{split}
+
+            \cos\alpha &= \frac{v_x}{||\vec{v}||}\\
+            \cos\beta &= \frac{v_y}{||\vec{v}||}\\
+            \cos\gamma &= \frac{v_z}{||\vec{v}||}
+        
+\end{split}
+\end{equation}$$
+          </div>
+        </div>
+        <div macro="note" boxed>
+          <h3 id="--Vectors---Vectors--Direction%255FCosines%255F%2526%255FDirection%255FAngles%255Fof%255Fa%255FVector--Direction%5FAngles">Direction Angles
+          </h3>
+          <div macro="equation" latex="block">$$\begin{equation}
+\begin{split}
+
+            \alpha &= \arccos \left(\frac{v_x}{||\vec{v}||}\right)\\
+            \beta &= \arccos \left(\frac{v_y}{||\vec{v}||}\right)\\
+            \gamma &= \arccos \left(\frac{v_z}{||\vec{v}||}\right)
+        
+\end{split}
+\end{equation}$$
+          </div>
+        </div>
+        <div boxed macro="note">
+          <h3 id="--Vectors---Vectors--Direction%255FCosines%255F%2526%255FDirection%255FAngles%255Fof%255Fa%255FVector--Theorem">Theorem
+          </h3>
+          <div macro="equation" latex="block">$$\begin{equation}
+\begin{split}
+
+            \cos^2\alpha + \cos^2\beta + \cos^2\gamma = 1
+        
+\end{split}
+\end{equation}$$
+          </div>
+          <hr></hr>
+          <h5 id="--Vectors---Vectors--Direction%255FCosines%255F%2526%255FDirection%255FAngles%255Fof%255Fa%255FVector---Vectors---Vectors--Direction%25255FCosines%25255F%252526%25255FDirection%25255FAngles%25255Fof%25255Fa%25255FVector--Theorem--Proof">Proof
+          </h5>
+          <div macro="equation" latex="block">$$\begin{equation}
+\begin{split}
+
+            \vec{v} &= \hat{i}\cos\alpha + \hat{k}\cos\beta + \hat{k}\cos\gamma\\
+            ||\vec{v}|| &= || \hat{i}\cos\alpha + \hat{k}\cos\beta + \hat{k}\cos\gamma|| = 1
+        
+\end{split}
+\end{equation}$$
+          </div>
+          <p>Given</p>
+          <div latex="block" macro="equation">$$\begin{equation}
+\begin{split}
+
+            \sqrt{\cos^2\alpha + \cos^2\beta + \cos^2\gamma} &= 1\\
+            \sqrt{\cos^2\alpha + \cos^2\beta + \cos^2\gamma}^2 &= 1^2\\
+            \cos^2\alpha + \cos^2\beta + \cos^2\gamma &= 1
+        
+\end{split}
+\end{equation}$$
+          </div>
+          <p>Therefore</p>
+          <div latex="block" macro="equation">$$\begin{equation}
+\begin{split}
+
+            \cos^2\alpha + \cos^2\beta + \cos^2\gamma = 1\\
+        
+\end{split}
+\end{equation}$$
+          </div>
+        </div>
+      </div>      <h2 id="--Vectors--Vector%5FRelations">Vector Relations
+      </h2>      <div macro="layout" columns="2" cols="2">
+        <div macro="note" boxed>
+          <h3 id="--Vectors---Vectors--Vector%255FRelations--Parallel%5FVectors">Parallel Vectors
+          </h3>
+          <ul>
+            <li>When two vectors are parallel; they never intersect (duh).
+            </li>
+          </ul>
+          <p>Given some vectors</p>
+          <div latex="block" macro="equation">$$\begin{equation}
+\begin{split}
+
+            \vec{a} &= \begin{bmatrix} a_x & a_y & a_z \end{bmatrix}\\
+            \vec{b} &= \begin{bmatrix} b_x & b_y & b_z \end{bmatrix}
+        
+\end{split}
+\end{equation}$$
+          </div>
+          <p>The vectors <span macro="tex" latex="inline">\(\vec{a}\)</span> and <span latex="inline" macro="tex">\(\vec{b}\)</span> are parallel if and only if they are scalar multiples of one another.</p>
+          <div latex="block" macro="equation">$$\begin{equation}
+\begin{split}
+
+            \vec{a} &= k\;\vec{b} \;\;\;\;\forall k \neq 0
+        
+\end{split}
+\end{equation}$$
+          </div>
+          <h4 id="--Vectors---Vectors--Vector%255FRelations---Vectors---Vectors--Vector%25255FRelations--Parallel%255FVectors--Alternatively">Alternatively
+          </h4>
+          <div macro="equation" latex="block">$$\begin{equation}
+\begin{split}
+
+            \frac{a_x}{b_x} = \frac{a_y}{b_y} = \frac{a_z}{b_z}
+        
+\end{split}
+\end{equation}$$
+          </div>
+        </div>
+        <div macro="note" boxed>
+          <h3 id="--Vectors---Vectors--Vector%255FRelations--Orthogonal%5FVectors">Orthogonal Vectors
+          </h3>
+          <ul>
+            <li>When two vectors are orthogonal; they meet at right angles.
+            </li>
+          </ul>
+          <p>Given some vectors</p>
+          <div macro="equation" latex="block">$$\begin{equation}
+\begin{split}
+
+            \vec{a} &= \begin{bmatrix} a_x & a_y & a_z \end{bmatrix}\\
+            \vec{b} &= \begin{bmatrix} b_x & b_y & b_z \end{bmatrix}
+        
+\end{split}
+\end{equation}$$
+          </div>
+          <p>Two vectors are orthogonal if and only if</p>
+          <div latex="block" macro="equation">$$\begin{equation}
+\begin{split}
+
+            \vec{a}\times\vec{b} = 0
+        
+\end{split}
+\end{equation}$$
+          </div>
+        </div>
+      </div>      <h2 id="--Vectors--Reparameterization%5Fof%5Fthe%5Fposition%5Fvector%5F-%5C%28%5Cvec%7Bv%7D%28t%29%5C%29-%5Fin%5Fterms%5Fof%5Flength%5F-%5C%28S%28t%29%5C%29">Reparameterization of the position vector <span latex="inline" macro="tex">\(\vec{v}(t)\)</span> in terms of length <span latex="inline" macro="tex">\(S(t)\)</span>
+      </h2>      <ul>
+        <li>
+          <p>We can parametrize a curve <b>with respect to arc length</b>; because arc length arises naturally from the shape of the curve and <b>does not depend on any coordinate system</b>.</p>
+        </li>
+      </ul>      <div cols="2" columns="2" macro="layout">
+        <div boxed macro="note">
+          <h3 id="--Vectors---Vectors--Reparameterization%255Fof%255Fthe%255Fposition%255Fvector%255F-%255C%2528%255Cvec%257Bv%257D%2528t%2529%255C%2529-%255Fin%255Fterms%255Fof%255Flength%255F-%255C%2528S%2528t%2529%255C%2529--The%5FArc%5FLength%5FFunction">The Arc Length Function
+          </h3>
+          <p>Given</p>
+          <div macro="equation" latex="block">$$\begin{equation}
+\begin{split}
+
+            \vec{v}
+                &= \begin{bmatrix} x & y & z \end{bmatrix}
+                = \begin{bmatrix} f(t) & g(t) & h(t) \end{bmatrix}
+        
+\end{split}
+\end{equation}$$
+          </div>
+          <p>We can redefine <span macro="tex" latex="inline">\(\vec{v}\)</span> in terms of arc length between two endpoints</p>
+          <div macro="texblock" latex="block">$$
+            \newcommand{\Long}{
+                \int_a^t \sqrt{
+                    \left(f^\prime(u)\right)^2
+                    \left(g^\prime(u)\right)^2
+                    \left(h^\prime(u)\right)^2
+                }
+            }
+            \newcommand{\AltLong}{
+                \int_a^t \sqrt{
+                    \left(\frac{\mathrm{d}x}{\mathrm{d}u}\right)^2
+                    \left(\frac{\mathrm{d}y}{\mathrm{d}u}\right)^2
+                    \left(\frac{\mathrm{d}z}{\mathrm{d}u}\right)^2
+                }
+            }
+            \newcommand{\short}{
+                \int_a^t ||\left(v^\prime(u)\right)||
+            }
+            \begin{equation}
+            \begin{split}
+                S(t)
+                    &= \Long\\
+                    &= \AltLong\\
+                    &= \short
+            \end{split}
+            \end{equation}
+        $$
+          </div>
+          <p>That is, <span macro="tex" latex="inline">\(S(t)\)</span> is the length of the curve (<span latex="inline" macro="tex">\(C\)</span>) between <span latex="inline" macro="tex">\(r(a)\)</span> and <span macro="tex" latex="inline">\(r(b)\)</span>.</p>
+          <hr></hr>
+          <p>Furthermore from the adjacent definition; we can simply the above to</p>
+          <div macro="equation" latex="block">$$\begin{equation}
+\begin{split}
+
+            S(t) = \int_a^t \frac{\mathrm{d}S}{\mathrm{d}t}
+        
+\end{split}
+\end{equation}$$
+          </div>
+        </div>
+        <div boxed macro="note">
+          <h3 id="--Vectors---Vectors--Reparameterization%255Fof%255Fthe%255Fposition%255Fvector%255F-%255C%2528%255Cvec%257Bv%257D%2528t%2529%255C%2529-%255Fin%255Fterms%255Fof%255Flength%255F-%255C%2528S%2528t%2529%255C%2529--The%5FArc%5FLength%5FFunction">The Arc Length Function
+          </h3>
+          <div macro="equation" latex="block">$$\begin{equation}
+\begin{split}
+
+            \frac{\mathrm{d}S}{\mathrm{d}t} \equiv || v^\prime(t) ||
+        
+\end{split}
+\end{equation}$$
+          </div>
+          <p>That is</p>
+          <div macro="texblock" latex="block">$$
+            \newcommand{\Long}{
+                \sqrt{
+                    \left(f^\prime(u)\right)^2
+                    \left(g^\prime(u)\right)^2
+                    \left(h^\prime(u)\right)^2
+                }
+            }
+            \newcommand{\AltLong}{
+                \sqrt{
+                    \left(\frac{\mathrm{d}x}{\mathrm{d}u}\right)^2
+                    \left(\frac{\mathrm{d}y}{\mathrm{d}u}\right)^2
+                    \left(\frac{\mathrm{d}z}{\mathrm{d}u}\right)^2
+                }
+            }
+            \newcommand{\short}{
+                ||\left(v^\prime(u)\right)||
+            }
+            \begin{equation}
+            \begin{split}
+                \frac{\mathrm{d}S}{\mathrm{d}t}
+                    &= \Long\\
+                    &= \AltLong\\
+                    &= \short
+            \end{split}
+            \end{equation}
+        $$
+          </div>
+        </div>
+      </div>      <h2 id="--Vectors--Vectors%5FDerived%5FFrom%5FSome%5FCurve%5FDefined%5Fby%5F-%5C%28%5Cvec%7Bv%7D%5C%29">Vectors Derived From Some Curve Defined by <span latex="inline" macro="tex">\(\vec{v}\)</span>
+      </h2>      <div columns="2" cols="2" macro="layout">
+        <div boxed macro="note"><img ss.proc.width center width="300px" style=";min-width: 0; max-width: 300px; width: 100%;" src="https://colbyn.github.io/school-notes-spring-2020/ss-data/13721048866769393143.png" ss.img.processed></img>
+        </div>
+        <div macro="note" boxed>
+          <h3 id="--Vectors---Vectors--Vectors%255FDerived%255FFrom%255FSome%255FCurve%255FDefined%255Fby%255F-%255C%2528%255Cvec%257Bv%257D%255C%2529--The%5FUnit%5FVector">The Unit Vector
+          </h3>
+          <div macro="equation" latex="block">$$\begin{equation}
+\begin{split}
+
+            \hat{U} \equiv \frac{\vec{v}}{||\vec{v}||}
+        
+\end{split}
+\end{equation}$$
+          </div>
+        </div>
+      </div>      <div columns="2" cols="2" macro="layout">
+        <div boxed macro="note">
+          <h3 id="--Vectors---Vectors--Vectors%255FDerived%255FFrom%255FSome%255FCurve%255FDefined%255Fby%255F-%255C%2528%255Cvec%257Bv%257D%255C%2529--The%5FUnit%5F-Tangent-%5FVector">The Unit <b>Tangent</b> Vector
+          </h3>
+          <div latex="block" macro="equation">$$\begin{equation}
+\begin{split}
+
+            \vec{T}
+                &\equiv \frac
+                    {v^\prime(t)}
+                    {||v^\prime(t)||}
+                &\equiv \frac
+                    {\mathrm{d}v}
+                    {\mathrm{d}S}
+        
+\end{split}
+\end{equation}$$
+          </div>
+        </div>
+        <div macro="note" boxed>
+          <h3 id="--Vectors---Vectors--Vectors%255FDerived%255FFrom%255FSome%255FCurve%255FDefined%255Fby%255F-%255C%2528%255Cvec%257Bv%257D%255C%2529--The%5FUnit%5F-Normal-%5FVector">The Unit <b>Normal</b> Vector
+          </h3>
+          <div latex="block" macro="equation">$$\begin{equation}
+\begin{split}
+
+            \vec{N} \equiv \frac
+                {T^\prime}
+                {||T^\prime||}
+        
+\end{split}
+\end{equation}$$
+          </div>
+        </div>
+        <div macro="note" boxed>
+          <h3 id="--Vectors---Vectors--Vectors%255FDerived%255FFrom%255FSome%255FCurve%255FDefined%255Fby%255F-%255C%2528%255Cvec%257Bv%257D%255C%2529--The%5FBinormal%5FVector">The Binormal Vector
+          </h3>
+          <div macro="equation" latex="block">$$\begin{equation}
+\begin{split}
+
+            \vec{B} \equiv \vec{T}\times\vec{N}
+        
+\end{split}
+\end{equation}$$
+          </div>
+          <ul>
+            <li>
+              <p>Therefore, the binormal vector is orthogonal to both the tangent vector and the normal vector.</p>
+            </li>
+            <li>
+              <p>The plane determined by the normal and binormal vectors N and B at a point P on a curve C is called the normal plane of C at P.</p>
+            </li>
+            <li>
+              <p>The plane determined by the vectors T and N is called the osculating plane of C at P. The name comes from the Latin osculum, meaning “kiss.” It is the plane that comes closest to containing the part of the curve near P. (For a plane curve, the osculating plane is simply the plane that contains the curve.)</p>
+            </li>
+          </ul>
+        </div>
+        <div boxed macro="note">
+          <h3 id="--Vectors---Vectors--Vectors%255FDerived%255FFrom%255FSome%255FCurve%255FDefined%255Fby%255F-%255C%2528%255Cvec%257Bv%257D%255C%2529--Kappa%5F-%5FCurvature%5Fof%5Fa%5FVector">Kappa - Curvature of a Vector
+          </h3>
+          <div macro="equation" latex="block">$$\begin{equation}
+\begin{split}
+
+            \kappa
+                &\equiv \left|\frac{\mathrm{d}T}{\mathrm{d}S}\right|
+                &\equiv \frac
+                    {\left| T^\prime \right|}
+                    {\left| r^\prime \right|}
+                &\equiv \frac
+                    {\left| r^\prime \times r^{\prime\prime} \right|}
+                    {\left| r^\prime \right|^3}
+        
+\end{split}
+\end{equation}$$
+          </div>
+        </div>
+        <div macro="note" boxed>
+          <h3 id="--Vectors---Vectors--Vectors%255FDerived%255FFrom%255FSome%255FCurve%255FDefined%255Fby%255F-%255C%2528%255Cvec%257Bv%257D%255C%2529--Tangential%5F%26%5FNormal%5FComponents%5Fof%5Fthe%5FAcceleration%5FVector%5Fof%5Fthe%5FCurve">Tangential & Normal Components of the Acceleration Vector of the Curve
+          </h3>
+          <p>When we study the motion of a particle, it is often useful to resolve the acceleration into two components, one in the direction of the tangent and the other in the direction of the normal.</p>
+          <div latex="block" macro="equation">$$\begin{equation}
+\begin{split}
+
+            a_{\vec{T}}
+                &= \frac{\mathrm{d}}{\mathrm{d}t} \left|\vec{v}\right|
+                = \frac{r^\prime \cdot r^{\prime\prime}}{|r^\prime|}\\
+            a_{\vec{N}}
+                &= \kappa \left|\vec{v}\right|^2
+                = \frac{\left|r^\prime \times r^{\prime\prime}\right|}{|r^\prime|}\\
+
+            \vec{a} &= a_{\vec{T}} \vec{T} + a_{\vec{N}} \vec{N}
+        
+\end{split}
+\end{equation}$$
+          </div>
+          <p>Specifically</p>
+          <div latex="block" macro="equation">$$\begin{equation}
+\begin{split}
+
+            \left.\begin{aligned}
+            a_{\vec{T}}\\
+            a_{\vec{N}}
+            \end{aligned}\right\} \text{Tangential & Normal Components of $\vec{a}$}
+        
+\end{split}
+\end{equation}$$
+          </div>
+        </div>
+      </div>      <h2 id="--Vectors--Vector%5FCalculus">Vector Calculus
+      </h2>      <div macro="layout" columns="3" cols="3">
+        <div boxed macro="note">
+          <h3 id="--Vectors---Vectors--Vector%255FCalculus--The%5FPosition%5FVector%5F-%5C%28%5Cvec%7Br%7D%28t%29%5C%29"><small>The Position Vector <span latex="inline" macro="tex">\(\vec{r}(t)\)</span></small>
+          </h3>
+          <p center><small>(Original Function)</small></p>
+        </div>
+        <div macro="note" boxed>
+          <h3 id="--Vectors---Vectors--Vector%255FCalculus--The%5FVelocity%5FVector%5F-%5C%28%5Cvec%7Bv%7D%28t%29%5C%29"><small>The Velocity Vector <span macro="tex" latex="inline">\(\vec{v}(t)\)</span></small>
+          </h3>
+          <p center><small>(First Derivative)</small></p>
+          <ul>
+            <li>The velocity vector is also the tangent vector and points in the direction of the tangent line.
+            </li>
+            <li>The <b>speed</b> of the particle <u>at time t</u> is the <b>magnitude</b> of the velocity vector, that is,
+                
+              <div latex="block" macro="equation">$$\begin{equation}
+\begin{split}
+
+                    \underbrace{|\vec{v}(t)| = |(\vec{r})^\prime(t)| = \frac{\mathrm{d}s}{\mathrm{d}t}}
+                    _{\text{rate of change of distance with respect to time}}
+                
+\end{split}
+\end{equation}$$
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div macro="note" boxed>
+          <h3 id="--Vectors---Vectors--Vector%255FCalculus--The%5FAcceleration%5FVector%5F-%5C%28%5Cvec%7Ba%7D%28t%29%5C%29"><small>The Acceleration Vector <span latex="inline" macro="tex">\(\vec{a}(t)\)</span></small>
+          </h3>
+          <p center><small>(Second Derivative)</small></p>
+        </div>
+      </div>      <h1 id="--Matrices">Matrices
+      </h1>      <h2 id="--Matrices--Reference">Reference
+      </h2>      <div cols="2" macro="layout" columns="2">
+        <div macro="note" boxed>
+          <h3 id="--Matrices---Matrices--Reference--The%5FDeterminant%5Fof%5FA%5FMatrix">The Determinant of A Matrix
+          </h3>
+          <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
             |A| &=
@@ -1041,15 +1564,15 @@ window.MathJax = {
         
 \end{split}
 \end{equation}$$
-          </div><img src="https://colbyn.github.io/school-notes-spring-2020/ss-data/4633199728518317818.png" ss.proc.width ss.img.processed width="400px" style=";min-width: 0; max-width: 400px; width: 100%;" center></img>
+          </div><img width="400px" src="https://colbyn.github.io/school-notes-spring-2020/ss-data/4633199728518317818.png" ss.proc.width center style=";min-width: 0; max-width: 400px; width: 100%;" ss.img.processed></img>
           <div macro="note" boxed>
             <p>Only works for square matrices.</p>
           </div>
         </div>
-        <div macro="note" boxed>
-          <h3 id="3863653940101464830">The Cross Product
+        <div boxed macro="note">
+          <h3 id="--Matrices---Matrices--Reference--The%5FCross%5FProduct">The Cross Product
           </h3>
-          <div macro="equation" latex="block">$$\begin{equation}
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             \vec{a}\times\vec{b}
@@ -1095,10 +1618,260 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-      </div>      <h1 id="9476182299198553002">Limits
-      </h1>      <div macro="layout" columns="2" cols="2">
+      </div>      <h1 id="--Geometry">Geometry
+      </h1>      <h2 id="--Geometry--Definition%5Fof%5Fa%5FLine">Definition of a Line
+      </h2>      <img ss.proc.width width="500px" src="https://colbyn.github.io/school-notes-spring-2020/ss-data/405215191661776806.png" ss.img.processed style=";min-width: 0; max-width: 500px; width: 100%;" center></img>      <div cols="3" macro="layout" columns="3">
         <div boxed macro="note">
-          <h2 id="14892183798542452014">L’Hospital’s Rule
+          <h3 id="--Geometry---Geometry--Definition%255Fof%255Fa%255FLine--Vector%5FEquation%5Fof%5Fa%5FLine">Vector Equation of a Line
+          </h3>
+          <p>Given</p>
+          <div macro="equation" latex="block">$$\begin{equation}
+\begin{split}
+
+            \colorB{P_1} &= \begin{bmatrix} \colorB{x_1} & \colorB{y_1} & \colorB{z_1} \end{bmatrix}\\
+            \colorC{P_2} &= \begin{bmatrix} \colorC{x_2} & \colorC{y_2} & \colorC{z_2} \end{bmatrix}\\
+        
+\end{split}
+\end{equation}$$
+          </div>
+          <div latex="block" macro="equation">$$\begin{equation}
+\begin{split}
+
+            \colorB{P_1} &= \begin{bmatrix} \colorB{x_1} & \colorB{y_1} & \colorB{z_1} \end{bmatrix}\\
+            \colorC{P_2} &= \begin{bmatrix} \colorC{x_2} & \colorC{y_2} & \colorC{z_2} \end{bmatrix}\\
+        
+\end{split}
+\end{equation}$$
+          </div>
+          <p>We can define a vector between <span latex="inline" macro="tex">\(\colorB{P_1}\)</span> and <span latex="inline" macro="tex">\(\colorC{P_2}\)</span></p>
+          <div latex="block" macro="equation">$$\begin{equation}
+\begin{split}
+
+            \colorA{\overrightarrow{\Delta\mathsf{v}}} &= 
+            \begin{bmatrix} \colorC{x_2} \\ \colorC{y_2} \\ \colorC{z_2} \end{bmatrix} -
+            \begin{bmatrix} \colorB{x_1} \\ \colorB{y_1} \\ \colorB{z_1} \end{bmatrix} =
+            \begin{bmatrix} \colorC{x_2}-\colorB{x_1} \\ \colorC{y_2}-\colorB{y_1} \\ \colorC{z_2}-\colorB{z_1} \end{bmatrix} =
+            \begin{bmatrix} \colorA{\Delta_x} \\ \colorA{\Delta_y} \\ \colorA{\Delta_z} \end{bmatrix}
+        
+\end{split}
+\end{equation}$$
+          </div>
+          <h4 id="--Geometry---Geometry--Definition%255Fof%255Fa%255FLine---Geometry---Geometry--Definition%25255Fof%25255Fa%25255FLine--Vector%255FEquation%255Fof%255Fa%255FLine--Therefore">Therefore
+          </h4>
+          <p>The equation of a line in 3D space or <span macro="tex" latex="inline">\(\mathbb{R}^3\)</span> can be defined VIA the following options</p>
+          <div latex="block" macro="equation">$$\begin{equation}
+\begin{split}
+
+            L &= \colorB{P_1} + t\cdot\colorA{\overrightarrow{\Delta\mathsf{v}}} \\
+            \begin{bmatrix} x \\ y \\ z \end{bmatrix} &= 
+            \begin{bmatrix} \colorB{x_1} \\ \colorB{y_1} \\ \colorB{z_1} \end{bmatrix} +
+            t\begin{bmatrix} \colorA{\Delta_x} \\ \colorA{\Delta_y} \\ \colorA{\Delta_z} \end{bmatrix} =
+            \begin{bmatrix} \colorB{x_1} \\ \colorB{y_1} \\ \colorB{z_1} \end{bmatrix} +
+            \begin{bmatrix} t\;\colorA{\Delta_x} \\ t\;\colorA{\Delta_y} \\ t\;\colorA{\Delta_z} \end{bmatrix} \\
+            &= 
+            \begin{bmatrix} \colorB{x_1} + t\;\colorA{\Delta_x} \\ \colorB{y_1} + t\;\colorA{\Delta_y} \\ \colorB{z_1} + t\;\colorA{\Delta_z} \end{bmatrix}\\
+            &= 
+            \begin{bmatrix} \colorB{x_1} + t(\colorC{x_2}-\colorB{x_1}) \\ \colorC{x_2} + t(\colorC{x_2}-\colorB{x_1}) \\ x_3 + t(\colorC{x_2}-\colorB{x_1}) \end{bmatrix}
+        
+\end{split}
+\end{equation}$$
+          </div>
+          <p>That is</p>
+          <div macro="equation" latex="block">$$\begin{equation}
+\begin{split}
+
+            L &= \colorB{P_1} + t\cdot\colorA{\overrightarrow{\Delta\mathsf{v}}}\\
+            \begin{bmatrix} x \\ y \\ z \end{bmatrix} &=
+            \begin{bmatrix} \colorB{x_1} + t\;\colorA{\Delta_x} \\ \colorB{y_1} + t\;\colorA{\Delta_y} \\ \colorB{z_1} + t\;\colorA{\Delta_z} \end{bmatrix}
+                = \begin{bmatrix} \colorB{x_1} + t(\colorC{x_2}-\colorB{x_1}) \\ \colorB{y_1} + t(\colorC{y_2}-\colorB{y_1}) \\ \colorB{z_1} + t(\colorC{z_2}-\colorB{z_1}) \end{bmatrix}
+        
+\end{split}
+\end{equation}$$
+          </div>
+        </div>
+        <div macro="layout">
+          <div boxed macro="note">
+            <h3 id="--Geometry---Geometry--Definition%255Fof%255Fa%255FLine--Parametric%5FEquation%5Fof%5Fa%5FLine">Parametric Equation of a Line
+            </h3>
+            <div latex="block" macro="equation">$$\begin{equation}
+\begin{split}
+
+                \underbrace{\begin{split}
+                    x &= \colorB{x_1} + t(\colorC{x_2}-\colorB{x_1}) = \colorB{x_1} + t\;\colorA{\Delta_x}\\
+                    y &= \colorB{x_1} + t(\colorC{y_2}-\colorB{y_1}) = \colorB{y_1} + t\;\colorA{\Delta_y}\\
+                    z &= \colorB{x_1} + t(\colorC{z_2}-\colorB{z_1}) = \colorB{z_1} + t\;\colorA{\Delta_z}
+                \end{split}}_{
+                    r \;=\; r_0 \;+\; a \;=\; r_0 \;+\; t\,v
+                }
+            
+\end{split}
+\end{equation}$$
+            </div>
+          </div>
+          <div boxed macro="note">
+            <h3 id="--Geometry---Geometry--Definition%255Fof%255Fa%255FLine--Essentially">Essentially
+            </h3>
+            <div latex="block" macro="equation">$$\begin{equation}
+\begin{split}
+
+                L &= \colorB{P_1} + t\cdot\colorA{\overrightarrow{\Delta\mathsf{v}}}\;\;\forall t\in\mathbb{R}
+            
+\end{split}
+\end{equation}$$
+            </div>
+            <p>That is, <span latex="inline" macro="tex">\(t\)</span> is the scaling factor. In a way, it's like it's a function of <span latex="inline" macro="tex">\(t\)</span>, but also similar to the slope (<span latex="inline" macro="tex">\(m\)</span>) in <span macro="tex" latex="inline">\(y = mx + b\)</span>, except <span macro="tex" latex="inline">\(m\)</span> (i.e. <span macro="tex" latex="inline">\(t\)</span>) is parameterized.</p>
+            <hr></hr>
+            <p>Sometimes this will be (confusingly) denoted as</p>
+            <div latex="block" macro="equation">$$\begin{equation}
+\begin{split}
+
+                \vec{r} &= \vec{r_0} + \vec{a} = \vec{r_0} + t\vec{v}\\
+            
+\end{split}
+\end{equation}$$
+            </div>
+          </div>
+        </div>
+        <div macro="note" boxed>
+          <h3 id="--Geometry---Geometry--Definition%255Fof%255Fa%255FLine--Symmetric%5FEquation%5Fof%5Fa%5FLine">Symmetric Equation of a Line
+          </h3>
+          <div macro="equation" latex="block">$$\begin{equation}
+\begin{split}
+
+            t &= \frac{x - \colorB{x_1}}{\colorC{x_2}-\colorB{x_1}} = \frac{x - \colorB{x_1}}{\colorA{\Delta_x}}\\
+            t &= \frac{y - \colorB{y_1}}{\colorC{y_2}-\colorB{y_1}} = \frac{y - \colorB{y_1}}{\colorA{\Delta_y}}\\
+            t &= \frac{z - \colorB{z_1}}{\colorC{z_2}-\colorB{z_1}} = \frac{z - \colorB{z_1}}{\colorA{\Delta_z}}
+        
+\end{split}
+\end{equation}$$
+          </div>
+          <p>Therefore</p>
+          <div latex="block" macro="equation">$$\begin{equation}
+\begin{split}
+
+                  \frac{x - \colorB{x_1}}{\colorA{\Delta_x}}
+               &= \frac{y - \colorB{y_1}}{\colorA{\Delta_y}}
+                = \frac{z - \colorB{z_1}}{\colorA{\Delta_z}}
+            \\\\
+                  \frac{x - \colorB{x_1}}{\colorC{x_2}-\colorB{x_1}}
+               &= \frac{y - \colorB{y_1}}{\colorC{y_2}-\colorB{y_1}}
+               =  \frac{z - \colorB{z_1}}{\colorC{z_2}-\colorB{z_1}}
+        
+\end{split}
+\end{equation}$$
+          </div>
+          <hr></hr>
+          <h4 id="--Geometry---Geometry--Definition%255Fof%255Fa%255FLine---Geometry---Geometry--Definition%25255Fof%25255Fa%25255FLine--Symmetric%255FEquation%255Fof%255Fa%255FLine--Rationale">Rationale
+          </h4>
+          <p>We rewrite <span latex="inline" macro="tex">\(r = r_0 + a = r_0 + t v\)</span> in terms of <span latex="inline" macro="tex">\(t\)</span>.</p>
+          <p>That is</p>
+          <div latex="block" macro="equation">$$\begin{equation}
+\begin{split}
+
+            x &= \colorB{x_1} + t(\colorC{x_2}-\colorB{x_1}) = \colorB{x_1} + t\;\colorA{\Delta_x}\\
+            t\;\colorA{\Delta_x}  &= x - \colorB{x_1} = t(\colorC{x_2}-\colorB{x_1})\\
+            t &= \frac{x - \colorB{x_1}}{\colorC{x_2}-\colorB{x_1}} = \frac{x - \colorB{x_1}}{\colorA{\Delta_x}} \\\\
+            y &= \colorB{y_1} + t(\colorC{y_2}-\colorB{y_1}) = \colorB{y_1} + t\;\colorA{\Delta_y}\\
+            t\;\colorA{\Delta_y}  &= y - \colorB{y_1} = t(\colorC{y_2}-\colorB{y_1})\\
+            t &= \frac{y - \colorB{y_1}}{\colorC{y_2}-\colorB{y_1}} = \frac{y - \colorB{y_1}}{\colorA{\Delta_y}} \\\\
+            z &= \colorB{z_1} + t(\colorC{z_2}-\colorB{z_1}) = \colorB{z_1} + t\;\colorA{\Delta_z}\\
+            t\;\colorA{\Delta_z} &= z - \colorB{z_1} = t(\colorC{z_2}-\colorB{z_1}) \\
+            t &= \frac{z - \colorB{z_1}}{\colorC{z_2}-\colorB{z_1}} = \frac{z - \colorB{z_1}}{\colorA{\Delta_z}}
+        
+\end{split}
+\end{equation}$$
+          </div>
+        </div>
+      </div>      <h2 id="--Geometry--Parameterizations%5Fof%5Fa%5Fcurve">Parameterizations of a curve
+      </h2>      <dl>
+        <dt>Parametrized curve
+        </dt>
+        <dd>A curve in the plane is said to be parameterized if the set of coordinates on the curve, (x,y), are represented as functions of a variable t.
+        </dd>
+        <dd>A parametrized Curve is a path in the xy-plane traced out by the point <span latex="inline" macro="tex">\(\left(x(t), y(t)\right)\)</span> as the parameter <span latex="inline" macro="tex">\(t\)</span> ranges over an interval <span latex="inline" macro="tex">\(I\)</span>.
+        </dd>
+        <dd>A parametrized Curve is a path in the xyz-plane traced out by the point <span latex="inline" macro="tex">\(\left(x(t), y(t), z(t)\right)\)</span> as the parameter <span macro="tex" latex="inline">\(t\)</span> ranges over an interval <span latex="inline" macro="tex">\(I\)</span>.
+        </dd>
+      </dl>      <h2 id="--Geometry--Curvature%5FProperties">Curvature Properties
+      </h2>      <div cols="3" macro="layout" columns="3">
+        <div boxed macro="note">
+          <h3 id="--Geometry---Geometry--Curvature%255FProperties--Length%5Fof%5Fa%5FCurve">Length of a Curve
+          </h3>
+          <div latex="block" macro="texblock">$$
+            \newcommand{\Long}{
+                \int_a^b \sqrt{
+                    \left(f^\prime(t)\right)^2
+                    \left(g^\prime(t)\right)^2
+                    \left(h^\prime(t)\right)^2
+                }
+            }
+            \newcommand{\AltLong}{
+                \int_a^b \sqrt{
+                    \left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)^2
+                    \left(\frac{\mathrm{d}y}{\mathrm{d}t}\right)^2
+                    \left(\frac{\mathrm{d}z}{\mathrm{d}t}\right)^2
+                }
+            }
+            \newcommand{\short}{
+                \int_a^b ||\left(r^\prime(t)\right)||
+            }
+            \begin{equation}
+            \begin{split}
+                L &= \Long\\
+                  &= \AltLong\\
+                  &= \short\\
+                  &\implies \text{some constant}
+            \end{split}
+            \end{equation}
+        $$
+          </div>
+        </div>
+        <div boxed macro="note">
+          <h3 id="--Geometry---Geometry--Curvature%255FProperties--The%5FArc%5FLength%5FFunction">The Arc Length Function
+          </h3>
+          <p>Suppose</p>
+          <ul>
+            <li>
+              <p>Given some curve <span latex="inline" macro="tex">\(C\)</span> defined by some vector <span latex="inline" macro="tex">\(\vec{r}\)</span> in <span macro="tex" latex="inline">\(\mathbb{R}^3\)</span></p>
+            </li>
+            <li>
+              <p>where <span macro="tex" latex="inline">\(r^\prime\)</span> is continuous and <span latex="inline" macro="tex">\(C\)</span> is traversed exactly once as <span latex="inline" macro="tex">\(t\)</span> increases from <span latex="inline" macro="tex">\(a\)</span> to <span macro="tex" latex="inline">\(b\)</span></p>
+            </li>
+          </ul>
+          <p>We can define it's arc length function VIA</p>
+          <div macro="texblock" latex="block">$$
+            \newcommand{\Long}{
+                \int_a^t \sqrt{
+                    \left(f^\prime(u)\right)^2
+                    \left(g^\prime(u)\right)^2
+                    \left(h^\prime(u)\right)^2
+                }
+            }
+            \newcommand{\AltLong}{
+                \int_a^t \sqrt{
+                    \left(\frac{\mathrm{d}x}{\mathrm{d}u}\right)^2
+                    \left(\frac{\mathrm{d}y}{\mathrm{d}u}\right)^2
+                    \left(\frac{\mathrm{d}z}{\mathrm{d}u}\right)^2
+                }
+            }
+            \newcommand{\short}{
+                \int_a^t ||\left(r^\prime(u)\right)||
+            }
+            \begin{equation}
+            \begin{split}
+                S(t)
+                    &= \Long\\
+                    &= \AltLong\\
+                    &= \short
+            \end{split}
+            \end{equation}
+        $$
+          </div>
+        </div>
+      </div>      <h1 id="--Limits">Limits
+      </h1>      <div macro="layout" cols="2" columns="2">
+        <div macro="note" boxed>
+          <h2 id="--Limits--L%E2%80%99Hospital%E2%80%99s%5FRule">L’Hospital’s Rule
           </h2>
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -1112,9 +1885,9 @@ window.MathJax = {
           </div>
           <p>In other words, if L’Hospital’s Rule applies to indeterminate forms.</p>
         </div>
-      </div>      <h2 id="5791620504577634231">Limit Laws
+      </div>      <h2 id="--Limits--Limit%5FLaws">Limit Laws
       </h2>      <div cols="3" macro="layout" columns="3">
-        <div latex="block" macro="equation">$$\begin{equation}
+        <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 \lim_{x \to a} \Big[ f(x) + g(x) \Big] &= \lim_{x \to a} f(x) + \lim_{x \to a} g(x)
 \end{split}
@@ -1126,7 +1899,7 @@ window.MathJax = {
 \end{split}
 \end{equation}$$
         </div>
-        <div latex="block" macro="equation">$$\begin{equation}
+        <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 \lim_{x \to a} \Big[ c \cdot f(x) \Big] &= c \cdot \lim_{x \to a} f(x)
 \end{split}
@@ -1138,55 +1911,55 @@ window.MathJax = {
 \end{split}
 \end{equation}$$
         </div>
-        <div macro="equation" latex="block">$$\begin{equation}
+        <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 \lim_{x \to a} \frac{f(x)}{g(x)} &= \frac{\lim_{x \to a} f(x)}{\lim_{x \to a}g(x)} \; \text{if} \lim_{x \to a}g(x) \neq 0
 \end{split}
 \end{equation}$$
         </div>
-        <div latex="block" macro="equation">$$\begin{equation}
+        <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 \lim_{x \to a} \Big[ f(x) \Big]^n = \Big[ \lim_{x \to a} f(x) \Big]^n\;\text{if}\;n\in\mathbb{Z}^+
 \end{split}
 \end{equation}$$
         </div>
-        <div macro="equation" latex="block">$$\begin{equation}
+        <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 \underbrace{\lim_{x \to a} \sqrt[n]{f(x)} = \sqrt[n]{\lim_{x \to a} f(x)}\;\text{if}\;n\in\mathbb{Z}^+}_{\text{if $n$ is even we assume $\lim_{x \to a} f(x) > 0$}}
 \end{split}
 \end{equation}$$
         </div>
-        <div latex="block" macro="equation">$$\begin{equation}
+        <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 \lim_{x\to{c}}\, \left(f \circ g\right)(x) &= f\left(\lim_{x\to{c}}\, g(x)\right)
 \end{split}
 \end{equation}$$
         </div>
-      </div>      <h2 id="1752513741556030968">Limit Formulas
-      </h2>      <div macro="layout" cols="3" columns="3">
+      </div>      <h2 id="--Limits--Limit%5FFormulas">Limit Formulas
+      </h2>      <div cols="3" macro="layout" columns="3">
         <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 \lim_{x\to\infty} \frac{1}{x^r} &= 0\;,\;\forall r > 0
 \end{split}
 \end{equation}$$
         </div>
-        <div macro="equation" latex="block">$$\begin{equation}
+        <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 \lim_{x\to\infty} \frac{x^n}{!n} &= 0\;,\;\forall n \in \mathbb{R}
 \end{split}
 \end{equation}$$
         </div>
-      </div>      <h2 id="9809195265654545402">Growth Rates
+      </div>      <h2 id="--Limits--Growth%5FRates">Growth Rates
       </h2>      <ol>
         <li><u>Factorial functions</u> grow faster than <u>exponential functions</u>.
         </li>
         <li><u>Exponential functions</u> grow faster than <u>polynomials</u>.
         </li>
-      </ol>      <h1 id="12808442855556465821">Calculus
+      </ol>      <h1 id="--Calculus">Calculus
       </h1>      <div macro="note">
-        <h2 id="13041984319253941958">Derivative Tables
+        <h2 id="--Calculus--Derivative%5FTables">Derivative Tables
         </h2>
-        <div boxed macro="layout" cols="3" columns="3">
+        <div cols="3" columns="3" macro="layout" boxed>
           <div boxed-child>
             <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -1210,7 +1983,7 @@ window.MathJax = {
             </div>
           </div>
           <div boxed-child>
-            <div latex="block" macro="equation">$$\begin{equation}
+            <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
             \delta\tan(x) &= \sec^2(x) \\
@@ -1221,9 +1994,9 @@ window.MathJax = {
             </div>
           </div>
         </div>
-        <div boxed macro="layout" columns="3" cols="3">
+        <div boxed columns="3" macro="layout" cols="3">
           <div boxed-child>
-            <div macro="equation" latex="block">$$\begin{equation}
+            <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             \delta\sin^{-1}(x) &= \frac{1}{\sqrt{1 - x^2}}
@@ -1243,7 +2016,7 @@ window.MathJax = {
             </div>
           </div>
           <div boxed-child>
-            <div latex="block" macro="equation">$$\begin{equation}
+            <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
             \delta\tan^{-1}(x) &= \frac{1}{1 + x^2}
@@ -1254,9 +2027,9 @@ window.MathJax = {
           </div>
         </div>
       </div>      <div macro="note">
-        <h2 id="5983618283210520911">Integration Tables
+        <h2 id="--Calculus--Integration%5FTables">Integration Tables
         </h2>
-        <div cols="3" macro="layout" boxed columns="3">
+        <div macro="layout" columns="3" boxed cols="3">
           <div boxed-child>
             <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -1286,7 +2059,7 @@ window.MathJax = {
             </div>
           </div>
           <div boxed-child>
-            <div macro="equation" latex="block">$$\begin{equation}
+            <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             \int\tan(x)\;\mathrm{d}x &= \ln| \sec x | \\
@@ -1297,7 +2070,7 @@ window.MathJax = {
             </div>
           </div>
         </div>
-        <div macro="layout" columns="3" boxed cols="3">
+        <div boxed cols="3" macro="layout" columns="3">
           <div boxed-child>
             <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
@@ -1309,7 +2082,7 @@ window.MathJax = {
             </div>
           </div>
           <div boxed-child>
-            <div macro="equation" latex="block">$$\begin{equation}
+            <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             \int\frac{1}{x^2 + a^2}\;\mathrm{d}x &= \frac{1}{a}\tan^{-1}\left(\frac{x}{a}\right)
@@ -1329,7 +2102,7 @@ window.MathJax = {
             </div>
           </div>
           <div boxed-child>
-            <div macro="equation" latex="block">$$\begin{equation}
+            <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             \int\frac{1}{\sqrt{a^2 - x^2}}\;\mathrm{d}x &= \sin^{-1}\left(\frac{x}{a}\right),\;a>0
@@ -1349,8 +2122,8 @@ window.MathJax = {
             </div>
           </div>
         </div>
-      </div>      <div boxed macro="note">
-        <h2 id="7917141332963055104">Riemann Sums
+      </div>      <div macro="note" boxed>
+        <h2 id="--Calculus--Riemann%5FSums">Riemann Sums
         </h2>
         <p center>Given</p>
         <div macro="equation" latex="block">$$\begin{equation}
@@ -1364,9 +2137,9 @@ window.MathJax = {
 \end{split}
 \end{equation}$$
         </div>
-        <div macro="layout" columns="2" cols="2">
+        <div macro="layout" cols="2" columns="2">
           <div boxed macro="note">
-            <h3 id="2066410476111681413">Left Riemann Sum
+            <h3 id="--Calculus---Calculus--Riemann%255FSums--Left%5FRiemann%5FSum">Left Riemann Sum
             </h3>
             <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -1377,8 +2150,8 @@ window.MathJax = {
 \end{equation}$$
             </div>
           </div>
-          <div macro="note" boxed>
-            <h3 id="6581055467208646242">Right Riemann Sum
+          <div boxed macro="note">
+            <h3 id="--Calculus---Calculus--Riemann%255FSums--Right%5FRiemann%5FSum">Right Riemann Sum
             </h3>
             <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
@@ -1391,7 +2164,7 @@ window.MathJax = {
           </div>
         </div>
         <div boxed macro="note">
-          <h3 id="9901584179951656103">Midpoint Riemann Sum
+          <h3 id="--Calculus---Calculus--Riemann%255FSums--Midpoint%5FRiemann%5FSum">Midpoint Riemann Sum
           </h3>
           <div macro="texblock" latex="block">$$
             \newcommand{\generalFormat}{
@@ -1435,17 +2208,17 @@ window.MathJax = {
           </div>
         </div>
         <div boxed macro="note">
-          <h3 id="18233368383485577838">Trapezoidal Riemann Sum
+          <h3 id="--Calculus---Calculus--Riemann%255FSums--Trapezoidal%5FRiemann%5FSum">Trapezoidal Riemann Sum
           </h3>
-          <div macro="texblock" latex="block">$$
+          <div latex="block" macro="texblock">$$
             \dots
         $$
           </div>
         </div>
         <div boxed macro="note">
-          <h3 id="5480783690523816758">Simpson's Rule
+          <h3 id="--Calculus---Calculus--Riemann%255FSums--Simpson%27s%5FRule">Simpson's Rule
           </h3>
-          <div macro="equation" latex="block">$$\begin{equation}
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             \dots
@@ -1454,9 +2227,9 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-      </div>      <div cols="2" macro="layout" columns="2">
+      </div>      <div columns="2" macro="layout" cols="2">
         <div macro="note">
-          <h2 id="6011480643990090271">Improper Integrals
+          <h2 id="--Calculus--Improper%5FIntegrals">Improper Integrals
           </h2>
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -1469,10 +2242,10 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-      </div>      <h2 id="16183304260771647229">Infinite Sequences
-      </h2>      <div macro="layout" cols="2" columns="2">
+      </div>      <h2 id="--Calculus--Infinite%5FSequences">Infinite Sequences
+      </h2>      <div cols="2" macro="layout" columns="2">
         <div boxed macro="note">
-          <h3 id="4517372019503599331">Infinite Sequence
+          <h3 id="--Calculus---Calculus--Infinite%255FSequences--Infinite%5FSequence">Infinite Sequence
           </h3>
           <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
@@ -1488,7 +2261,7 @@ window.MathJax = {
           </div>
         </div>
         <div macro="note" boxed>
-          <h3 id="14518621063304104086">Helpful Theorem
+          <h3 id="--Calculus---Calculus--Infinite%255FSequences--Helpful%5FTheorem">Helpful Theorem
           </h3>
           <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
@@ -1503,9 +2276,9 @@ window.MathJax = {
           </div>
         </div>
         <div macro="note" boxed>
-          <h3 id="1076956825058869293">Example
+          <h3 id="--Calculus---Calculus--Infinite%255FSequences--Example">Example
           </h3>
-          <div latex="block" macro="equation">$$\begin{equation}
+          <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
         \text{Given}\\
@@ -1521,10 +2294,10 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-        <div boxed macro="note">
-          <h3 id="2761553380442747645">Example
+        <div macro="note" boxed>
+          <h3 id="--Calculus---Calculus--Infinite%255FSequences--Example">Example
           </h3>
-          <div macro="equation" latex="block">$$\begin{equation}
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
         \text{Given}\\
@@ -1540,12 +2313,12 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-      </div>      <h2 id="14379108937820668209">Infinite Series
+      </div>      <h2 id="--Calculus--Infinite%5FSeries">Infinite Series
       </h2>      <div columns="2" macro="layout" cols="2">
-        <div boxed macro="note">
-          <h3 id="10237089603165525135">Infinite Series
+        <div macro="note" boxed>
+          <h3 id="--Calculus---Calculus--Infinite%255FSeries--Infinite%5FSeries">Infinite Series
           </h3>
-          <div latex="block" macro="equation">$$\begin{equation}
+          <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
             \text{Given}&\\
@@ -1560,14 +2333,14 @@ window.MathJax = {
           </div>
           <p>Note that the limit of every <b>convergent</b> series is equal to zero. But the inverse isn't always true. If the limit is equal to zero, it <u>may not be convergent</u>.</p>
           <p>For example, <span latex="inline" macro="tex">\(\sum_{n=1}^\infty \frac{1}{n}\)</span> does diverge; <u>but it's limit is equal to zero</u>.</p>
-          <div macro="note" inline>
+          <div inline macro="note">
             <p>If the limit is equal to zero; the <u>test is <b>inconclusive</b></u>.</p>
           </div>
         </div>
         <div boxed macro="note">
-          <h3 id="5987098542738069234">Geometric Series
+          <h3 id="--Calculus---Calculus--Infinite%255FSeries--Geometric%5FSeries">Geometric Series
           </h3>
-          <div latex="block" macro="equation">$$\begin{equation}
+          <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
             \text{Given}&\\
@@ -1590,10 +2363,10 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-        <div boxed macro="note">
-          <h3 id="12764328316927690872">The Integral Test
+        <div macro="note" boxed>
+          <h3 id="--Calculus---Calculus--Infinite%255FSeries--The%5FIntegral%5FTest">The Integral Test
           </h3>
-          <div macro="equation" latex="block">$$\begin{equation}
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             &\text{Given}\\
@@ -1611,7 +2384,7 @@ window.MathJax = {
 \end{equation}$$
           </div>
           <div macro="note">
-            <h4 id="1504207077675013566">Constraints on <span latex="inline" macro="tex">\([1,n)\)</span>
+            <h4 id="--Calculus---Calculus--Infinite%255FSeries---Calculus---Calculus--Infinite%25255FSeries--The%255FIntegral%255FTest--Constraints%5Fon%5F-%5C%28%5B1%2Cn%29%5C%29">Constraints on <span macro="tex" latex="inline">\([1,n)\)</span>
             </h4>
             <ul>
               <li>Continuous
@@ -1623,10 +2396,10 @@ window.MathJax = {
             </ul>
           </div>
         </div>
-        <div style="display: grid;" boxed macro="note">
-          <h3 id="14196651697575719226">P-Series -or- Harmonic Series
+        <div boxed macro="note" style="display: grid;">
+          <h3 id="--Calculus---Calculus--Infinite%255FSeries--P-Series%5F-or-%5FHarmonic%5FSeries">P-Series -or- Harmonic Series
           </h3>
-          <div macro="equation" latex="block">$$\begin{equation}
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             &\text{Given}\\
@@ -1638,12 +2411,12 @@ window.MathJax = {
 \end{split}
 \end{equation}$$
           </div>
-          <div macro="note" style="align-self: flex-end;" boxed>
-            <p>Note: the <u>Harmonic series</u> is the special case where <span macro="tex" latex="inline">\(p=1\)</span></p>
+          <div boxed style="align-self: flex-end;" macro="note">
+            <p>Note: the <u>Harmonic series</u> is the special case where <span latex="inline" macro="tex">\(p=1\)</span></p>
           </div>
         </div>
-        <div macro="note" boxed>
-          <h3 id="9054154038780863271">Comparison Test
+        <div boxed macro="note">
+          <h3 id="--Calculus---Calculus--Infinite%255FSeries--Comparison%5FTest">Comparison Test
           </h3>
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -1662,8 +2435,8 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-        <div boxed macro="note">
-          <h3 id="9836350147783819554">Limit Comparison Test
+        <div macro="note" boxed>
+          <h3 id="--Calculus---Calculus--Infinite%255FSeries--Limit%5FComparison%5FTest">Limit Comparison Test
           </h3>
           <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
@@ -1682,26 +2455,26 @@ window.MathJax = {
 \end{equation}$$
           </div>
           <div macro="note">
-            <h4 id="9534717585745295127">Warning
+            <h4 id="--Calculus---Calculus--Infinite%255FSeries---Calculus---Calculus--Infinite%25255FSeries--Limit%255FComparison%255FTest--Warning">Warning
             </h4>
             <ul>
-              <li>If <span macro="tex" latex="inline">\(L > 0\)</span>, this only means that the limit comparison test <u>can be used</u>. You <u>still need to determine if either</u><span macro="tex" latex="inline">\(A_n\)</span> or <span macro="tex" latex="inline">\(B_b\)</span> converges or diverges.
+              <li>If <span latex="inline" macro="tex">\(L > 0\)</span>, this only means that the limit comparison test <u>can be used</u>. You <u>still need to determine if either</u><span latex="inline" macro="tex">\(A_n\)</span> or <span macro="tex" latex="inline">\(B_b\)</span> converges or diverges.
               </li>
               <li>Therefore, this does not apply to any arbitrary rational function.
               </li>
             </ul>
           </div>
           <div macro="note">
-            <h4 id="369590182669923540">Notes
+            <h4 id="--Calculus---Calculus--Infinite%255FSeries---Calculus---Calculus--Infinite%25255FSeries--Limit%255FComparison%255FTest--Notes">Notes
             </h4>
             <ul>
-              <li>For many series, we find a suitable comparison, <span macro="tex" latex="inline">\(B_n\)</span>, by keeping only the <u>highest powers in the numerator and denominator</u> of <span latex="inline" macro="tex">\(A_n\)</span>.
+              <li>For many series, we find a suitable comparison, <span macro="tex" latex="inline">\(B_n\)</span>, by keeping only the <u>highest powers in the numerator and denominator</u> of <span macro="tex" latex="inline">\(A_n\)</span>.
               </li>
             </ul>
           </div>
         </div>
         <div boxed macro="note">
-          <h3 id="13612692549525215624">Estimating Infinite Series
+          <h3 id="--Calculus---Calculus--Infinite%255FSeries--Estimating%5FInfinite%5FSeries">Estimating Infinite Series
           </h3>
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -1710,10 +2483,10 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-      </div>      <h2 id="4282307792095540789">Differential Equations
-      </h2>      <div cols="2" macro="layout" columns="2">
-        <div macro="note" boxed>
-          <h3 id="1674119506562619045">Separable Differential Equations
+      </div>      <h2 id="--Calculus--Differential%5FEquations">Differential Equations
+      </h2>      <div columns="2" macro="layout" cols="2">
+        <div boxed macro="note">
+          <h3 id="--Calculus---Calculus--Differential%255FEquations--Separable%5FDifferential%5FEquations">Separable Differential Equations
           </h3>
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -1746,8 +2519,8 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-        <div boxed macro="note">
-          <h3 id="9931950878556336810">Growth and Decay Models
+        <div macro="note" boxed>
+          <h3 id="--Calculus---Calculus--Differential%255FEquations--Growth%5Fand%5FDecay%5FModels">Growth and Decay Models
           </h3>
           <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
@@ -1767,7 +2540,7 @@ window.MathJax = {
 \end{split}
 \end{equation}$$
           </div>
-          <p>The above states that all solutions for <span latex="inline" macro="tex">\(y^\prime = k y\)</span> are of the form <span latex="inline" macro="tex">\(y = C e^{k t}\)</span>.</p>
+          <p>The above states that all solutions for <span latex="inline" macro="tex">\(y^\prime = k y\)</span> are of the form <span macro="tex" latex="inline">\(y = C e^{k t}\)</span>.</p>
           <p>Where</p>
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -1778,7 +2551,7 @@ window.MathJax = {
 \end{split}
 \end{equation}$$
           </div>
-          <p>Exponential growth occurs when <span macro="tex" latex="inline">\(\textcolor{Periwinkle}{k > 0}\)</span>, and exponential decay occurs when <span macro="tex" latex="inline">\(\textcolor{Periwinkle}{k < 0}\)</span>.</p>
+          <p>Exponential growth occurs when <span latex="inline" macro="tex">\(\textcolor{Periwinkle}{k > 0}\)</span>, and exponential decay occurs when <span latex="inline" macro="tex">\(\textcolor{Periwinkle}{k < 0}\)</span>.</p>
           <hr></hr>
           <p>The Law of Natural Growth:</p>
           <div latex="block" macro="equation">$$\begin{equation}
@@ -1791,7 +2564,7 @@ window.MathJax = {
 \end{equation}$$
           </div>
           <p>The Logistic Model of Population Growth:</p>
-          <div macro="equation" latex="block">$$\begin{equation}
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             \frac{\mathrm{d}\textcolor{DarkOrchid}P}{\mathrm{d}t}
@@ -1813,8 +2586,8 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-        <div macro="note" boxed>
-          <h3 id="6430313704290086256">Solving the Logistic Equation
+        <div boxed macro="note">
+          <h3 id="--Calculus---Calculus--Differential%255FEquations--Solving%5Fthe%5FLogistic%5FEquation">Solving the Logistic Equation
           </h3>
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
@@ -1827,7 +2600,7 @@ window.MathJax = {
 \end{equation}$$
           </div>
           <p>Via partial fraction decomposition</p>
-          <div latex="block" macro="equation">$$\begin{equation}
+          <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
             \reciprocal{P \parens{1 - \frac{P}{L}}} &= \frac{A}{P} + \frac{B}{\parens{1 - \frac{P}{L}}}\\
@@ -1850,7 +2623,7 @@ window.MathJax = {
 \end{equation}$$
           </div>
           <p>Rewriting the differential equation</p>
-          <div latex="block" macro="equation">$$\begin{equation}
+          <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
             \reciprocal{P \parens{1 - \frac{P}{L}}} \s{d}P
@@ -1868,23 +2641,23 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-      </div>      <h2 id="3477258549380472457">Second Order Homogeneous Linear Differential Equations with Constant Coefficients
-      </h2>      <div macro="layout" columns="2" cols="2">
+      </div>      <h2 id="--Calculus--Second%5FOrder%5FHomogeneous%5FLinear%5FDifferential%5FEquations%5Fwith%5FConstant%5FCoefficients">Second Order Homogeneous Linear Differential Equations with Constant Coefficients
+      </h2>      <div columns="2" cols="2" macro="layout">
         <div macro="note">
-          <h3 id="14500282964375132167">Properties
+          <h3 id="--Calculus---Calculus--Second%255FOrder%255FHomogeneous%255FLinear%255FDifferential%255FEquations%255Fwith%255FConstant%255FCoefficients--Properties">Properties
           </h3>
           <ul>
             <li>
-              <p>If <span latex="inline" macro="tex">\(f(x)\)</span> and <span macro="tex" latex="inline">\(g(x)\)</span> are solutions; then <span macro="tex" latex="inline">\(f + g\)</span> is also a solution. Therefore, the most general solution to some second order homogeneous linear differential equations with constant coefficients would be <span macro="tex" latex="inline">\(y = C_1 f(x) + C_2 g(x)\)</span>.</p>
-              <p>This is why, when you find two solutions to the characteristic equation <span latex="inline" macro="tex">\(r_1\)</span> and <span latex="inline" macro="tex">\(r_2\)</span> respectively, we write it like so.</p>
+              <p>If <span latex="inline" macro="tex">\(f(x)\)</span> and <span latex="inline" macro="tex">\(g(x)\)</span> are solutions; then <span macro="tex" latex="inline">\(f + g\)</span> is also a solution. Therefore, the most general solution to some second order homogeneous linear differential equations with constant coefficients would be <span macro="tex" latex="inline">\(y = C_1 f(x) + C_2 g(x)\)</span>.</p>
+              <p>This is why, when you find two solutions to the characteristic equation <span latex="inline" macro="tex">\(r_1\)</span> and <span macro="tex" latex="inline">\(r_2\)</span> respectively, we write it like so.</p>
             </li>
           </ul>
         </div>
         <div macro="note">
-          <h3 id="18237100422879046548"><span latex="inline" macro="tex">\(r_1 = r_2\)</span>
+          <h3 id="--Calculus---Calculus--Second%255FOrder%255FHomogeneous%255FLinear%255FDifferential%255FEquations%255Fwith%255FConstant%255FCoefficients--%5C%28r%5F1%5F%3D%5Fr%5F2%5C%29"><span latex="inline" macro="tex">\(r_1 = r_2\)</span>
           </h3>
           <p>Given some:</p>
-          <div macro="equation" latex="block">$$\begin{equation}
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             a y^{\prime\prime} + b y^\prime + c y = 0\;\text{where $a \neq 0$}\\
@@ -1892,8 +2665,8 @@ window.MathJax = {
 \end{split}
 \end{equation}$$
           </div>
-          <p>We can presume that <span macro="tex" latex="inline">\(y\)</span> is of the form <span macro="tex" latex="inline">\(e^{r t}\)</span>, and therefore:</p>
-          <div macro="equation" latex="block">$$\begin{equation}
+          <p>We can presume that <span latex="inline" macro="tex">\(y\)</span> is of the form <span latex="inline" macro="tex">\(e^{r t}\)</span>, and therefore:</p>
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
             \text{if}\\
@@ -1906,7 +2679,7 @@ window.MathJax = {
 \end{equation}$$
           </div>
           <p>Substituting this back into the original equation, we have:</p>
-          <div latex="block" macro="equation">$$\begin{equation}
+          <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
             0 &= a r^2 e^{r t} + b r e^{r t} + c e^{r t}\\
@@ -1926,7 +2699,7 @@ window.MathJax = {
 \end{equation}$$
           </div>
           <p>So therefore:</p>
-          <div latex="block" macro="equation">$$\begin{equation}
+          <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
             &\underbrace{a r^2 + b r + c = 0}
@@ -1940,7 +2713,7 @@ window.MathJax = {
 \end{equation}$$
           </div>
           <p>Where the general solution is of the form:</p>
-          <div macro="equation" latex="block">$$\begin{equation}
+          <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
 \left.
@@ -1955,13 +2728,13 @@ window.MathJax = {
 \end{equation}$$
           </div>
         </div>
-      </div>      <h2 id="11747712099557378599">Parametric Equations
+      </div>      <h2 id="--Calculus--Parametric%5FEquations">Parametric Equations
       </h2>      <div cols="2" macro="layout" columns="2">
         <div macro="note">
-          <h3 id="10232297552074792574">First Derivative Formula
+          <h3 id="--Calculus---Calculus--Parametric%255FEquations--First%5FDerivative%5FFormula">First Derivative Formula
           </h3>
-          <p>To find the derivative of a given function defined parametrically by the equations <span latex="inline" macro="tex">\(x = u(t)\)</span> and <span macro="tex" latex="inline">\(y = v(t)\)</span>.</p>
-          <div latex="block" macro="equation">$$\begin{equation}
+          <p>To find the derivative of a given function defined parametrically by the equations <span latex="inline" macro="tex">\(x = u(t)\)</span> and <span latex="inline" macro="tex">\(y = v(t)\)</span>.</p>
+          <div macro="equation" latex="block">$$\begin{equation}
 \begin{split}
 
             \text{Given}\\
@@ -1979,9 +2752,9 @@ window.MathJax = {
           </div>
         </div>
         <div macro="note">
-          <h3 id="7206746481008878178">Second Derivative Formula
+          <h3 id="--Calculus---Calculus--Parametric%255FEquations--Second%5FDerivative%5FFormula">Second Derivative Formula
           </h3>
-          <p>To find the second derivative of a given function defined parametrically by the equations <span latex="inline" macro="tex">\(x = u(t)\)</span> and <span latex="inline" macro="tex">\(y = v(t)\)</span>.</p>
+          <p>To find the second derivative of a given function defined parametrically by the equations <span macro="tex" latex="inline">\(x = u(t)\)</span> and <span latex="inline" macro="tex">\(y = v(t)\)</span>.</p>
           <div latex="block" macro="equation">$$\begin{equation}
 \begin{split}
 
@@ -2033,12 +2806,12 @@ window.MathJax = {
 \end{split}
 \end{equation}$$
           </div>
-          <div inline macro="note">
-            <p>The above shows different ways of representing <span macro="tex" latex="inline">\(\frac{\mathrm{d}^{2}y}{\mathrm{d}x^2}\)</span>. (I.e. it doesn't correspond to some final solution.)</p>
+          <div macro="note" inline>
+            <p>The above shows different ways of representing <span latex="inline" macro="tex">\(\frac{\mathrm{d}^{2}y}{\mathrm{d}x^2}\)</span>. (I.e. it doesn't correspond to some final solution.)</p>
           </div>
         </div>
         <div macro="note">
-          <h3 id="11960894347663202276">Arc Length
+          <h3 id="--Calculus---Calculus--Parametric%255FEquations--Arc%5FLength">Arc Length
           </h3>
           <p>Formula for the arc length of a parametric curve over the interval <span latex="inline" macro="tex">\([a, b]\)</span>.</p>
           <div macro="equation" latex="block">$$\begin{equation}
